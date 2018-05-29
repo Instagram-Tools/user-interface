@@ -1,0 +1,10 @@
+version: '2'
+
+services:
+ nginx:
+   restart: always
+   build: ./nginx
+   ports:
+     - "80:80"
+   volumes:
+     - ./build:/www/static

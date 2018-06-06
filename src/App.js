@@ -1,10 +1,12 @@
-import React, { Component } from "react";
-import logo from "./logo.svg";
-import "./App.css";
+import React, { Component } from 'react';
+import API_Gateway from './API_Gateway';
+import logo from './logo.svg';
+import './App.css';
 
 class App extends Component {
   render() {
-      console.log("test")
+    API_Gateway.load().then(r => console.log(r));
+
     return (
       <div className="App">
         <header className="App-header">

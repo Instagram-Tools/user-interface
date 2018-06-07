@@ -6,6 +6,7 @@ services:
    build: ./nginx
    ports:
      - "80:80"
+     - "50:50"
    volumes:
      - ./build:/usr/static
 

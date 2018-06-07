@@ -5,7 +5,7 @@ import './App.css';
 
 class App extends Component {
   render() {
-    API_Gateway.load().then(r => console.log(r));
+    API_Gateway.get('u').then(r => console.log(r));
 
     return (
       <div className="App">

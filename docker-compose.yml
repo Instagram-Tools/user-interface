@@ -10,11 +10,12 @@ services:
      - ./build:/usr/static
 
  api:
+    command: /usr/local/bin/gunicorn -w 2 -b :5000 server
     build:
       context: ./api
       dockerfile: ./Dockerfile
     ports:
-      - "8000:5000"
+      - "5000:5000"
     volumes:
       - ./api:/app
     restart: always

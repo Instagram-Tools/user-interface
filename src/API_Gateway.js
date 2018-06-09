@@ -4,9 +4,7 @@ export default class API_Gateway {
     let url = API_URL + '?user=' + userName;
     console.log(url);
     let response = await fetch(url);
-    let text = await response.text();
-    if (response.status === 200) return text;
-    else return Promise.reject(new Error(text));
+    return this.parsResponse(response);
   }
 
   static async put(data) {
@@ -17,6 +15,10 @@ export default class API_Gateway {
         'Content-Type': 'application/json'
       }
     });
+    return this.parsResponse(response);
+  }
+
+  static async parsResponse(response) {
     let text = await response.text();
     if (response.status === 200) return text;
     else return new Error(text);

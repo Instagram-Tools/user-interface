@@ -2,7 +2,6 @@ const API_URL = 'http://localhost:50/';
 export default class API_Gateway {
   static async get(userName) {
     let url = API_URL + '?user=' + userName;
-    console.log(url);
     let response = await fetch(url);
     return this.parsResponse(response);
   }

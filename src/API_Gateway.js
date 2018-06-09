@@ -11,9 +11,15 @@ export default class API_Gateway {
     }
   }
 
-  static async put(user, timetable) {
+  static async put(data) {
     try {
-      let response = await fetch(API_URL);
+      let response = await fetch(API_URL, {
+        method: 'PUT',
+        body: JSON.stringify(data),
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      });
       return await response.text();
     } catch (e) {
       return e.message;

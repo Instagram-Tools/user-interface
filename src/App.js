@@ -1,10 +1,14 @@
 import React, { Component } from 'react';
-import API_Gateway from './API_Gateway';
+import NavBar from './NavBar';
 import './webflow.css';
 
 class App extends Component {
   render() {
-    return <div />;
+    return (
+      <div>
+        <NavBar />
+      </div>
+    );
   }
 }
 

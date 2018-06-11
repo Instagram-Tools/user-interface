@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import NavBar from './NavBar';
+import GeneralSettings from './GeneralSettings';
 import './webflow.css';
 
 class App extends Component {
@@ -7,6 +8,7 @@ class App extends Component {
     return (
       <div>
         <NavBar />
+        <GeneralSettings />
       </div>
     );
   }

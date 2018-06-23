@@ -22,4 +22,7 @@ export default class API_Gateway {
     if (response.status === 200) return text;
     else return new Error(text);
   }
+
+  static async register() {}
+  static async login() {}
 }

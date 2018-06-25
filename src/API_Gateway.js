@@ -23,6 +23,11 @@ export default class API_Gateway {
     else return new Error(text);
   }
 
-  static async register() {}
-  static async login() {}
+  static async register(email, password) {
+    let url = API_URL + '/register';
+    let response = await fetch(url);
+    return this.parsResponse(response);
+  }
+
+  static async login(email, password) {}
 }

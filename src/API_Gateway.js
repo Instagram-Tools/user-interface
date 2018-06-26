@@ -26,7 +26,15 @@ export default class API_Gateway {
   static async register(email, password) {
     let url = API_URL + '/register';
     let response = await fetch(url);
-    return this.parsResponse(response);
+    let text = await this.parsResponse(response);
+
+    return this.extractToken(text);
+  }
+
+  static extractToken(text) {
+    return new DOMParser()
+      .parseFromString(text, 'text/html')
+      .getElementById('csrf_token').value;
   }
 
   static async login(email, password) {}

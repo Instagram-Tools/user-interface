@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import './css/code-connect.webflow.css';
 import iPhone from './images/iPhone-X-icon.svg';
 import iPad from './images/iPad-icon.svg';
 import macBook from './images/MacBook-icon.svg';

@@ -14,6 +14,7 @@ class App extends Component {
         <NavBar />
         <GeneralSettings />
         <LikeSettings />
+        <CommentSettings />
       </div>
     );
   }

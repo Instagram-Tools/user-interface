@@ -4,6 +4,7 @@ import './css/normalize.css';
 import './css/code-connect.webflow.css';
 import NavBar from './NavBar';
 import GeneralSettings from './GeneralSettings';
+import LikeSettings from './LikeSettings';
 
 class App extends Component {
   render() {
@@ -11,6 +12,7 @@ class App extends Component {
       <div>
         <NavBar />
         <GeneralSettings />
+        <LikeSettings />
       </div>
     );
   }

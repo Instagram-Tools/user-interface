@@ -6,6 +6,7 @@ import NavBar from './NavBar';
 import GeneralSettings from './GeneralSettings';
 import LikeSettings from './LikeSettings';
 import CommentSettings from './CommentSettings';
+import FollowSettings from './FollowSettings';
 
 class App extends Component {
   render() {
@@ -15,6 +16,7 @@ class App extends Component {
         <GeneralSettings />
         <LikeSettings />
         <CommentSettings />
+        <FollowSettings />
       </div>
     );
   }

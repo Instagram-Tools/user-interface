@@ -10,11 +10,12 @@ import FollowSettings from './FollowSettings';
 import UnfollowSettings from './UnfollowSettings';
 import MessageSettings from './MessageSettings';
 import ActivitySettings from './ActivitySettings';
+import { Context, Provider } from './Context';
 
 export default class App extends Component {
   render() {
     return (
-      <div>
+      <Provider>
         <NavBar />
         <GeneralSettings />
         <LikeSettings />
@@ -34,7 +35,7 @@ export default class App extends Component {
             Oops! Something went wrong while submitting the form.
           </div>
         </div>
-      </div>
+      </Provider>
     );
   }
 }

@@ -7,6 +7,7 @@ import GeneralSettings from './GeneralSettings';
 import LikeSettings from './LikeSettings';
 import CommentSettings from './CommentSettings';
 import FollowSettings from './FollowSettings';
+import UnfollowSettings from './UnfollowSettings';
 
 class App extends Component {
   render() {
@@ -17,6 +18,18 @@ class App extends Component {
         <LikeSettings />
         <CommentSettings />
         <FollowSettings />
+        <UnfollowSettings />
+
+        <div className="success-message w-form-done">
+          <div className="text-block">
+            Thank you! Your submission has been received!
+          </div>
+        </div>
+        <div className="error-message w-form-fail">
+          <div className="text-block-2">
+            Oops! Something went wrong while submitting the form.
+          </div>
+        </div>
       </div>
     );
   }

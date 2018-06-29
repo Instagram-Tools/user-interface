@@ -5,6 +5,7 @@ import './css/code-connect.webflow.css';
 import NavBar from './NavBar';
 import GeneralSettings from './GeneralSettings';
 import LikeSettings from './LikeSettings';
+import CommentSettings from './CommentSettings';
 
 class App extends Component {
   render() {

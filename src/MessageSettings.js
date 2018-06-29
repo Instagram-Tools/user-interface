@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import trash from './images/Tash-Sultana.jpg';
 
-export default class UnfollowSettings extends Component {
+export default class MessageSettings extends Component {
   render() {
     return (
       <div>

@@ -11,7 +11,7 @@ import UnfollowSettings from './UnfollowSettings';
 import MessageSettings from './MessageSettings';
 import ActivitySettings from './ActivitySettings';
 
-class App extends Component {
+export default class App extends Component {
   render() {
     return (
       <div>
@@ -38,5 +38,3 @@ class App extends Component {
     );
   }
 }
-
-export default App;

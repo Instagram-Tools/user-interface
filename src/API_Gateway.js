@@ -24,7 +24,27 @@ export default class API_Gateway {
   }
 
   static async register(email, password) {
+    console.log('await Token');
     let url = API_URL + '/register';
+    let token = await this.getToken(url);
+
+    console.log('await Register');
+    let response = await fetch(url, {
+      method: 'POST',
+      body: JSON.stringify({
+        email: email,
+        password: password,
+        password_confirm: password,
+        csrf_token: token
+      }),
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    });
+    return this.parsResponse(response);
+  }
+
+  static async getToken(url) {
     let response = await fetch(url);
     let text = await this.parsResponse(response);
 

@@ -8,6 +8,7 @@ import LikeSettings from './LikeSettings';
 import CommentSettings from './CommentSettings';
 import FollowSettings from './FollowSettings';
 import UnfollowSettings from './UnfollowSettings';
+import MessageSettings from './MessageSettings';
 
 class App extends Component {
   render() {
@@ -19,6 +20,7 @@ class App extends Component {
         <CommentSettings />
         <FollowSettings />
         <UnfollowSettings />
+        <MessageSettings />
 
         <div className="success-message w-form-done">
           <div className="text-block">

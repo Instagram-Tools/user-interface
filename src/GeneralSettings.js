@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import './webflow.css';
 
 class GeneralSettings extends Component {
   render() {

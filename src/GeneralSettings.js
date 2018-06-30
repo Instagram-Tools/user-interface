@@ -1,9 +1,20 @@
 import React, { Component } from 'react';
 
 class GeneralSettings extends Component {
+  handle(e) {
+    console.log(e);
+    this.props.g({ age: 666 });
+  }
+
   render() {
     return (
       <div className="generalsettings">
+        <React.Fragment>
+          <p>Age: {this.props.settings.age}</p>
+          <p>Name: {this.props.settings.name}</p>
+          <button onClick={this.handle.bind(this)}>🍰🍥🎂</button>
+        </React.Fragment>
+
         <h1 className="general_settings">General</h1>
         <div data-delay="0" className="dropdown w-dropdown">
           <div

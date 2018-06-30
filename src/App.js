@@ -13,11 +13,17 @@ import ActivitySettings from './ActivitySettings';
 import { Context, Provider } from './Context';
 
 export default class App extends Component {
+  state = {
+    name: 'Wes',
+    age: 100,
+    cool: true
+  };
+
   render() {
     return (
       <Provider>
         <NavBar />
-        <GeneralSettings />
+        <GeneralSettings settings={this.state} g={this.setState.bind(this)} />
         <LikeSettings />
         <CommentSettings />
         <FollowSettings />

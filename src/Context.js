@@ -20,7 +20,8 @@ export class Provider extends Component {
           growAYearOlder: () =>
             this.setState({
               age: this.state.age + 1
-            })
+            }),
+          setState: this.setState.bind(this)
         }}
       >
         {this.props.children}

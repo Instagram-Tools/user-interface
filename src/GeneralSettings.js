@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Context } from './Context';
+import Switch from './Switch';
 
 class GeneralSettings extends Component {
   render() {
@@ -56,19 +57,7 @@ class GeneralSettings extends Component {
               </nav>
             </div>
             <h1 className="general_settings subtitle">Like</h1>
-            <div
-              data-w-id="2d6394df-909c-4223-c2d5-24e9d4611d2b"
-              className="switch_general_settings"
-            >
-              <div
-                data-w-id="2d6394df-909c-4223-c2d5-24e9d4611d2c"
-                className="switch_circle_general"
-              />
-              <div
-                data-w-id="2d6394df-909c-4223-c2d5-24e9d4611d2d"
-                className="switch_circle_off_general"
-              />
-            </div>
+            <Switch toggle="enable_like" />
             <h1 className="general_settings subtitle">Comment</h1>
             <div
               data-w-id="9f45fefc-d737-4e25-d57c-32ac923d5049"

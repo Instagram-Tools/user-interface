@@ -25,7 +25,6 @@
   width: 18px;
   height: 18px;
   left: 2px;
-  top: 1px;
   border-radius: 50% 50%;
   background-color: #fff;
   content: ' ';
@@ -58,7 +57,7 @@
 }
 
 .rc-switch-checked:after {
-  left: 22px;
+  left: 31px;
 }
 
 .rc-switch-disabled {

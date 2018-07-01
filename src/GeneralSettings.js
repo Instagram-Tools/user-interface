@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Context } from './Context';
-import Switch from './Switch';
+import Switch from './ContextSwitch';
 
 class GeneralSettings extends Component {
   render() {

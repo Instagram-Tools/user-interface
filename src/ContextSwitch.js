@@ -3,7 +3,7 @@ import { Context } from './Context';
 import './css/rc-switch.css';
 import Switch from 'rc-switch';
 
-export default class MySwitch extends Component {
+export default class ContextSwitch extends Component {
   render() {
     return (
       <Context.Consumer>

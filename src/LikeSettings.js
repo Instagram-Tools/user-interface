@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Switch from './ContextSwitch';
 
 export default class LikeSettings extends Component {
   render() {
@@ -16,19 +17,7 @@ export default class LikeSettings extends Component {
               className="form"
             >
               <div className="titleholder">
-                <div
-                  data-w-id="b670bce1-7a3b-04ba-b68e-664e7b547496"
-                  className="switch_general_settings title"
-                >
-                  <div
-                    data-w-id="b670bce1-7a3b-04ba-b68e-664e7b547497"
-                    className="switch_circle_general"
-                  />
-                  <div
-                    data-w-id="b670bce1-7a3b-04ba-b68e-664e7b547498"
-                    className="switch_circle_off_general"
-                  />
-                </div>
+                <Switch toggle="enable_like_by_tags" className="title" />
                 <label htmlFor="email" className="settingtitle">
                   Like pictures with a hashtag
                 </label>
@@ -131,13 +120,7 @@ export default class LikeSettings extends Component {
                 </div>
               </div>
               <div className="titleholder">
-                <div
-                  data-w-id="8f4e29f6-18fe-5727-4ce9-da91f78fc064"
-                  className="switch_general_settings title"
-                >
-                  <div className="switch_circle_general" />
-                  <div className="switch_circle_off_general" />
-                </div>
+                <Switch toggle="enable_like_by_locations" className="title" />
                 <label htmlFor="email" className="settingtitle">
                   Like pictures p a location
                 </label>
@@ -225,13 +208,10 @@ export default class LikeSettings extends Component {
                 </div>
               </div>
               <div className="titleholder">
-                <div
-                  data-w-id="dae0f6ca-dafd-34bc-42ef-8e920056988a"
-                  className="switch_general_settings title"
-                >
-                  <div className="switch_circle_general" />
-                  <div className="switch_circle_off_general" />
-                </div>
+                <Switch
+                  toggle="enable_follow_user_followers"
+                  className="title"
+                />
                 <label htmlFor="email" className="settingtitle">
                   Like pictures of a user&#x27;s followers
                 </label>
@@ -338,13 +318,7 @@ export default class LikeSettings extends Component {
                 </div>
               </div>
               <div className="titleholder like_pictures_from_feed">
-                <div
-                  data-w-id="3956ddc1-bad9-3bfd-2618-c6d6fa8fcd2b"
-                  className="switch_general_settings title"
-                >
-                  <div className="switch_circle_general" />
-                  <div className="switch_circle_off_general" />
-                </div>
+                <Switch toggle="enable_like_by_feed" className="title" />
                 <label htmlFor="email" className="settingtitle">
                   Like pictures from my feed
                 </label>

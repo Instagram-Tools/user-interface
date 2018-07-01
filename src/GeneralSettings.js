@@ -4,10 +4,10 @@ import { Context } from './Context';
 class GeneralSettings extends Component {
   render() {
     return (
-      <div className="generalsettings">
-        <Context.Consumer>
-          {context => (
-            <React.Fragment>
+      <Context.Consumer>
+        {context => (
+          <div className="generalsettings">
+            <div>
               <p>Age: {context.state.age}</p>
               <p>Name: {context.state.name}</p>
               <button onClick={context.growAYearOlder}>🍰🍥🎂</button>
@@ -16,94 +16,94 @@ class GeneralSettings extends Component {
               >
                 🍰🍥🎂
               </button>
-            </React.Fragment>
-          )}
-        </Context.Consumer>
+            </div>
 
-        <h1 className="general_settings">General</h1>
-        <div data-delay="0" className="dropdown w-dropdown">
-          <div
-            data-w-id="5bc62214-6295-d5b6-2514-2ebbae7e5d29"
-            className="dropdown-toggle w-dropdown-toggle"
-          >
-            <div
-              data-w-id="90672a42-9dd0-d234-71ce-11328a477e0a"
-              className="icon w-icon-dropdown-toggle"
-            />
-            <div className="general_settings subtitle account">Account</div>
-          </div>
-          <nav className="dropdown-list w-dropdown-list">
-            <a href="#" className="dropdownlink w-dropdown-link">
-              Alex Bosch
-            </a>
-            <a href="#" className="dropdownlink w-dropdown-link">
-              Gaylord69
-            </a>
-            <a href="#" className="dropdownlink w-dropdown-link">
-              Sex
-            </a>
-            <a
-              href="#"
-              data-w-id="2ef84843-5f94-80b8-30e8-eebec6eb258d"
-              className="dropdownlink bottom_add_account w-dropdown-link"
-            >
-              Add account{' '}
-              <span
-                data-w-id="4f8e18b0-394f-5f2b-c803-4957ff6fb5ee"
-                className="pluscharacter"
+            <h1 className="general_settings">General</h1>
+            <div data-delay="0" className="dropdown w-dropdown">
+              <div
+                data-w-id="5bc62214-6295-d5b6-2514-2ebbae7e5d29"
+                className="dropdown-toggle w-dropdown-toggle"
               >
-                +
-              </span>
-            </a>
-          </nav>
-        </div>
-        <h1 className="general_settings subtitle">Like</h1>
-        <div
-          data-w-id="2d6394df-909c-4223-c2d5-24e9d4611d2b"
-          className="switch_general_settings"
-        >
-          <div
-            data-w-id="2d6394df-909c-4223-c2d5-24e9d4611d2c"
-            className="switch_circle_general"
-          />
-          <div
-            data-w-id="2d6394df-909c-4223-c2d5-24e9d4611d2d"
-            className="switch_circle_off_general"
-          />
-        </div>
-        <h1 className="general_settings subtitle">Comment</h1>
-        <div
-          data-w-id="9f45fefc-d737-4e25-d57c-32ac923d5049"
-          className="switch_general_settings"
-        >
-          <div className="switch_circle_general" />
-          <div className="switch_circle_off_general" />
-        </div>
-        <h1 className="general_settings subtitle">Follow</h1>
-        <div
-          data-w-id="b0d17b75-ea64-2260-c203-8a36097b6c05"
-          className="switch_general_settings"
-        >
-          <div className="switch_circle_general" />
-          <div className="switch_circle_off_general" />
-        </div>
-        <h1 className="general_settings subtitle">Unfollow</h1>
-        <div
-          data-w-id="a02e83f8-7e0b-38f1-06e9-c7b9a0ba8ee1"
-          className="switch_general_settings"
-        >
-          <div className="switch_circle_general" />
-          <div className="switch_circle_off_general" />
-        </div>
-        <h1 className="general_settings subtitle">Messages</h1>
-        <div
-          data-w-id="52955fe0-8f21-ee9d-c898-2543aeaeff01"
-          className="switch_general_settings"
-        >
-          <div className="switch_circle_general" />
-          <div className="switch_circle_off_general" />
-        </div>
-      </div>
+                <div
+                  data-w-id="90672a42-9dd0-d234-71ce-11328a477e0a"
+                  className="icon w-icon-dropdown-toggle"
+                />
+                <div className="general_settings subtitle account">Account</div>
+              </div>
+              <nav className="dropdown-list w-dropdown-list">
+                <a href="#" className="dropdownlink w-dropdown-link">
+                  Alex Bosch
+                </a>
+                <a href="#" className="dropdownlink w-dropdown-link">
+                  Gaylord69
+                </a>
+                <a href="#" className="dropdownlink w-dropdown-link">
+                  Sex
+                </a>
+                <a
+                  href="#"
+                  data-w-id="2ef84843-5f94-80b8-30e8-eebec6eb258d"
+                  className="dropdownlink bottom_add_account w-dropdown-link"
+                >
+                  Add account{' '}
+                  <span
+                    data-w-id="4f8e18b0-394f-5f2b-c803-4957ff6fb5ee"
+                    className="pluscharacter"
+                  >
+                    +
+                  </span>
+                </a>
+              </nav>
+            </div>
+            <h1 className="general_settings subtitle">Like</h1>
+            <div
+              data-w-id="2d6394df-909c-4223-c2d5-24e9d4611d2b"
+              className="switch_general_settings"
+            >
+              <div
+                data-w-id="2d6394df-909c-4223-c2d5-24e9d4611d2c"
+                className="switch_circle_general"
+              />
+              <div
+                data-w-id="2d6394df-909c-4223-c2d5-24e9d4611d2d"
+                className="switch_circle_off_general"
+              />
+            </div>
+            <h1 className="general_settings subtitle">Comment</h1>
+            <div
+              data-w-id="9f45fefc-d737-4e25-d57c-32ac923d5049"
+              className="switch_general_settings"
+            >
+              <div className="switch_circle_general" />
+              <div className="switch_circle_off_general" />
+            </div>
+            <h1 className="general_settings subtitle">Follow</h1>
+            <div
+              data-w-id="b0d17b75-ea64-2260-c203-8a36097b6c05"
+              className="switch_general_settings"
+            >
+              <div className="switch_circle_general" />
+              <div className="switch_circle_off_general" />
+            </div>
+            <h1 className="general_settings subtitle">Unfollow</h1>
+            <div
+              data-w-id="a02e83f8-7e0b-38f1-06e9-c7b9a0ba8ee1"
+              className="switch_general_settings"
+            >
+              <div className="switch_circle_general" />
+              <div className="switch_circle_off_general" />
+            </div>
+            <h1 className="general_settings subtitle">Messages</h1>
+            <div
+              data-w-id="52955fe0-8f21-ee9d-c898-2543aeaeff01"
+              className="switch_general_settings"
+            >
+              <div className="switch_circle_general" />
+              <div className="switch_circle_off_general" />
+            </div>
+          </div>
+        )}
+      </Context.Consumer>
     );
   }
 }

@@ -59,37 +59,13 @@ class GeneralSettings extends Component {
             <h1 className="general_settings subtitle">Like</h1>
             <Switch toggle="enable_like" />
             <h1 className="general_settings subtitle">Comment</h1>
-            <div
-              data-w-id="9f45fefc-d737-4e25-d57c-32ac923d5049"
-              className="switch_general_settings"
-            >
-              <div className="switch_circle_general" />
-              <div className="switch_circle_off_general" />
-            </div>
+            <Switch toggle="enable_comment" />
             <h1 className="general_settings subtitle">Follow</h1>
-            <div
-              data-w-id="b0d17b75-ea64-2260-c203-8a36097b6c05"
-              className="switch_general_settings"
-            >
-              <div className="switch_circle_general" />
-              <div className="switch_circle_off_general" />
-            </div>
+            <Switch toggle="enable_follow" />
             <h1 className="general_settings subtitle">Unfollow</h1>
-            <div
-              data-w-id="a02e83f8-7e0b-38f1-06e9-c7b9a0ba8ee1"
-              className="switch_general_settings"
-            >
-              <div className="switch_circle_general" />
-              <div className="switch_circle_off_general" />
-            </div>
+            <Switch toggle="enable_unfollow" />
             <h1 className="general_settings subtitle">Messages</h1>
-            <div
-              data-w-id="52955fe0-8f21-ee9d-c898-2543aeaeff01"
-              className="switch_general_settings"
-            >
-              <div className="switch_circle_general" />
-              <div className="switch_circle_off_general" />
-            </div>
+            <Switch toggle="enable_message" />
           </div>
         )}
       </Context.Consumer>

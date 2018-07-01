@@ -122,7 +122,7 @@ export default class LikeSettings extends Component {
               <div className="titleholder">
                 <Switch toggle="enable_like_by_locations" className="title" />
                 <label htmlFor="email" className="settingtitle">
-                  Like pictures p a location
+                  Like pictures posted in a location
                 </label>
                 <div className="helptext">
                   <strong>Like pictures from a location: </strong>Choose

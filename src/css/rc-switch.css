@@ -22,11 +22,12 @@
 
 .rc-switch:after {
   position: absolute;
-  width: 18px;
-  height: 18px;
-  left: 2px;
+  width: 26px;
+  height: 26px;
+  left: 1px;
   border-radius: 50% 50%;
-  background-color: #fff;
+  background-image: -webkit-linear-gradient(270deg, #ff4252, #ff4252);
+  background-image: linear-gradient(180deg, #ff4252, #ff4252);
   content: ' ';
   cursor: pointer;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
@@ -58,6 +59,22 @@
 
 .rc-switch-checked:after {
   left: 31px;
+
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  /*margin-left: -26px;*/
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  border-radius: 999999px;
+  background-image: -webkit-linear-gradient(270deg, #31f688, #31f688);
+  background-image: linear-gradient(180deg, #31f688, #31f688);
+  font-family: Ubuntu, Helvetica, sans-serif;
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 1em;
 }
 
 .rc-switch-disabled {

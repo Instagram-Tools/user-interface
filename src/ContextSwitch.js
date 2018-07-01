@@ -9,7 +9,7 @@ export default class ContextSwitch extends Component {
       <Context.Consumer>
         {context => (
           <Switch
-            className="switch_general_settings"
+            className={'switch_general_settings ' + this.props.className}
             checked={context.state[this.props.toggle]}
             onClick={(() =>
               context.setState({

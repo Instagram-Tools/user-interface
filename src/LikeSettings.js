@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Switch from './ContextSwitch';
 import TextFieldBroad from './TextFieldBroad';
+import TextFieldNumber from './TextFieldNumber';
 import ContextList from './ContextList';
 
 export default class LikeSettings extends Component {
@@ -205,30 +206,14 @@ export default class LikeSettings extends Component {
                   </div>
                 </div>
                 <div className="columnholder filterholder first">
-                  <input
-                    type="text"
-                    maxLength="256"
-                    name="field-3"
-                    data-name="Field 3"
-                    id="field-3"
-                    className="text-field filter w-input"
+                  <TextFieldNumber
+                    value="follow_user_followers_amount"
+                    placeholder="Pick their last X followers"
                   />
-                  <input
-                    type="text"
-                    maxLength="256"
-                    name="field-3"
-                    data-name="Field 3"
-                    id="field-3"
-                    className="text-field filter last w-input"
+                  <TextFieldNumber
+                    value="user_interact_amount"
+                    placeholder="Like their last X pictures"
                   />
-                  <div className="columnholder belowholder">
-                    <div className="text_field_description below">
-                      Pick their last min-max followers
-                    </div>
-                    <div className="text_field_description below">
-                      Like their last min-max pictures
-                    </div>
-                  </div>
                 </div>
               </div>
               <div className="titleholder like_pictures_from_feed">

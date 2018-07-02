@@ -18,7 +18,7 @@ export default class LikeSettings extends Component {
               className="form"
             >
               <div className="titleholder">
-                <Switch toggle="enable_like_by_tags" className="title" />
+                <Switch value="enable_like_by_tags" className="title" />
                 <label htmlFor="email" className="settingtitle">
                   Like pictures with a hashtag
                 </label>
@@ -115,7 +115,7 @@ export default class LikeSettings extends Component {
                 </div>
               </div>
               <div className="titleholder">
-                <Switch toggle="enable_like_by_locations" className="title" />
+                <Switch value="enable_like_by_locations" className="title" />
                 <label htmlFor="email" className="settingtitle">
                   Like pictures posted in a location
                 </label>
@@ -301,7 +301,7 @@ export default class LikeSettings extends Component {
                 </div>
               </div>
               <div className="titleholder like_pictures_from_feed">
-                <Switch toggle="enable_like_by_feed" className="title" />
+                <Switch value="enable_like_by_feed" className="title" />
                 <label htmlFor="email" className="settingtitle">
                   Like pictures from my feed
                 </label>

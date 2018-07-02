@@ -43,15 +43,15 @@ class GeneralSettings extends Component {
           </nav>
         </div>
         <h1 className="general_settings subtitle">Like</h1>
-        <Switch toggle="enable_like" />
+        <Switch value="enable_like" />
         <h1 className="general_settings subtitle">Comment</h1>
-        <Switch toggle="enable_comment" />
+        <Switch value="enable_comment" />
         <h1 className="general_settings subtitle">Follow</h1>
-        <Switch toggle="enable_follow" />
+        <Switch value="enable_follow" />
         <h1 className="general_settings subtitle">Unfollow</h1>
-        <Switch toggle="enable_unfollow" />
+        <Switch value="enable_unfollow" />
         <h1 className="general_settings subtitle">Messages</h1>
-        <Switch toggle="enable_message" />
+        <Switch value="enable_message" />
       </div>
     );
   }

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Switch from './ContextSwitch';
+import TextFieldBroad from './TextFieldBroad';
 
 export default class LikeSettings extends Component {
   render() {
@@ -71,15 +72,9 @@ export default class LikeSettings extends Component {
                   </div>
                 </div>
                 <div className="columnholder hashtag_settings_holder">
-                  <input
-                    type="text"
-                    className="text-field broadfield w-input"
-                    maxLength="256"
-                    name="field-4"
-                    data-name="Field 4"
-                    placeholder="Enter hashtags this way: #fitness #workout #..."
-                    data-w-id="774f5b90-a04b-957a-a279-774c2c936ef9"
-                    id="field-4"
+                  <TextFieldBroad
+                    value="like_by_tags"
+                    placeholder="Enter hashtags this way: fitness"
                   />
                   <div
                     data-w-id="034888e9-27da-288f-a156-1f16d12dae01"
@@ -153,15 +148,9 @@ export default class LikeSettings extends Component {
                 </div>
               </div>
               <div className="columnholder hashtag_settings_holder">
-                <input
-                  type="text"
-                  className="text-field broadfield w-input"
-                  maxLength="256"
-                  name="field"
-                  data-name="Field"
+                <TextFieldBroad
+                  value="like_by_locations"
                   placeholder="Search for locations"
-                  data-w-id="78421ac3-fc69-dbc1-2588-27398162ca05"
-                  id="field"
                 />
                 <div
                   data-w-id="82f677f9-6358-e7d6-c0d4-db9fcd52b646"
@@ -257,15 +246,9 @@ export default class LikeSettings extends Component {
               </div>
               <div className="columnholder hashtag_settings_holder">
                 <div className="columnholder user">
-                  <input
-                    type="text"
-                    className="text-field broadfield w-input"
-                    maxLength="256"
-                    name="field-8"
-                    data-name="Field 8"
+                  <TextFieldBroad
+                    value="follow_user_followers"
                     placeholder="Search for user"
-                    data-w-id="1dae5dbc-8272-8bac-0fe7-cae65c555fc9"
-                    id="field-8"
                   />
                 </div>
                 <div

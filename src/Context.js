@@ -6,21 +6,13 @@ export const Context = React.createContext();
 
 // Then create a provider Component
 export class Provider extends Component {
-  state = {
-    name: 'Wes',
-    age: 100,
-    cool: true
-  };
+  state = {};
 
   render() {
     return (
       <Context.Provider
         value={{
           state: this.state,
-          growAYearOlder: () =>
-            this.setState({
-              age: this.state.age + 1
-            }),
           setState: this.setState.bind(this)
         }}
       >

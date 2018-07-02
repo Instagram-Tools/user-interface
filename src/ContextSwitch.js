@@ -12,9 +12,9 @@ export default class ContextSwitch extends Component {
             className={'switch_general_settings ' + this.props.className}
             checked={context.state[this.props.value]}
             onClick={(() =>
-              context.setState({
-                [this.props.value]: !context.state[this.props.value]
-              })).bind(this)}
+              context.setState(p => ({
+                [this.props.value]: !p[this.props.value]
+              }))).bind(this)}
           />
         )}
       </Context.Consumer>

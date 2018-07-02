@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Switch from './ContextSwitch';
 import TextFieldBroad from './TextFieldBroad';
+import ContextList from './ContextList';
 
 export default class LikeSettings extends Component {
   render() {
@@ -49,28 +50,7 @@ export default class LikeSettings extends Component {
                 data-w-id="1846180f-b0c1-4f62-a33b-df4641310d47"
                 className="settingsgroup"
               >
-                <div className="columnholder applied_hashtasgs_and_locations">
-                  <div className="applied_hashtag_or_location">
-                    <div className="classicon">
-                      <div className="hashtagicon" />
-                    </div>
-                    <div className="hashtag_or_location_text">
-                      fitnessworkout
-                    </div>
-                    <div className="deletebutton">
-                      <div className="xicon" />
-                    </div>
-                  </div>
-                  <div className="applied_hashtag_or_location">
-                    <div className="classicon">
-                      <div className="hashtagicon" />
-                    </div>
-                    <div className="hashtag_or_location_text">abs</div>
-                    <div className="deletebutton">
-                      <div className="xicon" />
-                    </div>
-                  </div>
-                </div>
+                <ContextList value="like_by_tags" iconClass="hashtagicon" />
                 <div className="columnholder hashtag_settings_holder">
                   <TextFieldBroad
                     value="like_by_tags"
@@ -127,26 +107,7 @@ export default class LikeSettings extends Component {
                   </span>
                 </div>
               </div>
-              <div className="columnholder applied_hashtasgs_and_locations">
-                <div className="applied_hashtag_or_location">
-                  <div className="classicon">
-                    <div className="locationicon" />
-                  </div>
-                  <div className="hashtag_or_location_text">Munich</div>
-                  <div className="deletebutton">
-                    <div className="xicon" />
-                  </div>
-                </div>
-                <div className="applied_hashtag_or_location">
-                  <div className="classicon">
-                    <div className="locationicon" />
-                  </div>
-                  <div className="hashtag_or_location_text">London</div>
-                  <div className="deletebutton">
-                    <div className="xicon" />
-                  </div>
-                </div>
-              </div>
+              <ContextList value="like_by_locations" iconClass="locationicon" />
               <div className="columnholder hashtag_settings_holder">
                 <TextFieldBroad
                   value="like_by_locations"
@@ -213,37 +174,7 @@ export default class LikeSettings extends Component {
                   </span>
                 </div>
               </div>
-              <div className="columnholder applied_hashtasgs_and_locations">
-                <div className="applied_hashtag_or_location">
-                  <div className="classicon">
-                    <div className="usericon" />
-                  </div>
-                  <div className="hashtag_or_location_text">
-                    Alex.Bosch.Unofficial
-                  </div>
-                  <div className="deletebutton">
-                    <div className="xicon" />
-                  </div>
-                </div>
-                <div className="applied_hashtag_or_location">
-                  <div className="classicon">
-                    <div className="usericon" />
-                  </div>
-                  <div className="hashtag_or_location_text">SvenSilver</div>
-                  <div className="deletebutton">
-                    <div className="xicon" />
-                  </div>
-                </div>
-                <div className="applied_hashtag_or_location">
-                  <div className="classicon">
-                    <div className="usericon" />
-                  </div>
-                  <div className="hashtag_or_location_text">I bims</div>
-                  <div className="deletebutton">
-                    <div className="xicon" />
-                  </div>
-                </div>
-              </div>
+              <ContextList value="follow_user_followers" iconClass="usericon" />
               <div className="columnholder hashtag_settings_holder">
                 <div className="columnholder user">
                   <TextFieldBroad

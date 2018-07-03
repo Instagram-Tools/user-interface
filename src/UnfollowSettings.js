@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import TextFieldNumber from './TextFieldNumber';
+import ContextSwitch from './ContextSwitch';
 
 export default class UnfollowSettings extends Component {
   render() {
@@ -30,6 +32,12 @@ export default class UnfollowSettings extends Component {
                   We only unfollows users the bot previously followed.
                 </span>
               </div>
+              <TextFieldNumber
+                value="unfollow_users_unfollow_after"
+                placeholder="unfollow after X days"
+              />
+              <ContextSwitch value="unfollow_users_nonfollowers" />
+              Only unfollow nonfollowers
               <div className="w-row">
                 <div className="column-2 w-col w-col-4">
                   <div className="text-field filter followfilter w-checkbox">

@@ -25,9 +25,9 @@ export default class UnfollowSettings extends Component {
                 </div>
               </div>
               <div className="unfollowdisclaimer">
-                NotInstagress does not unfollow users you followed manually.{' '}
+                We do not unfollow users you followed manually.{' '}
                 <span className="helptext_secondary">
-                  It only unfollows users the bot previously followed.
+                  We only unfollows users the bot previously followed.
                 </span>
               </div>
               <div className="w-row">

@@ -1,103 +1,57 @@
 import React, { Component } from 'react';
-import iPhone from './images/iPhone-X-icon.svg';
-import iPad from './images/iPad-icon.svg';
-import macBook from './images/MacBook-icon.svg';
+import Switch from './ContextSwitch';
 
 class NavBar extends Component {
   render() {
     return (
-      <div>
-        <div
-          data-w-id="5bf9847b-11fd-dd49-fb60-fb016f780822"
-          className="progressbar"
-        />
-
-        <div
-          data-collapse="medium"
-          data-animation="default"
-          data-duration="400"
-          className="menubar w-nav"
-        >
+      <div className="generalsettings">
+        <h1 className="general_settings">General</h1>
+        <div data-delay="0" className="dropdown w-dropdown">
           <div
-            data-w-id="159be7c4-821c-307a-8db6-ce0facef021a"
-            className="menubarleft animation"
+            data-w-id="5bc62214-6295-d5b6-2514-2ebbae7e5d29"
+            className="dropdown-toggle w-dropdown-toggle"
           >
-            <h4
-              data-w-id="9dbc5513-0172-9d82-e123-81988cd96620"
-              className="titlelogo useon"
-            >
-              Use on
-            </h4>
-            <img
-              src={iPhone}
-              data-w-id="78f29f2c-a0a9-fe05-4d18-4920df696a77"
-              className="devicesicon"
-            />
-            <img
-              src={iPad}
-              data-w-id="4468d356-10bf-f014-a55b-653048e8e5c3"
-              className="devicesicon"
-            />
-            <img
-              src={macBook}
-              data-w-id="a5c12e64-2d00-0a09-cbdb-cf54a0c7d6dc"
-              className="devicesicon"
-            />
-          </div>
-          <div className="menubarleft">
-            <h4
-              data-w-id="a1b87f0f-1fc2-95f6-8f8d-5866c6f1df17"
-              className="titlelogo"
-            >
-              NotInstagress
-            </h4>
-            <div className="container w-container">
-              <nav role="navigation" className="nav-menu w-nav-menu">
-                <div className="just_because_the_fucking_nav_menu_wont_distribute">
-                  <div className="nav_menu_half">
-                    <a href="#" className="title_menu_element w-nav-link">
-                      Bot
-                    </a>
-                    <a href="#" className="title_menu_element w-nav-link">
-                      Community
-                    </a>
-                    <a href="#" className="title_menu_element w-nav-link">
-                      Your statistics
-                    </a>
-                    <a href="#" className="title_menu_element w-nav-link">
-                      About
-                    </a>
-                    <a href="#" className="title_menu_element w-nav-link">
-                      Legal
-                    </a>
-                    <a href="#" className="title_menu_element w-nav-link">
-                      Pricing
-                    </a>
-                  </div>
-                  <div className="nav_menu_half righthalf">
-                    <a
-                      href="#"
-                      className="title_menu_element right profile_name_in_nav_menu w-nav-link"
-                    >
-                      Tash Sultana
-                    </a>
-                    <div className="profilepic profile_pic_in_nav_menu" />
-                  </div>
-                </div>
-              </nav>
-            </div>
-          </div>
-          <div className="menubarright">
             <div
-              data-w-id="16d541d2-66fb-d215-07d7-75eafc2917f1"
-              className="menu-button w-nav-button"
-            >
-              <div className="menuicon w-icon-nav-menu" />
-            </div>
-            <h2 className="title_menu_element right">Tash Sultana</h2>
-            <div className="profilepic" />
+              data-w-id="90672a42-9dd0-d234-71ce-11328a477e0a"
+              className="icon w-icon-dropdown-toggle"
+            />
+            <div className="general_settings subtitle account">Account</div>
           </div>
+          <nav className="dropdown-list w-dropdown-list">
+            <a href="#" className="dropdownlink w-dropdown-link">
+              Alex Bosch
+            </a>
+            <a href="#" className="dropdownlink w-dropdown-link">
+              Gaylord69
+            </a>
+            <a href="#" className="dropdownlink w-dropdown-link">
+              Sex
+            </a>
+            <a
+              href="#"
+              data-w-id="2ef84843-5f94-80b8-30e8-eebec6eb258d"
+              className="dropdownlink bottom_add_account w-dropdown-link"
+            >
+              Add account{' '}
+              <span
+                data-w-id="4f8e18b0-394f-5f2b-c803-4957ff6fb5ee"
+                className="pluscharacter"
+              >
+                +
+              </span>
+            </a>
+          </nav>
         </div>
+        <h1 className="general_settings subtitle">Like</h1>
+        <Switch value="enable_like" />
+        <h1 className="general_settings subtitle">Comment</h1>
+        <Switch value="enable_comment" />
+        <h1 className="general_settings subtitle">Follow</h1>
+        <Switch value="enable_follow" />
+        <h1 className="general_settings subtitle">Unfollow</h1>
+        <Switch value="enable_unfollow" />
+        <h1 className="general_settings subtitle">Messages</h1>
+        <Switch value="enable_message" />
       </div>
     );
   }

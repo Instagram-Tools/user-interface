@@ -20,10 +20,55 @@ export default class LikeSettings extends Component {
               className="form"
             >
               <div className="titleholder">
-                <Switch value="enable_like_by_tags" className="title" />
+                <label htmlFor="email" className="settingtitle">
+                  Like Percentage
+                </label>
+                <div
+                  style={{ position: 'unset' }}
+                  className="settingtitle helpcircle "
+                >
+                  ?
+                </div>
+                <div
+                  data-w-id="b0691913-c1f9-0a64-2b3e-395827bc09b7"
+                  className="helpcircle"
+                >
+                  ?
+                </div>
+                <div
+                  data-w-id="231a78f1-f0eb-a53f-47ae-a59c6e7cd1c7"
+                  className="helpcircle animationcircle"
+                >
+                  ?
+                </div>
+                <div
+                  data-w-id="22c58d28-9a42-f414-7b98-09bcc5c05a9b"
+                  className="helptext"
+                >
+                  <strong>Like pictures with a hashtag: </strong>Choose hashtags
+                  your target group could be interested in.{' '}
+                  <span className="helptext_secondary">
+                    NotInstagress will like pictures with these hashtags.{' '}
+                  </span>
+                </div>
+              </div>
+              <TextFieldNumber
+                placeholder="Like Percentage %"
+                max={100}
+                value="do_like_percentage"
+              />
+
+              <div className="titleholder">
                 <label htmlFor="email" className="settingtitle">
                   Like pictures with a hashtag
                 </label>
+                <Switch value="enable_like_by_tags" className="title" />
+                <div
+                  style={{ position: 'unset' }}
+                  className="settingtitle helpcircle "
+                >
+                  ?
+                </div>
                 <div
                   data-w-id="b0691913-c1f9-0a64-2b3e-395827bc09b7"
                   className="helpcircle"
@@ -100,6 +145,12 @@ export default class LikeSettings extends Component {
                 <label htmlFor="email" className="settingtitle">
                   Like pictures posted in a location
                 </label>
+                <div
+                  style={{ position: 'unset' }}
+                  className="settingtitle helpcircle "
+                >
+                  ?
+                </div>
                 <div className="helptext">
                   <strong>Like pictures from a location: </strong>Choose
                   locations where you want to interact with users.{' '}
@@ -166,6 +217,12 @@ export default class LikeSettings extends Component {
                 <label htmlFor="email" className="settingtitle">
                   Like pictures of a user&#x27;s followers
                 </label>
+                <div
+                  style={{ position: 'unset' }}
+                  className="settingtitle helpcircle "
+                >
+                  ?
+                </div>
                 <div className="helptext">
                   <strong>Like pictures of a user&#x27;s followers: </strong>Choose
                   successful profiles which are similar to yours.{' '}
@@ -221,6 +278,12 @@ export default class LikeSettings extends Component {
                 <label htmlFor="email" className="settingtitle">
                   Like pictures from my feed
                 </label>
+                <div
+                  style={{ position: 'unset' }}
+                  className="settingtitle helpcircle "
+                >
+                  ?
+                </div>
                 <div className="helptext">
                   <strong>Like pictures from my feed: </strong>Likes a random
                   amount of pictures from people you are already following.{' '}
@@ -234,6 +297,12 @@ export default class LikeSettings extends Component {
                 <label htmlFor="email" className="settingtitle">
                   <strong>Filters:</strong> Like pictures with...
                 </label>
+                <div
+                  style={{ position: 'unset' }}
+                  className="settingtitle helpcircle "
+                >
+                  ?
+                </div>
                 <div className="helptext">
                   <strong>Filters: Like pictures with...: </strong>Which
                   pictures are to be liked?{' '}

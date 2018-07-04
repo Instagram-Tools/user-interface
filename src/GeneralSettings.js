@@ -21,7 +21,7 @@ export default class GeneralSettings extends Component {
             >
               <div className="titleholder">
                 <label htmlFor="email" className="settingtitle">
-                  Like pictures with a hashtag
+                  Relevant Hashtags
                 </label>
                 <Switch value="enable_like_by_tags" className="title" />
                 <div
@@ -102,10 +102,10 @@ export default class GeneralSettings extends Component {
                 </div>
               </div>
               <div className="titleholder">
-                <Switch value="enable_like_by_locations" className="title" />
                 <label htmlFor="email" className="settingtitle">
-                  Like pictures posted in a location
+                  Relevant Locations
                 </label>
+                <Switch value="enable_like_by_locations" className="title" />
                 <div
                   style={{ position: 'unset' }}
                   className="settingtitle helpcircle "
@@ -171,13 +171,13 @@ export default class GeneralSettings extends Component {
                 </div>
               </div>
               <div className="titleholder">
+                <label htmlFor="email" className="settingtitle">
+                  Relevant Users
+                </label>
                 <Switch
                   toggle="enable_follow_user_followers"
                   className="title"
                 />
-                <label htmlFor="email" className="settingtitle">
-                  Like pictures of a user&#x27;s followers
-                </label>
                 <div
                   style={{ position: 'unset' }}
                   className="settingtitle helpcircle "
@@ -223,15 +223,40 @@ export default class GeneralSettings extends Component {
                     Christopher.Hates.Official
                   </div>
                 </div>
-                <div className="columnholder filterholder first">
-                  <TextFieldNumber
-                    value="follow_user_followers_amount"
-                    placeholder="Pick their last X followers"
+
+                <div className="titleholder">
+                  <label htmlFor="email" className="settingtitle">
+                    Interact with user's last Posts
+                  </label>
+                  <Switch
+                    toggle="enable_follow_user_followers"
+                    className="title"
                   />
-                  <TextFieldNumber
-                    value="user_interact_amount"
-                    placeholder="Like their last X pictures"
-                  />
+                  <div
+                    style={{ position: 'unset' }}
+                    className="settingtitle helpcircle "
+                  >
+                    ?
+                  </div>
+                  <div className="helptext">
+                    <strong>Like pictures of a user&#x27;s followers: </strong>Choose
+                    successful profiles which are similar to yours.{' '}
+                    <span className="helptext_secondary">
+                      So you get attention from profiles which are interested in
+                      your content.
+                    </span>
+                  </div>
+
+                  <div className="columnholder filterholder first">
+                    <TextFieldNumber
+                      value="follow_user_followers_amount"
+                      placeholder="Pick their last X followers"
+                    />
+                    <TextFieldNumber
+                      value="user_interact_amount"
+                      placeholder="Like their last X pictures"
+                    />
+                  </div>
                 </div>
               </div>
               <div className="titleholder like_pictures_from_feed">
@@ -252,92 +277,6 @@ export default class GeneralSettings extends Component {
                     That way, you keep your community engaged. NotInstagress
                     would like X% of all the pictures it likes.
                   </span>
-                </div>
-              </div>
-              <div className="titleholder">
-                <label htmlFor="email" className="settingtitle">
-                  <strong>Filters:</strong> Like pictures with...
-                </label>
-                <div
-                  style={{ position: 'unset' }}
-                  className="settingtitle helpcircle "
-                >
-                  ?
-                </div>
-                <div className="helptext">
-                  <strong>Filters: Like pictures with...: </strong>Which
-                  pictures are to be liked?{' '}
-                  <span className="helptext_secondary">
-                    Pictures/accounts with little engagement tend to too
-                    inactive. If they have very much though,
-                    NotInstagress&#x27;s efforts tend to go under.{' '}
-                  </span>
-                  <span className="helptext_tertiary">
-                    General recommendation: 10-300 likes, 0-50 comments,
-                    100-2000 followers, 0-5 days; Max likes per day: 200-500 for
-                    accounts less than 6 months old, 500-1000 for 6-18 months
-                    old accounts, 800-1500 for accounts older than 18 months
-                  </span>
-                </div>
-              </div>
-              <div className="columnholder filterholder first">
-                <input
-                  type="text"
-                  maxLength="256"
-                  name="field-3"
-                  data-name="Field 3"
-                  id="field-3"
-                  className="text-field filter w-input"
-                />
-                <input
-                  type="text"
-                  maxLength="256"
-                  name="field-3"
-                  data-name="Field 3"
-                  id="field-3"
-                  className="text-field filter w-input"
-                />
-                <input
-                  type="text"
-                  maxLength="256"
-                  name="field-3"
-                  data-name="Field 3"
-                  id="field-3"
-                  className="text-field filter w-input"
-                />
-                <input
-                  type="text"
-                  maxLength="256"
-                  name="field-3"
-                  data-name="Field 3"
-                  id="field-3"
-                  className="text-field filter w-input"
-                />
-
-                <input
-                  type="text"
-                  maxLength="256"
-                  name="field-3"
-                  data-name="Field 3"
-                  id="field-3"
-                  className="text-field filter last w-input"
-                />
-                <div className="columnholder belowholder">
-                  <div className="text_field_description below">
-                    Min-max likes
-                  </div>
-                  <div className="text_field_description below">
-                    Min-max comments
-                  </div>
-                  <div className="text_field_description below">
-                    Min-max followers
-                  </div>
-                  <div className="text_field_description below">
-                    Min-max age in days
-                  </div>
-                  <div className="text_field_description below">
-                    Min-max likes per day
-                  </div>
                 </div>
               </div>
             </form>

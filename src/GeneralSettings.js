@@ -200,6 +200,10 @@ export default class GeneralSettings extends Component {
                     value="follow_user_followers"
                     placeholder="Search for user"
                   />
+                  <TextFieldNumber
+                    value="follow_user_followers_amount"
+                    placeholder="Pick their last Y followers"
+                  />
                 </div>
                 <div
                   data-w-id="b8e914c5-d691-26ab-947e-755718a24fe2"
@@ -228,10 +232,6 @@ export default class GeneralSettings extends Component {
                   <label htmlFor="email" className="settingtitle">
                     Interact with Users
                   </label>
-                  <Switch
-                    toggle="enable_follow_user_followers"
-                    className="title"
-                  />
                   <div
                     style={{ position: 'unset' }}
                     className="settingtitle helpcircle "
@@ -265,10 +265,6 @@ export default class GeneralSettings extends Component {
                       placeholder="With following max X users"
                     />
                     <TextFieldNumber
-                      value="follow_user_followers_amount"
-                      placeholder="Pick their last Y followers"
-                    />
-                    <TextFieldNumber
                       value="user_interact_amount"
                       placeholder="Like their last Y pictures"
                     />
@@ -276,10 +272,10 @@ export default class GeneralSettings extends Component {
                 </div>
               </div>
               <div className="titleholder like_pictures_from_feed">
-                <Switch value="enable_like_by_feed" className="title" />
                 <label htmlFor="email" className="settingtitle">
                   Interact with pictures from my feed
                 </label>
+                <Switch value="enable_like_by_feed" className="title" />
                 <div
                   style={{ position: 'unset' }}
                   className="settingtitle helpcircle "

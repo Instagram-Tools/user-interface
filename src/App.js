@@ -22,7 +22,7 @@ export default class App extends Component {
         <CommentSettings />
         <FollowSettings />
         <UnfollowSettings />
-        <MessageSettings />
+        {/*<MessageSettings />*/}
         <ActivitySettings />
 
         <div className="success-message w-form-done">

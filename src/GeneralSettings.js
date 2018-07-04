@@ -278,7 +278,7 @@ export default class GeneralSettings extends Component {
               <div className="titleholder like_pictures_from_feed">
                 <Switch value="enable_like_by_feed" className="title" />
                 <label htmlFor="email" className="settingtitle">
-                  Like pictures from my feed
+                  Interact with pictures from my feed
                 </label>
                 <div
                   style={{ position: 'unset' }}

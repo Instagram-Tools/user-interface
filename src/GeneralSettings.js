@@ -226,7 +226,7 @@ export default class GeneralSettings extends Component {
 
                 <div className="titleholder">
                   <label htmlFor="email" className="settingtitle">
-                    Interact with user's last Posts
+                    Interact with Users
                   </label>
                   <Switch
                     toggle="enable_follow_user_followers"
@@ -249,12 +249,28 @@ export default class GeneralSettings extends Component {
 
                   <div className="columnholder filterholder first">
                     <TextFieldNumber
+                      value="relationship_bounds_min_followers"
+                      placeholder="With min X Followers"
+                    />
+                    <TextFieldNumber
+                      value="relationship_bounds_max_followers"
+                      placeholder="With max X Followers"
+                    />
+                    <TextFieldNumber
+                      value="relationship_bounds_min_following"
+                      placeholder="With following min X users"
+                    />
+                    <TextFieldNumber
+                      value="relationship_bounds_max_following"
+                      placeholder="With following max X users"
+                    />
+                    <TextFieldNumber
                       value="follow_user_followers_amount"
-                      placeholder="Pick their last X followers"
+                      placeholder="Pick their last Y followers"
                     />
                     <TextFieldNumber
                       value="user_interact_amount"
-                      placeholder="Like their last X pictures"
+                      placeholder="Like their last Y pictures"
                     />
                   </div>
                 </div>

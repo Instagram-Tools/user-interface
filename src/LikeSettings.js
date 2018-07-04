@@ -84,64 +84,14 @@ export default class LikeSettings extends Component {
                 </div>
               </div>
               <div className="columnholder filterholder first">
-                <input
-                  type="text"
-                  maxLength="256"
-                  name="field-3"
-                  data-name="Field 3"
-                  id="field-3"
-                  className="text-field filter w-input"
+                <TextFieldNumber
+                  placeholder="Min Likes"
+                  value="delimit_liking_min"
                 />
-                <input
-                  type="text"
-                  maxLength="256"
-                  name="field-3"
-                  data-name="Field 3"
-                  id="field-3"
-                  className="text-field filter w-input"
+                <TextFieldNumber
+                  placeholder="Max Likes"
+                  value="delimit_liking_max"
                 />
-                <input
-                  type="text"
-                  maxLength="256"
-                  name="field-3"
-                  data-name="Field 3"
-                  id="field-3"
-                  className="text-field filter w-input"
-                />
-                <input
-                  type="text"
-                  maxLength="256"
-                  name="field-3"
-                  data-name="Field 3"
-                  id="field-3"
-                  className="text-field filter w-input"
-                />
-
-                <input
-                  type="text"
-                  maxLength="256"
-                  name="field-3"
-                  data-name="Field 3"
-                  id="field-3"
-                  className="text-field filter last w-input"
-                />
-                <div className="columnholder belowholder">
-                  <div className="text_field_description below">
-                    Min-max likes
-                  </div>
-                  <div className="text_field_description below">
-                    Min-max comments
-                  </div>
-                  <div className="text_field_description below">
-                    Min-max followers
-                  </div>
-                  <div className="text_field_description below">
-                    Min-max age in days
-                  </div>
-                  <div className="text_field_description below">
-                    Min-max likes per day
-                  </div>
-                </div>
               </div>
             </form>
             <div className="success-message w-form-done">

@@ -76,11 +76,11 @@ export default class CommentSettings extends Component {
               </div>
               <div className="columnholder filterholder first">
                 <TextFieldNumber
-                  placeholder="Min Likes"
+                  placeholder="Min Comments"
                   value="delimit_liking_min"
                 />
                 <TextFieldNumber
-                  placeholder="Max Likes"
+                  placeholder="Max Comments"
                   value="delimit_liking_max"
                 />
               </div>

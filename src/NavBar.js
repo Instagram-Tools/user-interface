@@ -5,7 +5,6 @@ class NavBar extends Component {
   render() {
     return (
       <div className="generalsettings">
-        <h1 className="general_settings">General</h1>
         <div data-delay="0" className="dropdown w-dropdown">
           <div
             data-w-id="5bc62214-6295-d5b6-2514-2ebbae7e5d29"
@@ -50,8 +49,8 @@ class NavBar extends Component {
         <Switch value="enable_follow" />
         <h1 className="general_settings subtitle">Unfollow</h1>
         <Switch value="enable_unfollow" />
-        <h1 className="general_settings subtitle">Messages</h1>
-        <Switch value="enable_message" />
+        {/*<h1 className="general_settings subtitle">Messages</h1>*/}
+        {/*<Switch value="enable_message" />*/}
       </div>
     );
   }

@@ -17,6 +17,8 @@ export default class TextFieldNumber extends Component {
               maxLength="256"
               value={context.state[this.props.value]}
               onChange={(e => {
+                if (this.props.max && e.target.value > this.props.max) return;
+
                 const value = e.target.value > 0 ? e.target.value : 0;
                 context.setState({
                   [this.props.value]: value
@@ -24,7 +26,11 @@ export default class TextFieldNumber extends Component {
               }).bind(this)}
             />
             <div className="columnholder belowholder">
-              <div className="text_field_description below">
+              <div
+                className={
+                  'text_field_description below ' + this.props.className
+                }
+              >
                 {this.props.placeholder}
               </div>
             </div>

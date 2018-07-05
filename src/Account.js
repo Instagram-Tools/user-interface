@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import TextField from './TextField';
 
 export default class Account extends Component {
   state = {
@@ -42,30 +43,16 @@ export default class Account extends Component {
               className="formholder_connect_account"
             >
               <div className="columnholder filterholder first connect_account_column">
-                <input
-                  type="text"
-                  maxLength="256"
-                  name="field-3"
-                  data-name="Field 3"
-                  id="field-3"
-                  className="text-field filter connect_account_filter w-input"
+                <TextField
+                  type="email"
+                  placeholder="Username"
+                  value="username"
                 />
-                <input
-                  type="text"
-                  maxLength="256"
-                  name="field-3"
-                  data-name="Field 3"
-                  id="field-3"
-                  className="text-field filter connect_account_filter w-input"
+                <TextField
+                  type="password"
+                  placeholder="Password"
+                  value="password"
                 />
-                <div className="columnholder belowholder connect_account_second_column">
-                  <div className="text_field_description below connect_account_text">
-                    Email
-                  </div>
-                  <div className="text_field_description below connect_account_text">
-                    Password
-                  </div>
-                </div>
               </div>
               <input
                 onClick={this.toggle.bind(this)}

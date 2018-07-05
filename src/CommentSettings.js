@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import TextFieldNumber from './TextFieldNumber';
 import ContextList from './ContextList';
 import TextFieldBroad from './TextFieldBroad';
+import Help from './Help';
 
 export default class CommentSettings extends Component {
   render() {
@@ -22,34 +23,13 @@ export default class CommentSettings extends Component {
                 <label htmlFor="email" className="settingtitle">
                   Comment Percentage
                 </label>
-                <div
-                  style={{ position: 'unset' }}
-                  className="settingtitle helpcircle "
-                >
-                  ?
-                </div>
-                <div
-                  data-w-id="b0691913-c1f9-0a64-2b3e-395827bc09b7"
-                  className="helpcircle"
-                >
-                  ?
-                </div>
-                <div
-                  data-w-id="231a78f1-f0eb-a53f-47ae-a59c6e7cd1c7"
-                  className="helpcircle animationcircle"
-                >
-                  ?
-                </div>
-                <div
-                  data-w-id="22c58d28-9a42-f414-7b98-09bcc5c05a9b"
-                  className="helptext"
-                >
+                <Help>
                   <strong>Like pictures with a hashtag: </strong>Choose hashtags
                   your target group could be interested in.{' '}
                   <span className="helptext_secondary">
                     NotInstagress will like pictures with these hashtags.{' '}
                   </span>
-                </div>
+                </Help>
               </div>
               <TextFieldNumber
                 placeholder="Like Percentage %"
@@ -109,7 +89,7 @@ export default class CommentSettings extends Component {
                 <label htmlFor="email" className="settingtitle">
                   <strong>Filters:</strong> Comment pictures with...
                 </label>
-                <div className="helptext">
+                <Help className="helptext">
                   <strong>Filters: Comment pictures with...: </strong>Which
                   pictures are to be commented?{' '}
                   <span className="helptext_secondary">
@@ -123,7 +103,7 @@ export default class CommentSettings extends Component {
                     for accounts less than 6 months old, 200-400 for 6-18 months
                     old accounts, 300-500 for accounts older than 18 months
                   </span>
-                </div>
+                </Help>
               </div>
               <div className="columnholder filterholder first">
                 <TextFieldNumber

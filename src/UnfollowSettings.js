@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import TextFieldNumber from './TextFieldNumber';
 import ContextSwitch from './ContextSwitch';
+import Help from './Help';
 
 export default class UnfollowSettings extends Component {
   render() {
@@ -23,12 +24,21 @@ export default class UnfollowSettings extends Component {
                   value="unfollow_users_nonfollowers"
                   className="title"
                 />
-                <div
-                  style={{ position: 'unset' }}
-                  className="settingtitle helpcircle "
-                >
-                  ?
-                </div>
+                <Help>
+                  <strong>Filters: Like pictures with...: </strong>Which
+                  pictures are to be liked?{' '}
+                  <span className="helptext_secondary">
+                    Pictures/accounts with little engagement tend to too
+                    inactive. If they have very much though,
+                    NotInstagress&#x27;s efforts tend to go under.{' '}
+                  </span>
+                  <span className="helptext_tertiary">
+                    General recommendation: 10-300 likes, 0-50 comments,
+                    100-2000 followers, 0-5 days; Max likes per day: 200-500 for
+                    accounts less than 6 months old, 500-1000 for 6-18 months
+                    old accounts, 800-1500 for accounts older than 18 months
+                  </span>
+                </Help>
               </div>
               <TextFieldNumber
                 value="unfollow_users_unfollow_after"

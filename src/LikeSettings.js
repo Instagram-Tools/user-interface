@@ -3,6 +3,7 @@ import Switch from './ContextSwitch';
 import TextFieldBroad from './TextFieldBroad';
 import TextFieldNumber from './TextFieldNumber';
 import ContextList from './ContextList';
+import Help from './Help';
 
 export default class LikeSettings extends Component {
   render() {
@@ -23,25 +24,7 @@ export default class LikeSettings extends Component {
                 <label htmlFor="email" className="settingtitle">
                   Like Percentage
                 </label>
-                <div
-                  style={{ position: 'unset' }}
-                  className="settingtitle helpcircle "
-                >
-                  ?
-                </div>
-                <div
-                  data-w-id="b0691913-c1f9-0a64-2b3e-395827bc09b7"
-                  className="helpcircle"
-                >
-                  ?
-                </div>
-                <div
-                  data-w-id="231a78f1-f0eb-a53f-47ae-a59c6e7cd1c7"
-                  className="helpcircle animationcircle"
-                >
-                  ?
-                </div>
-                <div
+                <Help
                   data-w-id="22c58d28-9a42-f414-7b98-09bcc5c05a9b"
                   className="helptext"
                 >
@@ -50,7 +33,7 @@ export default class LikeSettings extends Component {
                   <span className="helptext_secondary">
                     NotInstagress will like pictures with these hashtags.{' '}
                   </span>
-                </div>
+                </Help>
               </div>
               <TextFieldNumber
                 placeholder="Like Percentage %"
@@ -61,13 +44,7 @@ export default class LikeSettings extends Component {
                 <label htmlFor="email" className="settingtitle">
                   <strong>Filters:</strong> Like pictures with...
                 </label>
-                <div
-                  style={{ position: 'unset' }}
-                  className="settingtitle helpcircle "
-                >
-                  ?
-                </div>
-                <div className="helptext">
+                <Help className="helptext">
                   <strong>Filters: Like pictures with...: </strong>Which
                   pictures are to be liked?{' '}
                   <span className="helptext_secondary">
@@ -81,7 +58,7 @@ export default class LikeSettings extends Component {
                     accounts less than 6 months old, 500-1000 for 6-18 months
                     old accounts, 800-1500 for accounts older than 18 months
                   </span>
-                </div>
+                </Help>
               </div>
               <div className="columnholder filterholder first">
                 <TextFieldNumber

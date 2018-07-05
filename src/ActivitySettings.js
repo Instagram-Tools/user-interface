@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Help from './Help';
 
 export default class ActivitySettings extends Component {
   render() {
@@ -19,13 +20,13 @@ export default class ActivitySettings extends Component {
                 <label htmlFor="email" className="settingtitle scheduletitle">
                   Define bot activity
                 </label>
-                <div className="helptext">
+                <Help className="helptext">
                   Choose successful profiles which are similar to yours.{' '}
                   <span className="helptext_secondary">
                     So you get attention from profiles which are interested in
                     your content.
                   </span>
-                </div>
+                </Help>
               </div>
               <div className="legendholder horizontal">
                 <div className="legendtext horizontaltext">Mon</div>

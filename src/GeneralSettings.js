@@ -3,6 +3,7 @@ import Switch from './ContextSwitch';
 import TextFieldBroad from './TextFieldBroad';
 import TextFieldNumber from './TextFieldNumber';
 import ContextList from './ContextList';
+import Help from './Help';
 
 export default class GeneralSettings extends Component {
   render() {
@@ -106,19 +107,13 @@ export default class GeneralSettings extends Component {
                   Relevant Locations
                 </label>
                 <Switch value="enable_like_by_locations" className="title" />
-                <div
-                  style={{ position: 'unset' }}
-                  className="settingtitle helpcircle "
-                >
-                  ?
-                </div>
-                <div className="helptext">
+                <Help>
                   <strong>Like pictures from a location: </strong>Choose
                   locations where you want to interact with users.{' '}
                   <span className="helptext_secondary">
                     E.g. &quot;England, Munich, Frankfurt Airport&quot;.
                   </span>
-                </div>
+                </Help>
               </div>
               <ContextList value="like_by_locations" iconClass="locationicon" />
               <div className="columnholder hashtag_settings_holder">

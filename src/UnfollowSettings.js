@@ -18,26 +18,28 @@ export default class UnfollowSettings extends Component {
               className="form"
             >
               <div className="titleholder">
-                <label htmlFor="email" className="settingtitle unfollowtitle">
-                  Settings
-                </label>
-                <div className="helptext whensubtitle">
-                  <strong>Settings:</strong> Shape NotInstagress&#x27;s
-                  behaviour concerning unfollows.<span className="helptext_secondary" />
+                <div className="settingtitle">Only unfollow nonfollowers</div>
+                <ContextSwitch
+                  value="unfollow_users_nonfollowers"
+                  className="title"
+                />
+                <div
+                  style={{ position: 'unset' }}
+                  className="settingtitle helpcircle "
+                >
+                  ?
                 </div>
               </div>
+              <TextFieldNumber
+                value="unfollow_users_unfollow_after"
+                placeholder="unfollow after X days"
+              />
               <div className="unfollowdisclaimer">
                 We do not unfollow users you followed manually.{' '}
                 <span className="helptext_secondary">
                   We only unfollows users the bot previously followed.
                 </span>
               </div>
-              <TextFieldNumber
-                value="unfollow_users_unfollow_after"
-                placeholder="unfollow after X days"
-              />
-              <ContextSwitch value="unfollow_users_nonfollowers" />
-              Only unfollow nonfollowers
               {/*<div className="w-row">*/}
               {/*<div className="column-2 w-col w-col-4">*/}
               {/*<div className="text-field filter followfilter w-checkbox">*/}

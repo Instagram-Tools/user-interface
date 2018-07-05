@@ -19,7 +19,7 @@ export default class TextFieldNumber extends Component {
               onChange={(e => {
                 if (this.props.max && e.target.value > this.props.max) return;
 
-                const value = e.target.value > 0 ? e.target.value : 0;
+                const value = e.target.value > 0 ? e.target.value : '';
                 context.setState({
                   [this.props.value]: value
                 });

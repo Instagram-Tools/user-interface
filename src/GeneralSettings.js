@@ -25,34 +25,13 @@ export default class GeneralSettings extends Component {
                   Relevant Hashtags
                 </label>
                 <Switch value="enable_like_by_tags" className="title" />
-                <div
-                  style={{ position: 'unset' }}
-                  className="settingtitle helpcircle "
-                >
-                  ?
-                </div>
-                <div
-                  data-w-id="b0691913-c1f9-0a64-2b3e-395827bc09b7"
-                  className="helpcircle"
-                >
-                  ?
-                </div>
-                <div
-                  data-w-id="231a78f1-f0eb-a53f-47ae-a59c6e7cd1c7"
-                  className="helpcircle animationcircle"
-                >
-                  ?
-                </div>
-                <div
-                  data-w-id="22c58d28-9a42-f414-7b98-09bcc5c05a9b"
-                  className="helptext"
-                >
+                <Help className="helptext">
                   <strong>Like pictures with a hashtag: </strong>Choose hashtags
                   your target group could be interested in.{' '}
                   <span className="helptext_secondary">
                     NotInstagress will like pictures with these hashtags.{' '}
                   </span>
-                </div>
+                </Help>
               </div>
               <div
                 data-w-id="1846180f-b0c1-4f62-a33b-df4641310d47"
@@ -173,20 +152,14 @@ export default class GeneralSettings extends Component {
                   toggle="enable_follow_user_followers"
                   className="title"
                 />
-                <div
-                  style={{ position: 'unset' }}
-                  className="settingtitle helpcircle "
-                >
-                  ?
-                </div>
-                <div className="helptext">
+                <Help className="helptext">
                   <strong>Like pictures of a user&#x27;s followers: </strong>Choose
                   successful profiles which are similar to yours.{' '}
                   <span className="helptext_secondary">
                     So you get attention from profiles which are interested in
                     your content.
                   </span>
-                </div>
+                </Help>
               </div>
               <ContextList value="follow_user_followers" iconClass="usericon" />
               <div className="columnholder hashtag_settings_holder">
@@ -227,20 +200,14 @@ export default class GeneralSettings extends Component {
                   <label htmlFor="email" className="settingtitle">
                     Interact with Users
                   </label>
-                  <div
-                    style={{ position: 'unset' }}
-                    className="settingtitle helpcircle "
-                  >
-                    ?
-                  </div>
-                  <div className="helptext">
+                  <Help className="helptext">
                     <strong>Like pictures of a user&#x27;s followers: </strong>Choose
                     successful profiles which are similar to yours.{' '}
                     <span className="helptext_secondary">
                       So you get attention from profiles which are interested in
                       your content.
                     </span>
-                  </div>
+                  </Help>
 
                   <div className="columnholder filterholder first">
                     <TextFieldNumber
@@ -271,20 +238,14 @@ export default class GeneralSettings extends Component {
                   Interact with pictures from my feed
                 </label>
                 <Switch value="enable_like_by_feed" className="title" />
-                <div
-                  style={{ position: 'unset' }}
-                  className="settingtitle helpcircle "
-                >
-                  ?
-                </div>
-                <div className="helptext">
+                <Help className="helptext">
                   <strong>Like pictures from my feed: </strong>Likes a random
                   amount of pictures from people you are already following.{' '}
                   <span className="helptext_secondary">
                     That way, you keep your community engaged. NotInstagress
                     would like X% of all the pictures it likes.
                   </span>
-                </div>
+                </Help>
               </div>
             </form>
             <div className="success-message w-form-done">

@@ -1,21 +1,13 @@
 import React, { Component } from 'react';
 import Switch from './ContextSwitch';
+import Account from './Account';
 
 class NavBar extends Component {
   render() {
     return (
       <div className="generalsettings">
         <div data-delay="0" className="dropdown w-dropdown">
-          <div
-            data-w-id="5bc62214-6295-d5b6-2514-2ebbae7e5d29"
-            className="dropdown-toggle w-dropdown-toggle"
-          >
-            <div
-              data-w-id="90672a42-9dd0-d234-71ce-11328a477e0a"
-              className="icon w-icon-dropdown-toggle"
-            />
-            <div className="general_settings subtitle account">Account</div>
-          </div>
+          <Account />
           <nav className="dropdown-list w-dropdown-list">
             <a href="#" className="dropdownlink w-dropdown-link">
               Alex Bosch

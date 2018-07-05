@@ -168,10 +168,6 @@ export default class GeneralSettings extends Component {
                     value="follow_user_followers"
                     placeholder="Search for user"
                   />
-                  <TextFieldNumber
-                    value="follow_user_followers_amount"
-                    placeholder="Pick their last Y followers"
-                  />
                 </div>
                 <div
                   data-w-id="b8e914c5-d691-26ab-947e-755718a24fe2"
@@ -197,8 +193,12 @@ export default class GeneralSettings extends Component {
                 </div>
 
                 <div className="titleholder">
-                  <label htmlFor="email" className="settingtitle">
-                    Interact with Users
+                  <label
+                    style={{ fontSize: '1.4em', fontWeight: '400' }}
+                    htmlFor="email"
+                    className="settingtitle"
+                  >
+                    Relevant Users Filters
                   </label>
                   <Help className="helptext">
                     <strong>Like pictures of a user&#x27;s followers: </strong>Choose
@@ -211,26 +211,33 @@ export default class GeneralSettings extends Component {
 
                   <div className="columnholder filterholder first">
                     <TextFieldNumber
-                      value="relationship_bounds_min_followers"
-                      placeholder="With min X Followers"
-                    />
-                    <TextFieldNumber
-                      value="relationship_bounds_max_followers"
-                      placeholder="With max X Followers"
-                    />
-                    <TextFieldNumber
-                      value="relationship_bounds_min_following"
-                      placeholder="With following min X users"
-                    />
-                    <TextFieldNumber
-                      value="relationship_bounds_max_following"
-                      placeholder="With following max X users"
-                    />
-                    <TextFieldNumber
-                      value="user_interact_amount"
-                      placeholder="Like their last Y pictures"
+                      placeholder="Pick your user's last X followers"
+                      value="follow_user_followers_amount"
                     />
                   </div>
+
+                  <div className="columnholder filterholder first">
+                    <TextFieldNumber
+                      placeholder="... having min X Followers"
+                      value="relationship_bounds_min_followers"
+                    />
+                    <TextFieldNumber
+                      placeholder="... having max Y Followers"
+                      value="relationship_bounds_max_followers"
+                    />
+                    <TextFieldNumber
+                      placeholder="... following min X users"
+                      value="relationship_bounds_min_following"
+                    />
+                    <TextFieldNumber
+                      placeholder="... following max Y users"
+                      value="relationship_bounds_max_following"
+                    />
+                  </div>
+                  <TextFieldNumber
+                    placeholder="Interact with their last Z pictures"
+                    value="user_interact_amount"
+                  />
                 </div>
               </div>
               <div className="titleholder like_pictures_from_feed">

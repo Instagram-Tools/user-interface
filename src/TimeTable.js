@@ -2,6 +2,10 @@ import React from 'react';
 import { Context } from './Context';
 
 class TimetableWrapper extends React.Component {
+  state = {
+    clicked: []
+  };
+
   render() {
     return (
       <Context.Consumer>
@@ -56,7 +60,7 @@ class TimetableWrapper extends React.Component {
   mapDays(day) {
     return (
       <div className={'legendtext horizontaltext'}>
-        {this.range(1, 24).map((h => this.mapHours(h, day)).bind(this))}
+        {this.range(1, 24).map((h => this.mapHours(day, h)).bind(this))}
       </div>
     );
   }
@@ -69,17 +73,31 @@ class TimetableWrapper extends React.Component {
     return list;
   }
 
-  mapHours(hour, day) {
+  mapHours(day, hour) {
     return (
       <div
-        onClick={(() => this.mark(hour, day)).bind(this)}
-        className={'week_schedule_column ' + (day % 2 ? '' : '_2nd')}
+        onClick={(() => this.mark(day, hour)).bind(this)}
+        onDragEnter={(() => this.mark(day, hour)).bind(this)}
+        draggable="true"
+        className={
+          'week_schedule_column ' +
+          (day % 2 ? '' : '_2nd') +
+          (this.contains(this.state.clicked, { day, hour }) ? ' ifclicked' : '')
+        }
       />
     );
   }
 
-  mark(hour, day) {
-    console.log(hour, day);
+  mark(day, hour) {
+    this.setState(p => ({
+      clicked: this.contains(this.state.clicked, { day, hour })
+        ? p.clicked
+        : [...p.clicked, { day, hour }]
+    }));
+  }
+
+  contains(list, o) {
+    return list.map(e => JSON.stringify(e)).includes(JSON.stringify(o));
   }
 }
 

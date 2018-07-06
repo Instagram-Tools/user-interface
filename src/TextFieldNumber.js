@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Context } from './Context';
-import './css/rc-switch.css';
 
 export default class TextFieldNumber extends Component {
   render() {

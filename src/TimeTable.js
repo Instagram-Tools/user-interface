@@ -44,7 +44,7 @@ class TimetableWrapper extends React.Component {
                 <div className="legendtext">12‍</div>
               </div>
               <div className="tableholder" style={{ display: 'flex' }}>
-                {[1, 2, 3, 4, 5, 6, 7].map(this.mapDays.bind(this))}
+                {this.range(1, 7).map(this.mapDays.bind(this))}
               </div>
             </div>
           </div>
@@ -56,34 +56,17 @@ class TimetableWrapper extends React.Component {
   mapDays(day) {
     return (
       <div className={'legendtext horizontaltext'}>
-        {[
-          1,
-          2,
-          3,
-          4,
-          5,
-          6,
-          7,
-          8,
-          9,
-          10,
-          11,
-          12,
-          13,
-          14,
-          15,
-          16,
-          17,
-          18,
-          19,
-          20,
-          21,
-          22,
-          23,
-          24
-        ].map((h => this.mapHours(h, day)).bind(this))}
+        {this.range(1, 24).map((h => this.mapHours(h, day)).bind(this))}
       </div>
     );
+  }
+
+  range(from, to) {
+    let list = [];
+    for (let i = from; i <= to; i++) {
+      list.push(i);
+    }
+    return list;
   }
 
   mapHours(hour, day) {

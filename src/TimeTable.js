@@ -82,7 +82,12 @@ class TimetableWrapper extends React.Component {
         className={
           'week_schedule_column ' +
           (day % 2 ? '' : '_2nd') +
-          (this.contains(this.state.clicked, { day, hour }) ? ' ifclicked' : '')
+          (this.contains(
+            this.state.clicked,
+            this.format(new Date(4, 1, day, hour))
+          )
+            ? ' ifclicked'
+            : '')
         }
       />
     );
@@ -90,14 +95,21 @@ class TimetableWrapper extends React.Component {
 
   mark(day, hour) {
     this.setState(p => ({
-      clicked: this.contains(this.state.clicked, { day, hour })
+      clicked: this.contains(
+        this.state.clicked,
+        this.format(new Date(4, 1, day, hour))
+      )
         ? p.clicked
-        : [...p.clicked, { day, hour }]
+        : [...p.clicked, this.format(new Date(4, 1, day, hour))]
     }));
   }
 
   contains(list, o) {
     return list.map(e => JSON.stringify(e)).includes(JSON.stringify(o));
+  }
+
+  format(date) {
+    return date.toISOString().replace('T', ' ');
   }
 }
 

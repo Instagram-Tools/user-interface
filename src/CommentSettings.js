@@ -3,11 +3,12 @@ import TextFieldNumber from './TextFieldNumber';
 import ContextList from './ContextList';
 import TextFieldBroad from './TextFieldBroad';
 import Help from './Help';
+import './css/settings.css';
 
 export default class CommentSettings extends Component {
   render() {
     return (
-      <div>
+      <div className={this.props.className}>
         <div className="header">
           <h1 className="titlepage">Comments</h1>
         </div>

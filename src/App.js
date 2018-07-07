@@ -17,26 +17,48 @@ export default class App extends Component {
   render() {
     return (
       <Provider>
-        <Progress />
-        <NavBar />
-        <GeneralSettings />
-        <LikeSettings />
-        <CommentSettings />
-        <FollowSettings />
-        <UnfollowSettings />
-        {/*<MessageSettings />*/}
-        <ActivitySettings />
+        <Context.Consumer>
+          {context => (
+            <div>
+              <Progress />
+              <NavBar />
+              <GeneralSettings />
+              <LikeSettings
+                className={
+                  'hideable ' + (context.state.enable_like ? '' : 'hidden')
+                }
+              />
+              <CommentSettings
+                className={
+                  'hideable ' + (context.state.enable_comment ? '' : 'hidden')
+                }
+              />
+              <FollowSettings
+                className={
+                  'hideable ' + (context.state.enable_follow ? '' : 'hidden')
+                }
+              />
+              <UnfollowSettings
+                className={
+                  'hideable ' + (context.state.enable_unfollow ? '' : 'hidden')
+                }
+              />
+              {/*<MessageSettings />*/}
+              <ActivitySettings />
 
-        <div className="success-message w-form-done">
-          <div className="text-block">
-            Thank you! Your submission has been received!
-          </div>
-        </div>
-        <div className="error-message w-form-fail">
-          <div className="text-block-2">
-            Oops! Something went wrong while submitting the form.
-          </div>
-        </div>
+              <div className="success-message w-form-done">
+                <div className="text-block">
+                  Thank you! Your submission has been received!
+                </div>
+              </div>
+              <div className="error-message w-form-fail">
+                <div className="text-block-2">
+                  Oops! Something went wrong while submitting the form.
+                </div>
+              </div>
+            </div>
+          )}
+        </Context.Consumer>
       </Provider>
     );
   }

@@ -2,11 +2,12 @@ import React, { Component } from 'react';
 import TextFieldNumber from './TextFieldNumber';
 import ContextSwitch from './ContextSwitch';
 import Help from './Help';
+import './css/settings.css';
 
 export default class UnfollowSettings extends Component {
   render() {
     return (
-      <div>
+      <div className={this.props.className}>
         <div className="header">
           <h1 className="titlepage">Unfollows</h1>
         </div>

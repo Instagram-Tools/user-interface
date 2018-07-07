@@ -1,0 +1,10 @@
+.hideable {
+  /*overflow: hidden;*/
+  /*max-height: 1000px;*/
+  /*transition: max-height 3s ease-in-out, all 0s 3s ease-in-out;*/
+}
+
+.hidden {
+  /*max-height: 0px;*/
+  display: none;
+}

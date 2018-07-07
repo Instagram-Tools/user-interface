@@ -1,14 +1,12 @@
 import React, { Component } from 'react';
-import Switch from './ContextSwitch';
-import TextFieldBroad from './TextFieldBroad';
 import TextFieldNumber from './TextFieldNumber';
-import ContextList from './ContextList';
 import Help from './Help';
+import './css/settings.css';
 
 export default class LikeSettings extends Component {
   render() {
     return (
-      <div>
+      <div className={this.props.className}>
         <div className="header">
           <h1 className="titlepage">Like</h1>
         </div>

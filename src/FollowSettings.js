@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 import TextFieldNumber from './TextFieldNumber';
 import Help from './Help';
+import './css/settings.css';
 
 export default class FollowSettings extends Component {
   render() {
     return (
-      <div>
+      <div className={this.props.className}>
         <div className="header">
           <h1 className="titlepage">Follows</h1>
         </div>

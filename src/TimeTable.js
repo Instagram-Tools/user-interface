@@ -76,7 +76,7 @@ class TimetableWrapper extends React.Component {
             className={
               'week_schedule_column ' +
               (day % 2 ? '' : '_2nd') +
-              (this.contains(context.state.clicked, this.calcTime(day, hour))
+              (this.contains(context.state.timetable, this.calcTime(day, hour))
                 ? ' ifclicked'
                 : '')
             }
@@ -87,20 +87,20 @@ class TimetableWrapper extends React.Component {
   }
 
   calcTime(day, hour) {
-    return this.format(new Date(4, 1, day, hour));
+    return this.format(new Date(4, 1, day, hour, 1));
   }
 
   mark(context, day, hour) {
     function addTime(p) {
       return [
-        ...(p.clicked ? p.clicked : []),
+        ...(p.timetable ? p.timetable : []),
         calcTime.call(this),
         calcTime2.call(this)
       ];
     }
 
     function removeTime(p) {
-      const times = [...p.clicked];
+      const times = [...p.timetable];
       const index = times.indexOf(calcTime.call(this));
       times.splice(index, 2);
       return times;
@@ -115,7 +115,7 @@ class TimetableWrapper extends React.Component {
     }
 
     context.setState(p => ({
-      clicked: this.contains(context.state.clicked, calcTime.call(this))
+      timetable: this.contains(context.state.timetable, calcTime.call(this))
         ? removeTime.call(this, p)
         : addTime.call(this, p)
     }));

@@ -34,11 +34,11 @@ class NavBar extends Component {
           </nav>
         </div>
         <h1 className="general_settings subtitle">Like</h1>
-        <Switch value="enable_like" />
+        <Switch value="do_like_enabled" />
         <h1 className="general_settings subtitle">Comment</h1>
-        <Switch value="enable_comment" />
+        <Switch value="do_comment_enabled" />
         <h1 className="general_settings subtitle">Follow</h1>
-        <Switch value="enable_follow" />
+        <Switch value="do_follow_enabled" />
         <h1 className="general_settings subtitle">Unfollow</h1>
         <Switch value="enable_unfollow" />
         {/*<h1 className="general_settings subtitle">Messages</h1>*/}

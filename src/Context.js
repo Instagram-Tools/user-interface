@@ -6,7 +6,6 @@ export const Context = React.createContext();
 // Then create a provider Component
 export class Provider extends Component {
   state = {
-    // TODO settings
     do_comment_enabled: true,
     do_follow_enabled: true,
     do_like_enabled: true,

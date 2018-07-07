@@ -7,6 +7,8 @@ export default class API_Gateway {
   }
 
   static async put(data) {
+    console.log('data:', data);
+
     let response = await fetch(API_URL, {
       method: 'PUT',
       body: JSON.stringify(data),
@@ -37,5 +39,14 @@ export default class API_Gateway {
       .getElementById('csrf_token').value;
   }
 
-  static async login(email, password) {}
+  static async login(email, password) {
+    let response = await fetch(API_URL + '/reg', {
+      method: 'PUT',
+      body: JSON.stringify({ email, password }),
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    });
+    return this.parsResponse(response);
+  }
 }

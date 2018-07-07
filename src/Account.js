@@ -43,14 +43,20 @@ export default class Account extends Component {
               className="formholder_connect_account"
             >
               <div className="columnholder filterholder first connect_account_column">
+                <TextField type="email" placeholder="Email" value="email" />
+                <TextField
+                  type="password"
+                  placeholder="Password"
+                  value="e_password"
+                />
                 <TextField
                   type="email"
-                  placeholder="Username"
+                  placeholder="Instagram Username"
                   value="username"
                 />
                 <TextField
                   type="password"
-                  placeholder="Password"
+                  placeholder="Instagram Password"
                   value="password"
                 />
               </div>

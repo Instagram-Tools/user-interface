@@ -12,6 +12,7 @@ import UnfollowSettings from './UnfollowSettings';
 import MessageSettings from './MessageSettings';
 import ActivitySettings from './ActivitySettings';
 import { Context, Provider } from './Context';
+import Save from './Save';
 
 export default class App extends Component {
   render() {
@@ -45,6 +46,7 @@ export default class App extends Component {
               />
               {/*<MessageSettings />*/}
               <ActivitySettings />
+              <Save />
 
               <div className="success-message w-form-done">
                 <div className="text-block">

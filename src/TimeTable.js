@@ -104,7 +104,7 @@ class TimetableWrapper extends React.Component {
   }
 
   contains(list = [], o) {
-    return list.map(e => JSON.stringify(e)).includes(JSON.stringify(o));
+    return list.includes(o);
   }
 
   format(date) {

@@ -149,7 +149,7 @@ export default class GeneralSettings extends Component {
                   Relevant Users
                 </label>
                 <Switch
-                  toggle="enable_follow_user_followers"
+                  value="enable_follow_user_followers"
                   className="title"
                 />
                 <Help className="helptext">

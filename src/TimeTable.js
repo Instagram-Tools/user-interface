@@ -90,16 +90,25 @@ class TimetableWrapper extends React.Component {
   }
 
   mark(context, day, hour) {
+    function addTime(p) {
+      return [...(p.clicked ? p.clicked : []), calcTime.call(this)];
+    }
+
+    function removeTime(p) {
+      const times = [...p.clicked];
+      const index = times.indexOf(calcTime.call(this));
+      times.splice(index, 1);
+      return times;
+    }
+
+    function calcTime() {
+      return this.format(new Date(4, 1, day, hour));
+    }
+
     context.setState(p => ({
-      clicked: this.contains(
-        context.state.clicked,
-        this.format(new Date(4, 1, day, hour))
-      )
-        ? p.clicked
-        : [
-            ...(p.clicked ? p.clicked : []),
-            this.format(new Date(4, 1, day, hour))
-          ]
+      clicked: this.contains(context.state.clicked, calcTime.call(this))
+        ? removeTime.call(this, p)
+        : addTime.call(this, p)
     }));
   }
 

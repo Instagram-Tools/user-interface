@@ -16,7 +16,7 @@ export default class Save extends Component {
 
             <input
               onClick={(() => this.saving(context.state)).bind(this)}
-              type="submit"
+              type="button"
               value="Save"
               data-wait="saving..."
               data-w-id="d8b0db36-ca47-deb4-6250-cc991b79ddba"

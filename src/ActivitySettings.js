@@ -31,27 +31,6 @@ export default class ActivitySettings extends Component {
               </div>
 
               <Timetable />
-
-              <div className="header savebutton holder">
-                <div
-                  data-w-id="d8b0db36-ca47-deb4-6250-cc991b79ddb9"
-                  className="header savebutton color"
-                />
-
-                <input
-                  type="submit"
-                  value="Save"
-                  data-wait="saving..."
-                  data-w-id="d8b0db36-ca47-deb4-6250-cc991b79ddba"
-                  className="submitbutton bigasssubmitbutton w-button"
-                />
-                <h1
-                  data-w-id="d8b0db36-ca47-deb4-6250-cc991b79ddbb"
-                  className="titlepage"
-                >
-                  Saved!
-                </h1>
-              </div>
             </form>
             <div className="success-message w-form-done">
               <div className="text-block">

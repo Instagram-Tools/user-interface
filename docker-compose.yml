@@ -6,17 +6,17 @@ services:
    build: ./nginx
    ports:
      - "80:80"
-     - "50:50"
+     - "60:60"
    volumes:
      - ./build:/usr/static
 
  api:
-    command: /usr/local/bin/gunicorn -w 2 -b :5000 server
+    command: /usr/local/bin/gunicorn -w 2 -b :6000 server
     build:
       context: ./api
       dockerfile: ./Dockerfile
     ports:
-      - "5000:5000"
+      - "6000:6000"
     volumes:
       - ./api:/app
     restart: always

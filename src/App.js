@@ -26,17 +26,19 @@ export default class App extends Component {
               <GeneralSettings />
               <LikeSettings
                 className={
-                  'hideable ' + (context.state.enable_like ? '' : 'hidden')
+                  'hideable ' + (context.state.do_like_enabled ? '' : 'hidden')
                 }
               />
               <CommentSettings
                 className={
-                  'hideable ' + (context.state.enable_comment ? '' : 'hidden')
+                  'hideable ' +
+                  (context.state.do_comment_enabled ? '' : 'hidden')
                 }
               />
               <FollowSettings
                 className={
-                  'hideable ' + (context.state.enable_follow ? '' : 'hidden')
+                  'hideable ' +
+                  (context.state.do_follow_enabled ? '' : 'hidden')
                 }
               />
               <UnfollowSettings

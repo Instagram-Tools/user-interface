@@ -26,10 +26,11 @@ export default class GeneralSettings extends Component {
                 </label>
                 <Switch value="enable_like_by_tags" className="title" />
                 <Help className="helptext">
-                  <strong>Like pictures with a hashtag: </strong>Choose hashtags
-                  your target group could be interested in.{' '}
+                  <strong>Relevant Hashtags: </strong>Choose hashtags your
+                  target group could be interested in.{' '}
                   <span className="helptext_secondary">
-                    NotInstagress will like pictures with these hashtags.{' '}
+                    PinkParrot will interact with pictures including these
+                    hashtags.{' '}
                   </span>
                 </Help>
               </div>
@@ -87,8 +88,8 @@ export default class GeneralSettings extends Component {
                 </label>
                 <Switch value="enable_like_by_locations" className="title" />
                 <Help>
-                  <strong>Like pictures from a location: </strong>Choose
-                  locations where you want to interact with users.{' '}
+                  <strong>Relevant Locations: </strong>Choose locations where
+                  you want to interact with users.{' '}
                   <span className="helptext_secondary">
                     E.g. &quot;England, Munich, Frankfurt Airport&quot;.
                   </span>

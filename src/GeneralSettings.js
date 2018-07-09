@@ -89,9 +89,10 @@ export default class GeneralSettings extends Component {
                 <Switch value="enable_like_by_locations" className="title" />
                 <Help>
                   <strong>Relevant Locations: </strong>Choose locations where
-                  you want to interact with users.{' '}
+                  you want to interact with users to get their attention.{' '}
                   <span className="helptext_secondary">
-                    E.g. &quot;England, Munich, Frankfurt Airport&quot;.
+                    E.g. &quot;England, Munich, Frankfurt Airport, Berlin, etc.
+                    &quot;.
                   </span>
                 </Help>
               </div>
@@ -154,8 +155,10 @@ export default class GeneralSettings extends Component {
                   className="title"
                 />
                 <Help className="helptext">
-                  <strong>Like pictures of a user&#x27;s followers: </strong>Choose
-                  successful profiles which are similar to yours.{' '}
+                  <strong>
+                    Interact with pictures of a user&#x27;s followers:{' '}
+                  </strong>Choose successful profiles which are similar to
+                  yours.{' '}
                   <span className="helptext_secondary">
                     So you get attention from profiles which are interested in
                     your content.
@@ -202,12 +205,7 @@ export default class GeneralSettings extends Component {
                     Relevant Users Filters
                   </label>
                   <Help className="helptext">
-                    <strong>Like pictures of a user&#x27;s followers: </strong>Choose
-                    successful profiles which are similar to yours.{' '}
-                    <span className="helptext_secondary">
-                      So you get attention from profiles which are interested in
-                      your content.
-                    </span>
+                    <strong>Filter Users you want to interact with</strong>
                   </Help>
 
                   <div className="columnholder filterholder first">
@@ -247,11 +245,10 @@ export default class GeneralSettings extends Component {
                 </label>
                 <Switch value="enable_like_by_feed" className="title" />
                 <Help className="helptext">
-                  <strong>Like pictures from my feed: </strong>Likes a random
-                  amount of pictures from people you are already following.{' '}
+                  <strong>Interact with pictures from my feed: </strong>
+                  Interact with people you are already following.{' '}
                   <span className="helptext_secondary">
-                    That way, you keep your community engaged. NotInstagress
-                    would like X% of all the pictures it likes.
+                    That way, you keep your community engaged.
                   </span>
                 </Help>
               </div>

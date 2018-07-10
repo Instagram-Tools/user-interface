@@ -11,21 +11,28 @@ export default class TextFieldBroad extends Component {
             className="text-field broadfield w-input"
             maxLength="256"
             placeholder={this.props.placeholder}
-            onKeyPress={(e => {
-              if (e.charCode === 13) {
-                const value = e.target.value;
-                context.setState(p => ({
-                  [this.props.value]: [
-                    ...(p[this.props.value] ? p[this.props.value] : []),
-                    value
-                  ]
-                }));
-                e.target.value = '';
-              }
-            }).bind(this)}
+            onKeyPress={(e =>
+              this.pressEnter(e) ? this.submitText(e, context) : null).bind(
+              this
+            )}
           />
         )}
       </Context.Consumer>
     );
+  }
+
+  submitText(e, context) {
+    const value = e.target.value;
+    context.setState(p => ({
+      [this.props.value]: [
+        ...(p[this.props.value] ? p[this.props.value] : []),
+        value
+      ]
+    }));
+    e.target.value = '';
+  }
+
+  pressEnter(e) {
+    return e.charCode === 13;
   }
 }

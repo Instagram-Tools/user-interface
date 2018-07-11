@@ -32,6 +32,7 @@ export default class TextFieldBroad extends Component {
   addValue(old = [], value) {
     let newVar = [...old];
     value
+      .replace(/#|@/gi, '')
       .split(' ')
       .filter(s => s.length > 0)
       .forEach(s => newVar.push(s));

@@ -1,11 +1,14 @@
 // first we will make a new context
 import React, { Component } from 'react';
+import ScrollUtil from './ScrollUtil';
 
 export const Context = React.createContext();
 
 // Then create a provider Component
 export class Provider extends Component {
   state = {
+    scrollY: 0,
+    scrollHeight: document.body.scrollHeight,
     do_comment_enabled: true,
     do_follow_enabled: true,
     do_like_enabled: true,
@@ -165,6 +168,15 @@ export class Provider extends Component {
       '1904-02-07 18:59:00.000Z'
     ]
   };
+  handleScroll() {
+    const scrollHeight = document.body.scrollHeight;
+    const scrollY = window.pageYOffset + window.innerHeight;
+    this.setState({ scrollY, scrollHeight });
+  }
+
+  componentWillMount() {
+    new ScrollUtil().init(this.handleScroll.bind(this));
+  }
 
   render() {
     return (

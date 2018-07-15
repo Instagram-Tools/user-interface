@@ -175,7 +175,7 @@ export class Provider extends Component {
   }
 
   componentWillMount() {
-    new ScrollUtil().init(this.handleScroll.bind(this));
+    // new ScrollUtil().init(this.handleScroll.bind(this));
   }
 
   render() {

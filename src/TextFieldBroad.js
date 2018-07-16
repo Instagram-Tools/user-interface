@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Context } from './Context';
+import API_Gageway from './API_Gateway';
 
 export default class TextFieldBroad extends Component {
   render() {
@@ -12,9 +13,9 @@ export default class TextFieldBroad extends Component {
             maxLength="256"
             placeholder={this.props.placeholder}
             onKeyPress={(e =>
-              this.pressEnter(e) ? this.submitText(e, context) : null).bind(
-              this
-            )}
+              this.pressEnter(e)
+                ? this.submitText(e, context)
+                : this.suggest(e.target.value)).bind(this)}
           />
         )}
       </Context.Consumer>
@@ -41,5 +42,22 @@ export default class TextFieldBroad extends Component {
 
   pressEnter(e) {
     return e.charCode === 13;
+  }
+
+  suggest(value) {
+    this.getSuggestion(value).then(suggestions =>
+      this.setState({ suggestions })
+    );
+  }
+
+  async getSuggestion(query) {
+    let url =
+      'https://www.instagram.com/web/search/topsearch/?context=blended&' +
+      'query=' +
+      query;
+    let response = await fetch(url);
+    let text = await API_Gageway.parsResponse(response);
+    let json = JSON.parse(text);
+    return json[this.props.query];
   }
 }

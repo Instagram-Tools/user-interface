@@ -42,6 +42,7 @@ export default class GeneralSettings extends Component {
                 <div className="columnholder hashtag_settings_holder">
                   <TextFieldBroad
                     value="like_by_tags"
+                    query="hashtags"
                     placeholder="Enter hashtags this way: fitness"
                   />
                   <div

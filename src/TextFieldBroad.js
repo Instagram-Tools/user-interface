@@ -43,7 +43,6 @@ export default class TextFieldBroad extends Component {
       <div style={{ display: 'flex' }}>
         <div className="suggestion_text_hashtags">
           #{suggestion.hashtag.name}
-          {suggestion.hashtag.name}
         </div>
         <div className="amount_text_hashtags">
           {suggestion.hashtag.media_count} posts

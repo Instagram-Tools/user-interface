@@ -24,9 +24,10 @@ export default class TextFieldBroad extends Component {
             />
             <div
               style={{
-                display: this.state.suggestions.length > 0 ? 'block' : 'none'
+                display: this.state.suggestions.length > 0 ? 'block' : 'none',
+                position: 'relative',
+                top: '-33px'
               }}
-              data-w-id="034888e9-27da-288f-a156-1f16d12dae01"
               className="suggestions"
             >
               {this.state.suggestions.map(this.mapSuggestions.bind(this))}

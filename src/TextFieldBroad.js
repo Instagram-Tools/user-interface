@@ -51,6 +51,8 @@ export default class TextFieldBroad extends Component {
   }
 
   async getSuggestion(query) {
+    if (!this.props.query) return;
+
     let url =
       'https://www.instagram.com/web/search/topsearch/?context=blended&' +
       'query=' +

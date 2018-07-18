@@ -69,8 +69,8 @@ export default class TextFieldBroad extends Component {
             this.clickSuggestion(suggestion.place.location.pk)).bind(this)}
           style={{ display: 'inline-flex', justifyContent: 'space-between' }}
         >
-          <div className="suggestion_text_hashtags">
-            #{suggestion.place.location.name}
+          <div className="suggestion_text_locations">
+            {suggestion.place.location.name}
           </div>
         </div>
       );

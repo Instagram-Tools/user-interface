@@ -68,49 +68,6 @@ export default class GeneralSettings extends Component {
                   query="places"
                   placeholder="Search for locations"
                 />
-                <div
-                  data-w-id="82f677f9-6358-e7d6-c0d4-db9fcd52b646"
-                  className="suggestions"
-                >
-                  <div className="suggestionscolumn">
-                    <div
-                      data-w-id="82f677f9-6358-e7d6-c0d4-db9fcd52b647"
-                      className="suggestion_text_locations"
-                    >
-                      Munich
-                    </div>
-                    <div
-                      data-w-id="82f677f9-6358-e7d6-c0d4-db9fcd52b649"
-                      className="suggestion_text_locations"
-                    >
-                      London
-                    </div>
-                    <div className="suggestion_text_locations">Timbuktu</div>
-                    <div className="suggestion_text_locations">Aachen</div>
-                    <div className="suggestion_text_locations">Bielefeld</div>
-                  </div>
-                  <div className="suggestionscolumn">
-                    <div
-                      data-w-id="cd5101a4-aee0-c789-143b-b516a6947130"
-                      className="amount_text_locations"
-                    >
-                      268.847.786 posts
-                    </div>
-                    <div
-                      data-w-id="cd5101a4-aee0-c789-143b-b516a6947132"
-                      className="amount_text_locations"
-                    >
-                      123.456.789 posts
-                    </div>
-                    <div className="amount_text_locations">
-                      987.654.321 posts
-                    </div>
-                    <div className="amount_text_locations">
-                      50.123.456 posts
-                    </div>
-                    <div className="amount_text_locations">5.345.678 posts</div>
-                  </div>
-                </div>
               </div>
               <div className="titleholder">
                 <label htmlFor="email" className="settingtitle">

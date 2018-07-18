@@ -45,21 +45,30 @@ export default class TextFieldBroad extends Component {
   }
 
   mapSuggestions(suggestion) {
-    return (
-      <div
-        onClick={(() => this.clickSuggestion(suggestion.hashtag.name)).bind(
-          this
-        )}
-        style={{ display: 'inline-flex', justifyContent: 'space-between' }}
-      >
-        <div className="suggestion_text_hashtags">
-          #{suggestion.hashtag.name}
+    function hashtagSuggestion() {
+      return (
+        <div
+          onClick={(() => this.clickSuggestion(suggestion.hashtag.name)).bind(
+            this
+          )}
+          style={{ display: 'inline-flex', justifyContent: 'space-between' }}
+        >
+          <div className="suggestion_text_hashtags">
+            #{suggestion.hashtag.name}
+          </div>
+          <div className="amount_text_hashtags">
+            {suggestion.hashtag.media_count} posts
+          </div>
         </div>
-        <div className="amount_text_hashtags">
-          {suggestion.hashtag.media_count} posts
-        </div>
-      </div>
-    );
+      );
+    }
+
+    switch (this.props.query) {
+      case 'hashtags':
+        return hashtagSuggestion.call(this);
+      default:
+        console.log(suggestion);
+    }
   }
 
   clickSuggestion(suggestion) {

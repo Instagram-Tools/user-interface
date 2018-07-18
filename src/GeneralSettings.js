@@ -136,6 +136,7 @@ export default class GeneralSettings extends Component {
                 <div className="columnholder user">
                   <TextFieldBroad
                     value="follow_user_followers"
+                    query="users"
                     placeholder="Search for user"
                   />
                 </div>

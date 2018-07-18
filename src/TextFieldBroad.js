@@ -75,12 +75,31 @@ export default class TextFieldBroad extends Component {
         </div>
       );
     }
+    function userSuggestion() {
+      return (
+        <div
+          onClick={(() => this.clickSuggestion(suggestion.user.username)).bind(
+            this
+          )}
+          style={{ display: 'inline-flex', justifyContent: 'space-between' }}
+        >
+          <div className="suggestion_text_hashtags">
+            {suggestion.user.username}
+          </div>
+          <div className="amount_text_hashtags">
+            {suggestion.user.follower_count} followers
+          </div>
+        </div>
+      );
+    }
 
     switch (this.props.query) {
       case 'hashtags':
         return hashtagSuggestion.call(this);
       case 'places':
         return placeSuggestion.call(this);
+      case 'users':
+        return userSuggestion.call(this);
       default:
         console.log(suggestion);
     }

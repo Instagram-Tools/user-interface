@@ -46,7 +46,12 @@ export default class TextFieldBroad extends Component {
 
   mapSuggestions(suggestion) {
     return (
-      <div style={{ display: 'inline-flex', justifyContent: 'space-between' }}>
+      <div
+        onClick={(() => this.clickSuggestion(suggestion.hashtag.name)).bind(
+          this
+        )}
+        style={{ display: 'inline-flex', justifyContent: 'space-between' }}
+      >
         <div className="suggestion_text_hashtags">
           #{suggestion.hashtag.name}
         </div>
@@ -55,6 +60,19 @@ export default class TextFieldBroad extends Component {
         </div>
       </div>
     );
+  }
+
+  clickSuggestion(suggestion) {
+    function autoComplete(value) {
+      const splitAt = value.lastIndexOf(' ');
+      return (
+        value.substring(0, splitAt) + (splitAt > 0 ? ' ' : '') + suggestion
+      );
+    }
+
+    this.setState(p => ({
+      value: autoComplete(p.value)
+    }));
   }
 
   submitText(context) {

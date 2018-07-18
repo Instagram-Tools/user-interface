@@ -76,6 +76,7 @@ export default class TextFieldBroad extends Component {
       );
     }
     function userSuggestion() {
+      if (suggestion.user.is_private) return;
       return (
         <div
           onClick={(() => this.clickSuggestion(suggestion.user.username)).bind(

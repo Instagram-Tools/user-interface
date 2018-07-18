@@ -120,16 +120,17 @@ export default class TextFieldBroad extends Component {
         console.log(suggestion);
     }
   }
+
   clickSuggestion(suggestion) {
+    let separator = this.separator;
     function autoComplete(value) {
-      const splitAt = value.lastIndexOf(this.separator);
+      const splitAt = value.lastIndexOf(separator);
       return (
         value.substring(0, splitAt) +
-        (splitAt > 0 ? this.separator : '') +
+        (splitAt > 0 ? separator : '') +
         suggestion
       );
     }
-
     this.setState(p => ({
       value: autoComplete(p.value)
     }));

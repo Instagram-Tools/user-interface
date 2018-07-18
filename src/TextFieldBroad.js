@@ -62,10 +62,25 @@ export default class TextFieldBroad extends Component {
         </div>
       );
     }
+    function placeSuggestion() {
+      return (
+        <div
+          onClick={(() =>
+            this.clickSuggestion(suggestion.place.location.pk)).bind(this)}
+          style={{ display: 'inline-flex', justifyContent: 'space-between' }}
+        >
+          <div className="suggestion_text_hashtags">
+            #{suggestion.place.location.name}
+          </div>
+        </div>
+      );
+    }
 
     switch (this.props.query) {
       case 'hashtags':
         return hashtagSuggestion.call(this);
+      case 'places':
+        return placeSuggestion.call(this);
       default:
         console.log(suggestion);
     }

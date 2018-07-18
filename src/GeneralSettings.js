@@ -65,6 +65,7 @@ export default class GeneralSettings extends Component {
               <div className="columnholder hashtag_settings_holder">
                 <TextFieldBroad
                   value="like_by_locations"
+                  query="places"
                   placeholder="Search for locations"
                 />
                 <div

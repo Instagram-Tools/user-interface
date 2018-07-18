@@ -24,9 +24,10 @@ export default class TextFieldBroad extends Component {
             />
             <div
               style={{
-                display: this.state.suggestions.length > 0 ? 'block' : 'none',
+                display:
+                  this.state.suggestions.length > 0 ? 'inline-grid' : 'none',
                 position: 'relative',
-                top: '-33px'
+                top: '-60px'
               }}
               className="suggestions"
             >
@@ -40,7 +41,7 @@ export default class TextFieldBroad extends Component {
 
   mapSuggestions(suggestion) {
     return (
-      <div style={{ display: 'flex' }}>
+      <div style={{ display: 'inline-flex', justifyContent: 'space-between' }}>
         <div className="suggestion_text_hashtags">
           #{suggestion.hashtag.name}
         </div>

@@ -20,13 +20,14 @@ export default class TextFieldBroad extends Component {
               maxLength="256"
               placeholder={this.props.placeholder}
               value={this.state.value}
-              onChange={(e => this.setState({ value: e.target.value })).bind(
+              onChange={(e => {
+                this.suggest(e.target.value);
+                return this.setState({ value: e.target.value });
+              }).bind(this)}
+              onKeyPress={(e =>
+                this.pressEnter(e) ? this.submitText(context) : null).bind(
                 this
               )}
-              onKeyPress={(e =>
-                this.pressEnter(e)
-                  ? this.submitText(context)
-                  : this.suggest(e.target.value)).bind(this)}
             />
             <div
               style={{

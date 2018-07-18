@@ -4,7 +4,8 @@ import API_Gageway from './API_Gateway';
 
 export default class TextFieldBroad extends Component {
   state = {
-    suggestions: []
+    suggestions: [],
+    value: ''
   };
 
   render() {
@@ -17,9 +18,13 @@ export default class TextFieldBroad extends Component {
               className="text-field broadfield w-input"
               maxLength="256"
               placeholder={this.props.placeholder}
+              value={this.state.value}
+              onChange={(e => this.setState({ value: e.target.value })).bind(
+                this
+              )}
               onKeyPress={(e =>
                 this.pressEnter(e)
-                  ? this.submitText(e, context)
+                  ? this.submitText(context)
                   : this.suggest(e.target.value)).bind(this)}
             />
             <div
@@ -52,12 +57,12 @@ export default class TextFieldBroad extends Component {
     );
   }
 
-  submitText(e, context) {
-    const value = e.target.value;
+  submitText(context) {
+    const value = this.state.value;
     context.setState(p => ({
       [this.props.value]: this.addValue(p[this.props.value], value)
     }));
-    e.target.value = '';
+    this.setState({ value: '' });
   }
 
   addValue(old = [], value) {

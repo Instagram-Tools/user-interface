@@ -158,7 +158,9 @@ export default class TextFieldBroad extends Component {
   }
 
   suggest(value) {
-    this.getSuggestion(value).then(suggestions =>
+    const splitAt = value.lastIndexOf(this.separator);
+    const query = value.substring(splitAt);
+    this.getSuggestion(query).then(suggestions =>
       this.setState({ suggestions })
     );
   }

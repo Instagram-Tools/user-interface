@@ -97,29 +97,6 @@ export default class GeneralSettings extends Component {
                     placeholder="Search for user"
                   />
                 </div>
-                <div
-                  data-w-id="b8e914c5-d691-26ab-947e-755718a24fe2"
-                  className="suggestions nosuggestions"
-                >
-                  <div
-                    data-w-id="b8e914c5-d691-26ab-947e-755718a24fe3"
-                    className="suggestion_text_users"
-                  >
-                    Blyat.Official
-                  </div>
-                  <div className="suggestion_text_users">HalloNein</div>
-                  <div
-                    data-w-id="b8e914c5-d691-26ab-947e-755718a24fe7"
-                    className="suggestion_text_users"
-                  >
-                    Miss.S
-                  </div>
-                  <div className="suggestion_text_users">Draufganger</div>
-                  <div className="suggestion_text_users">
-                    Christopher.Hates.Official
-                  </div>
-                </div>
-
                 <div className="titleholder">
                   <label
                     style={{ fontSize: '1.4em', fontWeight: '400' }}

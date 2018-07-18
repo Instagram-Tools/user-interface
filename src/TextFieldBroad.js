@@ -7,6 +7,7 @@ export default class TextFieldBroad extends Component {
     suggestions: [],
     value: ''
   };
+  separator = ' ';
 
   render() {
     return (
@@ -118,12 +119,13 @@ export default class TextFieldBroad extends Component {
         console.log(suggestion);
     }
   }
-
   clickSuggestion(suggestion) {
     function autoComplete(value) {
-      const splitAt = value.lastIndexOf(' ');
+      const splitAt = value.lastIndexOf(this.separator);
       return (
-        value.substring(0, splitAt) + (splitAt > 0 ? ' ' : '') + suggestion
+        value.substring(0, splitAt) +
+        (splitAt > 0 ? this.separator : '') +
+        suggestion
       );
     }
 
@@ -144,7 +146,7 @@ export default class TextFieldBroad extends Component {
     let newVar = [...old];
     value
       .replace(/#|@/gi, '')
-      .split(' ')
+      .split(this.separator)
       .filter(s => s.length > 0)
       .forEach(s => newVar.push(s));
     return newVar;

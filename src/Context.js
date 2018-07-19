@@ -13,6 +13,11 @@ export class Provider extends Component {
     do_follow_enabled: true,
     do_like_enabled: true,
     enable_unfollow: true,
+    enable_follow_user_followers: true,
+    enable_like_by_feed: true,
+    enable_like_by_locations: true,
+    enable_like_by_tags: true,
+    unfollow_users_nonfollowers: true,
     timetable: [
       '1904-02-01 07:01:00.000Z',
       '1904-02-01 07:59:00.000Z',

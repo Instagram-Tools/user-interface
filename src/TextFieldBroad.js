@@ -174,10 +174,16 @@ export default class TextFieldBroad extends Component {
   async getSuggestion(query) {
     if (!this.props.query) return;
     let servers = this.state.servers;
-    while (servers.length > 0) {
+
+    function chooseServer() {
       const server = servers[servers.length - 1];
-      let url = server + query;
       servers.pop();
+      return server;
+    }
+
+    while (servers.length > 0) {
+      const server = chooseServer();
+      let url = server + query;
       try {
         let response = await fetch(url);
         let text = await API_Gageway.parsResponse(response);

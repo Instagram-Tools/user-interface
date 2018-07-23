@@ -185,9 +185,7 @@ export default class TextFieldBroad extends Component {
       const server = chooseServer();
       let url = server + query;
       try {
-        let response = await fetch(url);
-        let text = await API_Gageway.parsResponse(response);
-        let json = JSON.parse(text);
+        let json = await this.fetchJSON(url);
 
         if (json) this.state.servers.push(server);
 
@@ -198,5 +196,12 @@ export default class TextFieldBroad extends Component {
     }
     this.setState({ servers: [...this.servers] });
     return [];
+  }
+
+  async fetchJSON(url) {
+    let response = await fetch(url);
+    let text = await API_Gageway.parsResponse(response);
+    let json = JSON.parse(text);
+    return json;
   }
 }

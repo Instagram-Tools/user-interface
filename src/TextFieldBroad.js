@@ -3,9 +3,14 @@ import { Context } from './Context';
 import API_Gageway from './API_Gateway';
 
 export default class TextFieldBroad extends Component {
+  servers = [
+    'https://www.instagram.com/web/search/topsearch/?context=blended&' +
+      'query='
+  ];
   state = {
     suggestions: [],
-    value: ''
+    value: '',
+    servers: [...this.servers]
   };
   separator = ' ';
 
@@ -168,14 +173,24 @@ export default class TextFieldBroad extends Component {
 
   async getSuggestion(query) {
     if (!this.props.query) return;
+    let servers = this.state.servers;
+    while (servers.length > 0) {
+      const server = servers[servers.length - 1];
+      let url = server + query;
+      servers.pop();
+      try {
+        let response = await fetch(url);
+        let text = await API_Gageway.parsResponse(response);
+        let json = JSON.parse(text);
 
-    let url =
-      'https://www.instagram.com/web/search/topsearch/?context=blended&' +
-      'query=' +
-      query;
-    let response = await fetch(url);
-    let text = await API_Gageway.parsResponse(response);
-    let json = JSON.parse(text);
-    return json[this.props.query];
+        if (json) this.state.servers.push(server);
+
+        return json[this.props.query];
+      } catch (e) {
+        console.error(e);
+      }
+    }
+    this.setState({ servers: [...this.servers] });
+    return [];
   }
 }

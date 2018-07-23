@@ -49,4 +49,11 @@ export default class API_Gateway {
     });
     return this.parsResponse(response);
   }
+
+  static async fetchJSON(url) {
+    let response = await fetch(url);
+    let text = await this.parsResponse(response);
+    let json = JSON.parse(text);
+    return json;
+  }
 }

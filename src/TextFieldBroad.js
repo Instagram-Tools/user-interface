@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Context } from './Context';
-import API_Gageway from './API_Gateway';
+import API_Gateway from './API_Gateway';
 
 export default class TextFieldBroad extends Component {
   servers = [
@@ -185,7 +185,7 @@ export default class TextFieldBroad extends Component {
       const server = chooseServer();
       let url = server + query;
       try {
-        let json = await this.fetchJSON(url);
+        let json = await API_Gateway.fetchJSON(url);
 
         if (json) this.state.servers.push(server);
 
@@ -196,12 +196,5 @@ export default class TextFieldBroad extends Component {
     }
     this.setState({ servers: [...this.servers] });
     return [];
-  }
-
-  async fetchJSON(url) {
-    let response = await fetch(url);
-    let text = await API_Gageway.parsResponse(response);
-    let json = JSON.parse(text);
-    return json;
   }
 }

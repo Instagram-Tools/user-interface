@@ -51,7 +51,7 @@ class TimetableWrapper extends React.Component {
 
   mapDays(day) {
     return (
-      <div className={'legendtext horizontaltext'}>
+      <div key={day} className={'legendtext horizontaltext'}>
         {this.range(1, 24).map((h => this.mapHours(day, h)).bind(this))}
       </div>
     );
@@ -67,7 +67,7 @@ class TimetableWrapper extends React.Component {
 
   mapHours(day, hour) {
     return (
-      <Context.Consumer>
+      <Context.Consumer key={hour}>
         {context => (
           <div
             onClick={(() => this.mark(context, day, hour)).bind(this)}

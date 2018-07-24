@@ -15,6 +15,7 @@ export default class TextFieldBroad extends Component {
   separator = ' ';
 
   render() {
+    console.log('env', process.env);
     return (
       <Context.Consumer>
         {context => (

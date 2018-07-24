@@ -10,28 +10,21 @@ export default class ActivitySettings extends Component {
           <h1 className="titlepage">Activity</h1>
         </div>
         <div className="body">
-          <div className="form-block w-form">
-            <form
-              id="email-form"
-              name="email-form"
-              data-name="Email Form"
-              className="form last"
-            >
-              <div className="titleholder">
-                <label htmlFor="email" className="settingtitle scheduletitle">
-                  Define bot activity
-                </label>
-                <Help className="helptext">
-                  Choose successful profiles which are similar to yours.{' '}
-                  <span className="helptext_secondary">
-                    So you get attention from profiles which are interested in
-                    your content.
-                  </span>
-                </Help>
-              </div>
+          <div className="form-block w-form form">
+            <div className="titleholder">
+              <label htmlFor="email" className="settingtitle scheduletitle">
+                Define bot activity
+              </label>
+              <Help className="helptext">
+                Choose successful profiles which are similar to yours.{' '}
+                <span className="helptext_secondary">
+                  So you get attention from profiles which are interested in
+                  your content.
+                </span>
+              </Help>
+            </div>
 
-              <Timetable />
-            </form>
+            <Timetable />
             <div className="success-message w-form-done">
               <div className="text-block">
                 Thank you! Your submission has been received!

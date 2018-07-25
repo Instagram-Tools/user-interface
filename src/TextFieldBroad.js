@@ -97,6 +97,7 @@ export default class TextFieldBroad extends Component {
               margin: '0 10px 0 0',
               width: '30px'
             }}
+            alt={'profile picture of ' + suggestion.user.username}
           />
           <div className="suggestion_text_hashtags">
             {suggestion.user.username}

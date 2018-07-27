@@ -29,7 +29,7 @@ export default class CommentSettings extends Component {
             <TextFieldNumber
               placeholder="Like Percentage %"
               max={100}
-              value="do_like_percentage"
+              value="do_comment_percentage"
             />
 
             <div

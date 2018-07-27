@@ -30,7 +30,7 @@ export default class FollowSettings extends Component {
             <TextFieldNumber
               placeholder="Follow Percentage %"
               max={100}
-              value="do_comment_percentage"
+              value="do_follow_percentage"
             />
             <div className="titleholder">
               <label htmlFor="email" className="settingtitle">

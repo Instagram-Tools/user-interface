@@ -15,14 +15,14 @@ export default class TextFieldNumber extends Component {
               className="text-field filter w-input"
               maxLength="256"
               value={context.state[this.props.value]}
-              onChange={(e => {
+              onChange={e => {
                 if (this.props.max && e.target.value > this.props.max) return;
 
                 const value = e.target.value > 0 ? e.target.value : '';
                 context.setState({
                   [this.props.value]: value
                 });
-              }).bind(this)}
+              }}
             />
             <div className="columnholder belowholder">
               <div

@@ -15,12 +15,12 @@ export default class TextField extends Component {
               className="text-field filter w-input"
               maxLength="256"
               value={context.state[this.props.value]}
-              onChange={(e => {
+              onChange={e => {
                 const value = e.target.value;
                 context.setState({
                   [this.props.value]: value
                 });
-              }).bind(this)}
+              }}
             />
             <div className="columnholder belowholder">
               <div

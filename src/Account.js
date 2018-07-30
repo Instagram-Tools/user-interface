@@ -14,7 +14,6 @@ export default class Account extends Component {
     return (
       <div>
         <div
-          onClick={this.toggle.bind(this)}
           data-w-id="5bc62214-6295-d5b6-2514-2ebbae7e5d29"
           className="dropdown-toggle w-dropdown-toggle"
         >
@@ -34,8 +33,8 @@ export default class Account extends Component {
           <a href="#" className="dropdownlink w-dropdown-link">
             Sex
           </a>
-          <a
-            href="#"
+          <div
+            onClick={this.toggle.bind(this)}
             data-w-id="2ef84843-5f94-80b8-30e8-eebec6eb258d"
             className="dropdownlink bottom_add_account w-dropdown-link"
           >
@@ -46,7 +45,7 @@ export default class Account extends Component {
             >
               +
             </span>
-          </a>
+          </div>
         </nav>
 
         <div

@@ -24,6 +24,30 @@ export default class Account extends Component {
           />
           <div className="general_settings subtitle account">Account</div>
         </div>
+        <nav className="dropdown-list w-dropdown-list">
+          <a href="#" className="dropdownlink w-dropdown-link">
+            Alex Bosch
+          </a>
+          <a href="#" className="dropdownlink w-dropdown-link">
+            Gaylord69
+          </a>
+          <a href="#" className="dropdownlink w-dropdown-link">
+            Sex
+          </a>
+          <a
+            href="#"
+            data-w-id="2ef84843-5f94-80b8-30e8-eebec6eb258d"
+            className="dropdownlink bottom_add_account w-dropdown-link"
+          >
+            Add account{' '}
+            <span
+              data-w-id="4f8e18b0-394f-5f2b-c803-4957ff6fb5ee"
+              className="pluscharacter"
+            >
+              +
+            </span>
+          </a>
+        </nav>
 
         <div
           style={display}
@@ -32,7 +56,7 @@ export default class Account extends Component {
         >
           <h1 className="settingtitle">Connect your Instagram account</h1>
           <a href="#" className="title_menu_element privacy">
-            Your details wil lnot be transferred to third parties. Click to see
+            Your details will not be transferred to third parties. Click to see
             our privacy policy.
           </a>
           <div className="w-form">

@@ -3,7 +3,8 @@ import TextField from './TextField';
 
 export default class Account extends Component {
   state = {
-    toggled: false
+    toggled: false,
+    dropdown: false
   };
 
   render() {
@@ -14,6 +15,7 @@ export default class Account extends Component {
     return (
       <div>
         <div
+          onClick={this.dropdown.bind(this)}
           data-w-id="5bc62214-6295-d5b6-2514-2ebbae7e5d29"
           className="dropdown-toggle w-dropdown-toggle"
         >
@@ -23,7 +25,10 @@ export default class Account extends Component {
           />
           <div className="general_settings subtitle account">Account</div>
         </div>
-        <nav className="dropdown-list w-dropdown-list">
+        <nav
+          style={{ display: this.state.dropdown ? 'block' : 'none' }}
+          className="dropdown-list w-dropdown-list"
+        >
           <a href="#" className="dropdownlink w-dropdown-link">
             Alex Bosch
           </a>
@@ -107,6 +112,10 @@ export default class Account extends Component {
         />
       </div>
     );
+  }
+
+  dropdown() {
+    this.setState(p => ({ dropdown: !p.dropdown }));
   }
 
   toggle() {

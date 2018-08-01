@@ -32,7 +32,7 @@ export default class Account extends Component {
         >
           <h1 className="settingtitle">Connect your Instagram account</h1>
           <a href="#" className="title_menu_element privacy">
-            Your details wil lnot be transferred to third parties. Click to see
+            Your details will not be transferred to third parties. Click to see
             our privacy policy.
           </a>
           <div className="w-form">

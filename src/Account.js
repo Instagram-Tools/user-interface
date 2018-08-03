@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import TextField from './TextField';
+import { Context } from './Context';
 
 export default class Account extends Component {
   state = {
@@ -29,15 +30,7 @@ export default class Account extends Component {
           style={{ display: this.state.dropdown ? 'block' : 'none' }}
           className="dropdown-list w-dropdown-list"
         >
-          <a href="#" className="dropdownlink w-dropdown-link">
-            Alex Bosch
-          </a>
-          <a href="#" className="dropdownlink w-dropdown-link">
-            Gaylord69
-          </a>
-          <a href="#" className="dropdownlink w-dropdown-link">
-            Sex
-          </a>
+          {this.displayAccounts()}
           <div
             onClick={this.toggle.bind(this)}
             data-w-id="2ef84843-5f94-80b8-30e8-eebec6eb258d"
@@ -111,6 +104,22 @@ export default class Account extends Component {
           className="connect_insta_account_darkener"
         />
       </div>
+    );
+  }
+
+  displayAccounts() {
+    function mapAccounts(list = []) {
+      return list.map(a => (
+        <a href="#" className="dropdownlink w-dropdown-link">
+          {a}
+        </a>
+      ));
+    }
+
+    return (
+      <Context.Consumer>
+        {context => mapAccounts(context.state.accounts)}
+      </Context.Consumer>
     );
   }
 

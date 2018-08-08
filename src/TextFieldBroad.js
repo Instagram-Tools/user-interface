@@ -5,10 +5,12 @@ import env from './Env';
 
 export default class TextFieldBroad extends Component {
   suggestionURL = 'https://www.instagram.com/web/search/topsearch/?context=blended&query=';
-  servers = [
-    this.suggestionURL,
-    ...env.RELAYS.map(r => r + this.suggestionURL)
-  ];
+  servers = [this.suggestionURL, ...this.buildRelays(env.RELAYS)];
+
+  buildRelays(relays = []) {
+    return relays.map(r => r + this.suggestionURL);
+  }
+
   state = {
     suggestions: [],
     value: '',

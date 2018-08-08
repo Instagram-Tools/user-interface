@@ -1,6 +1,9 @@
 let env = process.env;
-if (process.env.NODE_ENV !== 'production') {
+try {
   env = require('./.env.json');
+} catch (e) {
+  console.error(e);
+  env = process.env;
 }
 
 export default env;

@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
 import { Context } from './Context';
 import API_Gateway from './API_Gateway';
+import env from './Env';
 
 export default class TextFieldBroad extends Component {
+  suggestionURL = 'https://www.instagram.com/web/search/topsearch/?context=blended&query=';
   servers = [
-    'https://www.instagram.com/web/search/topsearch/?context=blended&' +
-      'query='
+    this.suggestionURL,
+    ...env.RELAYS.map(r => r + this.suggestionURL)
   ];
   state = {
     suggestions: [],

@@ -180,7 +180,9 @@ export class Provider extends Component {
   }
 
   componentWillMount() {
-    // new ScrollUtil().init(this.handleScroll.bind(this));
+    if (process.env.NODE_ENV === 'production') {
+      new ScrollUtil().init(this.handleScroll.bind(this));
+    }
   }
 
   render() {

@@ -24,7 +24,7 @@ export default class ContextList extends Component {
         <div
           className="deletebutton"
           value={index}
-          onClick={(() => this.remove(index, context)).bind(this)}
+          onClick={() => this.remove(index, context)}
         >
           <div className="xicon" value={index} />
         </div>

@@ -15,7 +15,7 @@ export default class Save extends Component {
             />
 
             <input
-              onClick={(() => this.saving(context.state)).bind(this)}
+              onClick={() => this.saving(context.state)}
               type="button"
               value="Save"
               data-wait="saving..."

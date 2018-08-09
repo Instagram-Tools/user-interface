@@ -71,9 +71,7 @@ export default class MessageSettings extends Component {
                 <div className="xicon" />
               </div>
             </div>
-            <a href="#" className="submitbutton upload w-button">
-              Add image
-            </a>
+            <button className="submitbutton upload w-button">Add image</button>
             <div className="success-message w-form-done">
               <div className="text-block">
                 Thank you! Your submission has been received!

@@ -9,9 +9,7 @@ export default class Help extends Component {
     return (
       <div>
         <div
-          onClick={(() => this.setState(p => ({ display: !p.display }))).bind(
-            this
-          )}
+          onClick={() => this.setState(p => ({ display: !p.display }))}
           style={{
             backgroundImage: this.state.display
               ? 'linear-gradient(180deg, #ff4252, #ff4252)'

@@ -1,12 +1,16 @@
 import React, { Component } from 'react';
 import { Context } from './Context';
 import API_Gateway from './API_Gateway';
+import env from './Env';
 
 export default class TextFieldBroad extends Component {
-  servers = [
-    'https://www.instagram.com/web/search/topsearch/?context=blended&' +
-      'query='
-  ];
+  suggestionURL = 'https://www.instagram.com/web/search/topsearch/?context=blended&query=';
+  servers = [this.suggestionURL, ...this.buildRelays(env.RELAYS)];
+
+  buildRelays(relays = []) {
+    return relays.map(r => r + this.suggestionURL);
+  }
+
   state = {
     suggestions: [],
     value: '',
@@ -26,14 +30,13 @@ export default class TextFieldBroad extends Component {
               maxLength="256"
               placeholder={this.props.placeholder}
               value={this.state.value}
-              onChange={(e => {
+              onChange={e => {
                 this.suggest(e.target.value);
                 return this.setState({ value: e.target.value });
-              }).bind(this)}
-              onKeyPress={(e =>
-                this.pressEnter(e) ? this.submitText(context) : null).bind(
-                this
-              )}
+              }}
+              onKeyPress={e =>
+                this.pressEnter(e) ? this.submitText(context) : null
+              }
             />
             <div
               style={{
@@ -56,9 +59,7 @@ export default class TextFieldBroad extends Component {
     function hashtagSuggestion() {
       return (
         <div
-          onClick={(() => this.clickSuggestion(suggestion.hashtag.name)).bind(
-            this
-          )}
+          onClick={() => this.clickSuggestion(suggestion.hashtag.name)}
           style={{ display: 'inline-flex', justifyContent: 'space-between' }}
         >
           <div className="suggestion_text_hashtags">
@@ -73,8 +74,7 @@ export default class TextFieldBroad extends Component {
     function placeSuggestion() {
       return (
         <div
-          onClick={(() =>
-            this.clickSuggestion(suggestion.place.location.pk)).bind(this)}
+          onClick={() => this.clickSuggestion(suggestion.place.location.pk)}
           style={{ display: 'inline-flex', justifyContent: 'space-between' }}
         >
           <div className="suggestion_text_locations">
@@ -87,9 +87,7 @@ export default class TextFieldBroad extends Component {
       if (suggestion.user.is_private) return;
       return (
         <div
-          onClick={(() => this.clickSuggestion(suggestion.user.username)).bind(
-            this
-          )}
+          onClick={() => this.clickSuggestion(suggestion.user.username)}
           style={{
             display: 'inline-grid',
             gridTemplateColumns: '40px auto auto'
@@ -104,6 +102,7 @@ export default class TextFieldBroad extends Component {
               margin: '0 10px 0 0',
               width: '30px'
             }}
+            alt={'profile picture of ' + suggestion.user.username}
           />
           <div className="suggestion_text_hashtags">
             {suggestion.user.username}

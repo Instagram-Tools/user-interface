@@ -3,7 +3,7 @@ version: '3'
 services:
  nginx:
    restart: always
-   build: ./nginx
+   build: .
    ports:
      - "80:80"
      - "60:60"

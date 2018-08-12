@@ -18,6 +18,7 @@
     "precommit": "lint-staged",
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "docker": "npm run build && docker-compose build && docker-compose push",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },

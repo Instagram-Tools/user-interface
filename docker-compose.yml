@@ -14,7 +14,7 @@ services:
  api:
     image: instagramtools/api
     ports:
-      - "6000:6000"
+      - "8000:8000"
     volumes:
       - ./api:/app
     restart: always

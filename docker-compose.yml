@@ -2,7 +2,6 @@ version: '3'
 
 services:
  nginx:
-   restart: always
    build: .
    image: instagramtools/user-interface
    ports:
@@ -17,7 +16,6 @@ services:
       - "8000:8000"
     volumes:
       - ./api:/app
-    restart: always
     depends_on:
       - postgres
     links:
@@ -35,7 +33,6 @@ services:
       - IP=tk
       - SECURITY_PASSWORD_SALT=tk
  postgres:
-    restart: always
     image: postgres:latest
     volumes:
       - db_data:/var/lib/postgresql

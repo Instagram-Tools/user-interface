@@ -43,14 +43,9 @@ export default class Save extends Component {
     delete settings.e_password;
     delete settings.timetable;
 
-    let paid = true,
-      started = true;
-
     const data = {
       email,
       username,
-      paid,
-      started,
       password,
       settings: JSON.stringify(settings),
       timetable

@@ -51,7 +51,7 @@ export default class Save extends Component {
       timetable
     };
 
-    console.log('e:', email, e_password);
+    // console.log('e:', email, e_password);
     API.login(email, e_password)
       .then(r => console.log('res r:', r))
       .catch(e => console.log('err r:', e))

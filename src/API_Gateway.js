@@ -7,7 +7,7 @@ export default class API_Gateway {
   }
 
   static async put(data) {
-    console.log('data:', data);
+    // console.log('data:', data);
 
     let response = await fetch(API_URL, {
       method: 'PUT',

@@ -6,7 +6,6 @@ services:
    image: instagramtools/user-interface
    ports:
      - "80:80"
-     - "60:60"
    volumes:
      - ./build:/usr/static
 

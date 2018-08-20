@@ -1,4 +1,4 @@
-const API_URL = 'http://localhost:60';
+const API_URL = 'http://localhost:8000';
 export default class API_Gateway {
   static async get(userName) {
     let url = API_URL + '/?user=' + userName;

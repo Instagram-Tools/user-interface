@@ -14,8 +14,6 @@ services:
     image: instagramtools/api
     ports:
       - "8000:8000"
-    volumes:
-      - ./api:/app
     depends_on:
       - postgres
     links:

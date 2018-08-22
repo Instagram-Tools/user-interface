@@ -31,7 +31,7 @@ export default class Account extends Component {
           className="connect_insta_account"
         >
           <h1 className="settingtitle">Connect your Instagram account</h1>
-          <a href="#" className="title_menu_element privacy">
+          <a href="/privacy-policy" className="title_menu_element privacy">
             Your details will not be transferred to third parties. Click to see
             our privacy policy.
           </a>

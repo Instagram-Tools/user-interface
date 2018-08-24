@@ -9,7 +9,7 @@ import LikeSettings from './LikeSettings';
 import CommentSettings from './CommentSettings';
 import FollowSettings from './FollowSettings';
 import UnfollowSettings from './UnfollowSettings';
-import MessageSettings from './MessageSettings';
+// import MessageSettings from './MessageSettings';
 import ActivitySettings from './ActivitySettings';
 import { Context, Provider } from './Context';
 import Save from './Save';

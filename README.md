@@ -1,5 +1,23 @@
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
+[docker-nginx-react](https://github.com/zzswang/docker-nginx-react)
+was used for the NGINX Files
+
+## Environments
+* APP_DIR: the root direactory of your app running in the docker container,
+  usally you do not need to change it.
+* APP_PATH_PREFIX: some times you would want to put several sites under one
+  domain, then sub path prefix is required.
+* APP_API_PLACEHOLDER: An api call start with a specific path, then the server
+  will redirect the request to APP_API_GATEWAY.
+* APP_API_GATEWAY: work together with APP_API_PLACEHOLDER.
+* CLIENT_BODY_TIMEOUT: body timeout.
+* CLIENT_HEADER_TIMEOUT: header timeout.
+* CLIENT_MAX_BODY_SIZE: maximum request body size.
+* WHITE_LIST: on or off, turn on white_list feature if on, default off.
+* WHITE_LIST_IP: ip you wang put through, set it as `(172.17.0.1)|(192.168.0.25)`.
+
+
 Below you will find some information on how to perform common tasks.<br>
 You can find the most recent version of this guide [here](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md).
 

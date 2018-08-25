@@ -1,15 +1,15 @@
 export default class Log {
-  isEnabled() {
+  static isEnabled() {
     return process.env.NODE_ENV === 'development';
   }
 
-  log(message, ...optionalParams) {
+  static log(message, ...optionalParams) {
     if (this.isEnabled()) console.log(message, optionalParams);
   }
 
-  error(message, ...optionalParams) {
+  static error(message, ...optionalParams) {
     if (this.isEnabled()) console.error(message, optionalParams);
   }
 }
 
-new Log().log('process.env.NODE_ENV:', process.env.NODE_ENV);
+Log.log('process.env.NODE_ENV:', process.env.NODE_ENV);

@@ -11,15 +11,15 @@ ENV DEBUG=off \
 	WHITE_LIST_IP=(172.17.0.1)|(192.168.0.25) \
 	WHITE_LIST=off
 
-COPY nginx-site.conf /etc/nginx/conf.d/app.conf.template
-COPY start-nginx.sh /usr/sbin/start
+COPY nginx/conf.d/nginx-site.conf /etc/nginx/conf.d/app.conf.template
+COPY nginx/start-nginx.sh /usr/sbin/start
 
 RUN chmod u+x /usr/sbin/start
 
 EXPOSE 80 443
 WORKDIR ${APP_DIR}
 
-COPY build /app
+COPY build ${APP_DIR}
 
 
 CMD [ "start" ]

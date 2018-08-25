@@ -7,8 +7,7 @@ services:
    ports:
      - "80:80"
    volumes:
-     - ./build:/usr/static
-     - ./nginx:/etc/nginx
+     - ./build:/app
 
  api:
     image: instagramtools/api

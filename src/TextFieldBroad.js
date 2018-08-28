@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Context } from './Context';
 import API_Gateway from './API_Gateway';
 import env from './Env';
+import console from './Log';
 
 export default class TextFieldBroad extends Component {
   suggestionURL = 'https://www.instagram.com/web/search/topsearch/?context=blended&query=';

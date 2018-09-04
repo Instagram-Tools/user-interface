@@ -1,5 +1,7 @@
 import console from './Log';
-const API_URL = 'http://localhost:8000';
+import env from './Env';
+
+const API_URL = process.env.API_URL || 'http://localhost:8000';
 export default class API_Gateway {
   static async get(userName) {
     let url = API_URL + '/?user=' + userName;

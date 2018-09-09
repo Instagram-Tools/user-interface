@@ -8,27 +8,45 @@ export default class Save extends Component {
     return (
       <Context.Consumer>
         {context => (
-          <div className="header savebutton holder">
-            <div
-              data-w-id="d8b0db36-ca47-deb4-6250-cc991b79ddb9"
-              className="header savebutton color"
-              style={{ left: 0 }}
-            />
+          <div>
+            <div className="header savebutton holder">
+              <div
+                data-w-id="d8b0db36-ca47-deb4-6250-cc991b79ddb9"
+                className="header savebutton color"
+                style={{ left: 0 }}
+              />
 
-            <input
-              onClick={() => this.saving(context.state)}
-              type="button"
-              value="Save"
-              data-wait="saving..."
-              data-w-id="d8b0db36-ca47-deb4-6250-cc991b79ddba"
-              className="submitbutton bigasssubmitbutton w-button"
-            />
-            <h1
-              data-w-id="d8b0db36-ca47-deb4-6250-cc991b79ddbb"
-              className="titlepage"
+              <input
+                onClick={(() => this.saving(context.state)).bind(this)}
+                type="button"
+                value="Save"
+                data-wait="saving..."
+                data-w-id="d8b0db36-ca47-deb4-6250-cc991b79ddba"
+                className="submitbutton bigasssubmitbutton w-button"
+              />
+              <h1
+                data-w-id="d8b0db36-ca47-deb4-6250-cc991b79ddbb"
+                className="titlepage"
+              >
+                Saved!
+              </h1>
+            </div>
+            <div
+              style={{ display: this.state.success ? 'block' : 'none' }}
+              className="success-message w-form-done"
             >
-              Saved!
-            </h1>
+              <div className="text-block">
+                Thank you! Your submission has been received!
+              </div>
+            </div>
+            <div
+              style={{ display: this.state.error ? 'block' : 'none' }}
+              className="error-message w-form-fail"
+            >
+              <div className="text-block-2">
+                Oops! Something went wrong while submitting the form.
+              </div>
+            </div>
           </div>
         )}
       </Context.Consumer>

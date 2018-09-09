@@ -25,16 +25,6 @@ export default class ActivitySettings extends Component {
             </div>
 
             <Timetable />
-            <div className="success-message w-form-done">
-              <div className="text-block">
-                Thank you! Your submission has been received!
-              </div>
-            </div>
-            <div className="error-message w-form-fail">
-              <div className="text-block-2">
-                Oops! Something went wrong while submitting the form.
-              </div>
-            </div>
           </div>
         </div>
       </div>

@@ -4,6 +4,11 @@ import API from './API_Gateway';
 import console from './Log';
 
 export default class Save extends Component {
+  state = {
+    success: false,
+    error: false
+  };
+
   render() {
     return (
       <Context.Consumer>
@@ -17,7 +22,7 @@ export default class Save extends Component {
               />
 
               <input
-                onClick={(() => this.saving(context.state)).bind(this)}
+                onClick={() => this.saving(context.state)}
                 type="button"
                 value="Save"
                 data-wait="saving..."
@@ -76,8 +81,18 @@ export default class Save extends Component {
       .catch(e => console.log('err r:', e))
       .then(() => {
         API.put(data)
-          .then(r => console.log('res s:', r))
-          .catch(e => console.log('err s:', e));
+          .then(this.success.bind(this))
+          .catch(this.error.bind(this));
       });
+  }
+
+  success(r) {
+    console.log('res s:', r);
+    this.setState({ success: true, error: false });
+  }
+
+  error(e) {
+    console.log('err s:', e);
+    this.setState({ success: false, error: true });
   }
 }

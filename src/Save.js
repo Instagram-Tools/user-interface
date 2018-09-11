@@ -14,7 +14,23 @@ export default class Save extends Component {
       <Context.Consumer>
         {context => (
           <div>
-            <div className="header savebutton holder">
+            <div
+              style={{ display: this.state.success ? 'block' : 'none' }}
+              className="success-message w-form-done"
+            >
+              <div className="text-block">
+                Thank you! Your submission has been received!
+              </div>
+            </div>
+            <div
+              style={{ display: this.state.error ? 'block' : 'none' }}
+              className="error-message w-form-fail"
+            >
+              <div className="text-block-2">
+                Oops! Something went wrong while submitting the form.
+              </div>
+            </div>
+            <div className="header savebutton holder" style={{ margin: 0 }}>
               <div
                 data-w-id="d8b0db36-ca47-deb4-6250-cc991b79ddb9"
                 className="header savebutton color"
@@ -35,22 +51,6 @@ export default class Save extends Component {
               >
                 Saved!
               </h1>
-            </div>
-            <div
-              style={{ display: this.state.success ? 'block' : 'none' }}
-              className="success-message w-form-done"
-            >
-              <div className="text-block">
-                Thank you! Your submission has been received!
-              </div>
-            </div>
-            <div
-              style={{ display: this.state.error ? 'block' : 'none' }}
-              className="error-message w-form-fail"
-            >
-              <div className="text-block-2">
-                Oops! Something went wrong while submitting the form.
-              </div>
             </div>
           </div>
         )}

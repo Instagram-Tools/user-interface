@@ -80,6 +80,17 @@ export default class TextFieldBroad extends Component {
   }
 
   mapSuggestions(suggestion) {
+    switch (this.props.query) {
+      case 'hashtags':
+        return hashtagSuggestion.call(this);
+      case 'places':
+        return placeSuggestion.call(this);
+      case 'users':
+        return userSuggestion.call(this);
+      default:
+        console.log(suggestion);
+    }
+
     function hashtagSuggestion() {
       return (
         <div
@@ -136,17 +147,6 @@ export default class TextFieldBroad extends Component {
           </div>
         </div>
       );
-    }
-
-    switch (this.props.query) {
-      case 'hashtags':
-        return hashtagSuggestion.call(this);
-      case 'places':
-        return placeSuggestion.call(this);
-      case 'users':
-        return userSuggestion.call(this);
-      default:
-        console.log(suggestion);
     }
   }
 

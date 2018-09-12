@@ -6,7 +6,11 @@ class NavBar extends Component {
   render() {
     return (
       <div className="generalsettings">
-        <div data-delay="0" className="dropdown w-dropdown">
+        <div
+          data-delay="0"
+          className="dropdown w-dropdown"
+          style={{ zIndex: 999999 }}
+        >
           <Account />
         </div>
         <h1 className="general_settings subtitle">Like</h1>

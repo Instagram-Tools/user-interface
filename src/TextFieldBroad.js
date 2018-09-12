@@ -47,12 +47,36 @@ export default class TextFieldBroad extends Component {
               }}
               className="suggestions"
             >
-              {this.state.suggestions.map(this.mapSuggestions.bind(this))}
+              {this.state.suggestions
+                .sort(this.sortByChildren())
+                .filter(this.firstN(10))
+                .map(this.mapSuggestions.bind(this))}
             </div>
           </div>
         )}
       </Context.Consumer>
     );
+  }
+
+  sortByChildren() {
+    return (p1, p2) => compareByChildren(p1, p2);
+
+    function compareByChildren(p1, p2) {
+      try {
+        if (p1.hashtags && p2.hashtags) {
+          return p2.hashtag.media_count - p1.hashtag.media_count;
+        } else if (p1.user && p2.user) {
+          return p2.user.follower_count - p1.user.follower_count;
+        }
+      } catch (e) {
+        console.error(e);
+      }
+      return 0;
+    }
+  }
+
+  firstN(number) {
+    return (element, index) => index < number;
   }
 
   mapSuggestions(suggestion) {

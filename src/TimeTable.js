@@ -12,30 +12,32 @@ class TimetableWrapper extends React.Component {
         </div>
         <div className="actvityholder" style={{ alignItems: 'start' }}>
           <div className="legendholder">
-            <div className="legendtext">1am</div>
-            <div className="legendtext">2</div>
-            <div className="legendtext">3</div>
-            <div className="legendtext">4</div>
-            <div className="legendtext">5</div>
-            <div className="legendtext">6</div>
-            <div className="legendtext">7</div>
-            <div className="legendtext">8</div>
-            <div className="legendtext">9</div>
-            <div className="legendtext">10</div>
-            <div className="legendtext">11</div>
-            <div className="legendtext">12</div>
-            <div className="legendtext">1pm</div>
-            <div className="legendtext">2</div>
-            <div className="legendtext">3</div>
-            <div className="legendtext">4</div>
-            <div className="legendtext">5</div>
-            <div className="legendtext">6</div>
-            <div className="legendtext">7</div>
-            <div className="legendtext">8</div>
-            <div className="legendtext">9</div>
-            <div className="legendtext">10</div>
-            <div className="legendtext">11‍</div>
-            <div className="legendtext">12‍</div>
+            {[
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19,
+              20,
+              21,
+              22,
+              23
+            ].map(time => <div className="legendtext">{time}</div>)}
           </div>
           <div className="tableholder" style={{ display: 'flex' }}>
             {this.range(1, 7).map(this.mapDays.bind(this))}

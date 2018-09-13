@@ -6,13 +6,9 @@ class TimetableWrapper extends React.Component {
     return (
       <div>
         <div className="legendholder horizontal">
-          <div className="legendtext horizontaltext">Mon</div>
-          <div className="legendtext horizontaltext">Tue</div>
-          <div className="legendtext horizontaltext">Wed</div>
-          <div className="legendtext horizontaltext">Thu</div>
-          <div className="legendtext horizontaltext">Fri</div>
-          <div className="legendtext horizontaltext">Sat</div>
-          <div className="legendtext horizontaltext">Sun</div>
+          {['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'].map(day => (
+            <div className="legendtext horizontaltext">{day}</div>
+          ))}
         </div>
         <div className="actvityholder" style={{ alignItems: 'start' }}>
           <div className="legendholder">

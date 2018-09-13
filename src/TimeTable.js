@@ -12,32 +12,9 @@ class TimetableWrapper extends React.Component {
         </div>
         <div className="actvityholder" style={{ alignItems: 'start' }}>
           <div className="legendholder">
-            {[
-              0,
-              1,
-              2,
-              3,
-              4,
-              5,
-              6,
-              7,
-              8,
-              9,
-              10,
-              11,
-              12,
-              13,
-              14,
-              15,
-              16,
-              17,
-              18,
-              19,
-              20,
-              21,
-              22,
-              23
-            ].map(time => <div className="legendtext">{time}</div>)}
+            {this.range(0, 23).map(time => (
+              <div className="legendtext">{time}</div>
+            ))}
           </div>
           <div className="tableholder" style={{ display: 'flex' }}>
             {this.range(1, 7).map(this.mapDays.bind(this))}

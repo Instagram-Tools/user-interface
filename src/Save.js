@@ -38,7 +38,7 @@ export default class Save extends Component {
               />
 
               <input
-                onClick={() => this.saving(context.state)}
+                onClick={() => this.saving(context)}
                 type="button"
                 value="Save"
                 data-wait="saving..."
@@ -58,9 +58,13 @@ export default class Save extends Component {
     );
   }
 
-  saving(state) {
-    let settings = { ...state };
+  saving(context) {
+    let settings = { ...context.state };
     let { password, username, email, e_password, timetable } = settings;
+    if (!(password && username && email && e_password && timetable)) {
+      return context.setState({ toggled: true });
+    }
+
     delete settings.password;
     delete settings.username;
     delete settings.email;

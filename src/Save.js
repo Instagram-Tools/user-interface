@@ -66,6 +66,7 @@ export default class Save extends Component {
     delete settings.email;
     delete settings.e_password;
     delete settings.timetable;
+    delete settings.toggled;
 
     const data = {
       email,

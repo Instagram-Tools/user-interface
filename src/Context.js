@@ -7,6 +7,7 @@ export const Context = React.createContext();
 // Then create a provider Component
 export class Provider extends Component {
   state = {
+    toggled: false,
     scrollY: 0,
     scrollHeight: document.body.scrollHeight,
     do_comment_enabled: true,

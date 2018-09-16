@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import './css/webflow.css';
 import './css/normalize.css';
+import './css/webflow.css';
 import './css/code-connect.webflow.css';
 import Progress from './ProgressBar';
 import NavBar from './NavBar';

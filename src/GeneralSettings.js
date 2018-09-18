@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Switch from './ContextSwitch';
-import TextFieldBroad from './TextFieldBroad';
+import TextFieldSuggestion from './TextFieldSuggestion';
 import TextFieldNumber from './TextFieldNumber';
 import ContextList from './ContextList';
 import Help from './Help';
@@ -34,7 +34,7 @@ export default class GeneralSettings extends Component {
             >
               <ContextList value="like_by_tags" iconClass="hashtagicon" />
               <div className="columnholder hashtag_settings_holder">
-                <TextFieldBroad
+                <TextFieldSuggestion
                   value="like_by_tags"
                   query="hashtags"
                   placeholder="Enter hashtags this way: fitness"
@@ -57,7 +57,7 @@ export default class GeneralSettings extends Component {
             </div>
             <ContextList value="like_by_locations" iconClass="locationicon" />
             <div className="columnholder hashtag_settings_holder">
-              <TextFieldBroad
+              <TextFieldSuggestion
                 value="like_by_locations"
                 query="places"
                 placeholder="Search for locations"
@@ -81,7 +81,7 @@ export default class GeneralSettings extends Component {
             <ContextList value="follow_user_followers" iconClass="usericon" />
             <div className="columnholder hashtag_settings_holder">
               <div className="columnholder user">
-                <TextFieldBroad
+                <TextFieldSuggestion
                   value="follow_user_followers"
                   query="users"
                   placeholder="Search for user"

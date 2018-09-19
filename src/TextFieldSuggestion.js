@@ -30,10 +30,7 @@ export default class TextFieldSuggestion extends Component {
               maxLength="256"
               placeholder={this.props.placeholder}
               value={this.state.value}
-              onChange={e => {
-                this.suggest(e.target.value);
-                return this.setState({ value: e.target.value });
-              }}
+              onChange={e => this.onInput(e)}
               onKeyPress={e =>
                 this.pressEnter(e) ? this.submitText(context) : null
               }
@@ -47,15 +44,24 @@ export default class TextFieldSuggestion extends Component {
               }}
               className="suggestions"
             >
-              {this.state.suggestions
-                .sort(this.sortByChildren())
-                .filter(this.firstN(10))
-                .map(this.mapSuggestions.bind(this))}
+              {this.Suggestions()}
             </div>
           </div>
         )}
       </Context.Consumer>
     );
+  }
+
+  onInput(e) {
+    this.suggest(e.target.value);
+    return this.setState({ value: e.target.value });
+  }
+
+  Suggestions() {
+    return this.state.suggestions
+      .sort(this.sortByChildren())
+      .filter(this.firstN(10))
+      .map(this.mapSuggestions.bind(this));
   }
 
   sortByChildren() {

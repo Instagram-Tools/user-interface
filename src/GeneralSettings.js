@@ -5,6 +5,7 @@ import TextFieldNumber from './TextFieldNumber';
 import ContextList from './ContextList';
 import Help from './Help';
 import TextField_Hashtags from './TextField_Hashtags';
+import TextField_Users from './TextField_Users';
 
 export default class GeneralSettings extends Component {
   render() {
@@ -81,9 +82,8 @@ export default class GeneralSettings extends Component {
             <ContextList value="follow_user_followers" iconClass="usericon" />
             <div className="columnholder hashtag_settings_holder">
               <div className="columnholder user">
-                <TextFieldSuggestion
+                <TextField_Users
                   value="follow_user_followers"
-                  query="users"
                   placeholder="Search for user"
                 />
               </div>

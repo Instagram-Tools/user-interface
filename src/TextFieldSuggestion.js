@@ -138,7 +138,7 @@ export default class TextFieldSuggestion extends Component {
   }
 
   async getSuggestion(query) {
-    if (!this.props.query) return;
+    if (!this.query) return console.error('this.query is missing');
     let servers = this.state.servers;
 
     function chooseServer() {
@@ -155,7 +155,7 @@ export default class TextFieldSuggestion extends Component {
 
         if (json) this.state.servers.push(server);
 
-        return json[this.props.query];
+        return json[this.query];
       } catch (e) {
         console.error(e);
       }

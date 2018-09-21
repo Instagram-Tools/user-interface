@@ -2,6 +2,8 @@ import React from 'react';
 import TextFieldSuggestion from './TextFieldSuggestion';
 
 export default class TextField_Hashtags extends TextFieldSuggestion {
+  query = 'hashtags';
+
   mapSuggestions(suggestion) {
     return (
       <div

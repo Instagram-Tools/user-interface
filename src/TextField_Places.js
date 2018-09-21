@@ -2,6 +2,8 @@ import React from 'react';
 import TextFieldSuggestion from './TextFieldSuggestion';
 
 export default class TextField_Places extends TextFieldSuggestion {
+  query = 'places';
+
   mapSuggestions(suggestion) {
     return (
       <div
@@ -13,5 +15,9 @@ export default class TextField_Places extends TextFieldSuggestion {
         </div>
       </div>
     );
+  }
+
+  pressEnter() {
+    return false;
   }
 }

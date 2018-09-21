@@ -2,6 +2,8 @@ import React from 'react';
 import TextFieldSuggestion from './TextFieldSuggestion';
 
 export default class TextField_Users extends TextFieldSuggestion {
+  query = 'users';
+
   mapSuggestions(suggestion) {
     if (suggestion.user.is_private) return;
     return (

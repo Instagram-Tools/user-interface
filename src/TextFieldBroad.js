@@ -1,4 +1,3 @@
-import React from 'react';
 import TextFieldSuggestion from './TextFieldSuggestion';
 
 export default class TextFieldBroad extends TextFieldSuggestion {

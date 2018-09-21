@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import Switch from './ContextSwitch';
-import TextFieldSuggestion from './TextFieldSuggestion';
 import TextFieldNumber from './TextFieldNumber';
 import ContextList from './ContextList';
 import Help from './Help';
 import TextField_Hashtags from './TextField_Hashtags';
 import TextField_Users from './TextField_Users';
+import TextField_Places from './TextField_Places';
 
 export default class GeneralSettings extends Component {
   render() {
@@ -58,9 +58,8 @@ export default class GeneralSettings extends Component {
             </div>
             <ContextList value="like_by_locations" iconClass="locationicon" />
             <div className="columnholder hashtag_settings_holder">
-              <TextFieldSuggestion
+              <TextField_Places
                 value="like_by_locations"
-                query="places"
                 placeholder="Search for locations"
               />
             </div>

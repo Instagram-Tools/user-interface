@@ -86,24 +86,9 @@ export default class TextFieldSuggestion extends Component {
   }
 
   mapSuggestions(suggestion) {
-    switch (this.props.query) {
-      case 'places':
-        return placeSuggestion.call(this);
-      default:
-        console.log(suggestion);
-    }
-    function placeSuggestion() {
-      return (
-        <div
-          onClick={() => this.clickSuggestion(suggestion.place.location.pk)}
-          style={{ display: 'inline-flex', justifyContent: 'space-between' }}
-        >
-          <div className="suggestion_text_locations">
-            {suggestion.place.location.name}
-          </div>
-        </div>
-      );
-    }
+    return console.error(
+      `do not use this Stub: \n mapSuggestions(${suggestion})`
+    );
   }
 
   clickSuggestion(suggestion) {

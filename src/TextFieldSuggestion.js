@@ -87,30 +87,12 @@ export default class TextFieldSuggestion extends Component {
 
   mapSuggestions(suggestion) {
     switch (this.props.query) {
-      case 'hashtags':
-        return hashtagSuggestion.call(this);
       case 'places':
         return placeSuggestion.call(this);
       case 'users':
         return userSuggestion.call(this);
       default:
         console.log(suggestion);
-    }
-
-    function hashtagSuggestion() {
-      return (
-        <div
-          onClick={() => this.clickSuggestion(suggestion.hashtag.name)}
-          style={{ display: 'inline-flex', justifyContent: 'space-between' }}
-        >
-          <div className="suggestion_text_hashtags">
-            #{suggestion.hashtag.name}
-          </div>
-          <div className="amount_text_hashtags">
-            {suggestion.hashtag.media_count} posts
-          </div>
-        </div>
-      );
     }
     function placeSuggestion() {
       return (
@@ -196,9 +178,10 @@ export default class TextFieldSuggestion extends Component {
   suggest(value) {
     const splitAt = value.lastIndexOf(this.separator);
     const query = value.substring(splitAt);
-    this.getSuggestion(query).then(suggestions =>
-      this.setState({ suggestions })
-    );
+    this.getSuggestion(query).then((suggestions = []) => {
+      console.log('suggestions', suggestions);
+      return this.setState({ suggestions });
+    });
   }
 
   async getSuggestion(query) {

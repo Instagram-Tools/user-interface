@@ -4,6 +4,7 @@ import TextFieldSuggestion from './TextFieldSuggestion';
 import TextFieldNumber from './TextFieldNumber';
 import ContextList from './ContextList';
 import Help from './Help';
+import TextField_Hashtags from './TextField_Hashtags';
 
 export default class GeneralSettings extends Component {
   render() {
@@ -34,9 +35,8 @@ export default class GeneralSettings extends Component {
             >
               <ContextList value="like_by_tags" iconClass="hashtagicon" />
               <div className="columnholder hashtag_settings_holder">
-                <TextFieldSuggestion
+                <TextField_Hashtags
                   value="like_by_tags"
-                  query="hashtags"
                   placeholder="Enter hashtags this way: fitness"
                 />
               </div>

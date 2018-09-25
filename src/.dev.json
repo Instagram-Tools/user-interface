@@ -1,0 +1,4 @@
+{
+  "RELAYS": ["https://cors.io/?"],
+  "API_URL": "http://loocalhost:8000"
+}

@@ -25,7 +25,7 @@ export default class TextFieldSuggestion extends Component {
       <Context.Consumer>
         {context => (
           <div>
-            <ContextList value={this.props.value} iconClass={this.iconClass} />
+            {this.getList()}
             <div className="columnholder hashtag_settings_holder">
               <input
                 type="text"
@@ -54,6 +54,10 @@ export default class TextFieldSuggestion extends Component {
         )}
       </Context.Consumer>
     );
+  }
+
+  getList() {
+    return <ContextList value={this.props.value} iconClass={this.iconClass} />;
   }
 
   onInput(e) {

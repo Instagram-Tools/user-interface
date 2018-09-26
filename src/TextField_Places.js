@@ -3,6 +3,7 @@ import TextFieldSuggestion from './TextFieldSuggestion';
 
 export default class TextField_Places extends TextFieldSuggestion {
   query = 'places';
+  iconClass = 'locationicon';
 
   mapSuggestions(suggestion) {
     return (

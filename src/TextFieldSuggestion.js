@@ -3,6 +3,7 @@ import { Context } from './Context';
 import API_Gateway from './API_Gateway';
 import env from './Env';
 import console from './Log';
+import ContextList from './ContextList';
 
 export default class TextFieldSuggestion extends Component {
   suggestionURL = 'https://www.instagram.com/web/search/topsearch/?context=blended&query=';
@@ -24,27 +25,30 @@ export default class TextFieldSuggestion extends Component {
       <Context.Consumer>
         {context => (
           <div>
-            <input
-              type="text"
-              className="text-field broadfield w-input"
-              maxLength="256"
-              placeholder={this.props.placeholder}
-              value={this.state.value}
-              onChange={e => this.onInput(e)}
-              onKeyPress={e =>
-                this.pressEnter(e) ? this.submitText(context) : null
-              }
-            />
-            <div
-              style={{
-                display:
-                  this.state.suggestions.length > 0 ? 'inline-grid' : 'none',
-                position: 'relative',
-                top: '-60px'
-              }}
-              className="suggestions"
-            >
-              {this.Suggestions()}
+            <ContextList value={this.props.value} iconClass={this.iconClass} />
+            <div className="columnholder hashtag_settings_holder">
+              <input
+                type="text"
+                className="text-field broadfield w-input"
+                maxLength="256"
+                placeholder={this.props.placeholder}
+                value={this.state.value}
+                onChange={e => this.onInput(e)}
+                onKeyPress={e =>
+                  this.pressEnter(e) ? this.submitText(context) : null
+                }
+              />
+              <div
+                style={{
+                  display:
+                    this.state.suggestions.length > 0 ? 'inline-grid' : 'none',
+                  position: 'relative',
+                  top: '-60px'
+                }}
+                className="suggestions"
+              >
+                {this.Suggestions()}
+              </div>
             </div>
           </div>
         )}

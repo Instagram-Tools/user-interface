@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import Switch from './ContextSwitch';
 import TextFieldNumber from './TextFieldNumber';
-import ContextList from './ContextList';
 import Help from './Help';
 import TextField_Hashtags from './TextField_Hashtags';
 import TextField_Users from './TextField_Users';
@@ -34,13 +33,10 @@ export default class GeneralSettings extends Component {
               data-w-id="1846180f-b0c1-4f62-a33b-df4641310d47"
               className="settingsgroup"
             >
-              <ContextList value="like_by_tags" iconClass="hashtagicon" />
-              <div className="columnholder hashtag_settings_holder">
-                <TextField_Hashtags
-                  value="like_by_tags"
-                  placeholder="Enter hashtags this way: fitness"
-                />
-              </div>
+              <TextField_Hashtags
+                value="like_by_tags"
+                placeholder="Enter hashtags this way: fitness"
+              />
             </div>
             <div className="titleholder">
               <label htmlFor="email" className="settingtitle">
@@ -56,13 +52,10 @@ export default class GeneralSettings extends Component {
                 </span>
               </Help>
             </div>
-            <ContextList value="like_by_locations" iconClass="locationicon" />
-            <div className="columnholder hashtag_settings_holder">
-              <TextField_Places
-                value="like_by_locations"
-                placeholder="Search for locations"
-              />
-            </div>
+            <TextField_Places
+              value="like_by_locations"
+              placeholder="Search for locations"
+            />
             <div className="titleholder">
               <label htmlFor="email" className="settingtitle">
                 Relevant Users
@@ -78,14 +71,11 @@ export default class GeneralSettings extends Component {
                 </span>
               </Help>
             </div>
-            <ContextList value="follow_user_followers" iconClass="usericon" />
             <div className="columnholder hashtag_settings_holder">
-              <div className="columnholder user">
-                <TextField_Users
-                  value="follow_user_followers"
-                  placeholder="Search for user"
-                />
-              </div>
+              <TextField_Users
+                value="follow_user_followers"
+                placeholder="Search for user"
+              />
               <div className="titleholder">
                 <label
                   style={{ fontSize: '1.4em', fontWeight: '400' }}

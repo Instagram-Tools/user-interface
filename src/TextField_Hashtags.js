@@ -3,6 +3,7 @@ import TextFieldSuggestion from './TextFieldSuggestion';
 
 export default class TextField_Hashtags extends TextFieldSuggestion {
   query = 'hashtags';
+  iconClass = 'hashtagicon';
 
   mapSuggestions(suggestion) {
     return (

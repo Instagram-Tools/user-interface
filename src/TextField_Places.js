@@ -11,9 +11,7 @@ export default class TextField_Places extends TextFieldSuggestion {
       <Context.Consumer>
         {context => (
           <div
-            onClick={() =>
-              this.clickSuggestion(suggestion.place.location.pk, context)
-            }
+            onClick={() => this.clickSuggestion(suggestion, context)}
             style={{ display: 'inline-flex', justifyContent: 'space-between' }}
           >
             <div className="suggestion_text_locations">
@@ -29,9 +27,13 @@ export default class TextField_Places extends TextFieldSuggestion {
     return false;
   }
 
-  clickSuggestion(suggestion, context) {
-    this.setState({ value: suggestion });
-    this.submitText(context);
-    this.setState({ suggestions: [] });
+  async clickSuggestion(suggestion, context) {
+    await this.setState({ value: suggestion.place.location.pk });
+    await this.submitText(context);
+    await this.setState({ suggestions: [] });
+  }
+
+  addValue(old = [], value) {
+    return [...old, value];
   }
 }

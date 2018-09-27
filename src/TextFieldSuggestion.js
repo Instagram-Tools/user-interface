@@ -3,7 +3,6 @@ import { Context } from './Context';
 import API_Gateway from './API_Gateway';
 import env from './Env';
 import console from './Log';
-import ContextList from './ContextList';
 
 export default class TextFieldSuggestion extends Component {
   suggestionURL = 'https://www.instagram.com/web/search/topsearch/?context=blended&query=';
@@ -25,7 +24,9 @@ export default class TextFieldSuggestion extends Component {
       <Context.Consumer>
         {context => (
           <div>
-            {this.getList()}
+            <div className="columnholder applied_hashtasgs_and_locations">
+              {this.map(context.state[this.props.value], context)}
+            </div>
             <div className="columnholder hashtag_settings_holder">
               <input
                 type="text"
@@ -56,8 +57,30 @@ export default class TextFieldSuggestion extends Component {
     );
   }
 
-  getList() {
-    return <ContextList value={this.props.value} iconClass={this.iconClass} />;
+  map(list = [], context) {
+    return list.map((element, index) => (
+      <div key={index} className="applied_hashtag_or_location">
+        <div className="classicon">
+          <div className={this.iconClass} />
+        </div>
+        <div className="hashtag_or_location_text">{element}</div>
+        <div
+          className="deletebutton"
+          value={index}
+          onClick={() => this.remove(index, context)}
+        >
+          <div className="xicon" value={index} />
+        </div>
+      </div>
+    ));
+  }
+
+  remove(index, context) {
+    context.setState(p => {
+      let l = [...p[this.props.value]];
+      l.splice(index, 1);
+      return { [this.props.value]: l };
+    });
   }
 
   onInput(e) {

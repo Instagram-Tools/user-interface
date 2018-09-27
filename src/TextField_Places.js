@@ -40,28 +40,16 @@ export default class TextField_Places extends TextFieldSuggestion {
     return [...old, value];
   }
 
-  getList() {
-    return (
-      <Context.Consumer>
-        {context => (
-          <div className="columnholder applied_hashtasgs_and_locations">
-            {this.map(this.state.list, context)}
-          </div>
-        )}
-      </Context.Consumer>
-    );
+  map(list = [], context) {
+    return super.map(this.state.list, context);
   }
 
   remove(index, context) {
+    super.remove(index, context);
     this.setState(p => {
       let l = [...p.list];
       l.splice(index, 1);
       return { list: l };
-    });
-    context.setState(p => {
-      let l = [...p[this.props.value]];
-      l.splice(index, 1);
-      return { [this.props.value]: l };
     });
   }
 }

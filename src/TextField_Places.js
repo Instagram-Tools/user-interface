@@ -52,24 +52,6 @@ export default class TextField_Places extends TextFieldSuggestion {
     );
   }
 
-  map(list = [], context) {
-    return list.map((element, index) => (
-      <div key={index} className="applied_hashtag_or_location">
-        <div className="classicon">
-          <div className={this.props.iconClass} />
-        </div>
-        <div className="hashtag_or_location_text">{element}</div>
-        <div
-          className="deletebutton"
-          value={index}
-          onClick={() => this.remove(index, context)}
-        >
-          <div className="xicon" value={index} />
-        </div>
-      </div>
-    ));
-  }
-
   remove(index, context) {
     this.setState(p => {
       let l = [...p.list];

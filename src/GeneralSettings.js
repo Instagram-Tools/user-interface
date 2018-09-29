@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 import Switch from './ContextSwitch';
 import TextFieldNumber from './TextFieldNumber';
 import Help from './Help';
-import TextField_Hashtags from './TextField_Hashtags';
-import TextField_Users from './TextField_Users';
-import TextField_Places from './TextField_Places';
+import TextFieldHashtags from './TextField_Hashtags';
+import TextFieldUsers from './TextField_Users';
+import TextFieldPlaces from './TextField_Places';
 
 export default class GeneralSettings extends Component {
   render() {
@@ -33,7 +33,7 @@ export default class GeneralSettings extends Component {
               data-w-id="1846180f-b0c1-4f62-a33b-df4641310d47"
               className="settingsgroup"
             >
-              <TextField_Hashtags
+              <TextFieldHashtags
                 value="like_by_tags"
                 placeholder="Enter hashtags this way: fitness"
               />
@@ -52,7 +52,7 @@ export default class GeneralSettings extends Component {
                 </span>
               </Help>
             </div>
-            <TextField_Places
+            <TextFieldPlaces
               value="like_by_locations"
               placeholder="Search for locations"
             />
@@ -72,7 +72,7 @@ export default class GeneralSettings extends Component {
               </Help>
             </div>
             <div className="columnholder hashtag_settings_holder">
-              <TextField_Users
+              <TextFieldUsers
                 value="follow_user_followers"
                 placeholder="Search for user"
               />

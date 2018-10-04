@@ -1,5 +1,6 @@
 import React from 'react';
 import { Context } from './Context';
+import moment from 'moment-timezone';
 
 class TimetableWrapper extends React.Component {
   render() {
@@ -92,7 +93,10 @@ class TimetableWrapper extends React.Component {
   }
 
   format(date) {
-    return date.toISOString().replace('T', ' ');
+    return moment(date)
+      .utc()
+      .add(new Date().getTimezoneOffset(), 'm')
+      .format();
   }
 }
 

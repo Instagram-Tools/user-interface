@@ -24,20 +24,24 @@ class TimetableWrapper extends React.Component {
     );
   }
 
-  mapDays(day) {
-    return (
-      <div key={day} className={'legendtext horizontaltext'}>
-        {this.range(1, 24).map(h => this.mapHours(day, h))}
-      </div>
-    );
-  }
-
   range(from, to) {
     let list = [];
     for (let i = from; i <= to; i++) {
       list.push(i);
     }
     return list;
+  }
+
+  contains(list = [], o) {
+    return list.includes(o);
+  }
+
+  mapDays(day) {
+    return (
+      <div key={day} className={'legendtext horizontaltext'}>
+        {this.range(1, 24).map(h => this.mapHours(day, h))}
+      </div>
+    );
   }
 
   mapHours(day, hour) {
@@ -69,35 +73,31 @@ class TimetableWrapper extends React.Component {
     function addTime(p) {
       return [
         ...(p.timetable ? p.timetable : []),
-        calcTime.call(this),
-        calcTime2.call(this)
+        beginning.call(this),
+        ending.call(this)
       ];
     }
 
     function removeTime(p) {
       const times = [...p.timetable];
-      const index = times.indexOf(calcTime.call(this));
+      const index = times.indexOf(beginning.call(this));
       times.splice(index, 2);
       return times;
     }
 
-    function calcTime() {
+    function beginning() {
       return this.calcTime(day, hour);
     }
 
-    function calcTime2() {
+    function ending() {
       return this.format(new Date(4, 1, day, hour, 59));
     }
 
     context.setState(p => ({
-      timetable: this.contains(context.state.timetable, calcTime.call(this))
+      timetable: this.contains(context.state.timetable, beginning.call(this))
         ? removeTime.call(this, p)
         : addTime.call(this, p)
     }));
-  }
-
-  contains(list = [], o) {
-    return list.includes(o);
   }
 
   format(date) {

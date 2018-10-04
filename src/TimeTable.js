@@ -46,17 +46,19 @@ class TimetableWrapper extends React.Component {
   }
 
   mapHours(day, hour) {
+    let beginning = this.calcTime(day, hour);
+    let ending = this.format(new Date(4, 1, day, hour, 59));
     return (
       <Context.Consumer key={hour}>
         {context => (
           <div
-            onClick={() => this.mark(context, day, hour)}
-            onDragEnter={() => this.mark(context, day, hour)}
+            onClick={() => this.mark(context, beginning, ending)}
+            onDragEnter={() => this.mark(context, beginning, ending)}
             draggable="true"
             className={
               'week_schedule_column ' +
               (day % 2 ? '' : '_2nd') +
-              (this.contains(context.state.timetable, this.calcTime(day, hour))
+              (this.contains(context.state.timetable, beginning)
                 ? ' ifclicked'
                 : '')
             }
@@ -70,10 +72,7 @@ class TimetableWrapper extends React.Component {
     return this.format(new Date(4, 1, day, hour, 1));
   }
 
-  mark(context, day, hour) {
-    let beginning = this.calcTime(day, hour);
-    let ending = this.format(new Date(4, 1, day, hour, 59));
-
+  mark(context, beginning, ending) {
     function addTime(p) {
       return [...(p.timetable ? p.timetable : []), beginning, ending];
     }

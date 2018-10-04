@@ -96,7 +96,8 @@ class TimetableWrapper extends React.Component {
     return moment(date)
       .utc()
       .add(new Date().getTimezoneOffset(), 'm')
-      .format();
+      .format()
+      .replace('T', ' ');
   }
 }
 

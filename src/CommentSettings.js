@@ -18,11 +18,9 @@ export default class CommentSettings extends Component {
                 Comment Percentage
               </label>
               <Help>
-                <strong>Like pictures with a hashtag: </strong>Choose hashtags
-                your target group could be interested in.{' '}
-                <span className="helptext_secondary">
-                  NotInstagress will like pictures with these hashtags.{' '}
-                </span>
+                <strong>Comment X percent of crawled pictures: </strong> <br />
+                100% means every crawled picture will be commented. <br />
+                50% means every second crawled picture will be commented.
               </Help>
             </div>
             <TextFieldNumber
@@ -71,29 +69,27 @@ export default class CommentSettings extends Component {
                 <strong>Filters:</strong> Comment pictures with...
               </label>
               <Help className="helptext">
-                <strong>Filters: Comment pictures with...: </strong>Which
-                pictures are to be commented?{' '}
+                <strong>Comment pictures with...: </strong>
+                <br />
+                Which pictures do you want to comment? <br />
+                Set minimum and maximum amount of comments a picture has you
+                want to interact with. <br />
+                Pictures with big engagement are not perfect to gain attention
+                as your interaction will be one of many.<br />
                 <span className="helptext_secondary">
-                  Pictures/accounts with little engagement tend to too inactive.
-                  If they have very much though, NotInstagress&#x27;s efforts
-                  tend to go under.{' '}
+                  Recommendation: 0 - 40 comments per picture.{' '}
                 </span>
-                <span className="helptext_tertiary">
-                  General recommendation: 10-300 likes, 0-50 comments, 100-2000
-                  followers, 0-5 days; Max comments per day: 50-200 for accounts
-                  less than 6 months old, 200-400 for 6-18 months old accounts,
-                  300-500 for accounts older than 18 months
-                </span>
+                <span className="helptext_tertiary" />
               </Help>
             </div>
             <div className="columnholder filterholder first">
               <TextFieldNumber
                 placeholder="Min Comments"
-                value="delimit_liking_min"
+                value="delimit_commenting_min"
               />
               <TextFieldNumber
                 placeholder="Max Comments"
-                value="delimit_liking_max"
+                value="delimit_commenting_max"
               />
             </div>
           </div>

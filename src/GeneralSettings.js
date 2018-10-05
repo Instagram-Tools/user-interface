@@ -17,6 +17,18 @@ export default class GeneralSettings extends Component {
           <div className="w-form form">
             <div className="titleholder">
               <label htmlFor="email" className="settingtitle">
+                Speed
+              </label>
+              <Help className="helptext">
+                <strong>Speed: </strong>Defines interaction rate/speed. <br />
+                slow: for new accounts younger than 6 months<br />
+                medium: for accounts between 6 and 18 months<br />
+                fast: for accounts older than 18 months
+              </Help>
+              <TextFieldNumber placeholder="speed" value="speed" />
+            </div>
+            <div className="titleholder">
+              <label htmlFor="email" className="settingtitle">
                 Relevant Hashtags
               </label>
               <Switch value="enable_like_by_tags" className="title" />
@@ -62,9 +74,8 @@ export default class GeneralSettings extends Component {
               </label>
               <Switch value="enable_follow_user_followers" className="title" />
               <Help className="helptext">
-                <strong>
-                  Interact with pictures of a user&#x27;s followers:{' '}
-                </strong>Choose successful profiles which are similar to yours.{' '}
+                <strong>Interact with user&#x27;s followers: </strong>Choose
+                successful profiles which are similar to yours.{' '}
                 <span className="helptext_secondary">
                   So you get attention from profiles which are interested in
                   your content.
@@ -82,10 +93,15 @@ export default class GeneralSettings extends Component {
                   htmlFor="email"
                   className="settingtitle"
                 >
-                  Relevant Users Filters
+                  Settings
                 </label>
                 <Help className="helptext">
-                  <strong>Filter Users you want to interact with</strong>
+                  <strong>Define your target group: </strong> <br />
+                  Recommendation: <br />
+                  Pick last 5 - 10 Followers of the selected Profile<br />
+                  Profiles with 100 - 3000 Followers <br />
+                  Profiles following 30 - 1000 Users <br />
+                  Interact with last 1 - 5 pictures
                 </Help>
 
                 <div className="columnholder filterholder first">
@@ -104,6 +120,8 @@ export default class GeneralSettings extends Component {
                     placeholder="... having max Y Followers"
                     value="relationship_bounds_max_followers"
                   />
+                </div>
+                <div className="columnholder filterholder first">
                   <TextFieldNumber
                     placeholder="... following min X users"
                     value="relationship_bounds_min_following"

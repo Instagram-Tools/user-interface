@@ -13,14 +13,14 @@ export default class ActivitySettings extends Component {
           <div className="form-block w-form form">
             <div className="titleholder">
               <label htmlFor="email" className="settingtitle scheduletitle">
-                Define bot activity
+                Schedule activity time
               </label>
               <Help className="helptext">
-                Choose successful profiles which are similar to yours.{' '}
-                <span className="helptext_secondary">
-                  So you get attention from profiles which are interested in
-                  your content.
-                </span>
+                <strong>Activity time: </strong> <br />
+                To simulate Instagram a real person you should schedule your
+                activity time.<br />
+                Mark the time fields you want PinkParrot to interact with users.<br />
+                Recommendation: 6 - 18 hours/day
               </Help>
             </div>
 

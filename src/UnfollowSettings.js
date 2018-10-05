@@ -20,19 +20,11 @@ export default class UnfollowSettings extends Component {
                 className="title"
               />
               <Help>
-                <strong>Filters: Like pictures with...: </strong>Which pictures
-                are to be liked?{' '}
-                <span className="helptext_secondary">
-                  Pictures/accounts with little engagement tend to too inactive.
-                  If they have very much though, NotInstagress&#x27;s efforts
-                  tend to go under.{' '}
-                </span>
-                <span className="helptext_tertiary">
-                  General recommendation: 10-300 likes, 0-50 comments, 100-2000
-                  followers, 0-5 days; Max likes per day: 200-500 for accounts
-                  less than 6 months old, 500-1000 for 6-18 months old accounts,
-                  800-1500 for accounts older than 18 months
-                </span>
+                <strong>Unfollow: </strong>
+                <br />
+                To keep your amount of followings low you should unfollow users
+                from time to time. <br />
+                Recommendation: after 2 - 3 days.
               </Help>
             </div>
             <TextFieldNumber

@@ -20,11 +20,9 @@ export default class LikeSettings extends Component {
                 data-w-id="22c58d28-9a42-f414-7b98-09bcc5c05a9b"
                 className="helptext"
               >
-                <strong>Like pictures with a hashtag: </strong>Choose hashtags
-                your target group could be interested in.{' '}
-                <span className="helptext_secondary">
-                  NotInstagress will like pictures with these hashtags.{' '}
-                </span>
+                <strong>Like X percent of crawled pictures: </strong> <br />
+                100% means every crawled picture will be liked. <br />
+                50% means every second crawled picture will be liked.
               </Help>
             </div>
             <TextFieldNumber
@@ -32,24 +30,20 @@ export default class LikeSettings extends Component {
               max={100}
               value="do_like_percentage"
             />
+            <span> equals 700 - 1050 likes/day </span>
             <div className="titleholder">
               <label htmlFor="email" className="settingtitle">
                 <strong>Filters:</strong> Like pictures with...
               </label>
               <Help className="helptext">
-                <strong>Filters: Like pictures with...: </strong>Which pictures
-                are to be liked?{' '}
-                <span className="helptext_secondary">
-                  Pictures/accounts with little engagement tend to too inactive.
-                  If they have very much though, NotInstagress&#x27;s efforts
-                  tend to go under.{' '}
-                </span>
-                <span className="helptext_tertiary">
-                  General recommendation: 10-300 likes, 0-50 comments, 100-2000
-                  followers, 0-5 days; Max likes per day: 200-500 for accounts
-                  less than 6 months old, 500-1000 for 6-18 months old accounts,
-                  800-1500 for accounts older than 18 months
-                </span>
+                <strong>Like pictures with...: </strong>
+                <br />
+                Which pictures do you want to like? <br />
+                Set minimum and maximum amount of likes on a picture you want to
+                interact with. <br />
+                Pictures with big engagement are not perfect to gain attention
+                as your interaction will be one of many.<br />
+                Recommendation: 10 - 500 likes per picture.
               </Help>
             </div>
             <div className="columnholder filterholder first">

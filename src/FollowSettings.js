@@ -20,11 +20,10 @@ export default class FollowSettings extends Component {
                 data-w-id="22c58d28-9a42-f414-7b98-09bcc5c05a9b"
                 className="helptext"
               >
-                <strong>Like pictures with a hashtag: </strong>Choose hashtags
-                your target group could be interested in.{' '}
-                <span className="helptext_secondary">
-                  NotInstagress will like pictures with these hashtags.{' '}
-                </span>
+                <strong>Follow X percent of Users you interacted with: </strong>{' '}
+                <br />
+                100% means every User will be followed. <br />
+                50% means every second User will be followed.
               </Help>
             </div>
             <TextFieldNumber
@@ -32,36 +31,6 @@ export default class FollowSettings extends Component {
               max={100}
               value="do_follow_percentage"
             />
-            <div className="titleholder">
-              <label htmlFor="email" className="settingtitle">
-                <strong>Filters:</strong> Like pictures with...
-              </label>
-              <Help>
-                <strong>Filters: Like pictures with...: </strong>Which pictures
-                are to be liked?{' '}
-                <span className="helptext_secondary">
-                  Pictures/accounts with little engagement tend to too inactive.
-                  If they have very much though, NotInstagress&#x27;s efforts
-                  tend to go under.{' '}
-                </span>
-                <span className="helptext_tertiary">
-                  General recommendation: 10-300 likes, 0-50 comments, 100-2000
-                  followers, 0-5 days; Max likes per day: 200-500 for accounts
-                  less than 6 months old, 500-1000 for 6-18 months old accounts,
-                  800-1500 for accounts older than 18 months
-                </span>
-              </Help>
-            </div>
-            <div className="columnholder filterholder first">
-              <TextFieldNumber
-                placeholder="Min Followers"
-                value="delimit_liking_min"
-              />
-              <TextFieldNumber
-                placeholder="Max Followers"
-                value="delimit_liking_max"
-              />
-            </div>
           </div>
         </div>
       </div>

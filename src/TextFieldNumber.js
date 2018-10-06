@@ -32,6 +32,7 @@ export default class TextFieldNumber extends Component {
               >
                 {this.props.placeholder}
               </div>
+              {this.props.children}
             </div>
           </div>
         )}

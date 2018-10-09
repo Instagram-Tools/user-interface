@@ -25,8 +25,7 @@ export default class TextField_Places extends TextFieldSuggestion {
   async clickSuggestion(suggestion, context) {
     await this.setState({ value: suggestion.place.location.pk });
     await this.setState(p => ({
-      list: [...(p.list || []), suggestion.place.location.name],
-      suggestions: []
+      list: [...(p.list || []), suggestion.place.location.name]
     }));
     await this.submitText(context);
     this.textInput.focus();

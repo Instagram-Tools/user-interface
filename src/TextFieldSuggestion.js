@@ -84,6 +84,7 @@ export default class TextFieldSuggestion extends Component {
       l.splice(index, 1);
       return { [this.props.value]: l };
     });
+    this.textInput.focus();
   }
 
   onInput(e) {

@@ -29,6 +29,7 @@ export default class TextField_Places extends TextFieldSuggestion {
       suggestions: []
     }));
     await this.submitText(context);
+    this.textInput.focus();
   }
 
   addValue(old = [], value) {

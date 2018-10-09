@@ -38,6 +38,9 @@ export default class TextFieldSuggestion extends Component {
                 onKeyPress={e =>
                   this.pressEnter(e) ? this.submitText(context) : null
                 }
+                ref={input => {
+                  this.textInput = input;
+                }}
               />
               <div
                 style={{
@@ -135,6 +138,7 @@ export default class TextFieldSuggestion extends Component {
     this.setState(p => ({
       value: autoComplete(p.value)
     }));
+    this.textInput.focus();
   }
 
   submitText(context) {

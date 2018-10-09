@@ -125,7 +125,7 @@ export default class TextFieldSuggestion extends Component {
     );
   }
 
-  clickSuggestion(suggestion, context) {
+  async clickSuggestion(suggestion, context) {
     let separator = this.separator;
     function autoComplete(value) {
       const splitAt = value.lastIndexOf(separator);
@@ -135,9 +135,11 @@ export default class TextFieldSuggestion extends Component {
         suggestion
       );
     }
-    this.setState(p => ({
+    await this.setState(p => ({
       value: autoComplete(p.value)
     }));
+    await this.submitText(context);
+
     this.textInput.focus();
   }
 
@@ -146,7 +148,7 @@ export default class TextFieldSuggestion extends Component {
     context.setState(p => ({
       [this.props.value]: this.addValue(p[this.props.value], value)
     }));
-    this.setState({ value: '' });
+    this.setState({ value: '', suggestions: [] });
   }
 
   addValue(old = [], value) {

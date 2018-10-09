@@ -5,10 +5,10 @@ export default class TextField_Hashtags extends TextFieldSuggestion {
   query = 'hashtags';
   iconClass = 'hashtagicon';
 
-  mapSuggestions(suggestion) {
+  mapSuggestions(suggestion, context) {
     return (
       <div
-        onClick={() => this.clickSuggestion(suggestion.hashtag.name)}
+        onClick={() => this.clickSuggestion(suggestion.hashtag.name, context)}
         style={{ display: 'inline-flex', justifyContent: 'space-between' }}
       >
         <div className="suggestion_text_hashtags">

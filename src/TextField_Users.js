@@ -5,11 +5,11 @@ export default class TextField_Users extends TextFieldSuggestion {
   query = 'users';
   iconClass = 'usericon';
 
-  mapSuggestions(suggestion) {
+  mapSuggestions(suggestion, context) {
     if (suggestion.user.is_private) return;
     return (
       <div
-        onClick={() => this.clickSuggestion(suggestion.user.username)}
+        onClick={() => this.clickSuggestion(suggestion.user.username, context)}
         style={{
           display: 'inline-grid',
           gridTemplateColumns: '40px auto auto'

@@ -48,7 +48,7 @@ export default class TextFieldSuggestion extends Component {
                 }}
                 className="suggestions"
               >
-                {this.Suggestions()}
+                {this.Suggestions(context)}
               </div>
             </div>
           </div>
@@ -88,11 +88,11 @@ export default class TextFieldSuggestion extends Component {
     return this.setState({ value: e.target.value });
   }
 
-  Suggestions() {
+  Suggestions(context) {
     return this.state.suggestions
       .sort(this.sortByChildren())
       .filter(this.firstN(10))
-      .map(this.mapSuggestions.bind(this));
+      .map(suggestion => this.mapSuggestions(suggestion, context));
   }
 
   sortByChildren() {
@@ -116,13 +116,13 @@ export default class TextFieldSuggestion extends Component {
     return (element, index) => index < number;
   }
 
-  mapSuggestions(suggestion) {
+  mapSuggestions(suggestion, context) {
     return console.error(
       `do not use this Stub: \n mapSuggestions(${suggestion})`
     );
   }
 
-  clickSuggestion(suggestion) {
+  clickSuggestion(suggestion, context) {
     let separator = this.separator;
     function autoComplete(value) {
       const splitAt = value.lastIndexOf(separator);

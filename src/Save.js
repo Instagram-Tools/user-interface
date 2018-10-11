@@ -72,6 +72,9 @@ export default class Save extends Component {
       return context.setState({ toggled: true });
     }
 
+    delete settings.scrollHeight;
+    delete settings.scrollY;
+
     delete settings.password;
     delete settings.username;
     delete settings.email;

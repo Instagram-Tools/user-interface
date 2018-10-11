@@ -74,13 +74,13 @@ export default class Save extends Component {
 
     delete settings.scrollHeight;
     delete settings.scrollY;
+    delete settings.toggled;
 
     delete settings.password;
     delete settings.username;
     delete settings.email;
     delete settings.e_password;
     delete settings.timetable;
-    delete settings.toggled;
     delete settings.discount_code;
 
     const data = {

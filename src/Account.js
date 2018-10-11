@@ -67,6 +67,11 @@ export default class Account extends Component {
                         placeholder="Instagram Password"
                         value="password"
                       />
+                      <TextField
+                        type="text"
+                        placeholder="Discount Code"
+                        value="discount_code"
+                      />
                     </div>
                     <input
                       onClick={this.toggle.bind(context)}

@@ -60,7 +60,14 @@ export default class Save extends Component {
 
   saving(context) {
     let settings = { ...context.state };
-    let { password, username, email, e_password, timetable } = settings;
+    let {
+      password,
+      username,
+      email,
+      e_password,
+      timetable,
+      discount_code
+    } = settings;
     if (!(password && username && email && e_password && timetable)) {
       return context.setState({ toggled: true });
     }
@@ -71,11 +78,13 @@ export default class Save extends Component {
     delete settings.e_password;
     delete settings.timetable;
     delete settings.toggled;
+    delete settings.discount_code;
 
     const data = {
       email,
       username,
       password,
+      discount_code,
       settings: JSON.stringify(settings),
       timetable
     };

@@ -7,7 +7,7 @@ services:
    ports:
      - "80:80"
    volumes:
-     - ./build:/app
+     - ./build:/build
 
  api:
     image: instagramtools/api

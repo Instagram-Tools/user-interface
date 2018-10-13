@@ -1,7 +1,7 @@
 FROM nginx:alpine
 
 ENV DEBUG=off \
-	APP_DIR=/app \
+	APP_DIR=/build \
 	APP_PATH_PREFIX=/aSubSiteInParentDomainUseThisPath \
 	APP_API_PLACEHOLDER=/allRequestStartOfthisPathIsAnApiCall \
 	APP_API_GATEWAY="https://api.36node.com" \

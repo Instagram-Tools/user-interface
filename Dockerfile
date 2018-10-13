@@ -44,6 +44,6 @@ RUN touch /var/log/cron
 COPY lendd/startup.sh /app/startup.sh
 
 COPY nginx/conf.d/example.conf /etc/nginx/conf.d/example.conf
-
+COPY build /build
 # Startup command
 CMD [ "/app/startup.sh" ]

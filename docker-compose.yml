@@ -6,8 +6,13 @@ services:
    image: instagramtools/user-interface
    ports:
      - "80:80"
+     - "443:443"
    volumes:
      - ./build:/build
+   environment:
+     - PROVIDER=cloudflare
+     - LEXICON_CLOUDFLARE_USERNAME=yourcloudflarelogin@example.com
+     - LEXICON_CLOUDFLARE_TOKEN=1231231231321321321321321321321321
 
  api:
     image: instagramtools/api

@@ -1,5 +1,9 @@
 #!/usr/bin/env bash
 
+# replace env for nginx conf
+envsubst '$UI_SERVER_NAME' < /etc/nginx/conf.d/app.conf.template > /etc/nginx/conf.d/default.conf
+
+
 echo $UI_SERVER_NAME > /etc/dehydrated/domains.txt
 
 # Required to set environment. Dehydrated has issues otherwise.

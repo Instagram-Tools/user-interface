@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+
+
 # Required to set environment. Dehydrated has issues otherwise.
 env > /etc/environment
 

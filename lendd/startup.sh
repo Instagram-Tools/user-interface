@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-
+echo $UI_SERVER_NAME > /etc/dehydrated/domains.txt
 
 # Required to set environment. Dehydrated has issues otherwise.
 env > /etc/environment

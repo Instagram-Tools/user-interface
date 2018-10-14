@@ -9,8 +9,6 @@ services:
      - "443:443"
    volumes:
      - ./build:/build
-     - ./mount/etc/dehydrated:/etc/dehydrated
-     - ./mount/etc/nginx/conf.d:/etc/nginx/conf.d
    environment:
      - PROVIDER=cloudflare
      - LEXICON_CLOUDFLARE_USERNAME=yourcloudflarelogin@example.com

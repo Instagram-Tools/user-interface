@@ -4,6 +4,6 @@ server {
       ssl_certificate /etc/dehydrated/certs/example.com/fullchain.pem;
       ssl_certificate_key /etc/dehydrated/certs/example.com/privkey.pem;
   location / {
-      proxy_pass /build/;
+      alias /build;
   }
 }

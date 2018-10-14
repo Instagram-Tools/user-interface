@@ -47,10 +47,10 @@ CHALLENGETYPE="dns-01"
 DOMAINS_TXT="/etc/dehydrated/domains.txt"
 
 # Output directory for generated certificates
-#CERTDIR="${BASEDIR}/certs"
+CERTDIR="/etc/dehydrated/certs"
 
 # Directory for account keys and registration information
-#ACCOUNTDIR="${BASEDIR}/accounts"
+ACCOUNTDIR="/etc/dehydrated/accounts"
 
 # Output directory for challenge-tokens to be served by webserver or deployed in HOOK (default: /var/www/dehydrated)
 #WELLKNOWN="/var/www/dehydrated"

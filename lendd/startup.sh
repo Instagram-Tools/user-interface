@@ -9,7 +9,7 @@ echo "MAILTO": $MAILTO
 
 # replace env for nginx conf
 envsubst '$UI_SERVER_NAME' < /etc/nginx/conf.d/app.conf.template > /etc/nginx/conf.d/default.conf
-envsubst '$MAILTO' < /etc/dehydrated/config > /etc/dehydrated/config
+envsubst '$MAILTO' < /etc/dehydrated/config.tmp > /etc/dehydrated/config
 
 
 echo $UI_SERVER_NAME > /etc/dehydrated/domains.txt

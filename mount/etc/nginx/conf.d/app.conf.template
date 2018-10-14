@@ -1,8 +1,8 @@
 server {
   listen 443 ssl;
       server_name ${UI_SERVER_NAME};
-      ssl_certificate /etc/dehydrated/certs/example.com/fullchain.pem;
-      ssl_certificate_key /etc/dehydrated/certs/example.com/privkey.pem;
+      ssl_certificate /etc/dehydrated/certs/fullchain.pem;
+      ssl_certificate_key /etc/dehydrated/certs/privkey.pem;
   location / {
       alias /build;
   }

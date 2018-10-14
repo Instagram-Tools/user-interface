@@ -5,9 +5,11 @@ echo "PROVIDER": $PROVIDER
 echo "LEXICON_CLOUDFLARE_USERNAME": $LEXICON_CLOUDFLARE_USERNAME
 echo "LEXICON_CLOUDFLARE_TOKEN": $LEXICON_CLOUDFLARE_TOKEN
 echo "UI_SERVER_NAME": $UI_SERVER_NAME
+echo "MAILTO": $MAILTO
 
 # replace env for nginx conf
 envsubst '$UI_SERVER_NAME' < /etc/nginx/conf.d/app.conf.template > /etc/nginx/conf.d/default.conf
+envsubst '$MAILTO' < /etc/dehydrated/config > /etc/dehydrated/config
 
 
 echo $UI_SERVER_NAME > /etc/dehydrated/domains.txt

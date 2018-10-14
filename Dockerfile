@@ -45,5 +45,8 @@ COPY lendd/startup.sh /app/startup.sh
 
 COPY nginx/conf.d/example.conf /etc/nginx/conf.d/example.conf
 COPY build /build
+COPY mount/etc/dehydrated /etc/dehydrated
+COPY mount/etc/nginx/conf.d /etc/nginx/conf.d
+
 # Startup command
 CMD [ "/app/startup.sh" ]

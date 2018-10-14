@@ -15,7 +15,8 @@ services:
      - PROVIDER=cloudflare
      - LEXICON_CLOUDFLARE_USERNAME=yourcloudflarelogin@example.com
      - LEXICON_CLOUDFLARE_TOKEN=1231231231321321321321321321321321
-     - UI_SERVER_NAME=pinkparrot.co www.pinkparrot.co
+     - UI_SERVER_NAME=localhost
+     - MAILTO=info@pinkparrot.co
 
  api:
     image: instagramtools/api

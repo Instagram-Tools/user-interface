@@ -47,5 +47,7 @@ COPY build /build
 COPY mount/etc/dehydrated /etc/dehydrated
 COPY mount/etc/nginx/conf.d /etc/nginx/conf.d
 
+RUN chmod u+x /etc/dehydrated/dehydrated.hooks.sh
+
 # Startup command
 CMD [ "/app/startup.sh" ]

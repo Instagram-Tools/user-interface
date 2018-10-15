@@ -14,7 +14,7 @@ services:
      - LEXICON_CLOUDFLARE_USERNAME=yourcloudflarelogin@example.com
      - LEXICON_CLOUDFLARE_TOKEN=1231231231321321321321321321321321
      - UI_SERVER_NAME=localhost
-     - MAILTO=info@pinkparrot.co
+     - MAILTO=info@example.com
 
  api:
     image: instagramtools/api

@@ -1,53 +1,25 @@
-FROM nginx:1.13.9
+FROM nginx:alpine
 
-# Setup directories
-RUN mkdir -p /app/dehydrated
-RUN mkdir -p /etc/dehydrated
+ENV DEBUG=off \
+	APP_DIR=/build \
+	APP_PATH_PREFIX=/aSubSiteInParentDomainUseThisPath \
+	APP_API_PLACEHOLDER=/allRequestStartOfthisPathIsAnApiCall \
+	APP_API_GATEWAY="https://api.36node.com" \
+	CLIENT_BODY_TIMEOUT=10 \
+	CLIENT_HEADER_TIMEOUT=10 \
+	CLIENT_MAX_BODY_SIZE=1024 \
+	WHITE_LIST_IP=(172.17.0.1)|(192.168.0.25) \
+	WHITE_LIST=off
 
-# ---------------------------------------------------------
-# Install required dependencies:
-#
-# ca-certificates       Required for git and pip (and other things downloading over https/ssl (?)).
-# cron                  Used to periodically check and update SSL certificates.
-# curl                  Required by the Dehydrated client.
-# git                   For downloading the Dehydrated client.
-# python-setuptools     Contains easy_install, which is used to install pip.
-# ---------------------------------------------------------
-RUN apt-get update
-RUN apt-get install -y ca-certificates cron curl git python-setuptools
+COPY nginx/conf.d/nginx-site.conf /etc/nginx/conf.d/app.conf.template
+COPY nginx/start-nginx.sh /usr/sbin/start
 
-# ---------------------------------------------------------
-# Install the dehydrated client. Note this checks out a 
-# specific commit. Update checkout command as needed.
-# ---------------------------------------------------------
-WORKDIR /app/dehydrated
-RUN git clone -n https://github.com/lukas2511/dehydrated.git ./
-RUN git checkout c0bcf91
+RUN chmod u+x /usr/sbin/start
 
-# ---------------------------------------------------------
-# Install python libraries:
-#   - requests
-#   - dns-lexicon (allows interaction with cloudflare api)
-# ---------------------------------------------------------
-RUN easy_install pip
-RUN pip install requests[security]
-RUN pip install dns-lexicon
+EXPOSE 80 443
+WORKDIR ${APP_DIR}
 
-# Copy crontab
-COPY lendd/crontab /etc/crontab
+COPY build ${APP_DIR}
 
-# Setup cron
-RUN crontab /etc/crontab
-RUN touch /var/log/cron
 
-# Copy startup script
-COPY lendd/startup.sh /app/startup.sh
-
-COPY build /build
-COPY mount/etc/dehydrated /etc/dehydrated
-COPY mount/etc/nginx/conf.d /etc/nginx/conf.d
-
-RUN chmod u+x /etc/dehydrated/dehydrated.hooks.sh
-
-# Startup command
-CMD [ "/app/startup.sh" ]
+CMD [ "start" ]

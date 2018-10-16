@@ -25,6 +25,11 @@ services:
      - UI_SERVER_NAME=localhost
      - MAILTO=info@example.com
 
+   depends_on:
+     - api
+   links:
+     - api:api
+
  api:
     image: instagramtools/api
     ports:

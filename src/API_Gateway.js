@@ -12,7 +12,7 @@ export default class API_Gateway {
   static async put(data) {
     console.log('data:', data);
 
-    let response = await fetch(API_URL, {
+    let response = await fetch(API_URL + '/', {
       method: 'PUT',
       body: JSON.stringify(data),
       headers: {
@@ -43,7 +43,7 @@ export default class API_Gateway {
   }
 
   static async login(email, password) {
-    let response = await fetch(API_URL + '/reg', {
+    let response = await fetch(API_URL + '/reg/', {
       method: 'PUT',
       body: JSON.stringify({ email, password }),
       headers: {

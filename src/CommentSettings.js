@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import TextFieldNumber from './TextFieldNumber';
-import TextFieldBroad from './TextFieldBroad';
+import TextField_Comments from './TextField_Comments';
 import Help from './Help';
 import './css/settings.css';
 
@@ -29,7 +29,7 @@ export default class CommentSettings extends Component {
               value="do_comment_percentage"
             />
 
-            <TextFieldBroad
+            <TextField_Comments
               value="comments"
               placeholder="Enter hashtags this way: fitness"
             />

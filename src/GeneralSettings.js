@@ -150,6 +150,16 @@ export default class GeneralSettings extends Component {
                 </span>
               </Help>
             </div>
+            <div className="titleholder">
+              <label htmlFor="email" className="settingtitle">
+                Ignore Users
+              </label>
+              <Help>List of users you don't want to interact with.</Help>
+            </div>
+            <TextFieldUsers
+              value="dont_include"
+              placeholder="Search for user"
+            />
           </div>
         </div>
       </div>

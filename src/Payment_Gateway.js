@@ -36,7 +36,18 @@ export default class Payment_Gateway extends React.Component {
         <div>
           <DropIn
             options={{
-              authorization: this.state.clientToken
+              authorization: this.state.clientToken,
+              paymentOptionPriority: [
+                'card',
+                'paypal',
+                'paypalCredit',
+                'venmo',
+                'applePay'
+              ],
+              paypal: true,
+              paypalCredit: true,
+              venmo: true,
+              applePay: true
             }}
             onInstance={instance => (this.instance = instance)}
           />

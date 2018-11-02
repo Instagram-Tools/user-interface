@@ -1,4 +1,5 @@
 {
   "RELAYS": ["https://cors.io/?"],
-  "API_URL": "http://localhost:8000"
+  "API_URL": "http://localhost:8000",
+  "PAYMENT_MANAGER": "http://127.0.0.1:5000/pay"
 }

@@ -1,7 +1,8 @@
 import React from 'react';
 import DropIn from 'braintree-web-drop-in-react';
+import env from './Env';
 
-const PAYMENT_MANAGER = 'http://127.0.0.1:5000';
+const PAYMENT_MANAGER = env.PAYMENT_MANAGER;
 
 export default class Payment_Gateway extends React.Component {
   instance;

@@ -14,6 +14,8 @@ services:
      - APP_PATH_PREFIX=/aSubSiteInParentDomainUseThisPath
      - APP_API_PLACEHOLDER=/api
      - APP_API_GATEWAY=http://api:8000
+     - PAYMENT_PLACEHOLDER=/pay
+     - PAYMENT_GATEWAY=http://payment-manager:7000
      - CLIENT_BODY_TIMEOUT=10
      - CLIENT_HEADER_TIMEOUT=10
      - CLIENT_MAX_BODY_SIZE=1024
@@ -27,8 +29,15 @@ services:
 
    depends_on:
      - api
+     - payment-manager
    links:
      - api:api
+     - payment-manager:payment-manager
+
+ payment-manager:
+   image: instagramtools/payment-manager
+   ports:
+   - "7000:7000"
 
  api:
     image: instagramtools/api

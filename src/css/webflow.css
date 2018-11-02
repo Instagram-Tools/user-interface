@@ -74,6 +74,10 @@ html.w-mod-touch * {
 .w-clearfix:after {
   content: ' ';
   display: table;
+  grid-column-start: 1;
+  grid-row-start: 1;
+  grid-column-end: 2;
+  grid-row-end: 2;
 }
 .w-clearfix:after {
   clear: both;
@@ -264,6 +268,10 @@ ol {
 .w-embed:after {
   content: ' ';
   display: table;
+  grid-column-start: 1;
+  grid-row-start: 1;
+  grid-column-end: 2;
+  grid-row-end: 2;
 }
 .w-embed:after {
   clear: both;
@@ -388,6 +396,10 @@ textarea.w-select {
 .w-radio:after {
   content: ' ';
   display: table;
+  grid-column-start: 1;
+  grid-row-start: 1;
+  grid-column-end: 2;
+  grid-row-end: 2;
 }
 .w-checkbox:after,
 .w-radio:after {
@@ -507,6 +519,10 @@ textarea.w-select {
 .w-container:after {
   content: ' ';
   display: table;
+  grid-column-start: 1;
+  grid-row-start: 1;
+  grid-column-end: 2;
+  grid-row-end: 2;
 }
 .w-container:after {
   clear: both;
@@ -519,6 +535,10 @@ textarea.w-select {
 .w-row:after {
   content: ' ';
   display: table;
+  grid-column-start: 1;
+  grid-row-start: 1;
+  grid-column-end: 2;
+  grid-row-end: 2;
 }
 .w-row:after {
   clear: both;
@@ -1457,6 +1477,10 @@ textarea.w-select {
 .w-richtext:after {
   content: ' ';
   display: table;
+  grid-column-start: 1;
+  grid-row-start: 1;
+  grid-column-end: 2;
+  grid-row-end: 2;
 }
 .w-richtext:after {
   clear: both;
@@ -1586,6 +1610,10 @@ textarea.w-select {
 .w-nav:after {
   content: ' ';
   display: table;
+  grid-column-start: 1;
+  grid-row-start: 1;
+  grid-column-end: 2;
+  grid-row-end: 2;
 }
 .w-nav:after {
   clear: both;
@@ -1717,6 +1745,10 @@ textarea.w-select {
 .w-tabs:after {
   content: ' ';
   display: table;
+  grid-column-start: 1;
+  grid-row-start: 1;
+  grid-column-end: 2;
+  grid-row-end: 2;
 }
 .w-tabs:after {
   clear: both;

@@ -56,6 +56,7 @@ export default class Payment_Gateway extends React.Component {
           <button
             onClick={this.buy.bind(this)}
             className="submitbutton bigasssubmitbutton w-button"
+            style={{ position: 'inherit' }}
           >
             Buy Now!
           </button>

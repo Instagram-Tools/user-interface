@@ -4,12 +4,16 @@ import ScrollUtil from './ScrollUtil';
 
 export const Context = React.createContext();
 
+export const unsavedState = {
+  toggled: false,
+  scrollY: 0,
+  scrollHeight: document.body.scrollHeight
+};
+
 // Then create a provider Component
 export class Provider extends Component {
   state = {
-    toggled: false,
-    scrollY: 0,
-    scrollHeight: document.body.scrollHeight,
+    ...unsavedState,
     do_comment_enabled: true,
     do_follow_enabled: true,
     do_like_enabled: true,

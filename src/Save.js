@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Context } from './Context';
 import API from './API_Gateway';
 import console from './Log';
+import { unsavedState } from './Context';
 
 export default class Save extends Component {
   state = {
@@ -72,9 +73,9 @@ export default class Save extends Component {
       return context.setState({ toggled: true });
     }
 
-    delete settings.scrollHeight;
-    delete settings.scrollY;
-    delete settings.toggled;
+    for (let prop in unsavedState) {
+      delete settings[prop];
+    }
 
     delete settings.password;
     delete settings.username;

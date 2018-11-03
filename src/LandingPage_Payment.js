@@ -16,17 +16,40 @@ export default class LandingPage_Payment extends Component {
               Let&#x27;s get your Insta to the next level!
             </h1>
             <h1 className="titlepage buysubtitle">
-              • Securest on the market<br />• Endless tweakability
+              Launch price until Jan 1, 2019
             </h1>
             <h1 className="softwareheading price">
               Just <span className="opacity text-span">49,95€</span> / month!
             </h1>
+            <div className="w-form">
+              <form
+                id="email-form-3"
+                name="email-form-3"
+                data-name="Email Form 3"
+              >
+                <input
+                  type="text"
+                  className="text-field-landing promocode w-input"
+                  maxLength="256"
+                  name="field-4"
+                  data-name="Field 4"
+                  placeholder="Promo Code"
+                  id="field-4"
+                />
+              </form>
+              <div className="w-form-done">
+                <div>Thank you! Your submission has been received!</div>
+              </div>
+              <div className="w-form-fail">
+                <div>Oops! Something went wrong while submitting the form.</div>
+              </div>
+            </div>
           </div>
           <div className="paycolumn">
             <div className="envelopeholder">
               <img
-                src="images/Envelope-Shadow.png"
-                srcSet="images/Envelope-Shadow.png 500w, images/Envelope-Shadow.png 800w, images/Envelope-Shadow.png 1080w, images/Envelope-Shadow.png 1600w, images/Envelope-Shadow.png 2000w, images/Envelope-Shadow.png 2496w"
+                src="images/Asset-57-target.png"
+                srcSet="images/Asset-57-target.png 500w, images/Asset-57-target.png 800w, images/Asset-57-target.png 1080w, images/Asset-57-target.png 1423w"
                 sizes="100vw"
                 alt=""
                 className="image-2-copy-copy"
@@ -38,7 +61,7 @@ export default class LandingPage_Payment extends Component {
               />
               <img
                 src="images/Envelope-Shadow.png"
-                srcSet="images/Envelope-Shadow.png 500w, images/Envelope-Shadow.png 800w, images/Envelope-Shadow.png 1080w, images/Envelope-Shadow.png 1600w, images/Envelope-Shadow.png 2000w, images/Envelope-Shadow.png 2496w"
+                srcSet="images/Envelope-Shadow-p-500.png 500w, images/Envelope-Shadow-p-800.png 800w, images/Envelope-Shadow-p-1080.png 1080w, images/Envelope-Shadow-p-1600.png 1600w, images/Envelope-Shadow-p-2000.png 2000w, images/Envelope-Shadow.png 2496w"
                 sizes="100vw"
                 alt=""
                 className="image-2"

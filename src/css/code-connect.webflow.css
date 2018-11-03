@@ -1,3 +1,10 @@
+body {
+  font-family: Muli, sans-serif;
+  color: #333;
+  font-size: 14px;
+  line-height: 20px;
+}
+
 .menubar {
   display: -webkit-box;
   display: -webkit-flex;
@@ -16,8 +23,17 @@
   position: absolute;
   z-index: 1;
   width: 30.5vw;
-  background-image: -webkit-linear-gradient(270deg, #f9fbfb, #f9fbfb);
-  background-image: linear-gradient(180deg, #f9fbfb, #f9fbfb);
+  background-image: -webkit-linear-gradient(270deg, #fff, #fff);
+  background-image: linear-gradient(180deg, #fff, #fff);
+}
+
+.menubar.aboutpage {
+  position: absolute;
+  width: 100vw;
+  background-image: -webkit-linear-gradient(0deg, #ff4252, #8b94ff),
+    -webkit-linear-gradient(270deg, #fff, #fff);
+  background-image: linear-gradient(90deg, #ff4252, #8b94ff),
+    linear-gradient(180deg, #fff, #fff);
 }
 
 .body {
@@ -85,53 +101,52 @@
 .titlepage {
   margin-top: 0px;
   margin-bottom: 0px;
-  font-family: Ubuntu, Helvetica, sans-serif;
+  font-family: Muli, sans-serif;
   color: #fff;
   font-size: 3em;
   line-height: 1em;
-  font-weight: 700;
+  font-weight: 800;
 }
 
 .titlepage.landingtitle {
-  width: 27vw;
+  width: 36vw;
   margin-top: 8vh;
   margin-left: 5vw;
-  font-family: Ubuntu, Helvetica, sans-serif;
+  font-family: Muli, sans-serif;
   color: rgba(0, 0, 0, 0.9);
   font-size: 3.33em;
   line-height: 1.33em;
+  font-weight: 800;
 }
 
 .titlepage.landingsubtitle {
   width: 40vw;
   margin-top: 1.5vh;
   margin-left: 5vw;
-  font-family: Ubuntu, Helvetica, sans-serif;
   color: #eb4956;
   font-size: 1.33em;
   line-height: 1.33em;
   font-style: italic;
-  font-weight: 400;
+  font-weight: 600;
 }
 
 .titlepage.landingtext {
   width: 40vw;
   margin-top: 3vh;
   margin-left: 5vw;
-  font-family: Ubuntu, Helvetica, sans-serif;
   color: #a2a2b5;
   font-size: 1.2em;
   line-height: 1.33em;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .titlepage.usptext {
   margin-bottom: 0.75em;
-  font-family: Ubuntu, Helvetica, sans-serif;
+  opacity: 0.89;
   color: #000;
   font-size: 1.2em;
   line-height: 1.33em;
-  font-weight: 500;
+  font-weight: 800;
   text-align: center;
 }
 
@@ -140,7 +155,7 @@
   margin-bottom: 1.33em;
   color: #a2a2b5;
   font-size: 1.1em;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 .titlepage.usptitle {
@@ -157,11 +172,11 @@
 .titlepage.buysubtitle {
   margin-bottom: 16px;
   margin-left: 8px;
-  font-family: Ubuntu, Helvetica, sans-serif;
+  font-family: Muli, sans-serif;
   color: #a2a2b5;
-  font-size: 1.2em;
+  font-size: 1em;
   line-height: 1.5em;
-  font-weight: 500;
+  font-weight: 700;
 }
 
 .titlelogo {
@@ -192,11 +207,16 @@
 .titlelogo.useon {
   display: none;
   margin-right: 1em;
+  background-image: url('../images/pink-parrot-logo.svg');
   cursor: pointer;
 }
 
 .titlelogo.landingpage_logo {
   opacity: 1;
+}
+
+.titlelogo.whitelogo {
+  background-image: url('../images/pink-parrot-logo-white-01.svg');
 }
 
 .title_menu_element {
@@ -214,17 +234,17 @@
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
-  font-family: Ubuntu, Helvetica, sans-serif;
-  color: #929292;
+  font-family: Muli, sans-serif;
+  color: rgba(0, 0, 0, 0.33);
   font-size: 1em;
   line-height: 1.5em;
-  font-weight: 500;
+  font-weight: 700;
   cursor: pointer;
 }
 
 .title_menu_element:hover {
   padding-top: 5px;
-  border-bottom: 5px solid #4251ff;
+  border-bottom: 5px solid #f7436a;
   color: #616161;
 }
 
@@ -266,16 +286,12 @@
   display: none;
 }
 
-.title_menu_element.landingpage_element {
-  color: rgba(0, 0, 0, 0.8);
-}
-
 .title_menu_element.trialtext {
   height: auto;
   margin-right: 1vw;
   margin-left: 1vw;
   padding-top: 5px;
-  font-weight: 400;
+  font-weight: 600;
   text-align: center;
   text-decoration: none;
   cursor: default;
@@ -283,6 +299,10 @@
 
 .title_menu_element.trialtext:hover {
   border-bottom-style: none;
+}
+
+.title_menu_element.about_menu_element {
+  color: #fff;
 }
 
 .menubarleft {
@@ -372,11 +392,11 @@
 .settingtitle {
   margin: 0px 0.5em 33px;
   opacity: 0.9;
-  font-family: Ubuntu, Helvetica, sans-serif;
+  font-family: Muli, sans-serif;
   color: #000;
   font-size: 1.6em;
   line-height: 1.5em;
-  font-weight: 500;
+  font-weight: 800;
   text-align: left;
 }
 
@@ -386,6 +406,10 @@
 
 .settingtitle.subscribetitle {
   margin-bottom: 0px;
+}
+
+.settingtitle.doubletitle {
+  font-weight: 800;
 }
 
 .columnholder {
@@ -539,11 +563,11 @@
   background-image: -webkit-linear-gradient(270deg, #fff, #fff);
   background-image: linear-gradient(180deg, #fff, #fff);
   box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.05);
-  font-family: Ubuntu, Helvetica, sans-serif;
-  color: rgba(0, 0, 0, 0.66);
+  font-family: Muli, sans-serif;
+  color: rgba(0, 0, 0, 0.74);
   font-size: 1em;
   line-height: 1em;
-  font-weight: 400;
+  font-weight: 800;
 }
 
 .submitbutton:hover {
@@ -655,7 +679,7 @@
   height: 33px;
   margin-bottom: 3vh;
   border-radius: 999999px;
-  font-family: Ubuntu, Helvetica, sans-serif;
+  font-family: Muli, sans-serif;
   color: rgba(0, 0, 0, 0.5);
   font-size: 1em;
 }
@@ -663,7 +687,7 @@
 .text-field.broadfield {
   width: 90vw;
   opacity: 0.66;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 .text-field.broadfield.connect_account_field {
@@ -692,6 +716,7 @@
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
+  opacity: 0.8;
 }
 
 .text-field.filter.last {
@@ -700,6 +725,17 @@
 
 .text-field.filter.connect_account_filter {
   margin-left: 2.5vw;
+}
+
+.text-field.promocode {
+  width: 90%;
+  margin-bottom: 0vh;
+  opacity: 0.66;
+  font-weight: 400;
+}
+
+.text-field.promocode.connect_account_field {
+  width: 33vw;
 }
 
 .success-message {
@@ -768,11 +804,11 @@
 .hashtag_or_location_text {
   margin-top: 6px;
   margin-bottom: 6px;
-  font-family: Ubuntu, Helvetica, sans-serif;
+  font-family: Muli, sans-serif;
   color: #fff;
   font-size: 1em;
   line-height: 1.5em;
-  font-weight: 400;
+  font-weight: 700;
   text-align: center;
 }
 
@@ -882,7 +918,7 @@
   margin-top: 0px;
   margin-right: 5vw;
   margin-bottom: 0px;
-  font-family: Ubuntu, Helvetica, sans-serif;
+  font-family: Muli, sans-serif;
   color: #fff;
   font-size: 1.75em;
   line-height: 1.5em;
@@ -893,11 +929,6 @@
   color: #b9b9b9;
   font-size: 1.2em;
   font-weight: 700;
-  cursor: pointer;
-}
-
-.general_settings.subtitle:hover {
-  color: #eee;
 }
 
 .general_settings.subtitle.account {
@@ -907,6 +938,7 @@
 .general_settings.generaltitle {
   margin-top: 1em;
   margin-bottom: 1em;
+  font-weight: 800;
 }
 
 .switch_general_settings {
@@ -1176,11 +1208,21 @@
   display: none;
 }
 
+.suggestions.vertical {
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
 .suggestion_text_hashtags {
   padding-right: 66px;
   padding-bottom: 12px;
-  font-family: Ubuntu, Helvetica, sans-serif;
+  font-family: Muli, sans-serif;
   font-size: 1em;
+  font-weight: 600;
   cursor: pointer;
 }
 
@@ -1191,8 +1233,9 @@
 .suggestion_text_locations {
   padding-right: 66px;
   padding-bottom: 12px;
-  font-family: Ubuntu, Helvetica, sans-serif;
+  font-family: Muli, sans-serif;
   font-size: 1em;
+  font-weight: 600;
 }
 
 .suggestion_text_locations:hover {
@@ -1210,8 +1253,9 @@
 
 .suggestion_text_users {
   padding-bottom: 12px;
-  font-family: Ubuntu, Helvetica, sans-serif;
+  font-family: Muli, sans-serif;
   font-size: 1em;
+  font-weight: 600;
   cursor: pointer;
 }
 
@@ -1229,8 +1273,9 @@
 }
 
 .fieldlabel {
-  color: rgba(0, 0, 0, 0.66);
+  color: #000;
   font-size: 1.1em;
+  font-weight: 600;
   text-align: left;
 }
 
@@ -1276,7 +1321,7 @@
 
 .amount_text_hashtags {
   padding-bottom: 12px;
-  font-family: Ubuntu, Helvetica, sans-serif;
+  font-family: Muli, sans-serif;
   color: #9c9c9c;
   font-size: 1em;
 }
@@ -1303,7 +1348,7 @@
 
 .amount_text_locations {
   padding-bottom: 12px;
-  font-family: Ubuntu, Helvetica, sans-serif;
+  font-family: Muli, sans-serif;
   color: #9c9c9c;
   font-size: 1em;
 }
@@ -1321,8 +1366,9 @@
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
-  font-family: Ubuntu, Helvetica, sans-serif;
+  font-family: Muli, sans-serif;
   color: rgba(0, 0, 0, 0.75);
+  font-size: 1em;
 }
 
 .text_field_description.below {
@@ -1363,9 +1409,10 @@
   border-radius: 999999px;
   background-image: -webkit-linear-gradient(270deg, #fff, #fff);
   background-image: linear-gradient(180deg, #fff, #fff);
-  font-family: Ubuntu, Helvetica, sans-serif;
+  font-family: Muli, sans-serif;
   color: #e0e0e0;
   font-size: 0.85em;
+  font-weight: 700;
   cursor: pointer;
 }
 
@@ -1416,11 +1463,12 @@
 
 .unfollowdisclaimer {
   margin-bottom: 33px;
-  margin-left: 2em;
-  font-family: Ubuntu, Helvetica, sans-serif;
-  color: rgba(0, 0, 0, 0.5);
+  margin-left: 1.25em;
+  font-family: Muli, sans-serif;
+  color: rgba(0, 0, 0, 0.33);
   font-size: 1em;
   line-height: 1.5em;
+  font-weight: 600;
 }
 
 .form-block {
@@ -1520,10 +1568,10 @@
 
 .legendtext {
   height: 25px;
-  font-family: Ubuntu, Helvetica, sans-serif;
-  color: rgba(0, 0, 0, 0.9);
+  font-family: Muli, sans-serif;
+  color: rgba(0, 0, 0, 0.75);
   font-size: 1em;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 .legendtext.horizontaltext {
@@ -1640,7 +1688,7 @@
 }
 
 .helptext_secondary {
-  font-weight: 300;
+  font-weight: 400;
 }
 
 .helptext_tertiary {
@@ -1653,10 +1701,7 @@
   left: 0px;
   top: 0px;
   z-index: 99999;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   width: 50vw;
   height: 40vh;
   margin-top: 30vh;
@@ -1710,10 +1755,7 @@
   left: 0px;
   top: 0px;
   z-index: 99998;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   width: 100vw;
   height: 100vh;
   background-image: -webkit-linear-gradient(
@@ -1760,9 +1802,9 @@
   height: 94vh;
   min-width: 94vh;
   background-image: url('../images/Pink-Parrot-Landing-Page-Hero-no-human.svg'),
-    -webkit-linear-gradient(270deg, #f9fbfb, #f9fbfb);
+    -webkit-linear-gradient(270deg, #fff, #fff);
   background-image: url('../images/Pink-Parrot-Landing-Page-Hero-no-human.svg'),
-    linear-gradient(180deg, #f9fbfb, #f9fbfb);
+    linear-gradient(180deg, #fff, #fff);
   background-position: 101% 0px, 0px 0px;
   background-size: 60%, auto;
   background-repeat: no-repeat, repeat;
@@ -1838,8 +1880,8 @@
   -ms-flex-align: center;
   align-items: center;
   border-radius: 15px;
-  background-image: -webkit-linear-gradient(270deg, #fff, #fff);
-  background-image: linear-gradient(180deg, #fff, #fff);
+  background-image: -webkit-linear-gradient(270deg, #f9f9f9, #f9f9f9);
+  background-image: linear-gradient(180deg, #f9f9f9, #f9f9f9);
   box-shadow: 1px 1px 6px 0 rgba(0, 0, 0, 0.1);
 }
 
@@ -1851,7 +1893,7 @@
   background-position: 50% 100%;
   background-size: contain;
   background-repeat: no-repeat;
-  opacity: 0.25;
+  opacity: 0.75;
 }
 
 .uspicon.sniper {
@@ -1881,9 +1923,10 @@
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
-  font-family: Ubuntu, Helvetica, sans-serif;
+  font-family: Muli, sans-serif;
   color: #eb4956;
   font-size: 1em;
+  font-weight: 600;
   text-align: center;
   text-decoration: none;
   cursor: pointer;
@@ -1945,11 +1988,11 @@
   margin-top: 15px;
   margin-bottom: 15px;
   opacity: 0.9;
-  font-family: Ubuntu, Helvetica, sans-serif;
+  font-family: Muli, sans-serif;
   color: #000;
   font-size: 1.45em;
   line-height: 1.5em;
-  font-weight: 500;
+  font-weight: 800;
   text-align: left;
 }
 
@@ -1966,6 +2009,7 @@
   margin-bottom: 15px;
   opacity: 0.74;
   font-size: 1.33em;
+  font-weight: 700;
 }
 
 .text-span {
@@ -1993,12 +2037,11 @@
 
 .envelopeholder {
   position: relative;
-  width: 90%;
-  background-image: url('../images/Envelope-Background.svg');
-  background-position: 100% 0px;
-  background-size: contain;
-  background-repeat: no-repeat;
-  box-shadow: 6px 6px 33px -10px rgba(0, 0, 0, 0.78);
+  width: 95%;
+  background-image: none;
+  background-size: auto;
+  background-repeat: repeat;
+  background-attachment: scroll;
 }
 
 .image {
@@ -2013,6 +2056,7 @@
   top: 0px;
   right: 0px;
   z-index: 1;
+  display: none;
 }
 
 .image-2-copy {
@@ -2020,11 +2064,12 @@
   top: 0px;
   right: 0px;
   z-index: 2;
+  display: none;
 }
 
 .image-2-copy-copy {
   position: relative;
-  opacity: 0;
+  display: block;
 }
 
 .paybutton {
@@ -2079,6 +2124,99 @@
   background-position: 0px 0px;
   background-size: auto;
   background-repeat: repeat;
+}
+
+.section {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100vw;
+  height: 66vh;
+  grid-column-gap: 16px;
+  grid-row-gap: 16px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  background-image: -webkit-linear-gradient(0deg, #ff4252, #8b94ff);
+  background-image: linear-gradient(90deg, #ff4252, #8b94ff);
+}
+
+.bold-text {
+  font-weight: 800;
+}
+
+.bold-text-2 {
+  font-weight: 800;
+}
+
+.bold-text-3 {
+  font-weight: 800;
+}
+
+.bold-text-4 {
+  font-weight: 800;
+}
+
+.text-field-landing {
+  height: 33px;
+  margin-bottom: 3vh;
+  border-radius: 999999px;
+  font-family: Muli, sans-serif;
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 1em;
+}
+
+.text-field-landing.broadfield {
+  width: 90vw;
+  opacity: 0.66;
+  font-weight: 400;
+}
+
+.text-field-landing.broadfield.connect_account_field {
+  width: 33vw;
+}
+
+.text-field-landing.filter {
+  position: relative;
+  z-index: 999;
+  width: 20vw;
+  min-width: 250px;
+  margin-right: 2.5vw;
+  opacity: 0.66;
+  color: #000;
+  text-align: right;
+}
+
+.text-field-landing.filter.followfilter {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: auto;
+  margin-right: 5vw;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  opacity: 0.8;
+}
+
+.text-field-landing.filter.last {
+  margin-bottom: 3vh;
+}
+
+.text-field-landing.filter.connect_account_filter {
+  margin-left: 2.5vw;
+}
+
+.text-field-landing.promocode {
+  margin-bottom: 0vh;
+  opacity: 0.66;
+  font-weight: 400;
+}
+
+.text-field-landing.promocode.connect_account_field {
+  width: 33vw;
 }
 
 @media (max-width: 991px) {
@@ -2255,6 +2393,10 @@
   .switchwrapper {
     width: 45vw;
   }
+  .text-field-landing.filter {
+    width: 90vw;
+    margin-right: 0vw;
+  }
 }
 
 @media (max-width: 479px) {
@@ -2367,6 +2509,9 @@
   }
   .text-field.filter.unfollowsettings {
     margin-bottom: 6vh;
+  }
+  .text-field.promocode {
+    margin-bottom: 4vh;
   }
   .applied_hashtag_or_location.long {
     margin-right: 0em;
@@ -2552,5 +2697,17 @@
   .softwareheading.scheduletitle {
     margin-right: 5vw;
     margin-left: 5vw;
+  }
+  .text-field-landing.broadfield {
+    margin-bottom: 4vh;
+  }
+  .text-field-landing.filter.last {
+    margin-bottom: 4vh;
+  }
+  .text-field-landing.filter.unfollowsettings {
+    margin-bottom: 6vh;
+  }
+  .text-field-landing.promocode {
+    margin-bottom: 4vh;
   }
 }

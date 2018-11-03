@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Context } from './Context';
 import LandingPage_Connect from './LandingPage_Connect';
+import LandingPage_Payment from './LandingPage_Payment';
 
 export default class Account extends Component {
   render() {
@@ -10,7 +11,7 @@ export default class Account extends Component {
           return (
             <div>
               <div
-                onClick={this.toggle.bind(context)}
+                onClick={this.toggleConnect.bind(context)}
                 data-w-id="5bc62214-6295-d5b6-2514-2ebbae7e5d29"
                 className="dropdown-toggle w-dropdown-toggle"
               >
@@ -21,14 +22,17 @@ export default class Account extends Component {
                 <div className="general_settings subtitle account">Account</div>
               </div>
               <LandingPage_Connect
-                display={context.state.toggled}
-                toggle={this.toggle.bind(context)}
+                display={context.state.toggledConnect}
+                toggle={this.toggleConnect.bind(context)}
               />
+              <LandingPage_Payment display={context.state.toggledConnect} />
               <div
                 style={
-                  context.state.toggled ? { opacity: 1, display: 'unset' } : {}
+                  context.state.toggledConnect
+                    ? { opacity: 1, display: 'unset' }
+                    : {}
                 }
-                onClick={this.toggle.bind(context)}
+                onClick={this.toggleConnect.bind(context)}
                 data-w-id="b2698b2e-f4ae-8511-f68d-03f81973a9a5"
                 className="connect_insta_account_darkener landing_page_darkener"
               />
@@ -39,7 +43,7 @@ export default class Account extends Component {
     );
   }
 
-  toggle() {
-    this.setState(p => ({ toggled: !p.toggled }));
+  toggleConnect() {
+    this.setState(p => ({ toggledConnect: !p.toggledConnect }));
   }
 }

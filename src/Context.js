@@ -5,7 +5,7 @@ import ScrollUtil from './ScrollUtil';
 export const Context = React.createContext();
 
 export const unsavedState = {
-  toggled: false,
+  toggledConnect: false,
   scrollY: 0,
   scrollHeight: document.body.scrollHeight
 };

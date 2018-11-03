@@ -1,9 +1,13 @@
 import React, { Component } from 'react';
+import TextField from './TextField';
 
 export default class LandingPage_Payment extends Component {
   render() {
     return (
-      <div className="connect_insta_account landing_page_payment">
+      <div
+        style={this.props.display ? { display: 'flex' } : {}}
+        className="connect_insta_account landing_page_payment"
+      >
         <h1 className="settingtitle subscribetitle">
           Subscribe to Pink Parrot
         </h1>
@@ -27,14 +31,11 @@ export default class LandingPage_Payment extends Component {
                 name="email-form-3"
                 data-name="Email Form 3"
               >
-                <input
+                <TextField
                   type="text"
-                  className="text-field-landing promocode w-input"
-                  maxLength="256"
-                  name="field-4"
-                  data-name="Field 4"
                   placeholder="Promo Code"
-                  id="field-4"
+                  value="discount_code"
+                  inputStyle={{ minWidth: '100%' }}
                 />
               </form>
               <div className="w-form-done">

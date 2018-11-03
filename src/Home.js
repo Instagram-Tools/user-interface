@@ -6,7 +6,15 @@ import './css/code-connect.webflow.css';
 export default class App extends Component {
   render() {
     return (
-      <div className="landingpage">
+      <div
+        className="landingpage"
+        style={{
+          position: 'absolute',
+          top: 0,
+          right: 0,
+          left: 0
+        }}
+      >
         <div className="landing_content_wrap">
           <h1 className="titlepage landingtitle">
             Growthhack human Engagement.

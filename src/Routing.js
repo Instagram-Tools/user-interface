@@ -12,6 +12,10 @@ function BasicExample() {
           data-animation="default"
           data-duration="400"
           className="menubar menubar_landing_page w-nav"
+          style={{
+            width: 'auto',
+            position: 'inherit'
+          }}
         >
           <div className="menubarleft animation">
             <h4 className="titlelogo useon">Use on</h4>
@@ -32,7 +36,11 @@ function BasicExample() {
             />
           </div>
           <div className="menubarleft landingpage_left">
-            <Link to="/" className="titlelogo landingpage_logo" />
+            <Link
+              to="/"
+              className="titlelogo landingpage_logo"
+              style={{ zIndex: 999 }}
+            />
             <div className="container w-container">
               <nav role="navigation" className="nav-menu w-nav-menu">
                 <div className="just_because_the_fucking_nav_menu_wont_distribute">

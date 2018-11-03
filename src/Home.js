@@ -3,7 +3,7 @@ import './css/normalize.css';
 import './css/webflow.css';
 import './css/code-connect.webflow.css';
 
-export default class App extends Component {
+export default class Home extends Component {
   render() {
     return (
       <div

@@ -178,7 +178,7 @@
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
-  /*background-image: url('../images/pink-parrot-logo.svg');*/
+  background-image: url('../images/pink-parrot-logo.svg');
   background-position: 50% 50%;
   background-size: cover;
   background-repeat: no-repeat;
@@ -834,7 +834,7 @@
 .xicon {
   width: 33%;
   height: 33%;
-  /*background-image: url('../images/xIcon.svg');*/
+  background-image: url('../images/xIcon.svg');
   background-position: 50% 50%;
   background-size: contain;
   background-repeat: no-repeat;
@@ -843,7 +843,7 @@
 .locationicon {
   width: 50%;
   height: 50%;
-  /*background-image: url('../images/locationIcon.svg');*/
+  background-image: url('../images/locationIcon.svg');
   background-position: 50% 50%;
   background-size: contain;
   background-repeat: no-repeat;
@@ -852,7 +852,7 @@
 .hashtagicon {
   width: 45%;
   height: 45%;
-  /*background-image: url('../images/hashtagIcon.svg');*/
+  background-image: url('../images/hashtagIcon.svg');
   background-position: 50% 50%;
   background-size: contain;
   background-repeat: no-repeat;
@@ -1202,7 +1202,7 @@
 .usericon {
   width: 50%;
   height: 50%;
-  /*background-image: url('../images/usericon.svg');*/
+  background-image: url('../images/usericon.svg');
   background-position: 50% 50%;
   background-size: contain;
   background-repeat: no-repeat;
@@ -1222,7 +1222,7 @@
 .commenticon {
   width: 45%;
   height: 45%;
-  /*background-image: url('../images/commentIcon.svg');*/
+  background-image: url('../images/commentIcon.svg');
   background-position: 50% 50%;
   background-size: contain;
   background-repeat: no-repeat;
@@ -1759,8 +1759,10 @@
   top: -5px;
   height: 94vh;
   min-width: 94vh;
-  /*background-image: url('../images/Pink-Parrot-Landing-Page-Hero-no-human.svg'), -webkit-linear-gradient(270deg, #f9fbfb, #f9fbfb);*/
-  /*background-image: url('../images/Pink-Parrot-Landing-Page-Hero-no-human.svg'), linear-gradient(180deg, #f9fbfb, #f9fbfb);*/
+  background-image: url('../images/Pink-Parrot-Landing-Page-Hero-no-human.svg'),
+    -webkit-linear-gradient(270deg, #f9fbfb, #f9fbfb);
+  background-image: url('../images/Pink-Parrot-Landing-Page-Hero-no-human.svg'),
+    linear-gradient(180deg, #f9fbfb, #f9fbfb);
   background-position: 101% 0px, 0px 0px;
   background-size: 60%, auto;
   background-repeat: no-repeat, repeat;
@@ -1845,7 +1847,7 @@
   width: 20%;
   height: 25%;
   margin-bottom: 2em;
-  /*background-image: url('../images/Asset-27-target.svg');*/
+  background-image: url('../images/Asset-27-target.svg');
   background-position: 50% 100%;
   background-size: contain;
   background-repeat: no-repeat;
@@ -1853,15 +1855,15 @@
 }
 
 .uspicon.sniper {
-  /*background-image: url('../images/Asset-17-target.svg');*/
+  background-image: url('../images/Asset-17-target.svg');
 }
 
 .uspicon.privacyicon {
-  /*background-image: url('../images/Asset-17-privacy.svg');*/
+  background-image: url('../images/Asset-17-privacy.svg');
 }
 
 .uspicon.alwaysonicon {
-  /*background-image: url('../images/Asset-47-target.svg');*/
+  background-image: url('../images/Asset-47-target.svg');
 }
 
 .more_info_button {
@@ -1992,7 +1994,7 @@
 .envelopeholder {
   position: relative;
   width: 90%;
-  /*background-image: url('../images/Envelope-Background.svg');*/
+  background-image: url('../images/Envelope-Background.svg');
   background-position: 100% 0px;
   background-size: contain;
   background-repeat: no-repeat;

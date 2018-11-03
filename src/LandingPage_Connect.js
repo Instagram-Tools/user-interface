@@ -5,7 +5,7 @@ export default class LandingPage_Connect extends Component {
   render() {
     return (
       <div
-        style={this.props.display}
+        style={this.props.display ? { opacity: 1, display: 'unset' } : {}}
         className="connect_insta_account landing_page_connect"
       >
         <h1 className="settingtitle">Connect your Instagram account</h1>

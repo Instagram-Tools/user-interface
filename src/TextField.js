@@ -12,6 +12,7 @@ export default class TextField extends Component {
           >
             <input
               type={this.props.type || 'text'}
+              style={this.props.inputStyle}
               className="text-field filter w-input"
               maxLength="256"
               value={context.state[this.props.value]}

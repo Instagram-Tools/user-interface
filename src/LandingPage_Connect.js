@@ -1,11 +1,15 @@
 import React, { Component } from 'react';
+import TextField from './TextField';
 
 export default class LandingPage_Connect extends Component {
   render() {
     return (
-      <div className="connect_insta_account landing_page_connect">
+      <div
+        style={this.props.display}
+        className="connect_insta_account landing_page_connect"
+      >
         <h1 className="settingtitle">Connect your Instagram account</h1>
-        <a href="#" className="title_menu_element privacy">
+        <a href="/privacy-policy" className="title_menu_element privacy">
           Your details will not be transferred to third parties, and neither
           your email, nor your password will be saved. Click to see our privacy
           policy.
@@ -18,33 +22,26 @@ export default class LandingPage_Connect extends Component {
             className="formholder_connect_account"
           >
             <div className="columnholder filterholder first connect_account_column">
-              <input
-                type="text"
-                maxLength="256"
-                name="field-3"
-                data-name="Field 3"
-                id="field-3"
-                className="text-field filter connect_account_filter w-input"
+              <TextField type="email" placeholder="Email" value="email" />
+              <TextField
+                type="password"
+                placeholder="Password"
+                value="e_password"
               />
-              <input
-                type="text"
-                maxLength="256"
-                name="field-3"
-                data-name="Field 3"
-                id="field-3"
-                className="text-field filter connect_account_filter w-input"
+              <TextField
+                type="email"
+                placeholder="Instagram Username"
+                value="username"
               />
-              <div className="columnholder belowholder connect_account_second_column">
-                <div className="text_field_description below connect_account_text">
-                  Email
-                </div>
-                <div className="text_field_description below connect_account_text">
-                  Password
-                </div>
-              </div>
+              <TextField
+                type="password"
+                placeholder="Instagram Password"
+                value="password"
+              />
             </div>
             <input
-              type="submit"
+              onClick={this.props.toggle}
+              type="button"
               value="Connect"
               data-wait="Please wait..."
               className="submitbutton connect_account_button w-button"

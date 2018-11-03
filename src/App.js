@@ -20,7 +20,7 @@ export default class App extends Component {
     return (
       <Context.Consumer>
         {context => (
-          <div>
+          <div style={this.props.style}>
             <Progress />
             <NavBar />
             <GeneralSettings />

@@ -32,7 +32,7 @@ export default class Account extends Component {
                     ? { opacity: 1, display: 'unset' }
                     : {}
                 }
-                onClick={this.toggleConnect.bind(context)}
+                onClick={this.untoggle.bind(context)}
                 data-w-id="b2698b2e-f4ae-8511-f68d-03f81973a9a5"
                 className="connect_insta_account_darkener landing_page_darkener"
               />
@@ -49,5 +49,9 @@ export default class Account extends Component {
 
   togglePayment() {
     this.setState(p => ({ toggledPayment: !p.toggledPayment }));
+  }
+
+  untoggle() {
+    this.setState({ toggledConnect: false, toggledPayment: false });
   }
 }

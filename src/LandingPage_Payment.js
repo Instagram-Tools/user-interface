@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import TextField from './TextField';
 import envelope from './images/Asset-57-target.png';
+import Payment_Gateway from './Payment_Gateway';
 
 export default class LandingPage_Payment extends Component {
   render() {
@@ -58,7 +59,9 @@ export default class LandingPage_Payment extends Component {
             </div>
           </div>
         </div>
-        <div className="buy_plan_holder" />
+        <div className="buy_plan_holder">
+          <Payment_Gateway />
+        </div>
       </div>
     );
   }

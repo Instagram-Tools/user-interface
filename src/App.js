@@ -13,7 +13,6 @@ import UnfollowSettings from './UnfollowSettings';
 import ActivitySettings from './ActivitySettings';
 import { Context } from './Context';
 import Save from './Save';
-import Payment_Gateway from './Payment_Gateway';
 
 export default class App extends Component {
   render() {

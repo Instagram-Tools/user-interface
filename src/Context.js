@@ -6,6 +6,7 @@ export const Context = React.createContext();
 
 export const unsavedState = {
   toggledConnect: false,
+  toggledPayment: false,
   scrollY: 0,
   scrollHeight: document.body.scrollHeight
 };

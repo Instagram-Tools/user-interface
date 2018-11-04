@@ -23,9 +23,9 @@ export default class Account extends Component {
               </div>
               <LandingPage_Connect
                 display={context.state.toggledConnect}
-                toggle={this.toggleConnect.bind(context)}
+                toggle={this.togglePayment.bind(context)}
               />
-              <LandingPage_Payment display={context.state.toggledConnect} />
+              <LandingPage_Payment display={context.state.toggledPayment} />
               <div
                 style={
                   context.state.toggledConnect
@@ -45,5 +45,9 @@ export default class Account extends Component {
 
   toggleConnect() {
     this.setState(p => ({ toggledConnect: !p.toggledConnect }));
+  }
+
+  togglePayment() {
+    this.setState(p => ({ toggledPayment: !p.toggledPayment }));
   }
 }

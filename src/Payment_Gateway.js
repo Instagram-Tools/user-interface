@@ -29,13 +29,13 @@ export default class Payment_Gateway extends React.Component {
   render() {
     if (!this.state.clientToken) {
       return (
-        <div>
+        <div style={this.props.style}>
           <h1>Loading...</h1>
         </div>
       );
     } else {
       return (
-        <div>
+        <div style={this.props.style}>
           <DropIn
             options={{
               authorization: this.state.clientToken,

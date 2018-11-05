@@ -60,7 +60,7 @@ export default class LandingPage_Payment extends Component {
           </div>
         </div>
         <div className="buy_plan_holder">
-          <Payment_Gateway />
+          <Payment_Gateway style={{ width: '100%' }} />
         </div>
       </div>
     );

@@ -485,7 +485,7 @@ export default class Legal extends Component {
           privacy? <br />Contact us at:<br />‍
         </span>
         <span className="titlepage legalsubtitle contacttext email">
-          info@pinkparrot.co
+          <a href="mailto:info@pinkparrot.co">info@pinkparrot.co</a>
         </span>
       </div>
     );

@@ -1,7 +1,13 @@
 import React from 'react';
-import { BrowserRouter as Router, Link, Route } from 'react-router-dom';
+import {
+  BrowserRouter as Router,
+  Link,
+  NavLink,
+  Route
+} from 'react-router-dom';
 import Home from './Home';
 import App from './App';
+import Legal from './Legal';
 import { Provider } from './Context';
 
 function BasicExample() {
@@ -38,7 +44,7 @@ function BasicExample() {
               />
             </div>
             <div className="menubarleft landingpage_left">
-              <Link
+              <NavLink
                 to="/"
                 className="titlelogo landingpage_logo"
                 style={{ zIndex: 999 }}
@@ -47,12 +53,12 @@ function BasicExample() {
                 <nav role="navigation" className="nav-menu w-nav-menu">
                   <div className="just_because_the_fucking_nav_menu_wont_distribute">
                     <div className="nav_menu_half">
-                      <Link
+                      <NavLink
                         className="title_menu_element landingpage_element w-nav-link"
                         to="/interface"
                       >
                         Interface
-                      </Link>
+                      </NavLink>
                       <a
                         href="#"
                         className="title_menu_element feature_in_development w-nav-link"
@@ -78,7 +84,7 @@ function BasicExample() {
                         Pricing
                       </a>
                       <a
-                        href="#"
+                        href="/legal"
                         className="title_menu_element landingpage_element w-nav-link"
                       >
                         Legal
@@ -111,6 +117,7 @@ function BasicExample() {
           </div>
           <Route exact path="/" component={Home} />
           <Route exact path="/interface" component={App} />
+          <Route exact path="/legal" component={Legal} />
         </div>
       </Router>
     </Provider>

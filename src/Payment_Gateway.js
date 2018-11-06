@@ -22,8 +22,14 @@ export default class Payment_Gateway extends React.Component {
 
   async buy() {
     // Send the nonce to your server
-    const { nonce } = await this.instance.requestPaymentMethod();
-    await fetch(`${PAYMENT_MANAGER}/purchase/${nonce}`);
+    let { nonce } = await this.instance.requestPaymentMethod();
+    await fetch(`${PAYMENT_MANAGER}/purchase/`, {
+      method: 'POST',
+      body: JSON.stringify({ ...this.props.userdata, nonce }),
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    });
   }
 
   render() {

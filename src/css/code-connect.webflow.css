@@ -22,6 +22,7 @@ body {
 .menubar.menubar_landing_page {
   position: absolute;
   z-index: 1;
+  padding-left: 5vw;
   background-image: -webkit-linear-gradient(270deg, #fff, #fff);
   background-image: linear-gradient(180deg, #fff, #fff);
 }
@@ -41,6 +42,20 @@ body {
     -webkit-linear-gradient(270deg, #fff, #fff);
   background-image: linear-gradient(90deg, #ff4252, #8b94ff),
     linear-gradient(180deg, #fff, #fff);
+}
+
+.menubar.menubar_interface_page {
+  width: 100vw;
+  background-image: -webkit-linear-gradient(270deg, #fff, #fff);
+  background-image: linear-gradient(180deg, #fff, #fff);
+}
+
+.menubar.menubar_interface_page.legalpage_menubar {
+  width: 100vw;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 .body {
@@ -251,6 +266,60 @@ body {
   font-size: 1.15em;
 }
 
+.titlepage.abouttitle {
+  position: absolute;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100vw;
+  margin-top: 70vh;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  font-family: Muli, sans-serif;
+  color: #f7436a;
+  font-size: 3em;
+  line-height: 1em;
+  font-weight: 800;
+  text-align: center;
+}
+
+.titlepage.abouttitle.legalpage {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 40vw;
+  margin-top: 0vh;
+  margin-left: 2.5vw;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  color: #000;
+  font-size: 3em;
+  line-height: 1.5em;
+  font-weight: 800;
+  text-align: center;
+}
+
+.titlepage.abouttitle.legal_category_title {
+  width: 40vw;
+  margin-top: 0vh;
+  margin-left: 0vw;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  color: #000;
+  font-size: 2em;
+  line-height: 1.5em;
+  font-weight: 800;
+  text-align: center;
+}
+
 .titlelogo {
   display: -webkit-box;
   display: -webkit-flex;
@@ -304,6 +373,7 @@ body {
 
 .titlelogo.legallogo {
   margin-right: 4vw;
+  margin-left: 2em;
   background-image: url('../images/pink-parrot-logo.svg');
   opacity: 0.91;
   -webkit-filter: none;
@@ -442,7 +512,7 @@ body {
 
 .menubarleft.landingpage_left {
   width: auto;
-  padding-left: 5vw;
+  padding-left: 0em;
 }
 
 .menubarleft.landingpage_left.menubarlegal {
@@ -2349,6 +2419,15 @@ body {
 .emailsmall {
   color: rgba(0, 82, 255, 0.8);
   font-weight: 600;
+}
+
+.mission_statement_hero {
+  width: 100vw;
+  height: 90vh;
+  background-image: url('../images/Pink-Parrot-Mission-Statement-pic-01.svg');
+  background-position: 50% 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 @media (max-width: 991px) {

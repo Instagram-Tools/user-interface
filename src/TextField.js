@@ -11,6 +11,7 @@ export default class TextField extends Component {
             style={{ width: 'unset' }}
           >
             <input
+              required={this.props.required}
               type={this.props.type || 'text'}
               style={this.props.inputStyle}
               className="text-field filter w-input"

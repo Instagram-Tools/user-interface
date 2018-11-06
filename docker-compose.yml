@@ -11,7 +11,7 @@ services:
      - ./build:/build
    environment:
      - DEBUG=on
-     - APP_PATH_PREFIX=/aSubSiteInParentDomainUseThisPath
+     - APP_PATH_PREFIX=/app
      - APP_API_PLACEHOLDER=/api
      - APP_API_GATEWAY=http://api:8000
      - PAYMENT_PLACEHOLDER=/pay
@@ -40,6 +40,8 @@ services:
    - "7000:7000"
    env_file:
    - .pay.env
+   environment:
+   - DEBUG=True
 
  api:
     image: instagramtools/api

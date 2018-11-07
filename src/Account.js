@@ -48,7 +48,8 @@ export default class Account extends Component {
   }
 
   togglePayment() {
-    this.setState(p => ({ toggledPayment: !p.toggledPayment }));
+    if (this.state.email)
+      this.setState(p => ({ toggledPayment: !p.toggledPayment }));
   }
 
   untoggle() {

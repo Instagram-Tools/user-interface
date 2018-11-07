@@ -10,7 +10,7 @@ import App from './App';
 import Legal from './Legal';
 import { Provider } from './Context';
 
-function BasicExample() {
+export default function BasicExample() {
   return (
     <Provider>
       <Router>
@@ -123,5 +123,3 @@ function BasicExample() {
     </Provider>
   );
 }
-
-export default BasicExample;

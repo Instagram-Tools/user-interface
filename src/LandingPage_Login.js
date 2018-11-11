@@ -13,7 +13,7 @@ export default class LandingPage_Login extends Component {
         style={this.props.display ? { opacity: 1, display: 'unset' } : {}}
         className="connect_insta_account landing_page_connect"
       >
-        <h1 className="settingtitle">Connect your Instagram account</h1>
+        <h1 className="settingtitle">Login</h1>
         <a href="/privacy-policy" className="title_menu_element privacy">
           Your details will not be transferred to third parties, and neither
           your email, nor your password will be saved. Click to see our privacy

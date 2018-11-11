@@ -2,6 +2,11 @@ import React, { Component } from 'react';
 import TextField from './TextField';
 
 export default class LandingPage_Connect extends Component {
+  state = {
+    isEmailSet: false,
+    isPasswordSet: false
+  };
+
   render() {
     return (
       <div
@@ -26,15 +31,18 @@ export default class LandingPage_Connect extends Component {
                 type="email"
                 placeholder="Instagram Username"
                 value="username"
+                setIsSet={b => this.setState({ isEmailSet: b })}
               />
               <TextField
                 type="password"
                 placeholder="Instagram Password"
                 value="password"
+                s
+                etIsSet={b => this.setState({ isPasswordSet: b })}
               />
             </div>
             <input
-              onClick={this.props.toggle}
+              onClick={this.requirementsMet() ? this.props.toggle : null}
               type="button"
               value="Connect"
               data-wait="Please wait..."
@@ -50,5 +58,9 @@ export default class LandingPage_Connect extends Component {
         </div>
       </div>
     );
+  }
+
+  requirementsMet() {
+    return this.state.isEmailSet && this.state.isPasswordSet;
   }
 }

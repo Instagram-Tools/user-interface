@@ -34,10 +34,11 @@ export default class TextField extends Component {
     );
   }
 
-  setValue(context, value) {
+  setValue(context, value = '') {
     context.setState({
       [this.props.value]: value
     });
+    this.props.setIsSet(value.length > 0);
   }
 
   getValue(context) {

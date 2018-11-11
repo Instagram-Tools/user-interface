@@ -3,7 +3,11 @@ import TextField from './TextField';
 import TextField_Confirm from './TextField_Confirm';
 
 export default class LandingPage_Register extends Component {
-  state = { isConfirmed: false };
+  state = {
+    isEmailSet: false,
+    isPasswordSet: false,
+    isConfirmed: false
+  };
 
   render() {
     return (
@@ -25,11 +29,17 @@ export default class LandingPage_Register extends Component {
             className="formholder_connect_account"
           >
             <div className="columnholder filterholder first connect_account_column">
-              <TextField type="email" placeholder="Email" value="email" />
+              <TextField
+                type="email"
+                placeholder="Email"
+                value="email"
+                setIsSet={b => this.setState({ isEmailSet: b })}
+              />
               <TextField
                 type="password"
                 placeholder="Password"
                 value="e_password"
+                setIsSet={b => this.setState({ isPasswordSet: b })}
               />
               <TextField_Confirm
                 type="password"
@@ -39,7 +49,7 @@ export default class LandingPage_Register extends Component {
               />
             </div>
             <input
-              onClick={this.state.isConfirmed ? this.props.toggle : null}
+              onClick={this.requirementsMet() ? this.props.toggle : null}
               type="button"
               value="Connect"
               data-wait="Please wait..."
@@ -54,6 +64,14 @@ export default class LandingPage_Register extends Component {
           </div>
         </div>
       </div>
+    );
+  }
+
+  requirementsMet() {
+    return (
+      this.state.isEmailSet &&
+      this.state.isPasswordSet &&
+      this.state.isConfirmed
     );
   }
 

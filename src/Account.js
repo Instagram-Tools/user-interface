@@ -3,6 +3,7 @@ import { Context } from './Context';
 import LandingPage_Connect from './LandingPage_Connect';
 import LandingPage_Payment from './LandingPage_Payment';
 import LandingPage_Register from './LandingPage_Register';
+import LandingPage_Login from './LandingPage_Login';
 
 export default class Account extends Component {
   render() {
@@ -22,7 +23,7 @@ export default class Account extends Component {
                 />
                 <div className="general_settings subtitle account">Account</div>
               </div>
-              <LandingPage_Connect
+              <LandingPage_Login
                 display={context.state.registrationStep === 11}
                 toggle={this.connect.bind(context)}
               />

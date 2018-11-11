@@ -22,12 +22,6 @@ export default class LandingPage_Connect extends Component {
             className="formholder_connect_account"
           >
             <div className="columnholder filterholder first connect_account_column">
-              <TextField type="email" placeholder="Email" value="email" />
-              <TextField
-                type="password"
-                placeholder="Password"
-                value="e_password"
-              />
               <TextField
                 type="email"
                 placeholder="Instagram Username"

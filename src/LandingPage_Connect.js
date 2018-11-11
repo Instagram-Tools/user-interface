@@ -37,8 +37,7 @@ export default class LandingPage_Connect extends Component {
                 type="password"
                 placeholder="Instagram Password"
                 value="password"
-                s
-                etIsSet={b => this.setState({ isPasswordSet: b })}
+                setIsSet={b => this.setState({ isPasswordSet: b })}
               />
             </div>
             <input

@@ -84,6 +84,6 @@ export default class LandingPage_Payment extends Component {
   }
 
   setSubscription(subscription) {
-    this.setState({ subscription });
+    this.setState({ subscription, registrationStep: 0 });
   }
 }

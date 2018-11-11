@@ -24,7 +24,7 @@ export default class Account extends Component {
               </div>
               <LandingPage_Register
                 display={context.state.registrationStep === 1}
-                toggle={this.togglePayment.bind(context)}
+                toggle={this.nextStep.bind(context)}
               />
               <LandingPage_Connect
                 display={context.state.registrationStep === 2}
@@ -52,10 +52,6 @@ export default class Account extends Component {
 
   nextStep() {
     this.setState(p => ({ registrationStep: p.registrationStep + 1 }));
-  }
-
-  togglePayment() {
-    if (this.state.email) this.setState(p => ({ registrationStep: 2 }));
   }
 
   resetStep() {

@@ -11,7 +11,7 @@ export default class Account extends Component {
           return (
             <div>
               <div
-                onClick={this.toggleConnect.bind(context)}
+                onClick={this.nextStep.bind(context)}
                 data-w-id="5bc62214-6295-d5b6-2514-2ebbae7e5d29"
                 className="dropdown-toggle w-dropdown-toggle"
               >
@@ -22,17 +22,19 @@ export default class Account extends Component {
                 <div className="general_settings subtitle account">Account</div>
               </div>
               <LandingPage_Connect
-                display={context.state.toggledConnect}
+                display={context.state.registrationStep === 1}
                 toggle={this.togglePayment.bind(context)}
               />
-              <LandingPage_Payment display={context.state.toggledPayment} />
+              <LandingPage_Payment
+                display={context.state.registrationStep === 2}
+              />
               <div
                 style={
-                  context.state.toggledConnect
+                  context.state.registrationStep > 0
                     ? { opacity: 1, display: 'unset' }
                     : {}
                 }
-                onClick={this.untoggle.bind(context)}
+                onClick={this.resetStep.bind(context)}
                 data-w-id="b2698b2e-f4ae-8511-f68d-03f81973a9a5"
                 className="connect_insta_account_darkener landing_page_darkener"
               />
@@ -43,16 +45,15 @@ export default class Account extends Component {
     );
   }
 
-  toggleConnect() {
-    this.setState(p => ({ toggledConnect: !p.toggledConnect }));
+  nextStep() {
+    this.setState(p => ({ registrationStep: p.registrationStep + 1 }));
   }
 
   togglePayment() {
-    if (this.state.email)
-      this.setState(p => ({ toggledPayment: !p.toggledPayment }));
+    if (this.state.email) this.setState(p => ({ registrationStep: 2 }));
   }
 
-  untoggle() {
-    this.setState({ toggledConnect: false, toggledPayment: false });
+  resetStep() {
+    this.setState({ registrationStep: 0 });
   }
 }

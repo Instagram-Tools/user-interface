@@ -16,13 +16,8 @@ export default class TextField extends Component {
               style={this.props.inputStyle}
               className="text-field filter w-input"
               maxLength="256"
-              value={context.state[this.props.value]}
-              onChange={e => {
-                const value = e.target.value;
-                context.setState({
-                  [this.props.value]: value
-                });
-              }}
+              value={this.getValue(context)}
+              onChange={e => this.setValue(context, e.target.value)}
             />
             <div className="columnholder belowholder">
               <div
@@ -37,5 +32,15 @@ export default class TextField extends Component {
         )}
       </Context.Consumer>
     );
+  }
+
+  setValue(context, value) {
+    context.setState({
+      [this.props.value]: value
+    });
+  }
+
+  getValue(context) {
+    return context.state[this.props.value];
   }
 }

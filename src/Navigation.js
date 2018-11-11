@@ -48,8 +48,13 @@ export default class Navigation extends Component {
                       <NavLink
                         className="title_menu_element landingpage_element w-nav-link"
                         to="/interface"
+                        onClick={
+                          !this.isLoggedin(context)
+                            ? this.login.bind(context)
+                            : null
+                        }
                       >
-                        Interface
+                        {this.isLoggedin(context) ? 'Interface' : 'Login'}
                       </NavLink>
                       <a
                         href="#"
@@ -110,5 +115,13 @@ export default class Navigation extends Component {
         )}
       </Context.Consumer>
     );
+  }
+
+  login() {
+    this.setState({ registrationStep: 11 });
+  }
+
+  isLoggedin(context) {
+    return context.state.email && context.state.e_password;
   }
 }

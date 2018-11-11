@@ -67,7 +67,7 @@ export default class Save extends Component {
       email,
       e_password,
       timetable,
-      discount_code
+      subscription
     } = settings;
     if (!(password && username && email && e_password && timetable)) {
       return context.setState({ toggled: true });
@@ -82,13 +82,13 @@ export default class Save extends Component {
     delete settings.email;
     delete settings.e_password;
     delete settings.timetable;
-    delete settings.discount_code;
+    delete settings.subscription;
 
     const data = {
       email,
       username,
       password,
-      discount_code,
+      subscription,
       settings: JSON.stringify(settings),
       timetable
     };

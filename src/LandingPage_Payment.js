@@ -73,6 +73,7 @@ export default class LandingPage_Payment extends Component {
                     email: context.state.email,
                     discount_code: context.state.discount_code
                   }}
+                  setSubscription={this.setSubscription.bind(context)}
                 />
               </div>
             </div>
@@ -80,5 +81,9 @@ export default class LandingPage_Payment extends Component {
         }}
       </Context.Consumer>
     );
+  }
+
+  setSubscription(subscription) {
+    this.setState({ subscription });
   }
 }

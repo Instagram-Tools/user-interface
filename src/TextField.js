@@ -38,7 +38,8 @@ export default class TextField extends Component {
     context.setState({
       [this.props.value]: value
     });
-    this.props.setIsSet(value.length > 0);
+
+    if (this.props.setIsSet) this.props.setIsSet(value.length > 0);
   }
 
   getValue(context) {

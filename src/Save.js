@@ -62,15 +62,19 @@ export default class Save extends Component {
   saving(context) {
     let settings = { ...context.state };
     let {
-      password,
-      username,
       email,
       e_password,
-      timetable,
-      subscription
+      password,
+      username,
+      subscription,
+      timetable
     } = settings;
-    if (!(password && username && email && e_password && timetable)) {
-      return context.setState({ toggled: true });
+    if (!(email && e_password)) {
+      return context.setState({ registrationStep: 1 });
+    } else if (!(password && username)) {
+      return context.setState({ registrationStep: 2 });
+    } else if (!subscription) {
+      return context.setState({ registrationStep: 3 });
     }
 
     for (let prop in unsavedState) {

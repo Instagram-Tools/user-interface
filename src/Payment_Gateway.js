@@ -8,7 +8,8 @@ export default class Payment_Gateway extends React.Component {
   instance;
 
   state = {
-    clientToken: null
+    clientToken: null,
+    error: false
   };
 
   async componentDidMount() {
@@ -21,17 +22,22 @@ export default class Payment_Gateway extends React.Component {
   }
 
   async buy() {
-    // Send the nonce to your server
-    let { nonce } = await this.instance.requestPaymentMethod();
-    const response = await fetch(`${PAYMENT_MANAGER}/purchase/`, {
-      method: 'POST',
-      body: JSON.stringify({ ...this.props.userdata, nonce }),
-      headers: {
-        'Content-Type': 'application/json'
-      }
-    });
-    const subscription = await response.text();
-    this.props.setSubscription(subscription);
+    try {
+      // Send the nonce to your server
+      let { nonce } = await this.instance.requestPaymentMethod();
+      const response = await fetch(`${PAYMENT_MANAGER}/purchase/`, {
+        method: 'POST',
+        body: JSON.stringify({ ...this.props.userdata, nonce }),
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      });
+      const subscription = await response.text();
+      this.props.setSubscription(subscription);
+      this.setState({ errorOccurred: false });
+    } catch (e) {
+      this.setState({ error: true });
+    }
   }
 
   render() {
@@ -68,6 +74,14 @@ export default class Payment_Gateway extends React.Component {
           >
             Buy Now!
           </button>
+          <div
+            style={{ display: this.state.error ? 'block' : 'none' }}
+            className="error-message w-form-fail"
+          >
+            <div className="text-block-2">
+              Oops! Something went wrong while submitting the form.
+            </div>
+          </div>
         </div>
       );
     }

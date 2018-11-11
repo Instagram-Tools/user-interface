@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Context } from './Context';
 import LandingPage_Connect from './LandingPage_Connect';
 import LandingPage_Payment from './LandingPage_Payment';
+import LandingPage_Register from './LandingPage_Register';
 
 export default class Account extends Component {
   render() {
@@ -21,12 +22,16 @@ export default class Account extends Component {
                 />
                 <div className="general_settings subtitle account">Account</div>
               </div>
-              <LandingPage_Connect
+              <LandingPage_Register
                 display={context.state.registrationStep === 1}
                 toggle={this.togglePayment.bind(context)}
               />
-              <LandingPage_Payment
+              <LandingPage_Connect
                 display={context.state.registrationStep === 2}
+                toggle={this.nextStep.bind(context)}
+              />
+              <LandingPage_Payment
+                display={context.state.registrationStep === 3}
               />
               <div
                 style={

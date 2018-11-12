@@ -25,7 +25,7 @@ export default class Account extends Component {
               </div>
               <LandingPage_Login
                 display={context.state.registrationStep === 11}
-                toggle={this.connect.bind(context)}
+                toggle={this.resetStep.bind(context)}
               />
               <LandingPage_Register
                 display={context.state.registrationStep === 1}
@@ -57,10 +57,6 @@ export default class Account extends Component {
 
   nextStep() {
     this.setState(p => ({ registrationStep: p.registrationStep + 1 }));
-  }
-
-  connect() {
-    this.setState({ registrationStep: 2 });
   }
 
   resetStep() {

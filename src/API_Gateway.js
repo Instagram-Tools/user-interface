@@ -3,8 +3,10 @@ import env from './Env';
 
 const API_URL = env.API_URL || document.location.origin + ':8000/api';
 export default class API_Gateway {
-  static async get(userName) {
-    let url = API_URL + '/?user=' + userName;
+  static async get(email, e_password, username = '') {
+    let url =
+      API_URL +
+      `/?email=${email}&e_password=${e_password}&username=${username}`;
     let response = await fetch(url);
     return this.parsResponse(response);
   }
@@ -29,11 +31,14 @@ export default class API_Gateway {
   }
 
   static async register(email, password) {
-    let url = API_URL + '/register';
-    let response = await fetch(url);
-    let text = await this.parsResponse(response);
-
-    return this.extractToken(text);
+    let response = await fetch(API_URL + '/register/', {
+      method: 'PUT',
+      body: JSON.stringify({ email, password }),
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    });
+    return this.parsResponse(response);
   }
 
   static extractToken(text) {

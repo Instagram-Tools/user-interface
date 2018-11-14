@@ -5,10 +5,13 @@ import API_Gateway from './API_Gateway';
 import { Context } from './Context';
 
 export default class LandingPage_Register extends Component {
+  errorCode = { 0: 'success', 1: 'PasswordError', 2: 'ServerError' };
+
   state = {
     isEmailSet: false,
     isPasswordSet: false,
-    isConfirmed: false
+    isConfirmed: false,
+    error: this.errorCode[0]
   };
 
   render() {
@@ -78,9 +81,11 @@ export default class LandingPage_Register extends Component {
   }
 
   submit(context) {
-    if (!this.requirementsMet()) return;
+    if (!this.requirementsMet())
+      return this.setState({ error: this.errorCode[1] });
     if (API_Gateway.register(context.state.email, context.state.e_password))
       return this.props.toggle;
+    else return this.setState({ error: this.errorCode[2] });
   }
 
   requirementsMet() {

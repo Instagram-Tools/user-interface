@@ -38,7 +38,8 @@ export default class API_Gateway {
         'Content-Type': 'application/json'
       }
     });
-    return this.parsResponse(response);
+    await response.text();
+    return response.status === 200;
   }
 
   static extractToken(text) {

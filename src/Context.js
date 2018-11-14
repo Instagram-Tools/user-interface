@@ -7,7 +7,9 @@ export const Context = React.createContext();
 export const unsavedState = {
   registrationStep: 0,
   scrollY: 0,
-  scrollHeight: document.body.scrollHeight
+  scrollHeight: document.body.scrollHeight,
+  try_email: '',
+  try_e_password: ''
 };
 
 // Then create a provider Component

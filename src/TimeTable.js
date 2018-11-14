@@ -72,20 +72,20 @@ class TimetableWrapper extends React.Component {
     return this.format(new Date(4, 1, day, hour, 1));
   }
 
-  mark(context, beginning, ending) {
+  mark(context, start, end) {
     function addTime(p) {
-      return [...(p.timetable ? p.timetable : []), beginning, ending];
+      return [...(p.timetable ? p.timetable : []), { start, end }];
     }
 
     function removeTime(p) {
       const times = [...p.timetable];
-      const index = times.indexOf(beginning);
-      times.splice(index, 2);
+      const index = times.indexOf({ start, end });
+      times.splice(index, 1);
       return times;
     }
 
     context.setState(p => ({
-      timetable: this.contains(context.state.timetable, beginning)
+      timetable: this.contains(context.state.timetable, { start, end })
         ? removeTime.call(this, p)
         : addTime.call(this, p)
     }));

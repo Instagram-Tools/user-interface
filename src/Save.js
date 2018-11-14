@@ -39,7 +39,7 @@ export default class Save extends Component {
               />
 
               <input
-                onClick={() => this.saving(context)}
+                onClick={() => this.save(context)}
                 type="button"
                 value="Save"
                 data-wait="saving..."
@@ -59,7 +59,7 @@ export default class Save extends Component {
     );
   }
 
-  saving(context) {
+  save(context) {
     let settings = { ...context.state };
     let {
       email,
@@ -97,15 +97,10 @@ export default class Save extends Component {
       timetable
     };
 
-    console.log('e:', email, e_password);
-    API.login(email, e_password)
-      .then(r => console.log('res r:', r))
-      .catch(e => console.log('err r:', e))
-      .then(() => {
-        API.put(data)
-          .then(this.success.bind(this))
-          .catch(this.error.bind(this));
-      });
+    console.log('save Data:', data);
+    API.put(data)
+      .then(this.success.bind(this))
+      .catch(this.error.bind(this));
   }
 
   success(r) {

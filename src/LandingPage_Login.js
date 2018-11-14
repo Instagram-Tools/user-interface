@@ -85,8 +85,7 @@ export default class LandingPage_Login extends Component {
     let result = await API.get(try_email, try_e_password);
 
     let settings = JSON.parse(JSON.parse(result.settings));
-    let timetable = JSON.parse(result.timetable);
-    let { password, username, subscription } = result;
+    let { password, username, subscription, timetable } = result;
 
     context.setState({
       ...settings,

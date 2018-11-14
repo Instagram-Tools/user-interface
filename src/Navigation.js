@@ -54,7 +54,7 @@ export default class Navigation extends Component {
                             : null
                         }
                       >
-                        {this.isLoggedin(context) ? 'Interface' : 'Login'}
+                        Interface
                       </NavLink>
                       <a
                         href="#"

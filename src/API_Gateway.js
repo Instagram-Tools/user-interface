@@ -8,7 +8,7 @@ export default class API_Gateway {
       API_URL +
       `/?email=${email}&e_password=${e_password}&username=${username}`;
     let response = await fetch(url);
-    return this.parsResponse(response);
+    return await response.json();
   }
 
   static async put(data) {

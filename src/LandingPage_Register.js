@@ -67,7 +67,14 @@ export default class LandingPage_Register extends Component {
                 <div className="w-form-done">
                   <div>Thank you! Your submission has been received!</div>
                 </div>
-                <div className="w-form-fail">
+                <div
+                  className="w-form-fail"
+                  style={
+                    this.state.error !== this.errorCode[0]
+                      ? { display: 'block' }
+                      : {}
+                  }
+                >
                   <div>
                     Oops! Something went wrong while submitting the form.
                   </div>
@@ -84,7 +91,7 @@ export default class LandingPage_Register extends Component {
     if (!this.requirementsMet())
       return this.setState({ error: this.errorCode[1] });
     if (API_Gateway.register(context.state.email, context.state.e_password))
-      return this.props.toggle;
+      return this.props.toggle();
     else return this.setState({ error: this.errorCode[2] });
   }
 

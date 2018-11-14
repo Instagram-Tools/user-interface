@@ -81,11 +81,10 @@ export default class LandingPage_Login extends Component {
   }
 
   async login(context) {
-    console.log('login()');
     let { try_email, try_e_password } = context.state;
     let result = await API.get(try_email, try_e_password);
 
-    let settings = JSON.parse(result.settings);
+    let settings = JSON.parse(JSON.parse(result.settings));
     let timetable = JSON.parse(result.timetable);
     let { password, username, subscription } = result;
 

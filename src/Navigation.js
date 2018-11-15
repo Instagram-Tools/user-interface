@@ -3,6 +3,10 @@ import { Context } from './Context';
 import { NavLink } from 'react-router-dom';
 
 export default class Navigation extends Component {
+  state = {
+    toggled: false
+  };
+
   render() {
     return (
       <Context.Consumer>
@@ -12,16 +16,11 @@ export default class Navigation extends Component {
             data-animation="default"
             data-duration="400"
             className="menubar menubar_landing_page w-nav"
-            style={{
-              width: 'auto',
-              position: 'inherit'
-            }}
           >
             <div className="menubarleft landingpage_left">
               <NavLink
                 to="/"
                 className="titlelogo legallogo homelogo w--current"
-                style={{ zIndex: 999 }}
               />
               <div className="container w-container">
                 <nav role="navigation" className="nav-menu w-nav-menu">
@@ -79,7 +78,10 @@ export default class Navigation extends Component {
                 </nav>
               </div>
             </div>
-            <div className="menubarright feature_in_development">
+            <div
+              className="menubarright feature_in_development"
+              onClick={this.toggle.bind(this)}
+            >
               <div
                 data-w-id="72205cee-9f07-ab14-c8ac-5697860317d1"
                 className="menu-button w-nav-button"
@@ -105,10 +107,85 @@ export default class Navigation extends Component {
                 login
               </NavLink>
             </div>
-            <div className="w-nav-overlay" data-wf-ignore="" />
+            {this.navOverlay(context)}
           </div>
         )}
       </Context.Consumer>
+    );
+  }
+
+  toggle() {
+    this.setState(p => ({ toggled: !p.toggled }));
+  }
+
+  navOverlay(context) {
+    return (
+      <div
+        className="w-nav-overlay"
+        data-wf-ignore=""
+        style={
+          this.state.toggled
+            ? {
+                display: 'inherit',
+                overflow: 'inherit'
+              }
+            : {}
+        }
+      >
+        <nav role="navigation" className="nav-menu w-nav-menu w--nav-menu-open">
+          <div className="just_because_the_fucking_nav_menu_wont_distribute">
+            <h4 className="titlelogo landinglogo" />
+            <div className="nav_menu_half">
+              <NavLink
+                to="/interface"
+                onClick={this.clickOnLogin(context)}
+                className="title_menu_element landingpage_element w-nav-link w--nav-link-open"
+              >
+                INTERFACE
+              </NavLink>
+              <NavLink
+                to="#"
+                className="title_menu_element feature_in_development w-nav-link w--nav-link-open"
+              >
+                Community
+              </NavLink>
+              <NavLink
+                to="#"
+                className="title_menu_element feature_in_development w-nav-link w--nav-link-open"
+              >
+                Your statistics
+              </NavLink>
+              <NavLink
+                to="/about"
+                className="title_menu_element landingpage_element w-nav-link w--nav-link-open"
+              >
+                ABOUT
+              </NavLink>
+              <NavLink
+                to="/about#pricing"
+                className="title_menu_element landingpage_element w-nav-link w--nav-link-open"
+              >
+                PRICING
+              </NavLink>
+              <NavLink
+                to="/legal"
+                className="title_menu_element landingpage_element w-nav-link w--nav-link-open"
+              >
+                LEGAL
+              </NavLink>
+            </div>
+            <div className="nav_menu_half righthalf">
+              <NavLink
+                to="#"
+                className="title_menu_element right profile_name_in_nav_menu w-nav-link w--nav-link-open"
+              >
+                Tash Sultana
+              </NavLink>
+              <div className="profilepic profile_pic_in_nav_menu" />
+            </div>
+          </div>
+        </nav>
+      </div>
     );
   }
 

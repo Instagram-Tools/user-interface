@@ -48,11 +48,7 @@ export default class Navigation extends Component {
                       <NavLink
                         className="title_menu_element landingpage_element w-nav-link"
                         to="/interface"
-                        onClick={
-                          !this.isLoggedin(context)
-                            ? this.login.bind(context)
-                            : null
-                        }
+                        onClick={this.clickOnLogin(context)}
                       >
                         Interface
                       </NavLink>
@@ -115,6 +111,10 @@ export default class Navigation extends Component {
         )}
       </Context.Consumer>
     );
+  }
+
+  clickOnLogin(context) {
+    return !this.isLoggedin(context) ? this.login.bind(context) : null;
   }
 
   login() {

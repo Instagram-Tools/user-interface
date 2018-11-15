@@ -17,79 +17,62 @@ export default class Navigation extends Component {
               position: 'inherit'
             }}
           >
-            <div className="menubarleft animation">
-              <h4 className="titlelogo useon">Use on</h4>
-              <img
-                src="images/iPhone-X-icon.svg"
-                alt=""
-                className="devicesicon"
-              />
-              <img
-                src="images/iPad-icon.svg"
-                alt=""
-                className="devicesicon tablet"
-              />
-              <img
-                src="images/MacBook-icon.svg"
-                alt=""
-                className="devicesicon macbook"
-              />
-            </div>
             <div className="menubarleft landingpage_left">
               <NavLink
                 to="/"
-                className="titlelogo landingpage_logo"
+                className="titlelogo legallogo homelogo w--current"
                 style={{ zIndex: 999 }}
               />
               <div className="container w-container">
                 <nav role="navigation" className="nav-menu w-nav-menu">
                   <div className="just_because_the_fucking_nav_menu_wont_distribute">
+                    <h4 className="titlelogo landinglogo" />
                     <div className="nav_menu_half">
                       <NavLink
                         className="title_menu_element landingpage_element w-nav-link"
                         to="/interface"
                         onClick={this.clickOnLogin(context)}
                       >
-                        Interface
+                        INTERFACE
                       </NavLink>
-                      <a
-                        href="#"
+                      <NavLink
+                        to="#"
                         className="title_menu_element feature_in_development w-nav-link"
                       >
                         Community
-                      </a>
-                      <a
-                        href="#"
+                      </NavLink>
+                      <NavLink
+                        to="#"
                         className="title_menu_element feature_in_development w-nav-link"
                       >
                         Your statistics
-                      </a>
-                      <a
-                        href="#"
+                      </NavLink>
+                      <NavLink
+                        to="/about"
                         className="title_menu_element landingpage_element w-nav-link"
                       >
-                        About
-                      </a>
-                      <a
-                        href="#"
+                        ABOUT
+                      </NavLink>
+                      <NavLink
+                        to="/about#pricing"
                         className="title_menu_element landingpage_element w-nav-link"
                       >
-                        Pricing
-                      </a>
-                      <a
-                        href="/legal"
+                        PRICING
+                      </NavLink>
+                      <NavLink
+                        to="/legal"
                         className="title_menu_element landingpage_element w-nav-link"
                       >
-                        Legal
-                      </a>
+                        LEGAL
+                      </NavLink>
                     </div>
                     <div className="nav_menu_half righthalf">
-                      <a
-                        href="#"
+                      <NavLink
+                        to="#"
                         className="title_menu_element right profile_name_in_nav_menu w-nav-link"
                       >
                         Tash Sultana
-                      </a>
+                      </NavLink>
                       <div className="profilepic profile_pic_in_nav_menu" />
                     </div>
                   </div>
@@ -98,13 +81,29 @@ export default class Navigation extends Component {
             </div>
             <div className="menubarright feature_in_development">
               <div
-                data-w-id="0952be67-6932-e3f7-baeb-289252b9db33"
+                data-w-id="72205cee-9f07-ab14-c8ac-5697860317d1"
                 className="menu-button w-nav-button"
               >
                 <div className="menuicon w-icon-nav-menu" />
               </div>
               <h2 className="title_menu_element right">Tash Sultana</h2>
               <div className="profilepic" />
+            </div>
+            <div className="menubarleft landingpage_left settingsicon homelogin">
+              <NavLink
+                to="/interface"
+                onClick={this.clickOnLogin(context)}
+                className="title_menu_element landingpage_element loginlogout homelogin w-nav-link"
+              >
+                login
+              </NavLink>
+              <NavLink
+                to="/interface"
+                onClick={this.clickOnLogin(context)}
+                className="title_menu_element landingpage_element loginlogout responsive w-nav-link"
+              >
+                login
+              </NavLink>
             </div>
             <div className="w-nav-overlay" data-wf-ignore="" />
           </div>

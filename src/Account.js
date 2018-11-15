@@ -17,11 +17,8 @@ export default class Account extends Component {
                 data-w-id="5bc62214-6295-d5b6-2514-2ebbae7e5d29"
                 className="dropdown-toggle w-dropdown-toggle"
               >
-                <div
-                  data-w-id="90672a42-9dd0-d234-71ce-11328a477e0a"
-                  className="icon w-icon-dropdown-toggle"
-                />
                 <div className="general_settings subtitle account">Account</div>
+                <div className="icon w-icon-dropdown-toggle" />
               </div>
               <LandingPage_Login
                 display={context.state.registrationStep === 11}

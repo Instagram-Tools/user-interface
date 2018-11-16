@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import TextField from './TextField';
+import { Link } from 'react-router-dom';
 
 export default class LandingPage_Connect extends Component {
   state = {
@@ -14,11 +15,11 @@ export default class LandingPage_Connect extends Component {
         className="connect_insta_account landing_page_connect"
       >
         <h1 className="settingtitle">Connect your Instagram account</h1>
-        <a href="/privacy-policy" className="title_menu_element privacy">
+        <Link to="/privacy-policy" className="title_menu_element privacy">
           Your details will not be transferred to third parties, and neither
           your email, nor your password will be saved. Click to see our privacy
           policy.
-        </a>
+        </Link>
         <div className="w-form">
           <form
             id="email-form-2"

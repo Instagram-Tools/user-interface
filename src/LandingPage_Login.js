@@ -21,10 +21,7 @@ export default class LandingPage_Login extends Component {
               className="connect_insta_account landing_page_connect"
             >
               <h1 className="settingtitle">Login</h1>
-              <Link
-                href="/privacy-policy"
-                className="title_menu_element privacy"
-              >
+              <Link to="/privacy-policy" className="title_menu_element privacy">
                 Your details will not be transferred to third parties, and
                 neither your email, nor your password will be saved. Click to
                 see our privacy policy.

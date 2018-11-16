@@ -11,8 +11,12 @@ export default class LandingPage_Connect extends Component {
   render() {
     return (
       <div
-        style={this.props.display ? { opacity: 1, display: 'unset' } : {}}
-        className="connect_insta_account landing_page_connect"
+        style={
+          this.props.display
+            ? { opacity: 1, display: 'unset' }
+            : { display: 'none' }
+        }
+        className="connect_insta_account landing_page_payment connect"
       >
         <h1 className="settingtitle">Connect your Instagram account</h1>
         <Link to="/privacy-policy" className="title_menu_element privacy">

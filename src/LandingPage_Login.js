@@ -17,8 +17,12 @@ export default class LandingPage_Login extends Component {
         {context => {
           return (
             <div
-              style={this.props.display ? { opacity: 1, display: 'unset' } : {}}
-              className="connect_insta_account landing_page_connect"
+              style={
+                this.props.display
+                  ? { opacity: 1, display: 'unset' }
+                  : { display: 'none' }
+              }
+              className="connect_insta_account landing_page_payment connect"
             >
               <h1 className="settingtitle">Login</h1>
               <Link to="/privacy-policy" className="title_menu_element privacy">

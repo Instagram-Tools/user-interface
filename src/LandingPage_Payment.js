@@ -11,7 +11,9 @@ export default class LandingPage_Payment extends Component {
         {context => {
           return (
             <div
-              style={this.props.display ? { display: 'flex' } : {}}
+              style={
+                this.props.display ? { display: 'flex' } : { display: 'none' }
+              }
               className="connect_insta_account landing_page_payment"
             >
               <h1 className="settingtitle subscribetitle">
@@ -42,7 +44,7 @@ export default class LandingPage_Payment extends Component {
                         type="text"
                         placeholder="Promo Code"
                         value="discount_code"
-                        inputStyle={{ minWidth: '100%' }}
+                        inputStyle={{ minWidth: '100%', width: '100%' }}
                       />
                     </form>
                     <div className="w-form-done">

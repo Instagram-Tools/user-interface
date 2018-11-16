@@ -2,11 +2,13 @@ import React, { Component } from 'react';
 import TextField from './TextField';
 import API from './API_Gateway';
 import { Context } from './Context';
+import { Link } from 'react-router-dom';
 
 export default class LandingPage_Login extends Component {
   state = {
     isEmailSet: false,
-    isPasswordSet: false
+    isPasswordSet: false,
+    error: false
   };
 
   render() {
@@ -19,11 +21,14 @@ export default class LandingPage_Login extends Component {
               className="connect_insta_account landing_page_connect"
             >
               <h1 className="settingtitle">Login</h1>
-              <a href="/privacy-policy" className="title_menu_element privacy">
+              <Link
+                href="/privacy-policy"
+                className="title_menu_element privacy"
+              >
                 Your details will not be transferred to third parties, and
                 neither your email, nor your password will be saved. Click to
                 see our privacy policy.
-              </a>
+              </Link>
               <div className="w-form">
                 <form
                   id="email-form-2"
@@ -60,7 +65,10 @@ export default class LandingPage_Login extends Component {
                 <div className="w-form-done">
                   <div>Thank you! Your submission has been received!</div>
                 </div>
-                <div className="w-form-fail">
+                <div
+                  className="w-form-fail"
+                  style={this.state.error ? { display: 'block' } : {}}
+                >
                   <div>
                     Oops! Something went wrong while submitting the form.
                   </div>
@@ -72,6 +80,7 @@ export default class LandingPage_Login extends Component {
       </Context.Consumer>
     );
   }
+
   requirementsMet() {
     return this.state.isEmailSet && this.state.isPasswordSet;
   }
@@ -81,22 +90,27 @@ export default class LandingPage_Login extends Component {
   }
 
   async login(context) {
-    let { try_email, try_e_password } = context.state;
-    let result = await API.get(try_email, try_e_password);
+    try {
+      let { try_email, try_e_password } = context.state;
+      let result = await API.get(try_email, try_e_password);
 
-    let settings = JSON.parse(JSON.parse(result.settings));
-    let { password, username, subscription, timetable } = result;
+      let settings = JSON.parse(JSON.parse(result.settings));
+      let { password, username, subscription, timetable } = result;
 
-    context.setState({
-      ...settings,
-      email: try_email,
-      e_password: try_e_password,
-      password,
-      username,
-      subscription,
-      timetable
-    });
+      context.setState({
+        ...settings,
+        email: try_email,
+        e_password: try_e_password,
+        password,
+        username,
+        subscription,
+        timetable
+      });
 
-    this.props.toggle();
+      this.props.toggle();
+      this.setState({ error: false });
+    } catch (e) {
+      this.setState({ error: true });
+    }
   }
 }

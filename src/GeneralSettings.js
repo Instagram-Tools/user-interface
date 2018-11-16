@@ -5,6 +5,7 @@ import Help from './Help';
 import TextFieldHashtags from './TextField_Hashtags';
 import TextFieldUsers from './TextField_Users';
 import TextFieldPlaces from './TextField_Places';
+import Switch_Speed from './Switch_Speed';
 
 export default class GeneralSettings extends Component {
   render() {
@@ -16,16 +17,14 @@ export default class GeneralSettings extends Component {
         <div data-w-id="885ad75b-5927-d36b-7821-9522271a2279" className="body">
           <div className="w-form form">
             <div className="titleholder">
-              <label htmlFor="email" className="settingtitle">
-                Speed
-              </label>
+              <label className="settingtitle">Interactions speed</label>
               <Help className="helptext">
                 <strong>Speed: </strong>Defines interaction rate/speed. <br />
                 slow: for new accounts younger than 6 months<br />
                 medium: for accounts between 6 and 18 months<br />
                 fast: for accounts older than 18 months
               </Help>
-              <TextFieldNumber placeholder="speed" value="speed" />
+              <Switch_Speed />
             </div>
             <div className="titleholder">
               <label htmlFor="email" className="settingtitle">

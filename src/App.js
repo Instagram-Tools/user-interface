@@ -3,7 +3,7 @@ import './css/normalize.css';
 import './css/webflow.css';
 import './css/code-connect.webflow.css';
 import Progress from './ProgressBar';
-import NavBar from './NavBar';
+import Sections from './Sections';
 import GeneralSettings from './GeneralSettings';
 import LikeSettings from './LikeSettings';
 import CommentSettings from './CommentSettings';
@@ -21,7 +21,7 @@ export default class App extends Component {
         {context => (
           <div style={this.props.style}>
             <Progress />
-            <NavBar />
+            <Sections />
             <GeneralSettings />
             <LikeSettings
               className={

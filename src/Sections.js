@@ -4,7 +4,7 @@ import Account from './Account';
 import { Link } from 'react-router-dom';
 import { Context } from './Context';
 
-class NavBar extends Component {
+export default class Sections extends Component {
   render() {
     return (
       <Context.Consumer>
@@ -68,5 +68,3 @@ class NavBar extends Component {
     return context.state.email && context.state.e_password;
   }
 }
-
-export default NavBar;

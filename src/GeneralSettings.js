@@ -24,7 +24,7 @@ export default class GeneralSettings extends Component {
                 medium: for accounts between 6 and 18 months<br />
                 fast: for accounts older than 18 months
               </Help>
-              <Switch_Speed />
+              <Switch_Speed value="speed" />
             </div>
             <div className="titleholder">
               <label htmlFor="email" className="settingtitle">

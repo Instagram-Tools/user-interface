@@ -11,7 +11,10 @@ export default class Switch_Speed extends Component {
           <div className="switch_general_settings title speedswitch">
             <div className="switch_general_settings title speedswitch_text_holder">
               <div
-                style={this.activate(context.state.speed, this.speed.slow)}
+                style={this.activate(
+                  context.state[this.props.value],
+                  this.speed.slow
+                )}
                 onClick={(e => this.setSpeed(context, this.speed.slow)).bind(
                   this
                 )}
@@ -20,7 +23,10 @@ export default class Switch_Speed extends Component {
                 slow
               </div>
               <div
-                style={this.activate(context.state.speed, this.speed.medium)}
+                style={this.activate(
+                  context.state[this.props.value],
+                  this.speed.medium
+                )}
                 onClick={(e => this.setSpeed(context, this.speed.medium)).bind(
                   this
                 )}
@@ -29,7 +35,10 @@ export default class Switch_Speed extends Component {
                 medium
               </div>
               <div
-                style={this.activate(context.state.speed, this.speed.fast)}
+                style={this.activate(
+                  context.state[this.props.value],
+                  this.speed.fast
+                )}
                 onClick={(e => this.setSpeed(context, this.speed.fast)).bind(
                   this
                 )}
@@ -54,6 +63,6 @@ export default class Switch_Speed extends Component {
   }
 
   setSpeed(context, selectedSpeed) {
-    context.setState({ speed: selectedSpeed });
+    context.setState({ [this.props.value]: selectedSpeed });
   }
 }

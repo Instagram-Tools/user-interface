@@ -91,27 +91,38 @@ export default class Navigation extends Component {
               <h2 className="title_menu_element right">Tash Sultana</h2>
               <div className="profilepic" />
             </div>
-            <div className="menubarleft landingpage_left settingsicon homelogin">
-              <NavLink
-                to="/interface"
-                onClick={this.clickOnLogin(context)}
-                className="title_menu_element landingpage_element loginlogout homelogin w-nav-link"
-              >
-                login
-              </NavLink>
-              <NavLink
-                to="/interface"
-                onClick={this.clickOnLogin(context)}
-                className="title_menu_element landingpage_element loginlogout responsive w-nav-link"
-              >
-                login
-              </NavLink>
-            </div>
+            {this.loginButton(context)}
             {this.navOverlay(context)}
           </div>
         )}
       </Context.Consumer>
     );
+  }
+
+  loginButton(context) {
+    if (!this.isLoggedin(context))
+      return (
+        <div className="menubarleft landingpage_left settingsicon homelogin">
+          <NavLink
+            to="/interface"
+            onClick={this.clickOnLogin(context)}
+            className="title_menu_element landingpage_element loginlogout homelogin w-nav-link"
+          >
+            login
+          </NavLink>
+          <NavLink
+            to="/interface"
+            onClick={this.clickOnLogin(context)}
+            className="title_menu_element landingpage_element loginlogout responsive w-nav-link"
+          >
+            login
+          </NavLink>
+        </div>
+      );
+    else
+      return (
+        <div className="menubarleft landingpage_left settingsicon homelogin" />
+      );
   }
 
   toggle() {

@@ -78,7 +78,7 @@ export default class Payment_Gateway extends React.Component {
             Buy Now!
           </button>
           <div
-            style={{ display: this.state.error ? 'block' : 'none' }}
+            style={{ display: this.state.error ? 'table-cell' : 'none' }}
             className="error-message w-form-fail"
           >
             <div className="text-block-2">

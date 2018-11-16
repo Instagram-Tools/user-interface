@@ -21,6 +21,7 @@ export default class Navigation extends Component {
               <NavLink
                 to="/"
                 className="titlelogo legallogo homelogo w--current"
+                style={{ zIndex: 999 }}
               />
               <div className="container w-container">
                 <nav role="navigation" className="nav-menu w-nav-menu">

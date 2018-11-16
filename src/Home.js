@@ -3,20 +3,13 @@ import './css/normalize.css';
 import './css/webflow.css';
 import './css/code-connect.webflow.css';
 import App from './App';
+import './Home.css';
 
 export default class Home extends Component {
   render() {
     return (
       <div>
-        <div
-          className="landingpage"
-          style={{
-            position: 'absolute',
-            top: 0,
-            right: 0,
-            left: 0
-          }}
-        >
+        <div className="landingpage">
           <div className="landing_content_wrap">
             <h1 className="titlepage landingtitle">
               Growthhack human Engagement.

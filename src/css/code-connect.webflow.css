@@ -551,9 +551,13 @@ body {
 
 .title_menu_element.trialtext {
   height: auto;
+  margin-top: 5px;
   margin-right: 1vw;
   margin-left: 1vw;
-  padding-top: 5px;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   font-weight: 600;
   text-align: center;
   text-decoration: none;
@@ -680,7 +684,7 @@ body {
   font-size: 1.6em;
   line-height: 1.5em;
   font-weight: 800;
-  text-align: left;
+  text-align: center;
 }
 
 .settingtitle.unfollowtitle {
@@ -689,6 +693,7 @@ body {
 
 .settingtitle.subscribetitle {
   margin-bottom: 0px;
+  text-align: center;
 }
 
 .settingtitle.doubletitle {
@@ -916,15 +921,15 @@ body {
 }
 
 .submitbutton.connect_account_button {
-  margin-bottom: 2px;
+  margin-bottom: 0px;
   background-image: -webkit-gradient(
     linear,
     left top,
     left bottom,
-    from(#fff),
-    to(#fff)
+    from(#f5f5f5),
+    to(#f5f5f5)
   );
-  background-image: linear-gradient(180deg, #fff, #fff);
+  background-image: linear-gradient(180deg, #f5f5f5, #f5f5f5);
   box-shadow: none;
 }
 
@@ -1316,6 +1321,7 @@ body {
 .general_settings.generaltitle {
   margin-top: 1em;
   margin-bottom: 1em;
+  font-size: 1.66em;
   font-weight: 800;
 }
 
@@ -2193,23 +2199,25 @@ body {
   position: absolute;
   z-index: 1000;
   display: none;
-  overflow: scroll;
-  width: 90vw;
-  max-height: 4.3em;
-  min-height: 4.3em;
-  padding-bottom: 1em;
+  margin-top: 36px;
+  padding: 12px 20px;
   -webkit-box-align: start;
   -webkit-align-items: flex-start;
   -ms-flex-align: start;
   align-items: flex-start;
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgba(0, 0, 0, 0.02);
+  border-radius: 16.5px;
   background-image: -webkit-gradient(
     linear,
     left top,
     left bottom,
-    from(#f5f5f5),
-    to(#f5f5f5)
+    from(#fff),
+    to(#fff)
   );
-  background-image: linear-gradient(180deg, #f5f5f5, #f5f5f5);
+  background-image: linear-gradient(180deg, #fff, #fff);
+  box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.09);
   font-family: Ubuntu, Helvetica, sans-serif;
   color: rgba(0, 0, 0, 0.66);
   font-size: 1.075em;
@@ -2270,7 +2278,10 @@ body {
 }
 
 .connect_insta_account.landing_page_connect {
-  display: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   padding-right: 0.5em;
   opacity: 1;
 }
@@ -2283,6 +2294,19 @@ body {
   padding-right: 0.5em;
   padding-bottom: 1em;
   opacity: 1;
+}
+
+.connect_insta_account.landing_page_payment.connect {
+  display: none;
+  height: 40vh;
+  min-height: auto;
+  margin-top: 30vh;
+  padding-top: 2.5vh;
+  padding-bottom: 1.5vh;
+}
+
+.connect_insta_account.landing_page_payment.away {
+  display: none;
 }
 
 .connect_insta_account.landing_page_trial {
@@ -3320,6 +3344,12 @@ body {
   .title_menu_element.right.profile_name_in_nav_menu {
     display: none;
   }
+  .title_menu_element.privacy {
+    padding-top: 0em;
+    padding-bottom: 0em;
+    padding-left: 0em;
+    color: rgba(0, 0, 0, 0.33);
+  }
   .title_menu_element.landingpage_element {
     margin-right: 0vw;
     padding-right: 2em;
@@ -3341,6 +3371,11 @@ body {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
+  }
+  .title_menu_element.trialtext {
+    padding-top: 0em;
+    padding-bottom: 0em;
+    padding-left: 0em;
   }
   .menubarleft {
     width: 50vw;
@@ -3392,6 +3427,9 @@ body {
   }
   .columnholder.weekplan {
     width: 80vw;
+  }
+  .submitbutton.connect_account_button {
+    width: 15vw;
   }
   .submitbutton.connect_account_button.trialbutton.about_buy_button {
     width: 14vw;
@@ -3538,6 +3576,10 @@ body {
     -webkit-justify-content: center;
     -ms-flex-pack: center;
     justify-content: center;
+  }
+  .connect_insta_account.landing_page_payment {
+    width: 90vw;
+    margin-left: 5vw;
   }
   .landingpage {
     min-width: auto;
@@ -3737,6 +3779,11 @@ body {
   .titlepage.usptext.subtext {
     margin-bottom: 0.5em;
   }
+  .title_menu_element.privacy {
+    width: 90%;
+    margin-right: 2vw;
+    margin-left: 2vw;
+  }
   .menubarleft.landingpage_left {
     width: 18vw;
   }
@@ -3754,9 +3801,26 @@ body {
     width: 3em;
     height: 3em;
   }
+  .settingtitle {
+    margin-bottom: 15px;
+  }
+  .columnholder.filterholder.first.connect_account_column {
+    width: 66vw;
+  }
+  .columnholder.belowholder.connect_account_second_column {
+    width: 66vw;
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+  }
   .text-field.filter {
     width: 90vw;
     margin-right: 0vw;
+  }
+  .text-field.filter.connect_account_filter {
+    width: 100%;
+    margin-right: 2.5vw;
   }
   .switch_general_settings {
     margin-right: 36%;
@@ -3766,6 +3830,9 @@ body {
   }
   .dropdown {
     width: 45vw;
+  }
+  .text_field_description.below.connect_account_text {
+    padding-left: 6px;
   }
   .switchwrapper {
     width: 45vw;
@@ -3815,6 +3882,9 @@ body {
     -ms-flex-pack: start;
     justify-content: flex-start;
   }
+  .software_plan_holder {
+    width: 85%;
+  }
   .legaltext {
     width: 75vw;
     margin-left: 12.5vw;
@@ -3825,6 +3895,9 @@ body {
   }
   .div-block-2 {
     height: 20vh;
+  }
+  .form-block-4 {
+    width: 90%;
   }
 }
 
@@ -3955,7 +4028,7 @@ body {
     padding-left: 0vw;
   }
   .settingtitle {
-    width: 90vw;
+    width: 85vw;
     margin-right: 0em;
     margin-bottom: 10px;
     margin-left: 0em;
@@ -3972,8 +4045,17 @@ body {
   .columnholder.applied_hashtasgs_and_locations {
     margin-bottom: 0vh;
   }
+  .columnholder.filterholder.first.connect_account_column {
+    width: 80vw;
+  }
   .columnholder.weekplan {
     width: 85vw;
+  }
+  .columnholder.belowholder.connect_account_second_column {
+    width: 80vw;
+  }
+  .submitbutton.connect_account_button {
+    width: 33vw;
   }
   .submitbutton.connect_account_button.trialbutton.about_buy_button {
     width: 33vw;
@@ -4152,6 +4234,10 @@ body {
   .helptext_secondary {
     font-weight: 300;
   }
+  .connect_insta_account.landing_page_payment.connect {
+    height: 66vh;
+    margin-top: 17vh;
+  }
   .landingpage {
     background-image: url('../images/rocket-mobile-landing-01.svg'),
       -webkit-gradient(linear, left top, left bottom, from(#f9fbfc), to(#f9fbfc));
@@ -4241,6 +4327,10 @@ body {
     -ms-flex-align: center;
     align-items: center;
   }
+  .software_plan_holder {
+    width: 95%;
+    height: 28vh;
+  }
   .software_plan_holder.aboutpage_buy {
     width: 90%;
     min-height: 25vh;
@@ -4257,7 +4347,7 @@ body {
     font-size: 1.5em;
   }
   .text-field-landing.promocode {
-    margin-bottom: 4vh;
+    margin-bottom: 1vh;
   }
   .legaltext {
     width: 80vw;

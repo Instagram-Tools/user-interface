@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Context } from './Context';
 import { NavLink } from 'react-router-dom';
+import { NavHashLink } from 'react-router-hash-link';
 
 export default class Navigation extends Component {
   state = {
@@ -53,12 +54,13 @@ export default class Navigation extends Component {
                       >
                         ABOUT
                       </NavLink>
-                      <NavLink
-                        to="/about#pricing"
+                      <NavHashLink
+                        smooth
+                        to="/about/#pricing"
                         className="title_menu_element landingpage_element w-nav-link"
                       >
                         PRICING
-                      </NavLink>
+                      </NavHashLink>
                       <NavLink
                         to="/legal"
                         className="title_menu_element landingpage_element w-nav-link"
@@ -173,12 +175,13 @@ export default class Navigation extends Component {
               >
                 ABOUT
               </NavLink>
-              <NavLink
-                to="/about#pricing"
+              <NavHashLink
+                smooth
+                to="/about/#pricing"
                 className="title_menu_element landingpage_element w-nav-link w--nav-link-open"
               >
                 PRICING
-              </NavLink>
+              </NavHashLink>
               <NavLink
                 to="/legal"
                 className="title_menu_element landingpage_element w-nav-link w--nav-link-open"

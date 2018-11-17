@@ -257,7 +257,7 @@ body {
   line-height: 1.5em;
   font-weight: 700;
   text-align: center;
-  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
 }
 
 .titlepage.legalsubtitle {
@@ -295,7 +295,6 @@ body {
 
 .titlepage.legalsubtitle.contacttext.aboutemail {
   width: auto;
-  margin-left: 3.5vw;
   color: rgba(0, 82, 255, 0.8);
   font-size: 1.15em;
 }
@@ -346,7 +345,6 @@ body {
 }
 
 .titlepage.aboutsubtitle.contactsubtitle {
-  margin-left: 3.5vw;
   text-align: center;
 }
 
@@ -361,7 +359,6 @@ body {
 
 .titlepage.featurestitle.contacttitle {
   margin-bottom: 0.15em;
-  margin-left: 3.5vw;
 }
 
 .titlelogo {
@@ -684,7 +681,7 @@ body {
   font-size: 1.6em;
   line-height: 1.5em;
   font-weight: 800;
-  text-align: center;
+  text-align: left;
 }
 
 .settingtitle.unfollowtitle {
@@ -834,7 +831,7 @@ body {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  width: 8vw;
+  width: auto;
   height: 36px;
   margin-bottom: 3px;
   -webkit-box-pack: center;
@@ -921,7 +918,7 @@ body {
 }
 
 .submitbutton.connect_account_button {
-  margin-bottom: 0px;
+  margin-bottom: 3vh;
   background-image: -webkit-gradient(
     linear,
     left top,
@@ -992,6 +989,7 @@ body {
 }
 
 .submitbutton.connect_account_button.trialbutton.about_buy_button {
+  width: 7vw;
   margin-top: 2vh;
   margin-bottom: 2vh;
   background-image: url('../images/buy-spicy-01.svg');
@@ -1022,6 +1020,14 @@ body {
 
 .submitbutton.connect_account_button.buy_anyway_button:hover {
   color: #000;
+}
+
+.submitbutton.connect_account_button.registerbutton {
+  margin-bottom: 0vh;
+}
+
+.submitbutton.connect_account_button.get_started_button {
+  text-align: center;
 }
 
 .text-field {
@@ -1074,21 +1080,38 @@ body {
 
 .success-message {
   width: 100vw;
+  height: 7vh;
+  padding-top: 0px;
+  padding-bottom: 0px;
   background-image: -webkit-gradient(
     linear,
     left top,
-    left bottom,
-    from(#31f688),
-    to(#31f688)
+    right top,
+    from(#42fff0),
+    to(#beff8b)
   );
-  background-image: linear-gradient(180deg, #31f688, #31f688);
-  font-family: Ubuntu, Helvetica, sans-serif;
+  background-image: linear-gradient(90deg, #42fff0, #beff8b);
   font-size: 1em;
   line-height: 1.5em;
 }
 
 .text-block {
-  color: #fff;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: rgba(0, 0, 0, 0.74);
+  font-size: 1.1em;
+  font-weight: 800;
 }
 
 .error-message {
@@ -1101,13 +1124,14 @@ body {
     to(#f33d35)
   );
   background-image: linear-gradient(180deg, #f33d35, #f33d35);
-  font-family: Ubuntu, Helvetica, sans-serif;
-  font-size: 1em;
+  font-size: 1.1em;
   line-height: 1.5em;
+  font-weight: 800;
+  text-align: center;
 }
 
 .text-block-2 {
-  color: #fff;
+  color: rgba(0, 0, 0, 0.74);
 }
 
 .applied_hashtag_or_location {
@@ -1185,10 +1209,10 @@ body {
     linear,
     left top,
     left bottom,
-    from(#ff4252),
-    to(#ff4252)
+    from(#f33d35),
+    to(#f33d35)
   );
-  background-image: linear-gradient(180deg, #ff4252, #ff4252);
+  background-image: linear-gradient(180deg, #f33d35, #f33d35);
   color: #fff;
   cursor: pointer;
 }
@@ -2029,6 +2053,17 @@ body {
     to(#ececec)
   );
   background-image: linear-gradient(180deg, #ececec, #ececec);
+  cursor: pointer;
+}
+
+.week_schedule_column:hover {
+  border-style: solid;
+  border-width: 2px;
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+.week_schedule_column:active {
+  border-color: rgba(0, 0, 0, 0.4);
 }
 
 .week_schedule_column._2nd {
@@ -2298,15 +2333,20 @@ body {
 
 .connect_insta_account.landing_page_payment.connect {
   display: none;
-  height: 40vh;
+  height: 50vh;
   min-height: auto;
-  margin-top: 30vh;
+  margin-top: 25vh;
   padding-top: 2.5vh;
   padding-bottom: 1.5vh;
 }
 
 .connect_insta_account.landing_page_payment.away {
   display: none;
+}
+
+.connect_insta_account.landing_page_payment.successmessage {
+  display: none;
+  padding-top: 6vh;
 }
 
 .connect_insta_account.landing_page_trial {
@@ -2792,7 +2832,7 @@ body {
       rgba(255, 0, 0, 0)
     ),
     url('../images/pink-parrot-about-page-graphic-sarah-new-font-03.svg');
-  background-position: 0px 0px, 50% 100%;
+  background-position: 0px 0px, 50% 50%;
   background-size: auto, cover;
   background-repeat: repeat, no-repeat;
   box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.1);
@@ -2978,9 +3018,7 @@ body {
   display: flex;
   width: 100vw;
   height: auto;
-  padding-top: 10vh;
-  padding-bottom: 10vh;
-  padding-left: 5vw;
+  padding: 10vh 5vw;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
   -webkit-flex-direction: row;
@@ -3014,8 +3052,7 @@ body {
   display: -ms-flexbox;
   display: flex;
   width: 100vw;
-  padding-top: 15vh;
-  padding-bottom: 11vh;
+  padding: 15vh 5vw 11vh;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -webkit-flex-direction: column;
@@ -3230,6 +3267,61 @@ body {
   );
   background-image: linear-gradient(180deg, #ff4252, #ff4252);
   color: #fff;
+}
+
+.successimage {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 40vh;
+  height: 40vh;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  border-radius: 15px;
+  background-image: url('../images/Success-Astronaut.svg');
+  background-position: 50% 50%;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.successimage.aboutpage_buy {
+  width: 40%;
+  height: auto;
+  min-height: 35vh;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(#fff),
+    to(#fff)
+  );
+  background-image: linear-gradient(180deg, #fff, #fff);
+  box-shadow: 0 7px 25px 0 rgba(0, 0, 0, 0.1);
 }
 
 @media (max-width: 991px) {
@@ -3740,6 +3832,9 @@ body {
   .dropdown-toggle-2 {
     display: none;
   }
+  .successimage.aboutpage_buy {
+    width: 63%;
+  }
 }
 
 @media (max-width: 767px) {
@@ -3814,6 +3909,12 @@ body {
     -ms-flex-align: start;
     align-items: flex-start;
   }
+  .submitbutton.connect_account_button {
+    width: 20vw;
+  }
+  .submitbutton.connect_account_button.trialbutton.about_buy_button {
+    width: 18vw;
+  }
   .text-field.filter {
     width: 90vw;
     margin-right: 0vw;
@@ -3833,6 +3934,11 @@ body {
   }
   .text_field_description.below.connect_account_text {
     padding-left: 6px;
+  }
+  .week_schedule_column:hover {
+    border-style: solid;
+    border-width: 2px;
+    border-color: rgba(0, 0, 0, 0.25);
   }
   .switchwrapper {
     width: 45vw;
@@ -3899,6 +4005,9 @@ body {
   .form-block-4 {
     width: 90%;
   }
+  .successimage {
+    width: 85%;
+  }
 }
 
 @media (max-width: 479px) {
@@ -3940,9 +4049,13 @@ body {
     max-width: 90vw;
     margin-top: 0.25em;
     margin-left: 0em;
+    text-align: center;
   }
   .titlepage.aboutsubtitle.distance {
     text-align: left;
+  }
+  .titlepage.featurestitle {
+    text-align: center;
   }
   .title_menu_element {
     width: 100%;
@@ -4041,6 +4154,9 @@ body {
   .settingtitle.scheduletitle {
     margin-right: 5vw;
     margin-left: 5vw;
+  }
+  .settingtitle.speedttitle.interfacetitle {
+    text-align: left;
   }
   .columnholder.applied_hashtasgs_and_locations {
     margin-bottom: 0vh;
@@ -4227,7 +4343,6 @@ body {
     align-items: flex-start;
   }
   .helptext {
-    max-height: 6.7em;
     padding-bottom: 1em;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   }
@@ -4397,6 +4512,14 @@ body {
   .new_help_circle {
     z-index: 9999999;
   }
+  .successimage {
+    width: 95%;
+    height: 28vh;
+  }
+  .successimage.aboutpage_buy {
+    width: 90%;
+    min-height: 25vh;
+  }
 }
 
 #w-node-8f45982eb615-1b786f28 {
@@ -4451,15 +4574,14 @@ body {
   grid-column-end: 2;
   -ms-grid-row: 2;
   grid-row-start: 2;
-  -ms-grid-row-span: 1;
-  grid-row-end: 3;
-}
-
-@media screen and (max-width: 991px) {
-  #w-node-6a47229be18e-1b786f28 {
-    -ms-grid-column-align: start;
-    justify-self: start;
-  }
+  -ms-grid-row-span: 0;
+  grid-row-end: 2;
+  -webkit-align-self: auto;
+  -ms-flex-item-align: auto;
+  -ms-grid-row-align: auto;
+  align-self: auto;
+  -ms-grid-column-align: auto;
+  justify-self: auto;
 }
 
 #w-node-d63bd21a43a5-1b786f28 {

@@ -20,7 +20,7 @@ export default class Save extends Component {
               className="success-message w-form-done"
             >
               <div className="text-block">
-                Thank you! Your submission has been received!
+                Thank you! Pink Parrot is active now!
               </div>
             </div>
             <div

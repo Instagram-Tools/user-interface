@@ -24,14 +24,14 @@ export default class CommentSettings extends Component {
               </Help>
             </div>
             <TextFieldNumber
-              placeholder="Like Percentage %"
+              placeholder="Comment Percentage %"
               max={100}
               value="do_comment_percentage"
             />
 
             <TextField_Comments
               value="comments"
-              placeholder="Enter hashtags this way: fitness"
+              placeholder="Enter Text you want to comment."
             />
             <div
               data-w-id="1846180f-b0c1-4f62-a33b-df4641310d47"

@@ -4,6 +4,7 @@ import './css/webflow.css';
 import './css/code-connect.webflow.css';
 import { Link } from 'react-router-dom';
 import { Context } from './Context';
+import TextField from './TextField';
 
 export default class Legal extends Component {
   render() {
@@ -157,14 +158,11 @@ export default class Legal extends Component {
                       name="email-form-3"
                       data-name="Email Form 3"
                     >
-                      <input
+                      <TextField
                         type="text"
-                        className="text-field-landing promocode w-input"
-                        maxLength="256"
-                        name="field-4"
-                        data-name="Field 4"
                         placeholder="Promo Code"
-                        id="field-4"
+                        value="discount_code"
+                        inputStyle={{ minWidth: '100%', width: '100%' }}
                       />
                     </form>
                     <div className="w-form-done">

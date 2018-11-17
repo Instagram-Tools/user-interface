@@ -4,6 +4,7 @@ import './css/webflow.css';
 import './css/code-connect.webflow.css';
 import App from './App';
 import './Home.css';
+import { HashLink } from 'react-router-hash-link';
 
 export default class Home extends Component {
   render() {
@@ -28,9 +29,13 @@ export default class Home extends Component {
                 <div className="titlepage usptext subtext">
                   The bot simulates being a mobile phone. Thus most safe.
                 </div>
-                <a href="#" className="more_info_button">
+                <HashLink
+                  smooth
+                  to="/about/#whatstatement"
+                  className="more_info_button"
+                >
                   Learn more
-                </a>
+                </HashLink>
               </div>
               <div id="w-node-b6d3c275123f-1b786f28" className="usp uspright">
                 <div className="uspicon sniper righticon" />
@@ -40,9 +45,13 @@ export default class Home extends Component {
                 <div className="titlepage usptext subtext righttext">
                   You reach exactly who you want. Organically.
                 </div>
-                <a href="#" className="more_info_button">
+                <HashLink
+                  smooth
+                  to="/about/#whatstatement"
+                  className="more_info_button"
+                >
                   Learn more
-                </a>
+                </HashLink>
               </div>
               <div id="w-node-6a47229be18e-1b786f28" className="usp uspleft">
                 <div className="uspicon privacyicon" />
@@ -51,9 +60,13 @@ export default class Home extends Component {
                   Your data is not saved. You're the only one who can access
                   your insta.
                 </div>
-                <a href="#" className="more_info_button">
+                <HashLink
+                  smooth
+                  to="/about/#whatstatement"
+                  className="more_info_button"
+                >
                   Learn more
-                </a>
+                </HashLink>
               </div>
               <div id="w-node-d63bd21a43a5-1b786f28" className="usp uspright">
                 <div className="uspicon alwaysonicon righticon lasticon" />
@@ -63,9 +76,13 @@ export default class Home extends Component {
                 <div className="titlepage usptext subtext righttext">
                   It's on a server. Works even when your devices are off.
                 </div>
-                <a href="#" className="more_info_button">
+                <HashLink
+                  smooth
+                  to="/about/#whatstatement"
+                  className="more_info_button"
+                >
                   Learn more
-                </a>
+                </HashLink>
               </div>
             </div>
           </div>

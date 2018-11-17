@@ -63,7 +63,7 @@ export default class Legal extends Component {
                 </div>
               </div>
             </div>
-            <div className="whatstatement">
+            <div id="whatstatement" className="whatstatement">
               <div className="titleholder_bacon">
                 <h1 className="titlepage featurestitle">
                   WHAT <span>do we offer?</span>

@@ -17,7 +17,9 @@ export default class Account extends Component {
                 data-w-id="5bc62214-6295-d5b6-2514-2ebbae7e5d29"
                 className="dropdown-toggle w-dropdown-toggle"
               >
-                <div className="general_settings subtitle account">Account</div>
+                <div className="general_settings subtitle account">
+                  {context.state.username ? context.state.username : 'Account'}
+                </div>
                 <div className="icon w-icon-dropdown-toggle" />
               </div>
               <LandingPage_Login

@@ -1,3 +1,6 @@
+.App {
+  position: inherit;
+}
 @media (min-width: 991px) {
   .menubar.menubar_landing_page {
     position: initial;
@@ -7,5 +10,9 @@
     top: 0px;
     right: 0px;
     left: 0px;
+  }
+  .App {
+    position: absolute;
+    top: 94vh;
   }
 }

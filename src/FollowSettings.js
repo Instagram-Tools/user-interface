@@ -20,7 +20,9 @@ export default class FollowSettings extends Component {
                 data-w-id="22c58d28-9a42-f414-7b98-09bcc5c05a9b"
                 className="helptext"
               >
-                <strong>Follow X percent of Users you interacted with: </strong>{' '}
+                <strong>
+                  Follow X percent of Users crawled you interacted with:{' '}
+                </strong>{' '}
                 <br />
                 100% means every User will be followed. <br />
                 50% means every second User will be followed.

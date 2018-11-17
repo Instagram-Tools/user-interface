@@ -124,7 +124,22 @@ export default class Navigation extends Component {
       );
     else
       return (
-        <div className="menubarleft landingpage_left settingsicon homelogin" />
+        <div className="menubarleft landingpage_left settingsicon homelogin">
+          <a
+            href="/interface"
+            onClick={this.clickOnLogout(context)}
+            className="title_menu_element landingpage_element loginlogout homelogin w-nav-link"
+          >
+            logout
+          </a>
+          <a
+            href="/interface"
+            onClick={this.clickOnLogout(context)}
+            className="title_menu_element landingpage_element loginlogout responsive w-nav-link"
+          >
+            logout
+          </a>
+        </div>
       );
   }
 
@@ -214,5 +229,9 @@ export default class Navigation extends Component {
 
   isLoggedin(context) {
     return context.state.email && context.state.e_password;
+  }
+
+  clickOnLogout(context) {
+    console.log('clickOnLogout');
   }
 }

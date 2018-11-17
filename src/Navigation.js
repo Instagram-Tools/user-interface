@@ -111,14 +111,14 @@ export default class Navigation extends Component {
             onClick={this.clickOnLogin(context)}
             className="title_menu_element landingpage_element loginlogout homelogin w-nav-link"
           >
-            login
+            login / register
           </NavLink>
           <NavLink
             to="/interface"
             onClick={this.clickOnLogin(context)}
             className="title_menu_element landingpage_element loginlogout responsive w-nav-link"
           >
-            login
+            login / register
           </NavLink>
         </div>
       );

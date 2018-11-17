@@ -150,7 +150,7 @@ export default class Legal extends Component {
                     Launch price until Jan 1, 2019
                   </h1>
                   <h1 className="softwareheading price">
-                    Just <span className="text-span">49,95€</span> / month!
+                    Just <span className="text-span">29,95€</span> / month!
                   </h1>
                   <div className="form-block-3 w-form">
                     <form

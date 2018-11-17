@@ -31,7 +31,7 @@ export default class LandingPage_Payment extends Component {
                     Launch price until Jan 1, 2019
                   </h1>
                   <h1 className="softwareheading price">
-                    Just <span className="opacity text-span">49,95€</span> /
+                    Just <span className="opacity text-span">29,95€</span> /
                     month!
                   </h1>
                   <div className="w-form">

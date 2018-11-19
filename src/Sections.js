@@ -34,8 +34,10 @@ export default class Sections extends Component {
               <h1 className="general_settings subtitle">Unfollow</h1>
               <Switch value="enable_unfollow" />
             </div>
-            {/*<h1 className="general_settings subtitle">Messages</h1>*/}
-            {/*<Switch value="enable_message" />*/}
+            <div className="switchwrapper">
+              <h1 className="general_settings subtitle">Messages</h1>
+              <Switch value="enable_message" />
+            </div>
             {!this.isLoggedin(context) ? this.warning(context) : null}
           </div>
         )}

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import trash from './images/Tash-Sultana.jpg';
+import Help from './Help';
 
 export default class MessageSettings extends Component {
   render() {
@@ -21,13 +22,12 @@ export default class MessageSettings extends Component {
               <label htmlFor="email" className="settingtitle">
                 Define message when someone follows you
               </label>
-              <div className="helptext">
-                Choose successful profiles which are similar to yours.{' '}
-                <span className="helptext_secondary">
-                  So you get attention from profiles which are interested in
-                  your content.
-                </span>
-              </div>
+              <Help>
+                <strong>This could be your HelpText: </strong>
+                <br />
+                and or<br />
+                recommendations
+              </Help>
             </div>
             <div className="titleholder">
               <div className="columnholder applied_hashtasgs_and_locations">

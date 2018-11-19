@@ -9,7 +9,7 @@ import LikeSettings from './LikeSettings';
 import CommentSettings from './CommentSettings';
 import FollowSettings from './FollowSettings';
 import UnfollowSettings from './UnfollowSettings';
-// import MessageSettings from './MessageSettings';
+import MessageSettings from './MessageSettings';
 import ActivitySettings from './ActivitySettings';
 import { Context } from './Context';
 import Save from './Save';
@@ -43,7 +43,11 @@ export default class App extends Component {
                 'hideable ' + (context.state.enable_unfollow ? '' : 'hidden')
               }
             />
-            {/*<MessageSettings />*/}
+            <MessageSettings
+              className={
+                'hideable ' + (context.state.enable_message ? '' : 'hidden')
+              }
+            />
             <ActivitySettings />
             <Save />
           </div>

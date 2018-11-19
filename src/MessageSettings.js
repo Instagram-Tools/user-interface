@@ -4,7 +4,7 @@ import trash from './images/Tash-Sultana.jpg';
 export default class MessageSettings extends Component {
   render() {
     return (
-      <div>
+      <div className={this.props.className}>
         <div className="header">
           <h1 className="titlepage">Messages</h1>
         </div>

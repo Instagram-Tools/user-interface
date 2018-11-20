@@ -4,6 +4,7 @@ import Account from './Account';
 import { Link } from 'react-router-dom';
 import { Context } from './Context';
 import Statistics from './Statistics';
+import StartStopButton from './StartStopButton';
 
 export default class Sections extends Component {
   render() {
@@ -42,7 +43,10 @@ export default class Sections extends Component {
             {!this.isLoggedin(context) ? (
               this.warning(context)
             ) : (
-              <Statistics className="general_settings" />
+              <div>
+                <Statistics className="general_settings" />
+                <StartStopButton />
+              </div>
             )}
           </div>
         )}

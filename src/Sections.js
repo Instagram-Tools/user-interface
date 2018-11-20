@@ -3,6 +3,7 @@ import Switch from './ContextSwitch';
 import Account from './Account';
 import { Link } from 'react-router-dom';
 import { Context } from './Context';
+import Statistics from './Statistics';
 
 export default class Sections extends Component {
   render() {
@@ -38,7 +39,11 @@ export default class Sections extends Component {
               <h1 className="general_settings subtitle">Messages</h1>
               <Switch value="enable_message" />
             </div>
-            {!this.isLoggedin(context) ? this.warning(context) : null}
+            {!this.isLoggedin(context) ? (
+              this.warning(context)
+            ) : (
+              <Statistics className="general_settings" />
+            )}
           </div>
         )}
       </Context.Consumer>

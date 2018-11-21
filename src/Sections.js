@@ -21,6 +21,10 @@ export default class Sections extends Component {
               <Account />
             </div>
             <div className="switchwrapper">
+              <h1 className="general_settings subtitle">Bot On/Off</h1>
+              <StartStopButton />
+            </div>
+            <div className="switchwrapper">
               <h1 className="general_settings subtitle">Like</h1>
               <Switch value="do_like_enabled" />
             </div>
@@ -43,10 +47,7 @@ export default class Sections extends Component {
             {!this.isLoggedin(context) ? (
               this.warning(context)
             ) : (
-              <div>
-                <Statistics className="general_settings" />
-                <StartStopButton />
-              </div>
+              <Statistics className="general_settings" />
             )}
           </div>
         )}

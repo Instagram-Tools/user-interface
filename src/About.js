@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 import { Context } from './Context';
 import TextField from './TextField';
 
-export default class Legal extends Component {
+export default class About extends Component {
   render() {
     return (
       <Context.Consumer>

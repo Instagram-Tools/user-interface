@@ -62,6 +62,7 @@ export default class Save extends Component {
   save(context) {
     let settings = { ...context.state };
     let {
+      bot_on,
       email,
       e_password,
       password,
@@ -81,6 +82,7 @@ export default class Save extends Component {
       delete settings[prop];
     }
 
+    delete settings.bot_on;
     delete settings.password;
     delete settings.username;
     delete settings.email;
@@ -89,6 +91,7 @@ export default class Save extends Component {
     delete settings.subscription;
 
     const data = {
+      bot_on,
       email,
       username,
       password,

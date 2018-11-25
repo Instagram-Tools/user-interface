@@ -9,14 +9,14 @@ export const unsavedState = {
   scrollY: 0,
   scrollHeight: document.body.scrollHeight,
   try_email: '',
-  try_e_password: '',
-  bot_on: true
+  try_e_password: ''
 };
 
 // Then create a provider Component
 export class Provider extends Component {
   state = {
     ...unsavedState,
+    bot_on: true,
     do_comment_enabled: true,
     do_follow_enabled: true,
     do_like_enabled: true,

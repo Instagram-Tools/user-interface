@@ -232,6 +232,6 @@ export default class Navigation extends Component {
   }
 
   clickOnLogout(context) {
-    console.log('clickOnLogout');
+    return () => console.log('clickOnLogout');
   }
 }

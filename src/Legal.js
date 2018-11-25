@@ -25,18 +25,19 @@ export default class Legal extends Component {
         <br />
         <span className="paragraphtitle">
           OVERVIEW<br />
-        </span>This website is operated by Pink Parrot Ltd.. Throughout the
-        site, the terms “we”, “us” and “our” refer to Pink Parrot Ltd.. Pink
-        Parrot Ltd. offers this website, including all information, tools and
-        services available from this site to you, the user, conditioned upon
-        your acceptance of all terms, conditions, policies and notices stated
-        here.<br />‍<br />By visiting our site and/ or purchasing something from
-        us, you engage in our “Service” and agree to be bound by the following
-        terms and conditions (“Terms of Service”, “Terms”), including those
-        additional terms and conditions and policies referenced herein and/or
-        available by hyperlink. These Terms of Service apply to all users of the
-        site, including without limitation users who are browsers, vendors,
-        customers, merchants, and/ or contributors of content.<br />
+        </span>This website is operated by Service as a Service GmbH. Throughout
+        the site, the terms “we”, “us” and “our” refer to Service as a Service
+        GmbH. Pink Parrot Ltd. offers this website, including all information,
+        tools and services available from this site to you, the user,
+        conditioned upon your acceptance of all terms, conditions, policies and
+        notices stated here.<br />‍<br />By visiting our site and/ or purchasing
+        something from us, you engage in our “Service” and agree to be bound by
+        the following terms and conditions (“Terms of Service”, “Terms”),
+        including those additional terms and conditions and policies referenced
+        herein and/or available by hyperlink. These Terms of Service apply to
+        all users of the site, including without limitation users who are
+        browsers, vendors, customers, merchants, and/ or contributors of
+        content.<br />
         <br />Please read these Terms of Service carefully before accessing or
         using our website. By accessing or using any part of the site, you agree
         to be bound by these Terms of Service. If you do not agree to all the
@@ -86,19 +87,19 @@ export default class Legal extends Component {
         <br />You understand that the use of our site and tools with Instagram
         may result in violating the Terms of Service of Instagram. By signing up
         for Pink Parrot and agreeing to our Terms of Service, you waive all
-        rights to legal action against Pink Parrot Ltd. and its owners for any
-        and all impact to your Instagram account(s) or yourself from using our
-        products, including but not limited to Pink Parrot and the site and
-        tools available on{' '}
+        rights to legal action against Service as a Service GmbH and its owners
+        for any and all impact to your Instagram account(s) or yourself from
+        using our products, including but not limited to Pink Parrot and the
+        site and tools available on{' '}
         <span className="emailsmall">https://ww.pinkparrot.co</span>. Potential
         impact to you or your Instagram accounts includes but is not limited to
         loss of account access, account freezes or suspensions, identity
         verification challenges, and limits on the visibility of your Instagram
         content (commonly known as “shadowbans”). You agree that activity on
-        Instagram using any of your accounts but performed by Pink Parrot Ltd.
-        or any of its products including Pink Parrot may result in unwanted
-        interactions with Instagram users and their content, including but not
-        limited to pornography, prostitution, narcotics, or hate groups.<br />
+        Instagram using any of your accounts but performed by Service as a
+        Service GmbH or any of its products including Pink Parrot may result in
+        unwanted interactions with Instagram users and their content, including
+        but not limited to pornography, prostitution, narcotics, or hate groups.<br />
         <br />
         <br />
         <span className="paragraphtitle">
@@ -308,35 +309,35 @@ export default class Legal extends Component {
         either express or implied, including all implied warranties or
         conditions of merchantability, merchantable quality, fitness for a
         particular purpose, durability, title, and non-infringement.<br />
-        <br />In no case shall Pink Parrot Ltd., our directors, officers,
-        employees, affiliates, agents, contractors, interns, suppliers, service
-        providers or licensors be liable for any injury, loss, claim, or any
-        direct, indirect, incidental, punitive, special, or consequential
-        damages of any kind, including, without limitation lost profits, lost
-        revenue, lost savings, loss of data, replacement costs, or any similar
-        damages, whether based in contract, tort (including negligence), strict
-        liability or otherwise, arising from your use of any of the service or
-        any products procured using the service, or for any other claim related
-        in any way to your use of the service or any product, including, but not
-        limited to, any errors or omissions in any content, or any loss or
-        damage of any kind incurred as a result of the use of the service or any
-        content (or product) posted, transmitted, or otherwise made available
-        via the service, even if advised of their possibility. Because some
-        states or jurisdictions do not allow the exclusion or the limitation of
-        liability for consequential or incidental damages, in such states or
-        jurisdictions, our liability shall be limited to the maximum extent
-        permitted by law.<br />
+        <br />In no case shall Service as a Service GmbH, our directors,
+        officers, employees, affiliates, agents, contractors, interns,
+        suppliers, service providers or licensors be liable for any injury,
+        loss, claim, or any direct, indirect, incidental, punitive, special, or
+        consequential damages of any kind, including, without limitation lost
+        profits, lost revenue, lost savings, loss of data, replacement costs, or
+        any similar damages, whether based in contract, tort (including
+        negligence), strict liability or otherwise, arising from your use of any
+        of the service or any products procured using the service, or for any
+        other claim related in any way to your use of the service or any
+        product, including, but not limited to, any errors or omissions in any
+        content, or any loss or damage of any kind incurred as a result of the
+        use of the service or any content (or product) posted, transmitted, or
+        otherwise made available via the service, even if advised of their
+        possibility. Because some states or jurisdictions do not allow the
+        exclusion or the limitation of liability for consequential or incidental
+        damages, in such states or jurisdictions, our liability shall be limited
+        to the maximum extent permitted by law.<br />
         <br />
         <br />
         <span className="paragraphtitle">SECTION 14 - INDEMNIFICATION</span>
-        <br />You agree to indemnify, defend and hold harmless Pink Parrot Ltd.
-        and our parent, subsidiaries, affiliates, partners, officers, directors,
-        agents, contractors, licensors, service providers, subcontractors,
-        suppliers, interns and employees, harmless from any claim or demand,
-        including reasonable attorneys’ fees, made by any third-party due to or
-        arising out of your breach of these Terms of Service or the documents
-        they incorporate by reference, or your violation of any law or the
-        rights of a third-party.<br />
+        <br />You agree to indemnify, defend and hold harmless Service as a
+        Service GmbH and our parent, subsidiaries, affiliates, partners,
+        officers, directors, agents, contractors, licensors, service providers,
+        subcontractors, suppliers, interns and employees, harmless from any
+        claim or demand, including reasonable attorneys’ fees, made by any
+        third-party due to or arising out of your breach of these Terms of
+        Service or the documents they incorporate by reference, or your
+        violation of any law or the rights of a third-party.<br />
         <br />
         <br />
         <span className="paragraphtitle">SECTION 15 - SEVERABILITY</span>
@@ -415,10 +416,12 @@ export default class Legal extends Component {
         </span>
         <br />
         <br />
-        <br />Here we describe how we at Pink Parrot Ltd. collect, use and
-        handle your information when you use our websites, software and services
-        (&quot;Services&quot;), including but not limited to Pink Parrot and{' '}
-        <span className="emailsmall">https://www.pinkparrot.co</span>.<br />
+        <br />Here we describe how we at Service as a Service GmbH collect, use
+        and handle your information when you use our websites, software and
+        services (&quot;Services&quot;), including but not limited to Pink
+        Parrot and <span className="emailsmall">
+          https://www.pinkparrot.co
+        </span>.<br />
         <br />What &amp; Why We collect and use the following information to
         provide, improve and protect our Services:Account. We collect, and
         associate with your account, information like your name, email address,
@@ -447,18 +450,18 @@ export default class Legal extends Component {
         <br />With whom we may share information as discussed below, but we
         won&#x27;t sell it to advertisers or other third parties without your
         consent.<br />
-        <br />Others working for Pink Parrot Ltd.. Pink Parrot Ltd. May use
-        certain trusted third parties (for example, providers of customer
-        support and IT services) to help us provide, improve, protect, and
-        promote our Services. These third parties will access your information
-        only to perform tasks on our behalf in compliance with this Privacy
-        Policy, and we&#x27;ll remain responsible for their handling of your
-        information per our instructions.<br />
+        <br />Others working for Service as a Service GmbH. Service as a Service
+        GmbH May use certain trusted third parties (for example, providers of
+        customer support and IT services) to help us provide, improve, protect,
+        and promote our Services. These third parties will access your
+        information only to perform tasks on our behalf in compliance with this
+        Privacy Policy, and we&#x27;ll remain responsible for their handling of
+        your information per our instructions.<br />
         <br />Law &amp; Order. We may disclose your information to third parties
         if we determine that such disclosure is reasonably necessary to (a)
         comply with the law; (b) protect any person from death or serious bodily
-        injury; (c) prevent fraud or abuse of Pink Parrot Ltd. or our users; or
-        (d) protect Pink Parrot Ltd.&#x27;s property rights.<br />
+        injury; (c) prevent fraud or abuse of Service as a Service GmbH or our
+        users; or (d) protect Service as a Service GmbH&#x27;s property rights.<br />
         <br />How Security works. We have a team dedicated to keeping your
         information secure and testing for vulnerabilities.<br />
         <br />Retention. We&#x27;ll retain information you store on our Services
@@ -481,8 +484,8 @@ export default class Legal extends Component {
         <br />
         <br />
         <span className="titlepage legalsubtitle contacttext">
-          Have questions or concerns about Pink Parrot Ltd., our services and
-          privacy? <br />Contact us at:<br />‍
+          Have questions or concerns about Service as a Service GmbH, our
+          services and privacy? <br />Contact us at:<br />‍
         </span>
         <span className="titlepage legalsubtitle contacttext email">
           <a href="mailto:info@pinkparrot.co">info@pinkparrot.co</a>

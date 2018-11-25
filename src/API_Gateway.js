@@ -1,7 +1,7 @@
 import console from './Log';
 import env from './Env';
 
-const API_URL = env.API_URL || document.location.origin + ':8000/api';
+const API_URL = env.API_URL || document.location.origin + '/api';
 export default class API_Gateway {
   static async get(email, e_password, username = '') {
     let url =

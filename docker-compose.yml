@@ -14,6 +14,8 @@ services:
      - APP_PATH_PREFIX=/app
      - APP_API_PLACEHOLDER=/api
      - APP_API_GATEWAY=http://api:8000
+     - APP_BOT_PLACEHOLDER=/bot
+     - APP_BOT_GATEWAY=http://manager:8765
      - PAYMENT_PLACEHOLDER=/pay
      - PAYMENT_GATEWAY=http://payment-manager:7000
      - CLIENT_BODY_TIMEOUT=10
@@ -30,9 +32,11 @@ services:
    depends_on:
      - api
      - payment-manager
+     - manager
    links:
      - api:api
      - payment-manager:payment-manager
+     - manager:manager
 
  payment-manager:
    image: instagramtools/payment-manager

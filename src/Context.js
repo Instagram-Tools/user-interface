@@ -9,7 +9,8 @@ export const unsavedState = {
   scrollY: 0,
   scrollHeight: document.body.scrollHeight,
   try_email: '',
-  try_e_password: ''
+  try_e_password: '',
+  bot_on: true
 };
 
 // Then create a provider Component

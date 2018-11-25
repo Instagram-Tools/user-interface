@@ -78,5 +78,24 @@ services:
       - DB_USER=postgres
       - DB_PASS=postgres
 
+ manager:
+    image: instagramtools/manager
+    ports:
+      - 8765:8765
+    depends_on:
+      - postgres
+      - api
+    links:
+      - postgres:postgres
+    environment:
+      - DEBUG=True
+      - P_USER=docker
+      - SECRET_KEY=5(15ds+i2+%ik6z&!yer+ga9m=e%jcqiz_5wszg)r-z!2--b2d
+      - DB_NAME=postgres
+      - DB_USER=postgres
+      - DB_PASS=postgres
+      - DB_SERVICE=postgres
+      - DB_PORT=5432
+
 volumes:
   db_data:

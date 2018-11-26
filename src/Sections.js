@@ -12,7 +12,7 @@ export default class Sections extends Component {
       <Context.Consumer>
         {context => (
           <div className="generalsettings general_settings_landing_page">
-            <h1 className="general_settings generaltitle">Sections</h1>
+            {this.activity(context)}
             <div
               data-delay="0"
               className="dropdown w-dropdown"
@@ -55,6 +55,26 @@ export default class Sections extends Component {
         )}
       </Context.Consumer>
     );
+  }
+
+  activity(context) {
+    if (this.isLoggedin(context))
+      if (context.state.bot_active)
+        return (
+          <h1 className="general_settings generaltitle distancegeneral">
+            Bot active
+          </h1>
+        );
+      else
+        return (
+          <h1
+            style={{ color: '#ff4c44' }}
+            className="general_settings generaltitle distancegeneral"
+          >
+            Bot inactive
+          </h1>
+        );
+    else return <h1 className="general_settings generaltitle">Sections</h1>;
   }
 
   warning(context) {

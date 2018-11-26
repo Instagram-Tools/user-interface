@@ -1,6 +1,7 @@
 // first we will make a new context
 import React, { Component } from 'react';
 import ScrollUtil from './ScrollUtil';
+import BOT_Gateway from './BOT_Gateway';
 
 export const Context = React.createContext();
 
@@ -9,7 +10,9 @@ export const unsavedState = {
   scrollY: 0,
   scrollHeight: document.body.scrollHeight,
   try_email: '',
-  try_e_password: ''
+  try_e_password: '',
+  subscription: '',
+  bot_active: false
 };
 
 // Then create a provider Component
@@ -195,12 +198,19 @@ export class Provider extends Component {
     }
   }
 
+  async isBotActive() {
+    const bot_active = await BOT_Gateway.isBotRunning(this.state.username);
+    console.log('bot_active', bot_active);
+    this.setState({ bot_active });
+  }
+
   render() {
     return (
       <Context.Provider
         value={{
           state: this.state,
-          setState: this.setState.bind(this)
+          setState: this.setState.bind(this),
+          isBotActive: this.isBotActive.bind(this)
         }}
       >
         {this.props.children}

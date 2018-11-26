@@ -5,13 +5,17 @@ import { Link } from 'react-router-dom';
 import { Context } from './Context';
 import Statistics from './Statistics';
 import StartStopButton from './StartStopButton';
+import BOT_Gateway from './BOT_Gateway';
 
 export default class Sections extends Component {
   render() {
     return (
       <Context.Consumer>
         {context => (
-          <div className="generalsettings general_settings_landing_page">
+          <div
+            className="generalsettings general_settings_landing_page"
+            onClick={() => this.isBotActive(context)}
+          >
             {this.activity(context)}
             <div
               data-delay="0"
@@ -75,6 +79,12 @@ export default class Sections extends Component {
           </h1>
         );
     else return <h1 className="general_settings generaltitle">Sections</h1>;
+  }
+
+  async isBotActive(context) {
+    const bot_active = await BOT_Gateway.isBotRunning(context.state.username);
+    console.log('bot_active', bot_active);
+    context.setState({ bot_active });
   }
 
   warning(context) {

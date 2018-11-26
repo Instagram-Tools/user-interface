@@ -13,6 +13,7 @@ import MessageSettings from './MessageSettings';
 import ActivitySettings from './ActivitySettings';
 import { Context } from './Context';
 import Save from './Save';
+import GeneralInfo from './GeneralInfo';
 
 export default class App extends Component {
   render() {
@@ -22,6 +23,7 @@ export default class App extends Component {
           <div className={this.props.className} style={this.props.style}>
             <Progress />
             <Sections />
+            <GeneralInfo />
             <GeneralSettings />
             <LikeSettings
               className={

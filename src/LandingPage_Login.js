@@ -101,25 +101,26 @@ export default class LandingPage_Login extends Component {
     try {
       let { try_email, try_e_password } = context.state;
       let result = await API.get(try_email, try_e_password);
-      if (result.username) {
-        let settings = JSON.parse(JSON.parse(result.settings));
-        let { password, username, subscription, timetable } = result;
 
-        context.setState({
-          ...settings,
-          email: try_email,
-          e_password: try_e_password,
-          password,
-          username,
-          subscription,
-          timetable
-        });
-      } else {
-        context.setState({
-          email: try_email,
-          e_password: try_e_password
-        });
+      let settings;
+      if (result.settings) {
+        try {
+          settings = JSON.parse(JSON.parse(result.settings));
+        } catch (e) {
+          console.log(e);
+        }
       }
+
+      let { password, username, subscription, timetable } = result;
+      context.setState({
+        ...settings,
+        email: try_email,
+        e_password: try_e_password,
+        password,
+        username,
+        subscription,
+        timetable
+      });
       this.props.toggle();
       this.setState({ error: false });
     } catch (e) {

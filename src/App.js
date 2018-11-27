@@ -45,11 +45,11 @@ export default class App extends Component {
                 'hideable ' + (context.state.enable_unfollow ? '' : 'hidden')
               }
             />
-            <MessageSettings
-              className={
-                'hideable ' + (context.state.enable_message ? '' : 'hidden')
-              }
-            />
+            {/*<MessageSettings*/}
+            {/*className={*/}
+            {/*'hideable ' + (context.state.enable_message ? '' : 'hidden')*/}
+            {/*}*/}
+            {/*/>*/}
             <ActivitySettings />
             <Save />
           </div>

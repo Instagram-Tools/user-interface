@@ -8,7 +8,7 @@ export default class FollowSettings extends Component {
     return (
       <div className={this.props.className}>
         <div className="header">
-          <h1 className="titlepage">Follows</h1>
+          <h1 className="titlepage followunderline">Follows</h1>
         </div>
         <div className="body">
           <div className="w-form form">

@@ -9,7 +9,7 @@ export default class UnfollowSettings extends Component {
     return (
       <div className={this.props.className}>
         <div className="header">
-          <h1 className="titlepage">Unfollows</h1>
+          <h1 className="titlepage unfollowunderline">Unfollows</h1>
         </div>
         <div className="body">
           <div className="w-form form">

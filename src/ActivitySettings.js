@@ -7,7 +7,7 @@ export default class ActivitySettings extends Component {
     return (
       <div className="timetable">
         <div className="header">
-          <h1 className="titlepage">Activity</h1>
+          <h1 className="titlepage activityunderline">Activity</h1>
         </div>
         <div className="body">
           <div className="form-block w-form form">

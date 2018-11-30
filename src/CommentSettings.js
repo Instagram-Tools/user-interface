@@ -9,7 +9,7 @@ export default class CommentSettings extends Component {
     return (
       <div className={this.props.className}>
         <div className="header">
-          <h1 className="titlepage">Comments</h1>
+          <h1 className="titlepage commentunderline">Comments</h1>
         </div>
         <div className="body">
           <div className="w-form form">

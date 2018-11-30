@@ -27,16 +27,16 @@ export default class Legal extends Component {
           OVERVIEW<br />
         </span>This website is operated by Service as a Service GmbH. Throughout
         the site, the terms “we”, “us” and “our” refer to Service as a Service
-        GmbH. Pink Parrot Ltd. offers this website, including all information,
-        tools and services available from this site to you, the user,
-        conditioned upon your acceptance of all terms, conditions, policies and
-        notices stated here.<br />‍<br />By visiting our site and/ or purchasing
-        something from us, you engage in our “Service” and agree to be bound by
-        the following terms and conditions (“Terms of Service”, “Terms”),
-        including those additional terms and conditions and policies referenced
-        herein and/or available by hyperlink. These Terms of Service apply to
-        all users of the site, including without limitation users who are
-        browsers, vendors, customers, merchants, and/ or contributors of
+        GmbH. Service as a Service GmbH offers this website, including all
+        information, tools and services available from this site to you, the
+        user, conditioned upon your acceptance of all terms, conditions,
+        policies and notices stated here.<br />‍<br />By visiting our site and/
+        or purchasing something from us, you engage in our “Service” and agree
+        to be bound by the following terms and conditions (“Terms of Service”,
+        “Terms”), including those additional terms and conditions and policies
+        referenced herein and/or available by hyperlink. These Terms of Service
+        apply to all users of the site, including without limitation users who
+        are browsers, vendors, customers, merchants, and/ or contributors of
         content.<br />
         <br />Please read these Terms of Service carefully before accessing or
         using our website. By accessing or using any part of the site, you agree
@@ -91,15 +91,17 @@ export default class Legal extends Component {
         for any and all impact to your Instagram account(s) or yourself from
         using our products, including but not limited to Pink Parrot and the
         site and tools available on{' '}
-        <span className="emailsmall">https://ww.pinkparrot.co</span>. Potential
-        impact to you or your Instagram accounts includes but is not limited to
-        loss of account access, account freezes or suspensions, identity
-        verification challenges, and limits on the visibility of your Instagram
-        content (commonly known as “shadowbans”). You agree that activity on
-        Instagram using any of your accounts but performed by Service as a
-        Service GmbH or any of its products including Pink Parrot may result in
-        unwanted interactions with Instagram users and their content, including
-        but not limited to pornography, prostitution, narcotics, or hate groups.<br />
+        <span className="emailsmall">
+          <a href="https://www.pinkparrot.co">https://www.pinkparrot.co</a>
+        </span>. Potential impact to you or your Instagram accounts includes but
+        is not limited to loss of account access, account freezes or
+        suspensions, identity verification challenges, and limits on the
+        visibility of your Instagram content (commonly known as “shadowbans”).
+        You agree that activity on Instagram using any of your accounts but
+        performed by Service as a Service GmbH or any of its products including
+        Pink Parrot may result in unwanted interactions with Instagram users and
+        their content, including but not limited to pornography, prostitution,
+        narcotics, or hate groups.<br />
         <br />
         <br />
         <span className="paragraphtitle">
@@ -419,8 +421,9 @@ export default class Legal extends Component {
         <br />Here we describe how we at Service as a Service GmbH collect, use
         and handle your information when you use our websites, software and
         services (&quot;Services&quot;), including but not limited to Pink
-        Parrot and <span className="emailsmall">
-          https://www.pinkparrot.co
+        Parrot and{' '}
+        <span className="emailsmall">
+          <a href="https://www.pinkparrot.co">https://www.pinkparrot.co</a>
         </span>.<br />
         <br />What &amp; Why We collect and use the following information to
         provide, improve and protect our Services:Account. We collect, and

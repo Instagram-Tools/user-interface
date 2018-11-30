@@ -11,7 +11,11 @@ export default class Account extends Component {
       <Context.Consumer>
         {context => {
           return (
-            <div>
+            <div
+              data-delay="0"
+              className="dropdown w-dropdown"
+              style={{ zIndex: 999999 }}
+            >
               <div
                 onClick={this.nextStep.bind(context)}
                 data-w-id="5bc62214-6295-d5b6-2514-2ebbae7e5d29"

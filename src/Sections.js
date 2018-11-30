@@ -17,13 +17,7 @@ export default class Sections extends Component {
             onClick={() => this.isBotActive(context)}
           >
             {this.activity(context)}
-            <div
-              data-delay="0"
-              className="dropdown w-dropdown"
-              style={{ zIndex: 999999 }}
-            >
-              <Account />
-            </div>
+            <Account />
             {this.isLoggedin(context) ? (
               <div className="switchwrapper">
                 <h1 className="general_settings subtitle">Bot On/Off</h1>
@@ -46,10 +40,10 @@ export default class Sections extends Component {
               <h1 className="general_settings subtitle">Unfollow</h1>
               <Switch value="enable_unfollow" />
             </div>
-            <div className="switchwrapper">
-              <h1 className="general_settings subtitle">Messages</h1>
-              <Switch value="enable_message" />
-            </div>
+            {/*<div className="switchwrapper">*/}
+            {/*<h1 className="general_settings subtitle">Messages</h1>*/}
+            {/*<Switch value="enable_message" />*/}
+            {/*</div>*/}
             {!this.isLoggedin(context) ? (
               this.warning(context)
             ) : (

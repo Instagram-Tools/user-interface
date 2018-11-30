@@ -14,7 +14,11 @@ export default class Account extends Component {
             <div
               data-delay="0"
               className="dropdown w-dropdown"
-              style={{ zIndex: 999999 }}
+              style={
+                context.state.registrationStep > 0
+                  ? { zIndex: 1000 }
+                  : { zIndex: 0 }
+              }
             >
               <div
                 onClick={this.nextStep.bind(context)}

@@ -19,8 +19,10 @@ export default class Sections extends Component {
             {this.activity(context)}
             <Account />
             {this.isLoggedin(context) ? (
-              <div className="switchwrapper">
-                <h1 className="general_settings subtitle">Bot On/Off</h1>
+              <div className="switchwrapper general_switch_wrapper">
+                <h1 className="general_settings subtitle generalswitch">
+                  Bot On/Off
+                </h1>
                 <StartStopButton value="bot_on" />
               </div>
             ) : null}
@@ -28,11 +30,11 @@ export default class Sections extends Component {
               <h1 className="general_settings subtitle">Like</h1>
               <Switch value="do_like_enabled" />
             </div>
-            <div className="switchwrapper">
+            <div className="switchwrapper tabletmiddle">
               <h1 className="general_settings subtitle">Comment</h1>
               <Switch value="do_comment_enabled" />
             </div>
-            <div className="switchwrapper">
+            <div className="switchwrapper tabletright">
               <h1 className="general_settings subtitle">Follow</h1>
               <Switch value="do_follow_enabled" />
             </div>
@@ -40,7 +42,7 @@ export default class Sections extends Component {
               <h1 className="general_settings subtitle">Unfollow</h1>
               <Switch value="enable_unfollow" />
             </div>
-            {/*<div className="switchwrapper">*/}
+            {/*<div className="switchwrapper tabletmiddle">*/}
             {/*<h1 className="general_settings subtitle">Messages</h1>*/}
             {/*<Switch value="enable_message" />*/}
             {/*</div>*/}

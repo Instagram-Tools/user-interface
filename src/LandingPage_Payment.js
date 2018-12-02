@@ -12,7 +12,9 @@ export default class LandingPage_Payment extends Component {
           return (
             <div
               style={
-                this.props.display ? { display: 'flex' } : { display: 'none' }
+                this.props.display
+                  ? { display: 'flex', overflowY: 'scroll' }
+                  : { display: 'none' }
               }
               className="connect_insta_account landing_page_payment"
             >

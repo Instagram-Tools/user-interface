@@ -21,7 +21,7 @@ export default class Sections extends Component {
             {this.isLoggedin(context) ? (
               <div className="switchwrapper general_switch_wrapper">
                 <h1 className="general_settings subtitle generalswitch">
-                  Bot On/Off
+                  Bot Off/On
                 </h1>
                 <StartStopButton value="bot_on" />
               </div>

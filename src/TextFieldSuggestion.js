@@ -145,9 +145,10 @@ export default class TextFieldSuggestion extends Component {
   }
 
   submitText(context) {
+    const key = this.props.value;
     const value = this.state.value;
     context.setState(p => ({
-      [this.props.value]: this.addValue(p[this.props.value], value)
+      [key]: this.addValue(p[key], value)
     }));
     this.setState({ value: '', suggestions: [] });
   }

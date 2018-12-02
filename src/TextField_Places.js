@@ -24,7 +24,7 @@ export default class TextField_Places extends TextFieldSuggestion {
 
   async clickSuggestion(suggestion, context) {
     await this.setState({ value: suggestion.place.location.pk });
-    await this.setState(p => ({
+    await context.setState(p => ({
       list: [...(p.list || []), suggestion.place.location.name]
     }));
     await this.submitText(context);
@@ -36,12 +36,12 @@ export default class TextField_Places extends TextFieldSuggestion {
   }
 
   map(list = [], context) {
-    return super.map(this.state.list, context);
+    return super.map(context.state.list, context);
   }
 
   remove(index, context) {
     super.remove(index, context);
-    this.setState(p => {
+    context.setState(p => {
       let l = [...p.list];
       l.splice(index, 1);
       return { list: l };

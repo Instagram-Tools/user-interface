@@ -27,7 +27,7 @@ export default class API_Gateway {
   static async parsResponse(response) {
     let text = await response.text();
     if (response.status === 200) return text;
-    else return new Error(text);
+    else throw new Error(text);
   }
 
   static async register(email, password) {

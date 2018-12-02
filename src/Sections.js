@@ -78,9 +78,11 @@ export default class Sections extends Component {
   }
 
   async isBotActive(context) {
-    const bot_active = await BOT_Gateway.isBotRunning(context.state.username);
-    console.log('bot_active', bot_active);
-    context.setState({ bot_active });
+    if (context.state.username) {
+      const bot_active = await BOT_Gateway.isBotRunning(context.state.username);
+      console.log('bot_active', bot_active);
+      context.setState({ bot_active });
+    }
   }
 
   warning(context) {

@@ -20,7 +20,7 @@ export default class TextFieldNumber extends Component {
 
                 const value = e.target.value > 0 ? e.target.value : '';
                 context.setState({
-                  [this.props.value]: value
+                  [this.props.value]: parseInt(value)
                 });
               }}
             />

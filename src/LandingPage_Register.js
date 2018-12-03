@@ -92,10 +92,12 @@ export default class LandingPage_Register extends Component {
     );
   }
 
-  submit(context) {
+  async submit(context) {
     if (!this.requirementsMet())
       return this.setState({ error: this.errorCode[1] });
-    if (API_Gateway.register(context.state.email, context.state.e_password))
+    if (
+      await API_Gateway.register(context.state.email, context.state.e_password)
+    )
       return this.props.toggle();
     else return this.setState({ error: this.errorCode[2] });
   }

@@ -40,6 +40,7 @@ export default class Payment_Gateway extends React.Component {
     } catch (e) {
       console.error(e);
       this.setState({ error: true });
+      await this.componentDidMount();
     }
   }
 

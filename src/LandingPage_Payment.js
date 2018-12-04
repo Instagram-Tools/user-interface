@@ -12,7 +12,7 @@ export default class LandingPage_Payment extends Component {
             <div
               style={
                 this.props.display
-                  ? { display: 'flex', overflowY: 'scroll' }
+                  ? { display: 'flex', position: 'absolute', margin: 0 }
                   : { display: 'none' }
               }
               className="connect_insta_account landing_page_payment"
@@ -94,7 +94,7 @@ export default class LandingPage_Payment extends Component {
                     email: context.state.email,
                     discount_code: context.state.discount_code
                   }}
-                  setSubscription={this.setSubscription.bind(context)}
+                  setSubscription={sub => this.setSubscription(sub, context)}
                 />
               </div>
             </div>
@@ -104,7 +104,8 @@ export default class LandingPage_Payment extends Component {
     );
   }
 
-  setSubscription(subscription) {
-    this.setState({ subscription, registrationStep: 0 });
+  setSubscription(subscription, context) {
+    context.setState({ subscription });
+    this.toggle(context);
   }
 }

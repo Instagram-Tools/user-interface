@@ -1,5 +1,5 @@
 import React from 'react';
-import DropIn from 'braintree-web-drop-in-react';
+import DropIn from './DropIn';
 import env from './Env';
 
 const PAYMENT_MANAGER = env.PAYMENT_MANAGER;
@@ -64,10 +64,9 @@ export default class Payment_Gateway extends React.Component {
                 'venmo',
                 'applePay'
               ],
-              paypal: true,
-              paypalCredit: true,
-              venmo: true,
-              applePay: true
+              paypal: {
+                flow: 'vault'
+              }
             }}
             onInstance={instance => (this.instance = instance)}
           />

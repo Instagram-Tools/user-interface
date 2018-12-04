@@ -100,9 +100,13 @@ export default class LandingPage_Register extends Component {
         context.state.try_email,
         context.state.try_e_password
       )
-    )
+    ) {
+      context.setState({
+        email: context.state.try_email,
+        e_password: context.state.try_e_password
+      });
       return this.props.toggle();
-    else return this.setState({ error: this.errorCode[2] });
+    } else return this.setState({ error: this.errorCode[2] });
   }
 
   requirementsMet() {

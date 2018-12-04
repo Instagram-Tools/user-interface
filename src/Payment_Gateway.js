@@ -1,5 +1,5 @@
 import React from 'react';
-import DropIn from 'braintree-web-drop-in-react';
+import DropIn from './DropIn';
 import env from './Env';
 
 const PAYMENT_MANAGER = env.PAYMENT_MANAGER;
@@ -66,25 +66,6 @@ export default class Payment_Gateway extends React.Component {
               ],
               paypal: {
                 flow: 'vault'
-              },
-              paypalCredit: {
-                flow: 'vault'
-              },
-              venmo: {
-                allowNewBrowserTab: false
-              },
-              applePay: {
-                displayName: 'PinkParrot',
-                paymentRequest: {
-                  total: {
-                    label: 'PinkParrot',
-                    amount: '29.95'
-                  },
-                  // We recommend collecting billing address information, at minimum
-                  // billing postal code, and passing that billing postal code with all
-                  // Google Pay transactions as a best practice.
-                  requiredBillingContactFields: ['postalAddress']
-                }
               }
             }}
             onInstance={instance => (this.instance = instance)}

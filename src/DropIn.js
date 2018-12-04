@@ -23,7 +23,6 @@ export default class DropIn extends React.Component {
   instance;
 
   async componentDidMount() {
-    console.log('dropin', this.props.options);
     this.instance = await BraintreeWebDropIn.create({
       container: ReactDOM.findDOMNode(this.wrapper),
       ...this.props.options

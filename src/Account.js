@@ -4,6 +4,7 @@ import LandingPage_Connect from './LandingPage_Connect';
 import LandingPage_Payment from './LandingPage_Payment';
 import LandingPage_Register from './LandingPage_Register';
 import LandingPage_Login from './LandingPage_Login';
+import LandingPage_Success from './LandingPage_Success';
 
 export default class Account extends Component {
   render() {
@@ -45,6 +46,11 @@ export default class Account extends Component {
               />
               <LandingPage_Payment
                 display={context.state.registrationStep === 3}
+                toggle={this.nextStep.bind(context)}
+              />
+              <LandingPage_Success
+                display={context.state.registrationStep === 4}
+                toggle={this.resetStep.bind(context)}
               />
               <div
                 style={

@@ -45,19 +45,19 @@ export default class LandingPage_Register extends Component {
                     <TextField
                       type="email"
                       placeholder="Email"
-                      value="email"
+                      value="try_email"
                       setIsSet={b => this.setState({ isEmailSet: b })}
                     />
                     <TextField
                       type="password"
                       placeholder="Password"
-                      value="e_password"
+                      value="try_e_password"
                       setIsSet={b => this.setState({ isPasswordSet: b })}
                     />
                     <TextField_Confirm
                       type="password"
                       placeholder="Confirm Password"
-                      value="e_password"
+                      value="try_e_password"
                       setIsConfirmed={this.setIsConfirmed.bind(this)}
                     />
                   </div>
@@ -96,10 +96,17 @@ export default class LandingPage_Register extends Component {
     if (!this.requirementsMet())
       return this.setState({ error: this.errorCode[1] });
     if (
-      await API_Gateway.register(context.state.email, context.state.e_password)
-    )
+      await API_Gateway.register(
+        context.state.try_email,
+        context.state.try_e_password
+      )
+    ) {
+      context.setState({
+        email: context.state.try_email,
+        e_password: context.state.try_e_password
+      });
       return this.props.toggle();
-    else return this.setState({ error: this.errorCode[2] });
+    } else return this.setState({ error: this.errorCode[2] });
   }
 
   requirementsMet() {

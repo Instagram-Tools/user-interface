@@ -1,7 +1,4 @@
 import React, { Component } from 'react';
-import TextField from './TextField';
-import PaymentGateway from './PaymentGateway';
-import { Context } from './Context';
 
 export default class LandingPageSuccess extends Component {
   render() {

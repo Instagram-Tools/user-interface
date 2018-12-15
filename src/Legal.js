@@ -343,14 +343,13 @@ export default class Legal extends Component {
         <br />
         <br />
         <span className="paragraphtitle">SECTION 15 - SEVERABILITY</span>
-        <a href="#" className="link">
-          <br />I
-        </a>n the event that any provision of these Terms of Service is
-        determined to be unlawful, void or unenforceable, such provision shall
-        nonetheless be enforceable to the fullest extent permitted by applicable
-        law, and the unenforceable portion shall be deemed to be severed from
-        these Terms of Service, such determination shall not affect the validity
-        and enforceability of any other remaining provisions.<br />
+        <br />
+        In the event that any provision of these Terms of Service is determined
+        to be unlawful, void or unenforceable, such provision shall nonetheless
+        be enforceable to the fullest extent permitted by applicable law, and
+        the unenforceable portion shall be deemed to be severed from these Terms
+        of Service, such determination shall not affect the validity and
+        enforceability of any other remaining provisions.<br />
         <br />
         <br />
         <span className="paragraphtitle">SECTION 16 - TERMINATION</span>

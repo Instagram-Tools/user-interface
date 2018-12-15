@@ -1,11 +1,4 @@
 import React, { Component } from 'react';
-import Switch from './ContextSwitch';
-import TextFieldNumber from './TextFieldNumber';
-import Help from './Help';
-import TextFieldHashtags from './TextField_Hashtags';
-import TextFieldUsers from './TextField_Users';
-import TextFieldPlaces from './TextField_Places';
-import SwitchSpeed from './SwitchSpeed';
 
 export default class GeneralInfo extends Component {
   render() {

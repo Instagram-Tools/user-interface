@@ -106,6 +106,6 @@ export default class LandingPage_Payment extends Component {
 
   setSubscription(subscription, context) {
     context.setState({ subscription });
-    this.toggle(context);
+    this.props.toggle(context);
   }
 }

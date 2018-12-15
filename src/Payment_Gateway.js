@@ -33,14 +33,15 @@ export default class Payment_Gateway extends React.Component {
         }
       });
       const subscription = await response.text();
+      console.log('pay subscripton: ', subscription);
+      console.log('pay response.status: ', response.status);
       if (response.status === 200) {
         this.props.setSubscription(subscription);
-        this.setState({ errorOccurred: false });
+        this.setState({ error: false });
       } else throw subscription;
     } catch (e) {
       console.error(e);
       this.setState({ error: true });
-      await this.componentDidMount();
     }
   }
 

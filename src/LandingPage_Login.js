@@ -31,45 +31,38 @@ export default class LandingPage_Login extends Component {
                 see our privacy policy.
               </Link>
               <div className="w-form">
-                <form
-                  id="email-form-2"
-                  name="email-form-2"
-                  data-name="Email Form 2"
-                  className="formholder_connect_account"
-                >
-                  <div className="columnholder filterholder first connect_account_column">
-                    <TextField
-                      type="email"
-                      placeholder="Email"
-                      value="try_email"
-                      setIsSet={b => this.setState({ isEmailSet: b })}
-                    />
-                    <TextField
-                      type="password"
-                      placeholder="Password"
-                      value="try_e_password"
-                      setIsSet={b => this.setState({ isPasswordSet: b })}
-                    />
-                  </div>
-                  <input
-                    onClick={
-                      this.requirementsMet()
-                        ? (e => this.login(context)).bind(this)
-                        : null
-                    }
-                    type="button"
-                    value="Connect"
-                    data-wait="Please wait..."
-                    className="submitbutton connect_account_button w-button"
+                <div className="columnholder filterholder first connect_account_column">
+                  <TextField
+                    type="email"
+                    placeholder="Email"
+                    value="try_email"
+                    setIsSet={b => this.setState({ isEmailSet: b })}
                   />
-                  <input
-                    type="button"
-                    value="Register"
-                    data-wait="Please wait..."
-                    className="submitbutton connect_account_button registerbutton w-button"
-                    onClick={this.props.register}
+                  <TextField
+                    type="password"
+                    placeholder="Password"
+                    value="try_e_password"
+                    setIsSet={b => this.setState({ isPasswordSet: b })}
                   />
-                </form>
+                </div>
+                <input
+                  onClick={
+                    this.requirementsMet()
+                      ? (e => this.login(context)).bind(this)
+                      : null
+                  }
+                  type="button"
+                  value="Connect"
+                  data-wait="Please wait..."
+                  className="submitbutton connect_account_button w-button"
+                />
+                <input
+                  type="button"
+                  value="Register"
+                  data-wait="Please wait..."
+                  className="submitbutton connect_account_button registerbutton w-button"
+                  onClick={this.props.register}
+                />
                 <div className="w-form-done">
                   <div>Thank you! Your submission has been received!</div>
                 </div>

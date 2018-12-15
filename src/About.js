@@ -153,18 +153,12 @@ export default class About extends Component {
                     Just <span className="text-span">29,95€</span> / month!
                   </h1>
                   <div className="form-block-3 w-form">
-                    <form
-                      id="email-form-3"
-                      name="email-form-3"
-                      data-name="Email Form 3"
-                    >
-                      <TextField
-                        type="text"
-                        placeholder="Promo Code"
-                        value="discount_code"
-                        inputStyle={{ minWidth: '100%', width: '100%' }}
-                      />
-                    </form>
+                    <TextField
+                      type="text"
+                      placeholder="Promo Code"
+                      value="discount_code"
+                      inputStyle={{ minWidth: '100%', width: '100%' }}
+                    />
                     <div className="w-form-done">
                       <div>Thank you! Your submission has been received!</div>
                     </div>

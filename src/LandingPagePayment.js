@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import TextField from './TextField';
-import Payment_Gateway from './Payment_Gateway';
+import PaymentGateway from './PaymentGateway';
 import { Context } from './Context';
 
-export default class LandingPage_Payment extends Component {
+export default class LandingPagePayment extends Component {
   render() {
     return (
       <Context.Consumer>
@@ -82,7 +82,7 @@ export default class LandingPage_Payment extends Component {
                 </div>
               </div>
               <div className="buy_plan_holder">
-                <Payment_Gateway
+                <PaymentGateway
                   style={{ width: '100%' }}
                   userdata={{
                     email: context.state.email,

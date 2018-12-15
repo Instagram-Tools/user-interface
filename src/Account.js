@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import { Context } from './Context';
-import LandingPage_Connect from './LandingPage_Connect';
-import LandingPage_Payment from './LandingPage_Payment';
-import LandingPage_Register from './LandingPage_Register';
-import LandingPage_Login from './LandingPage_Login';
-import LandingPage_Success from './LandingPage_Success';
+import LandingPageConnect from './LandingPageConnect';
+import LandingPagePayment from './LandingPagePayment';
+import LandingPageRegister from './LandingPageRegister';
+import LandingPageLogin from './LandingPageLogin';
+import LandingPageSuccess from './LandingPageSuccess';
 
 export default class Account extends Component {
   render() {
@@ -31,24 +31,24 @@ export default class Account extends Component {
                 </div>
                 <div className="icon w-icon-dropdown-toggle" />
               </div>
-              <LandingPage_Login
+              <LandingPageLogin
                 display={context.state.registrationStep === 11}
                 toggle={this.resetStep.bind(context)}
                 register={this.register.bind(context)}
               />
-              <LandingPage_Register
+              <LandingPageRegister
                 display={context.state.registrationStep === 1}
                 toggle={this.nextStep.bind(context)}
               />
-              <LandingPage_Connect
+              <LandingPageConnect
                 display={context.state.registrationStep === 2}
                 toggle={this.nextStep.bind(context)}
               />
-              <LandingPage_Payment
+              <LandingPagePayment
                 display={context.state.registrationStep === 3}
                 toggle={this.nextStep.bind(context)}
               />
-              <LandingPage_Success
+              <LandingPageSuccess
                 display={context.state.registrationStep === 4}
                 toggle={this.resetStep.bind(context)}
               />

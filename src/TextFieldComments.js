@@ -1,6 +1,6 @@
 import TextFieldBroad from './TextFieldBroad';
 
-export default class TextField_Comments extends TextFieldBroad {
+export default class TextFieldComments extends TextFieldBroad {
   iconClass = 'commenticon';
 
   addValue(old = [], value) {

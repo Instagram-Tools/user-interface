@@ -5,7 +5,7 @@ import Help from './Help';
 import TextFieldHashtags from './TextField_Hashtags';
 import TextFieldUsers from './TextField_Users';
 import TextFieldPlaces from './TextField_Places';
-import Switch_Speed from './Switch_Speed';
+import SwitchSpeed from './SwitchSpeed';
 
 export default class GeneralInfo extends Component {
   render() {

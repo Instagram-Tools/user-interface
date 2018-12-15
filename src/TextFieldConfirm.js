@@ -1,6 +1,6 @@
 import TextField from './TextField';
 
-export default class TextField_Confirm extends TextField {
+export default class TextFieldConfirm extends TextField {
   state = { value: '' };
 
   setValue(context, value) {

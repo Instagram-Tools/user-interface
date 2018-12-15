@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import TextField from './TextField';
 import { Link } from 'react-router-dom';
 
-export default class LandingPage_Connect extends Component {
+export default class LandingPageConnect extends Component {
   state = {
     isEmailSet: false,
     isPasswordSet: false

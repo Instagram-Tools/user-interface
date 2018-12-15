@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Help from './Help';
-import TextField_Comments from './TextField_Comments';
+import TextFieldComments from './TextFieldComments';
 
 export default class MessageSettings extends Component {
   render() {
@@ -22,7 +22,7 @@ export default class MessageSettings extends Component {
                 recommendations
               </Help>
             </div>
-            <TextField_Comments
+            <TextFieldComments
               value="messages_onfollow"
               placeholder="Enter Text you want to message"
             />

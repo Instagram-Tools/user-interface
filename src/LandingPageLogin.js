@@ -1,18 +1,14 @@
 import React, { Component } from 'react';
 import TextField from './TextField';
-import TextField_Confirm from './TextField_Confirm';
-import API_Gateway from './API_Gateway';
+import API from './API_Gateway';
 import { Context } from './Context';
 import { Link } from 'react-router-dom';
 
-export default class LandingPage_Register extends Component {
-  errorCode = { 0: 'success', 1: 'PasswordError', 2: 'ServerError' };
-
+export default class LandingPageLogin extends Component {
   state = {
     isEmailSet: false,
     isPasswordSet: false,
-    isConfirmed: false,
-    error: this.errorCode[0]
+    error: false
   };
 
   render() {
@@ -28,7 +24,7 @@ export default class LandingPage_Register extends Component {
               }
               className="connect_insta_account landing_page_payment connect"
             >
-              <h1 className="settingtitle">Register</h1>
+              <h1 className="settingtitle">Login</h1>
               <Link to="/privacy-policy" className="title_menu_element privacy">
                 Your details will not be transferred to third parties, and
                 neither your email, nor your password will be saved. Click to
@@ -48,30 +44,31 @@ export default class LandingPage_Register extends Component {
                     value="try_e_password"
                     setIsSet={b => this.setState({ isPasswordSet: b })}
                   />
-                  <TextField_Confirm
-                    type="password"
-                    placeholder="Confirm Password"
-                    value="try_e_password"
-                    setIsConfirmed={this.setIsConfirmed.bind(this)}
-                  />
                 </div>
                 <input
-                  onClick={(e => this.submit(context)).bind(this)}
+                  onClick={
+                    this.requirementsMet()
+                      ? (e => this.login(context)).bind(this)
+                      : null
+                  }
                   type="button"
                   value="Connect"
                   data-wait="Please wait..."
                   className="submitbutton connect_account_button w-button"
+                />
+                <input
+                  type="button"
+                  value="Register"
+                  data-wait="Please wait..."
+                  className="submitbutton connect_account_button registerbutton w-button"
+                  onClick={this.props.register}
                 />
                 <div className="w-form-done">
                   <div>Thank you! Your submission has been received!</div>
                 </div>
                 <div
                   className="w-form-fail"
-                  style={
-                    this.state.error !== this.errorCode[0]
-                      ? { display: 'block' }
-                      : {}
-                  }
+                  style={this.state.error ? { display: 'block' } : {}}
                 >
                   <div>
                     Oops! Something went wrong while submitting the form.
@@ -85,32 +82,42 @@ export default class LandingPage_Register extends Component {
     );
   }
 
-  async submit(context) {
-    if (!this.requirementsMet())
-      return this.setState({ error: this.errorCode[1] });
-    if (
-      await API_Gateway.register(
-        context.state.try_email,
-        context.state.try_e_password
-      )
-    ) {
-      context.setState({
-        email: context.state.try_email,
-        e_password: context.state.try_e_password
-      });
-      return this.props.toggle();
-    } else return this.setState({ error: this.errorCode[2] });
-  }
-
   requirementsMet() {
-    return (
-      this.state.isEmailSet &&
-      this.state.isPasswordSet &&
-      this.state.isConfirmed
-    );
+    return this.state.isEmailSet && this.state.isPasswordSet;
   }
 
   setIsConfirmed(isConfirmed = false) {
     this.setState({ isConfirmed });
+  }
+
+  async login(context) {
+    try {
+      let { try_email, try_e_password } = context.state;
+      let result = await API.get(try_email, try_e_password);
+
+      let settings;
+      if (result.settings) {
+        try {
+          settings = JSON.parse(JSON.parse(result.settings));
+        } catch (e) {
+          console.log(e);
+        }
+      }
+
+      let { password, username, subscription, timetable } = result;
+      context.setState({
+        ...settings,
+        email: try_email,
+        e_password: try_e_password,
+        password,
+        username,
+        subscription,
+        timetable
+      });
+      this.props.toggle();
+      this.setState({ error: false });
+    } catch (e) {
+      this.setState({ error: true });
+    }
   }
 }

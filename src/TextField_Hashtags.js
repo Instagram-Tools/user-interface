@@ -1,7 +1,7 @@
 import React from 'react';
 import TextFieldSuggestion from './TextFieldSuggestion';
 
-export default class TextField_Hashtags extends TextFieldSuggestion {
+export default class TextFieldHashtags extends TextFieldSuggestion {
   query = 'hashtags';
   iconClass = 'hashtagicon';
 

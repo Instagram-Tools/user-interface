@@ -5,7 +5,7 @@ import Help from './Help';
 import TextFieldHashtags from './TextField_Hashtags';
 import TextFieldUsers from './TextField_Users';
 import TextFieldPlaces from './TextField_Places';
-import Switch_Speed from './Switch_Speed';
+import SwitchSpeed from './SwitchSpeed';
 
 export default class GeneralSettings extends Component {
   render() {
@@ -24,7 +24,7 @@ export default class GeneralSettings extends Component {
                 medium: for accounts between 6 and 18 months<br />
                 fast: for accounts older than 18 months
               </Help>
-              <Switch_Speed value="speed" />
+              <SwitchSpeed value="speed" />
             </div>
             <div className="titleholder">
               <label htmlFor="email" className="settingtitle">

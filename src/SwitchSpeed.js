@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Context } from './Context';
 
-export default class Switch_Speed extends Component {
+export default class SwitchSpeed extends Component {
   speed = { slow: 150, medium: 100, fast: 50 };
 
   render() {

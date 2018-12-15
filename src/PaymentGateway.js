@@ -4,7 +4,7 @@ import env from './Env';
 
 const PAYMENT_MANAGER = env.PAYMENT_MANAGER;
 
-export default class Payment_Gateway extends React.Component {
+export default class PaymentGateway extends React.Component {
   instance;
 
   state = {

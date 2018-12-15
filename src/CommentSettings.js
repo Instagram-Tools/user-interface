@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import TextFieldNumber from './TextFieldNumber';
-import TextField_Comments from './TextField_Comments';
+import TextFieldComments from './TextFieldComments';
 import Help from './Help';
 import './css/settings.css';
 
@@ -29,7 +29,7 @@ export default class CommentSettings extends Component {
               value="do_comment_percentage"
             />
 
-            <TextField_Comments
+            <TextFieldComments
               value="comments"
               placeholder="Enter Text you want to comment."
             />

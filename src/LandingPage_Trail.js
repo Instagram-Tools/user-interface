@@ -11,18 +11,20 @@ export default class LandingPage_Trail extends Component {
           don&#x27;t even have to enter your payment details.
         </div>
         <div className="w-form">
-          <input
-            type="submit"
-            value="Start trial"
-            data-wait="Please wait..."
-            className="submitbutton connect_account_button trialbutton w-button"
-          />
-          <input
-            type="submit"
-            value="purchase subscription"
-            data-wait="Please wait..."
-            className="submitbutton connect_account_button buy_anyway_button w-button"
-          />
+          <div className="formholder_connect_account">
+            <input
+              type="submit"
+              value="Start trial"
+              data-wait="Please wait..."
+              className="submitbutton connect_account_button trialbutton w-button"
+            />
+            <input
+              type="submit"
+              value="purchase subscription"
+              data-wait="Please wait..."
+              className="submitbutton connect_account_button buy_anyway_button w-button"
+            />
+          </div>
           <div className="w-form-done">
             <div>Thank you! Your submission has been received!</div>
           </div>

@@ -35,33 +35,35 @@ export default class LandingPageRegister extends Component {
                 see our privacy policy.
               </Link>
               <div className="w-form">
-                <div className="columnholder filterholder first connect_account_column">
-                  <TextField
-                    type="email"
-                    placeholder="Email"
-                    value="try_email"
-                    setIsSet={b => this.setState({ isEmailSet: b })}
-                  />
-                  <TextField
-                    type="password"
-                    placeholder="Password"
-                    value="try_e_password"
-                    setIsSet={b => this.setState({ isPasswordSet: b })}
-                  />
-                  <TextFieldConfirm
-                    type="password"
-                    placeholder="Confirm Password"
-                    value="try_e_password"
-                    setIsConfirmed={this.setIsConfirmed.bind(this)}
+                <div className="formholder_connect_account">
+                  <div className="columnholder filterholder first connect_account_column">
+                    <TextField
+                      type="email"
+                      placeholder="Email"
+                      value="try_email"
+                      setIsSet={b => this.setState({ isEmailSet: b })}
+                    />
+                    <TextField
+                      type="password"
+                      placeholder="Password"
+                      value="try_e_password"
+                      setIsSet={b => this.setState({ isPasswordSet: b })}
+                    />
+                    <TextFieldConfirm
+                      type="password"
+                      placeholder="Confirm Password"
+                      value="try_e_password"
+                      setIsConfirmed={this.setIsConfirmed.bind(this)}
+                    />
+                  </div>
+                  <input
+                    onClick={(e => this.submit(context)).bind(this)}
+                    type="button"
+                    value="Connect"
+                    data-wait="Please wait..."
+                    className="submitbutton connect_account_button w-button"
                   />
                 </div>
-                <input
-                  onClick={(e => this.submit(context)).bind(this)}
-                  type="button"
-                  value="Connect"
-                  data-wait="Please wait..."
-                  className="submitbutton connect_account_button w-button"
-                />
                 <div className="w-form-done">
                   <div>Thank you! Your submission has been received!</div>
                 </div>

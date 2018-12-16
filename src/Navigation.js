@@ -27,7 +27,6 @@ export default class Navigation extends Component {
               <div className="container w-container">
                 <nav role="navigation" className="nav-menu w-nav-menu">
                   <div className="just_because_the_fucking_nav_menu_wont_distribute">
-                    <h4 className="titlelogo landinglogo" />
                     <div className="nav_menu_half">
                       <NavLink
                         className="title_menu_element landingpage_element w-nav-link"
@@ -163,7 +162,6 @@ export default class Navigation extends Component {
       >
         <nav role="navigation" className="nav-menu w-nav-menu w--nav-menu-open">
           <div className="just_because_the_fucking_nav_menu_wont_distribute">
-            <h4 className="titlelogo landinglogo" />
             <div className="nav_menu_half">
               <NavLink
                 to="/interface"

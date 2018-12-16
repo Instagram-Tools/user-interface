@@ -1,4 +1,3 @@
-import console from './Log';
 import env from './Env';
 
 const BOT_URL = env.BOT_URL || document.location.origin + '/bot';

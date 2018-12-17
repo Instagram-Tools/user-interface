@@ -67,8 +67,9 @@ export default class API_Gateway {
     return json;
   }
 
-  static data_to_save(context) {
-    let settings = { ...context.state };
+  static data_to_save(data = {}) {
+    console.log('Settings to save:', data);
+    let settings = { ...data };
     let {
       bot_on,
       email,
@@ -91,7 +92,7 @@ export default class API_Gateway {
     delete settings.timetable;
     delete settings.subscription;
 
-    const data = {
+    const to_save = {
       bot_on,
       email,
       e_password,
@@ -102,7 +103,6 @@ export default class API_Gateway {
       timetable
     };
 
-    console.log('Data to save:', data);
-    return data;
+    return to_save;
   }
 }

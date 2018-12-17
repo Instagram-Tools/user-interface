@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import TextField from './TextField';
 import PaymentGateway from './PaymentGateway';
 import { Context } from './Context';
+import API from './API_Gateway';
 
 export default class LandingPagePayment extends Component {
   render() {
@@ -98,8 +99,12 @@ export default class LandingPagePayment extends Component {
     );
   }
 
-  setSubscription(subscription, context) {
-    context.setState({ subscription });
+  async setSubscription(subscription, context) {
+    await context.setState({ subscription });
+    API.put(API.data_to_save({ ...context.state, subscription })).catch(
+      console.error
+    );
+
     this.props.toggle(context);
   }
 }

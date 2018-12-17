@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
-import { Context } from './Context';
+import { Context, unsavedState } from './Context';
 import API from './API_Gateway';
 import console from './Log';
-import { unsavedState } from './Context';
 
 export default class Save extends Component {
   state = {
@@ -60,6 +59,16 @@ export default class Save extends Component {
   }
 
   save(context) {
+    let data = this.data_to_save(context);
+
+    if (data) {
+      API.put(data)
+        .then(this.success.bind(this))
+        .catch(this.error.bind(this));
+    }
+  }
+
+  data_to_save(context) {
     let settings = { ...context.state };
     let {
       bot_on,
@@ -70,40 +79,40 @@ export default class Save extends Component {
       subscription,
       timetable
     } = settings;
+    let data = undefined;
+
     if (!(email && e_password)) {
-      return context.setState({ registrationStep: 1 });
+      context.setState({ registrationStep: 1 });
     } else if (!(password && username)) {
-      return context.setState({ registrationStep: 2 });
+      context.setState({ registrationStep: 2 });
     } else if (!subscription) {
-      return context.setState({ registrationStep: 3 });
+      context.setState({ registrationStep: 3 });
+    } else {
+      for (let prop in unsavedState) {
+        delete settings[prop];
+      }
+
+      delete settings.bot_on;
+      delete settings.password;
+      delete settings.username;
+      delete settings.email;
+      delete settings.e_password;
+      delete settings.timetable;
+      delete settings.subscription;
+
+      data = {
+        bot_on,
+        email,
+        username,
+        password,
+        subscription,
+        settings: JSON.stringify(settings),
+        timetable
+      };
+
+      console.log('Data to save:', data);
     }
-
-    for (let prop in unsavedState) {
-      delete settings[prop];
-    }
-
-    delete settings.bot_on;
-    delete settings.password;
-    delete settings.username;
-    delete settings.email;
-    delete settings.e_password;
-    delete settings.timetable;
-    delete settings.subscription;
-
-    const data = {
-      bot_on,
-      email,
-      username,
-      password,
-      subscription,
-      settings: JSON.stringify(settings),
-      timetable
-    };
-
-    console.log('save Data:', data);
-    API.put(data)
-      .then(this.success.bind(this))
-      .catch(this.error.bind(this));
+    return data;
   }
 
   success(r) {

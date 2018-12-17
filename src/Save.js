@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Context, unsavedState } from './Context';
+import { Context } from './Context';
 import API from './API_Gateway';
 import console from './Log';
 
@@ -59,60 +59,13 @@ export default class Save extends Component {
   }
 
   save(context) {
-    let data = this.data_to_save(context);
+    let data = API.data_to_save(context);
 
     if (data) {
       API.put(data)
         .then(this.success.bind(this))
         .catch(this.error.bind(this));
     }
-  }
-
-  data_to_save(context) {
-    let settings = { ...context.state };
-    let {
-      bot_on,
-      email,
-      e_password,
-      password,
-      username,
-      subscription,
-      timetable
-    } = settings;
-    let data = undefined;
-
-    if (!(email && e_password)) {
-      context.setState({ registrationStep: 1 });
-    } else if (!(password && username)) {
-      context.setState({ registrationStep: 2 });
-    } else if (!subscription) {
-      context.setState({ registrationStep: 3 });
-    } else {
-      for (let prop in unsavedState) {
-        delete settings[prop];
-      }
-
-      delete settings.bot_on;
-      delete settings.password;
-      delete settings.username;
-      delete settings.email;
-      delete settings.e_password;
-      delete settings.timetable;
-      delete settings.subscription;
-
-      data = {
-        bot_on,
-        email,
-        username,
-        password,
-        subscription,
-        settings: JSON.stringify(settings),
-        timetable
-      };
-
-      console.log('Data to save:', data);
-    }
-    return data;
   }
 
   success(r) {

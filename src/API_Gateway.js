@@ -1,5 +1,6 @@
 import console from './Log';
 import env from './Env';
+import { unsavedState } from './Context';
 
 const API_URL = env.API_URL || document.location.origin + '/api';
 export default class API_Gateway {
@@ -64,5 +65,52 @@ export default class API_Gateway {
     let text = await this.parsResponse(response);
     let json = JSON.parse(text);
     return json;
+  }
+
+  static data_to_save(context) {
+    let settings = { ...context.state };
+    let {
+      bot_on,
+      email,
+      e_password,
+      password,
+      username,
+      subscription,
+      timetable
+    } = settings;
+    let data = undefined;
+
+    if (!(email && e_password)) {
+      context.setState({ registrationStep: 1 });
+    } else if (!(password && username)) {
+      context.setState({ registrationStep: 2 });
+    } else if (!subscription) {
+      context.setState({ registrationStep: 3 });
+    } else {
+      for (let prop in unsavedState) {
+        delete settings[prop];
+      }
+
+      delete settings.bot_on;
+      delete settings.password;
+      delete settings.username;
+      delete settings.email;
+      delete settings.e_password;
+      delete settings.timetable;
+      delete settings.subscription;
+
+      data = {
+        bot_on,
+        email,
+        username,
+        password,
+        subscription,
+        settings: JSON.stringify(settings),
+        timetable
+      };
+
+      console.log('Data to save:', data);
+    }
+    return data;
   }
 }

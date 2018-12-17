@@ -59,6 +59,14 @@ export default class Save extends Component {
   }
 
   save(context) {
+    if (!(context.state.email && context.state.e_password)) {
+      return context.setState({ registrationStep: 1 });
+    } else if (!(context.state.password && context.state.username)) {
+      return context.setState({ registrationStep: 2 });
+    } else if (!context.state.subscription) {
+      return context.setState({ registrationStep: 3 });
+    }
+
     let data = API.data_to_save(context);
 
     if (data) {

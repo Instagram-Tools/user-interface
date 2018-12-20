@@ -67,7 +67,7 @@ export default class Save extends Component {
       return context.setState({ registrationStep: 3 });
     }
 
-    let data = API.data_to_save(...context.state);
+    let data = API.data_to_save({ ...context.state });
 
     if (data) {
       API.put(data)

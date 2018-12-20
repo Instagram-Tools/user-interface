@@ -7,14 +7,18 @@ class TimetableWrapper extends React.Component {
     return (
       <div>
         <div className="legendholder horizontal">
-          {['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'].map(day => (
-            <div className="legendtext horizontaltext">{day}</div>
+          {['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'].map((day, key) => (
+            <div className="legendtext horizontaltext" key={key}>
+              {day}
+            </div>
           ))}
         </div>
         <div className="actvityholder" style={{ alignItems: 'start' }}>
           <div className="legendholder">
-            {this.range(0, 23).map(time => (
-              <div className="legendtext">{time}</div>
+            {this.range(0, 23).map((time, key) => (
+              <div className="legendtext" key={key}>
+                {time}
+              </div>
             ))}
           </div>
           <div className="tableholder" style={{ display: 'flex' }}>

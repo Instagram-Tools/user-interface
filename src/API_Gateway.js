@@ -3,6 +3,7 @@ import env from './Env';
 import { unsavedState } from './Context';
 
 const API_URL = env.API_URL || document.location.origin + '/api';
+
 export default class API_Gateway {
   static async get(email, e_password, username = '') {
     let url =
@@ -98,7 +99,13 @@ export default class API_Gateway {
       password,
       subscription,
       settings: JSON.stringify(settings),
-      timetable
+      timetable: this.compressTimeTable(timetable)
     };
+  }
+
+  static compressTimeTable(timetable) {
+    console.log('api', 'before:', timetable);
+    timetable.sort();
+    console.log('api', 'after:', timetable);
   }
 }

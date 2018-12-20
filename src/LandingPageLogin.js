@@ -102,20 +102,20 @@ export default class LandingPageLogin extends Component {
         try {
           settings = JSON.parse(JSON.parse(result.settings));
         } catch (e) {
-          console.log(e);
+          console.error(e);
         }
       }
 
       let { password, username, subscription, timetable } = result;
-      context.setState({
+      context.setState(p => ({
         ...settings,
         email: try_email,
         e_password: try_e_password,
-        password,
-        username,
-        subscription,
-        timetable
-      });
+        password: password || p.password,
+        username: username || p.username,
+        subscription: subscription || p.subscription,
+        timetable: timetable || p.timetable
+      }));
       this.props.toggle();
       this.setState({ error: false });
     } catch (e) {

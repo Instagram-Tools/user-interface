@@ -13,8 +13,6 @@ export default class API_Gateway {
   }
 
   static async put(data) {
-    console.log('data:', data);
-
     let response = await fetch(API_URL + '/', {
       method: 'PUT',
       body: JSON.stringify(data),
@@ -92,7 +90,7 @@ export default class API_Gateway {
     delete settings.timetable;
     delete settings.subscription;
 
-    const to_save = {
+    return {
       bot_on,
       email,
       e_password,
@@ -102,7 +100,5 @@ export default class API_Gateway {
       settings: JSON.stringify(settings),
       timetable
     };
-
-    return to_save;
   }
 }

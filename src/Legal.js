@@ -18,6 +18,34 @@ export default class Legal extends Component {
         <br />
         <br />
         <span className="titlepage landingtitle legal_category_title">
+          Contact
+        </span>
+        <br />
+        <br />
+        <br />Service as a Service GmbH<br />Vimystraße 2a<br />85354 Freising<br />
+        <br />
+        <span className="paragraphtitle">
+          REPRESENTED BY SHAREHOLDER<br />‍
+        </span>Timo Morawitz<br />
+        <br />
+        <span className="paragraphtitle">
+          CEO<br />
+        </span>Timo Morawitz<br />
+        <br />
+        <span className="paragraphtitle">FOR INQUIRIES</span>
+        <br />Phone: 0049 160 2674280<br />Fax: 0049 32 224257748<br />E-Mail:
+        info@pinkparrot.co<br />
+        <br />
+        <span className="paragraphtitle">
+          SOCIAL MEDIA<br />‍
+        </span>
+        <br />
+        <span className="social_logo_insta">mml</span>
+        <span className="social_logo_insta facebook">himl</span>
+        <br />
+        <br />
+        <br />‍<br />
+        <span className="titlepage landingtitle legal_category_title">
           Terms of Use
         </span>
         <br />
@@ -25,19 +53,18 @@ export default class Legal extends Component {
         <br />
         <span className="paragraphtitle">
           OVERVIEW<br />
-        </span>This website is operated by Service as a Service GmbH. Throughout
-        the site, the terms “we”, “us” and “our” refer to Service as a Service
-        GmbH. Service as a Service GmbH offers this website, including all
-        information, tools and services available from this site to you, the
-        user, conditioned upon your acceptance of all terms, conditions,
-        policies and notices stated here.<br />‍<br />By visiting our site and/
-        or purchasing something from us, you engage in our “Service” and agree
-        to be bound by the following terms and conditions (“Terms of Service”,
-        “Terms”), including those additional terms and conditions and policies
-        referenced herein and/or available by hyperlink. These Terms of Service
-        apply to all users of the site, including without limitation users who
-        are browsers, vendors, customers, merchants, and/ or contributors of
-        content.<br />
+        </span>This website is operated by Pink Parrot Ltd.. Throughout the
+        site, the terms “we”, “us” and “our” refer to Pink Parrot Ltd.. Pink
+        Parrot Ltd. offers this website, including all information, tools and
+        services available from this site to you, the user, conditioned upon
+        your acceptance of all terms, conditions, policies and notices stated
+        here.<br />‍<br />By visiting our site and/ or purchasing something from
+        us, you engage in our “Service” and agree to be bound by the following
+        terms and conditions (“Terms of Service”, “Terms”), including those
+        additional terms and conditions and policies referenced herein and/or
+        available by hyperlink. These Terms of Service apply to all users of the
+        site, including without limitation users who are browsers, vendors,
+        customers, merchants, and/ or contributors of content.<br />
         <br />Please read these Terms of Service carefully before accessing or
         using our website. By accessing or using any part of the site, you agree
         to be bound by these Terms of Service. If you do not agree to all the
@@ -87,21 +114,19 @@ export default class Legal extends Component {
         <br />You understand that the use of our site and tools with Instagram
         may result in violating the Terms of Service of Instagram. By signing up
         for Pink Parrot and agreeing to our Terms of Service, you waive all
-        rights to legal action against Service as a Service GmbH and its owners
-        for any and all impact to your Instagram account(s) or yourself from
-        using our products, including but not limited to Pink Parrot and the
-        site and tools available on{' '}
-        <span className="emailsmall">
-          <a href="https://www.pinkparrot.co">https://www.pinkparrot.co</a>
-        </span>. Potential impact to you or your Instagram accounts includes but
-        is not limited to loss of account access, account freezes or
-        suspensions, identity verification challenges, and limits on the
-        visibility of your Instagram content (commonly known as “shadowbans”).
-        You agree that activity on Instagram using any of your accounts but
-        performed by Service as a Service GmbH or any of its products including
-        Pink Parrot may result in unwanted interactions with Instagram users and
-        their content, including but not limited to pornography, prostitution,
-        narcotics, or hate groups.<br />
+        rights to legal action against Pink Parrot Ltd. and its owners for any
+        and all impact to your Instagram account(s) or yourself from using our
+        products, including but not limited to Pink Parrot and the site and
+        tools available on{' '}
+        <span className="emailsmall">https://ww.pinkparrot.co</span>. Potential
+        impact to you or your Instagram accounts includes but is not limited to
+        loss of account access, account freezes or suspensions, identity
+        verification challenges, and limits on the visibility of your Instagram
+        content (commonly known as “shadowbans”). You agree that activity on
+        Instagram using any of your accounts but performed by Pink Parrot Ltd.
+        or any of its products including Pink Parrot may result in unwanted
+        interactions with Instagram users and their content, including but not
+        limited to pornography, prostitution, narcotics, or hate groups.<br />
         <br />
         <br />
         <span className="paragraphtitle">
@@ -128,6 +153,11 @@ export default class Legal extends Component {
         Service (or any part or content thereof) without notice at any time.<br />
         <br />We shall not be liable to you or to any third-party for any
         modification, price change, suspension or discontinuance of the Service.<br />
+        <br />We, at any moment, and without incurring in any responsibility
+        towards the User, modify the content of the Websites or the Services,
+        limit or modify the conditions or cease to provide some or all the
+        Services and features available or deactivate and delete all or some of
+        the User accounts and their corresponding information.<br />
         <br />
         <br />
         <span className="paragraphtitle">
@@ -154,8 +184,22 @@ export default class Legal extends Component {
         your expectations, or that any errors in the Service will be corrected.<br />
         <br />
         <br />
+        <span className="paragraphtitle">SECTION 6 - REFUND POLICY</span>
+        <strong>
+          <br />‍
+        </strong>The Service is billed in advance on a monthly basis, as
+        determined by your initial subscription date, and is non-refundable. All
+        subscriptions shall renew at the stated subscription rate. When the
+        member requests the termination of service, subscription fees are not
+        refunded; however you will be able to use the remainder of your paid
+        subscription. All cancellations must be submitted through an email to{' '}
+        <a href="mailto:info@pinkparrot.co">info@pinkparrot.co</a>. We are free
+        to take any further steps to identify whether you are truly cancelling
+        your own service before completing the cancellation.<br />
+        <br />
+        <br />
         <span className="paragraphtitle">
-          SECTION 6 - ACCURACY OF BILLING AND ACCOUNT INFORMATION
+          SECTION 7 - ACCURACY OF BILLING AND ACCOUNT INFORMATION
         </span>
         <br />We reserve the right to refuse any order you place with us. We
         may, in our sole discretion, limit or cancel quantities purchased per
@@ -172,10 +216,9 @@ export default class Legal extends Component {
         promptly update your account and other information, including your email
         address and credit card numbers and expiration dates, so that we can
         complete your transactions and contact you as needed.<br />
-        <br />For more detail, please review our Returns Policy.<br />
         <br />
         <br />
-        <span className="paragraphtitle">SECTION 7 - OPTIONAL TOOLS</span>
+        <span className="paragraphtitle">SECTION 8 - OPTIONAL TOOLS</span>
         <br />We may provide you with access to third-party tools over which we
         neither monitor nor have any control nor input.<br />
         <br />You acknowledge and agree that we provide access to such tools ”as
@@ -193,7 +236,7 @@ export default class Legal extends Component {
         of Service.<br />
         <br />
         <br />
-        <span className="paragraphtitle">SECTION 8 - THIRD-PARTY LINKS</span>
+        <span className="paragraphtitle">SECTION 9 - THIRD-PARTY LINKS</span>
         <br />Certain content, products and services available via our Service
         may include materials from third-parties.<br />
         <br />Third-party links on this site may direct you to third-party
@@ -212,7 +255,7 @@ export default class Legal extends Component {
         <br />
         <br />
         <span className="paragraphtitle">
-          SECTION 9 - USER COMMENTS, FEEDBACK AND OTHER SUBMISSIONS
+          SECTION 10 - USER COMMENTS, FEEDBACK AND OTHER SUBMISSIONS
         </span>
         <br />If, at our request, you send certain specific submissions (for
         example contest entries) or without a request from us you send creative
@@ -242,7 +285,7 @@ export default class Legal extends Component {
         <br />
         <br />
         <span className="paragraphtitle">
-          SECTION 10 - PERSONAL INFORMATION
+          SECTION 11 - PERSONAL INFORMATION
         </span>
         <br />Your submission of personal information through the site is
         governed by our Privacy Policy. By signing up and providing your email
@@ -253,7 +296,7 @@ export default class Legal extends Component {
         <br />
         <br />
         <span className="paragraphtitle">
-          SECTION 11 - ERRORS, INACCURACIES AND OMISSIONS
+          SECTION 12 - ERRORS, INACCURACIES AND OMISSIONS
         </span>
         <br />Occasionally there may be information on our site or in the
         Service that contains typographical errors, inaccuracies or omissions
@@ -271,7 +314,7 @@ export default class Legal extends Component {
         website has been modified or updated.<br />
         <br />
         <br />
-        <span className="paragraphtitle">SECTION 12 - PROHIBITED USES</span>
+        <span className="paragraphtitle">SECTION 13 - PROHIBITED USES</span>
         <br />In addition to other prohibitions as set forth in the Terms of
         Service, you are prohibited from using the site or its content: (a) for
         any unlawful purpose; (b) to solicit others to perform or participate in
@@ -294,7 +337,7 @@ export default class Legal extends Component {
         <br />
         <br />
         <span className="paragraphtitle">
-          SECTION 13 - DISCLAIMER OF WARRANTIES; LIMITATION OF LIABILITY
+          SECTION 14 - DISCLAIMER OF WARRANTIES; LIMITATION OF LIABILITY
         </span>
         <br />We do not guarantee, represent or warrant that your use of our
         service will be uninterrupted, timely, secure or error-free.<br />
@@ -306,53 +349,54 @@ export default class Legal extends Component {
         <br />You expressly agree that your use of, or inability to use, the
         service is at your sole risk. The service and all products and services
         delivered to you through the service are (except as expressly stated by
-        us) provided &#x27;as is&#x27; and &#x27;as available&#x27; for your
-        use, without any representation, warranties or conditions of any kind,
-        either express or implied, including all implied warranties or
-        conditions of merchantability, merchantable quality, fitness for a
-        particular purpose, durability, title, and non-infringement.<br />
-        <br />In no case shall Service as a Service GmbH, our directors,
-        officers, employees, affiliates, agents, contractors, interns,
-        suppliers, service providers or licensors be liable for any injury,
-        loss, claim, or any direct, indirect, incidental, punitive, special, or
-        consequential damages of any kind, including, without limitation lost
-        profits, lost revenue, lost savings, loss of data, replacement costs, or
-        any similar damages, whether based in contract, tort (including
-        negligence), strict liability or otherwise, arising from your use of any
-        of the service or any products procured using the service, or for any
-        other claim related in any way to your use of the service or any
-        product, including, but not limited to, any errors or omissions in any
-        content, or any loss or damage of any kind incurred as a result of the
-        use of the service or any content (or product) posted, transmitted, or
-        otherwise made available via the service, even if advised of their
-        possibility. Because some states or jurisdictions do not allow the
-        exclusion or the limitation of liability for consequential or incidental
-        damages, in such states or jurisdictions, our liability shall be limited
-        to the maximum extent permitted by law.<br />
+        us) provided &#x27;as is&#x27; and &#x27;as available&#x27;for your use,
+        without any representation, warranties or conditions of any kind, either
+        express or implied, including all implied warranties or conditions of
+        merchantability, merchantable quality, fitness for a particular purpose,
+        durability, title, and non-infringement.<br />
+        <br />In no case shall Pink Parrot Ltd., our directors, officers,
+        employees, affiliates, agents, contractors, interns, suppliers, service
+        providers or licensors be liable for any injury, loss, claim, or any
+        direct, indirect, incidental, punitive, special, or consequential
+        damages of any kind, including, without limitation lost profits, lost
+        revenue, lost savings, loss of data, replacement costs, or any similar
+        damages, whether based in contract, tort (including negligence), strict
+        liability or otherwise, arising from your use of any of the service or
+        any products procured using the service, or for any other claim related
+        in any way to your use of the service or any product, including, but not
+        limited to, any errors or omissions in any content, or any loss or
+        damage of any kind incurred as a result of the use of the service or any
+        content (or product) posted, transmitted, or otherwise made available
+        via the service, even if advised of their possibility. Because some
+        states or jurisdictions do not allow the exclusion or the limitation of
+        liability for consequential or incidental damages, in such states or
+        jurisdictions, our liability shall be limited to the maximum extent
+        permitted by law.<br />
         <br />
         <br />
-        <span className="paragraphtitle">SECTION 14 - INDEMNIFICATION</span>
-        <br />You agree to indemnify, defend and hold harmless Service as a
-        Service GmbH and our parent, subsidiaries, affiliates, partners,
-        officers, directors, agents, contractors, licensors, service providers,
-        subcontractors, suppliers, interns and employees, harmless from any
-        claim or demand, including reasonable attorneys’ fees, made by any
-        third-party due to or arising out of your breach of these Terms of
-        Service or the documents they incorporate by reference, or your
-        violation of any law or the rights of a third-party.<br />
+        <span className="paragraphtitle">SECTION 15 - INDEMNIFICATION</span>
+        <br />You agree to indemnify, defend and hold harmless Pink Parrot Ltd.
+        and our parent, subsidiaries, affiliates, partners, officers, directors,
+        agents, contractors, licensors, service providers, subcontractors,
+        suppliers, interns and employees, harmless from any claim or demand,
+        including reasonable attorneys’ fees, made by any third-party due to or
+        arising out of your breach of these Terms of Service or the documents
+        they incorporate by reference, or your violation of any law or the
+        rights of a third-party.<br />
         <br />
         <br />
-        <span className="paragraphtitle">SECTION 15 - SEVERABILITY</span>
+        <span className="paragraphtitle">SECTION 16 - SEVERABILITY</span>
+        <a href="#" className="link">
+          <br />I
+        </a>n the event that any provision of these Terms of Service is
+        determined to be unlawful, void or unenforceable, such provision shall
+        nonetheless be enforceable to the fullest extent permitted by applicable
+        law, and the unenforceable portion shall be deemed to be severed from
+        these Terms of Service, such determination shall not affect the validity
+        and enforceability of any other remaining provisions.<br />
         <br />
-        In the event that any provision of these Terms of Service is determined
-        to be unlawful, void or unenforceable, such provision shall nonetheless
-        be enforceable to the fullest extent permitted by applicable law, and
-        the unenforceable portion shall be deemed to be severed from these Terms
-        of Service, such determination shall not affect the validity and
-        enforceability of any other remaining provisions.<br />
         <br />
-        <br />
-        <span className="paragraphtitle">SECTION 16 - TERMINATION</span>
+        <span className="paragraphtitle">SECTION 17 - TERMINATION</span>
         <br />The obligations and liabilities of the parties incurred prior to
         the termination date shall survive the termination of this agreement for
         all purposes.<br />
@@ -368,7 +412,7 @@ export default class Legal extends Component {
         any part thereof).<br />
         <br />
         <br />
-        <span className="paragraphtitle">SECTION 17 - ENTIRE AGREEMENT</span>
+        <span className="paragraphtitle">SECTION 18 - ENTIRE AGREEMENT</span>
         <br />The failure of us to exercise or enforce any right or provision of
         these Terms of Service shall not constitute a waiver of such right or
         provision.<br />
@@ -383,7 +427,7 @@ export default class Legal extends Component {
         shall not be construed against the drafting party.<br />
         <br />
         <br />
-        <span className="paragraphtitle">SECTION 18 - GOVERNING LAW</span>
+        <span className="paragraphtitle">SECTION 19 - GOVERNING LAW</span>
         <br />These Terms and any separate agreements whereby we provide you
         services shall be governed by the laws of Germany, without respect to
         its conflict of laws principles. We each agree to submit to the personal
@@ -392,7 +436,7 @@ export default class Legal extends Component {
         <br />
         <br />
         <span className="paragraphtitle">
-          SECTION 19 - CHANGES TO TERMS OF SERVICE
+          SECTION 20 - CHANGES TO TERMS OF SERVICE
         </span>
         <br />You can review the most current version of the Terms of Service at
         any time at this page.<br />
@@ -405,7 +449,7 @@ export default class Legal extends Component {
         <br />
         <br />
         <span className="paragraphtitle">
-          SECTION 20 - CONTACT INFORMATION<br />
+          SECTION 21 - CONTACT INFORMATION<br />
         </span>Questions about the Terms of Service should be sent to us at{' '}
         <span className="emailsmall">info@pinkparrot.co</span>
         <br />
@@ -417,14 +461,11 @@ export default class Legal extends Component {
         </span>
         <br />
         <br />
-        <br />Here we describe how we at Service as a Service GmbH collect, use
-        and handle your information when you use our websites, software and
-        services (&quot;Services&quot;), including but not limited to Pink
-        Parrot and{' '}
-        <span className="emailsmall">
-          <a href="https://www.pinkparrot.co">https://www.pinkparrot.co</a>
-        </span>.<br />
-        <br />What &amp; Why We collect and use the following information to
+        <br />Here we describe how we at Pink Parrot Ltd. collect, use and
+        handle your information when you use our websites, software and services
+        (&quot;Services&quot;), including but not limited to Pink Parrot and{' '}
+        <span className="emailsmall">https://www.pinkparrot.co</span>.<br />
+        <br />What&amp; Why We collect and use the following information to
         provide, improve and protect our Services:Account. We collect, and
         associate with your account, information like your name, email address,
         phone number, payment info, physical address, and account activity. Some
@@ -452,18 +493,18 @@ export default class Legal extends Component {
         <br />With whom we may share information as discussed below, but we
         won&#x27;t sell it to advertisers or other third parties without your
         consent.<br />
-        <br />Others working for Service as a Service GmbH. Service as a Service
-        GmbH May use certain trusted third parties (for example, providers of
-        customer support and IT services) to help us provide, improve, protect,
-        and promote our Services. These third parties will access your
-        information only to perform tasks on our behalf in compliance with this
-        Privacy Policy, and we&#x27;ll remain responsible for their handling of
-        your information per our instructions.<br />
+        <br />Others working for Pink Parrot Ltd.. Pink Parrot Ltd. May use
+        certain trusted third parties (for example, providers of customer
+        support and IT services) to help us provide, improve, protect, and
+        promote our Services. These third parties will access your information
+        only to perform tasks on our behalf in compliance with this Privacy
+        Policy, and we&#x27;ll remain responsible for their handling of your
+        information per our instructions.<br />
         <br />Law &amp; Order. We may disclose your information to third parties
         if we determine that such disclosure is reasonably necessary to (a)
         comply with the law; (b) protect any person from death or serious bodily
-        injury; (c) prevent fraud or abuse of Service as a Service GmbH or our
-        users; or (d) protect Service as a Service GmbH&#x27;s property rights.<br />
+        injury; (c) prevent fraud or abuse of Pink Parrot Ltd. or our users; or
+        (d) protect Pink Parrot Ltd.&#x27;s property rights.<br />
         <br />How Security works. We have a team dedicated to keeping your
         information secure and testing for vulnerabilities.<br />
         <br />Retention. We&#x27;ll retain information you store on our Services
@@ -486,11 +527,11 @@ export default class Legal extends Component {
         <br />
         <br />
         <span className="titlepage legalsubtitle contacttext">
-          Have questions or concerns about Service as a Service GmbH, our
-          services and privacy? <br />Contact us at:<br />‍
+          Have questions or concerns about Pink Parrot Ltd., our services and
+          privacy? <br />Contact us at:<br />‍
         </span>
         <span className="titlepage legalsubtitle contacttext email">
-          <a href="mailto:info@pinkparrot.co">info@pinkparrot.co</a>
+          info@pinkparrot.co
         </span>
       </div>
     );

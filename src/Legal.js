@@ -40,8 +40,22 @@ export default class Legal extends Component {
           SOCIAL MEDIA<br />‍
         </span>
         <br />
-        <span className="social_logo_insta">mml</span>
-        <span className="social_logo_insta facebook">himl</span>
+        <a
+          href="https://www.instagram.com/johannes.eisenlohr/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="social_logo_insta"
+        >
+          mml
+        </a>
+        <a
+          href="https://www.facebook.com/thatPinkParrot/?modal=admin_todo_tour"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="social_logo_insta facebook"
+        >
+          himl
+        </a>
         <br />
         <br />
         <br />‍<br />

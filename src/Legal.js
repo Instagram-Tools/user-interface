@@ -41,7 +41,7 @@ export default class Legal extends Component {
         </span>
         <br />
         <a
-          href="https://www.instagram.com/johannes.eisenlohr/"
+          href="https://instagram.com/thatpinkparrot?utm_source=ig_profile_share&igshid=1gkwpgl5j3m4y"
           target="_blank"
           rel="noopener noreferrer"
           className="social_logo_insta"

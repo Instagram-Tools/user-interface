@@ -30,7 +30,7 @@ export default class LikeSettings extends Component {
               max={100}
               value="do_like_percentage"
             />
-            <span> equals 700 - 1050 likes/day </span>
+            {/*<span> equals 700 - 1050 likes/day </span>*/}
             <div className="titleholder">
               <label htmlFor="email" className="settingtitle">
                 <strong>Filters:</strong> Like pictures with...

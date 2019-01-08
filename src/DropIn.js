@@ -42,24 +42,25 @@ class DropIn extends React.Component {
     let { token } = await this.props.stripe.createToken({
       name: context.state.email
     });
-    if (!token) {
+    try {
+      let response = await fetch(`${PAYMENT_MANAGER}/purchase/`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          token: token.id,
+          email: context.state.email,
+          discount_code: context.state.discount_code
+        })
+      });
+
+      if (response.ok) {
+        console.log('Purchase Complete! response:', response);
+        this.props.setSubscription(await response.text());
+      } else throw Error(response);
+    } catch (e) {
+      console.error('Error on DropIn.submit():', e);
       return this.setState({ error: true });
     }
-
-    let response = await fetch(`${PAYMENT_MANAGER}/purchase/`, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        token: token.id,
-        email: context.state.email,
-        discount_code: context.state.discount_code
-      })
-    });
-
-    if (response.ok) {
-      console.log('Purchase Complete! response:', response);
-      this.props.setSubscription(await response.text());
-    } else console.error('Error on Purchase! response:', response);
   }
 
   render() {

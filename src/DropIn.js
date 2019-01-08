@@ -56,7 +56,10 @@ class DropIn extends React.Component {
       if (response.ok) {
         console.log('Purchase Complete! response:', response);
         this.props.setSubscription(await response.text());
-      } else throw Error(response);
+      } else {
+        console.error('DropIn.submit() response not ok:', response);
+        throw Error('response not ok');
+      }
     } catch (e) {
       console.error('Error on DropIn.submit():', e);
       return this.setState({ error: true });

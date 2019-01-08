@@ -12,6 +12,9 @@ class DropIn extends React.Component {
   constructor(props) {
     super(props);
     this.submit = this.submit.bind(this);
+    this.state = {
+      error: false
+    };
   }
 
   createOptions(fontSize, padding) {
@@ -39,6 +42,10 @@ class DropIn extends React.Component {
     let { token } = await this.props.stripe.createToken({
       name: context.state.email
     });
+    if (!token) {
+      return this.setState({ error: true });
+    }
+
     let response = await fetch(`${PAYMENT_MANAGER}/purchase/`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
@@ -65,6 +72,14 @@ class DropIn extends React.Component {
               <CardElement {...this.createOptions(this.props.fontSize)} />
             </label>
             <button>Pay</button>
+            <div
+              style={{ display: this.state.error ? 'table-cell' : 'none' }}
+              className="error-message w-form-fail"
+            >
+              <div className="text-block-2">
+                Oops! Something went wrong while submitting the form.
+              </div>
+            </div>
           </form>
         )}
       </Context.Consumer>

@@ -4,6 +4,7 @@ import { CardElement, injectStripe } from 'react-stripe-elements';
 import './DropInCSS.css';
 
 import env from './Env';
+import { Context } from './Context';
 
 const PAYMENT_MANAGER = env.PAYMENT_MANAGER;
 
@@ -33,27 +34,38 @@ class DropIn extends React.Component {
     };
   }
 
-  async submit(ev) {
+  async submit(ev, context) {
     ev.preventDefault();
-    let { token } = await this.props.stripe.createToken({ name: 'Name' });
+    let { token } = await this.props.stripe.createToken({
+      name: context.state.email
+    });
     let response = await fetch(`${PAYMENT_MANAGER}/purchase/`, {
       method: 'POST',
-      headers: { 'Content-Type': 'text/plain' },
-      body: token.id
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        token: token.id,
+        email: context.state.email,
+        discount_code: context.state.discount_code
+      })
     });
 
     if (response.ok) console.log('Purchase Complete! response:', response);
+    else console.error('Error on Purchase! response:', response);
   }
 
   render() {
     return (
-      <form onSubmit={this.submit}>
-        <label>
-          Card details
-          <CardElement {...this.createOptions(this.props.fontSize)} />
-        </label>
-        <button>Pay</button>
-      </form>
+      <Context.Consumer>
+        {context => (
+          <form onSubmit={ev => this.submit(ev, context)}>
+            <label>
+              Card details
+              <CardElement {...this.createOptions(this.props.fontSize)} />
+            </label>
+            <button>Pay</button>
+          </form>
+        )}
+      </Context.Consumer>
     );
   }
 }

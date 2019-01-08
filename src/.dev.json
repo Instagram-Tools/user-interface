@@ -2,5 +2,6 @@
   "RELAYS": ["https://cors.io/?"],
   "API_URL": "http://localhost:8000/api",
   "BOT_URL": "http://localhost:8765/bot",
-  "PAYMENT_MANAGER": "http://127.0.0.1:5000/pay"
+  "PAYMENT_MANAGER": "http://127.0.0.1:5000/pay",
+  "STRIPE_PUBLIC_KEY": "pk_test_b1xnLwuXAD8nz71YQQX2ygaP"
 }

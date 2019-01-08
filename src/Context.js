@@ -6,7 +6,7 @@ import BOT_Gateway from './BOT_Gateway';
 export const Context = React.createContext();
 
 export const unsavedState = {
-  registrationStep: 3,
+  registrationStep: 0,
   scrollY: 0,
   scrollHeight: document.body.scrollHeight,
   try_email: '',

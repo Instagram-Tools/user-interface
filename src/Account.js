@@ -70,7 +70,11 @@ export default class Account extends Component {
   }
 
   nextStep() {
-    this.setState(p => ({ registrationStep: p.registrationStep + 1 }));
+    let lastStep = 4;
+    this.setState(p => ({
+      registrationStep:
+        p.registrationStep + 1 < lastStep ? p.registrationStep + 1 : lastStep
+    }));
   }
 
   resetStep() {

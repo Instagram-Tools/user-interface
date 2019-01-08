@@ -3,7 +3,16 @@ import { CardElement, injectStripe } from 'react-stripe-elements';
 
 import './DropInCSS.css';
 
+import env from './Env';
+
+const PAYMENT_MANAGER = env.PAYMENT_MANAGER;
+
 class DropIn extends React.Component {
+  constructor(props) {
+    super(props);
+    this.submit = this.submit.bind(this);
+  }
+
   createOptions(fontSize, padding) {
     return {
       style: {
@@ -24,20 +33,21 @@ class DropIn extends React.Component {
     };
   }
 
-  handleSubmit(ev) {
+  async submit(ev) {
     ev.preventDefault();
-    if (this.props.stripe) {
-      this.props.stripe
-        .createToken()
-        .then(payload => console.log('[token]', payload));
-    } else {
-      console.log("Stripe.js hasn't loaded yet.");
-    }
+    let { token } = await this.props.stripe.createToken({ name: 'Name' });
+    let response = await fetch(`${PAYMENT_MANAGER}/purchase/`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'text/plain' },
+      body: token.id
+    });
+
+    if (response.ok) console.log('Purchase Complete! response:', response);
   }
 
   render() {
     return (
-      <form onSubmit={this.handleSubmit}>
+      <form onSubmit={this.submit}>
         <label>
           Card details
           <CardElement {...this.createOptions(this.props.fontSize)} />

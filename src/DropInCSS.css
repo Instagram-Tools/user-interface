@@ -24,6 +24,10 @@
   padding: 0 5px;
 }
 
+.buy_plan_holder form {
+  width: 100%;
+}
+
 .buy_plan_holder label {
   color: #6b7c93;
   font-weight: 300;
@@ -70,7 +74,6 @@
 .buy_plan_holder .StripeElement {
   display: block;
   margin: 10px 0 20px 0;
-  width: 500px;
   padding: 10px 14px;
   font-size: 1em;
   font-family: 'Source Code Pro', monospace;

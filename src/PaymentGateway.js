@@ -7,7 +7,7 @@ export default class PaymentGateway extends React.Component {
     return (
       <StripeProvider apiKey="pk_test_b1xnLwuXAD8nz71YQQX2ygaP">
         <Elements>
-          <DropIn />
+          <DropIn setSubscription={this.props.setSubscription} />
         </Elements>
       </StripeProvider>
     );

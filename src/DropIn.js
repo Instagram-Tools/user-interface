@@ -49,8 +49,10 @@ class DropIn extends React.Component {
       })
     });
 
-    if (response.ok) console.log('Purchase Complete! response:', response);
-    else console.error('Error on Purchase! response:', response);
+    if (response.ok) {
+      console.log('Purchase Complete! response:', response);
+      this.props.setSubscription(await response.text());
+    } else console.error('Error on Purchase! response:', response);
   }
 
   render() {

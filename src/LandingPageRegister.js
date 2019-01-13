@@ -6,7 +6,12 @@ import { Context } from './Context';
 import { Link } from 'react-router-dom';
 
 export default class LandingPageRegister extends Component {
-  errorCode = { 0: 'success', 1: 'PasswordError', 2: 'ServerError' };
+  errorCode = {
+    0: 'success',
+    1: 'PasswordError',
+    2: 'ServerError',
+    3: 'EmailTakenError'
+  };
 
   state = {
     isEmailSet: false,
@@ -74,23 +79,25 @@ export default class LandingPageRegister extends Component {
                 <div className="w-form-done">
                   <div>Thank you! Your submission has been received!</div>
                 </div>
-                <div
-                  className="w-form-fail"
-                  style={
-                    this.state.error !== this.errorCode[0]
-                      ? { display: 'block' }
-                      : {}
-                  }
-                >
-                  <div>
-                    Oops! Something went wrong while submitting the form.
-                  </div>
-                </div>
+                {this.buildErrorMessage()}
               </div>
             </div>
           );
         }}
       </Context.Consumer>
+    );
+  }
+
+  buildErrorMessage() {
+    return (
+      <div
+        className="w-form-fail"
+        style={
+          this.state.error !== this.errorCode[0] ? { display: 'block' } : {}
+        }
+      >
+        <div>Oops! Something went wrong while submitting the form.</div>
+      </div>
     );
   }
 

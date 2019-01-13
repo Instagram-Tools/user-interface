@@ -91,6 +91,14 @@ export default class LandingPageRegister extends Component {
   buildErrorMessage() {
     function getMessage() {
       switch (this.state.error) {
+        case this.errorCode[3]:
+          return (
+            <div>
+              Email already taken. If you have registered but didn't pay or
+              connect your Instagram account yet, pleas login, then tweak the
+              interface's settings at wish and press save.
+            </div>
+          );
         default:
           return (
             <div>Oops! Something went wrong while submitting the form.</div>

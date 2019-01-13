@@ -78,7 +78,8 @@ export default class Account extends Component {
   }
 
   resetStep() {
-    this.setState({ registrationStep: 0 });
+    if (this.state.registrationStep >= 4)
+      this.setState({ registrationStep: 0 });
   }
 
   register() {

@@ -89,6 +89,15 @@ export default class LandingPageRegister extends Component {
   }
 
   buildErrorMessage() {
+    function getMessage() {
+      switch (this.state.error) {
+        default:
+          return (
+            <div>Oops! Something went wrong while submitting the form.</div>
+          );
+      }
+    }
+
     return (
       <div
         className="w-form-fail"
@@ -96,7 +105,7 @@ export default class LandingPageRegister extends Component {
           this.state.error !== this.errorCode[0] ? { display: 'block' } : {}
         }
       >
-        <div>Oops! Something went wrong while submitting the form.</div>
+        {getMessage.call(this)}
       </div>
     );
   }

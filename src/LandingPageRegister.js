@@ -63,6 +63,13 @@ export default class LandingPageRegister extends Component {
                     data-wait="Please wait..."
                     className="submitbutton connect_account_button w-button"
                   />
+                  <input
+                    type="button"
+                    value="Login"
+                    data-wait="Please wait..."
+                    className="submitbutton connect_account_button registerbutton w-button"
+                    onClick={this.props.login}
+                  />
                 </div>
                 <div className="w-form-done">
                   <div>Thank you! Your submission has been received!</div>

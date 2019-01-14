@@ -3,10 +3,15 @@ import TextField from './TextField';
 import TextFieldConfirm from './TextFieldConfirm';
 import API_Gateway from './API_Gateway';
 import { Context } from './Context';
-import { Link } from 'react-router-dom';
+import { NavHashLink } from 'react-router-hash-link';
 
 export default class LandingPageRegister extends Component {
-  errorCode = { 0: 'success', 1: 'PasswordError', 2: 'ServerError' };
+  errorCode = {
+    0: 'success',
+    1: 'PasswordError',
+    2: 'ServerError',
+    3: 'EmailTakenError'
+  };
 
   state = {
     isEmailSet: false,
@@ -29,11 +34,15 @@ export default class LandingPageRegister extends Component {
               className="connect_insta_account landing_page_payment connect"
             >
               <h1 className="settingtitle">Register</h1>
-              <Link to="/privacy-policy" className="title_menu_element privacy">
+              <NavHashLink
+                smooth
+                to="/legal/#privacy"
+                className="title_menu_element privacy"
+              >
                 Your details will not be transferred to third parties, and
                 neither your email, nor your password will be saved. Click to
                 see our privacy policy.
-              </Link>
+              </NavHashLink>
               <div className="w-form">
                 <div className="formholder_connect_account">
                   <div className="columnholder filterholder first connect_account_column">
@@ -63,27 +72,53 @@ export default class LandingPageRegister extends Component {
                     data-wait="Please wait..."
                     className="submitbutton connect_account_button w-button"
                   />
+                  <input
+                    type="button"
+                    value="Login"
+                    data-wait="Please wait..."
+                    className="submitbutton connect_account_button registerbutton w-button"
+                    onClick={this.props.login}
+                  />
                 </div>
                 <div className="w-form-done">
                   <div>Thank you! Your submission has been received!</div>
                 </div>
-                <div
-                  className="w-form-fail"
-                  style={
-                    this.state.error !== this.errorCode[0]
-                      ? { display: 'block' }
-                      : {}
-                  }
-                >
-                  <div>
-                    Oops! Something went wrong while submitting the form.
-                  </div>
-                </div>
+                {this.buildErrorMessage()}
               </div>
             </div>
           );
         }}
       </Context.Consumer>
+    );
+  }
+
+  buildErrorMessage() {
+    function getMessage() {
+      switch (this.state.error) {
+        case this.errorCode[3]:
+          return (
+            <div>
+              Email already taken. If you have registered but didn't pay or
+              connect your Instagram account yet, pleas login, then tweak the
+              interface's settings at wish and press save.
+            </div>
+          );
+        default:
+          return (
+            <div>Oops! Something went wrong while submitting the form.</div>
+          );
+      }
+    }
+
+    return (
+      <div
+        className="w-form-fail"
+        style={
+          this.state.error !== this.errorCode[0] ? { display: 'block' } : {}
+        }
+      >
+        {getMessage.call(this)}
+      </div>
     );
   }
 

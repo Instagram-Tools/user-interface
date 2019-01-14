@@ -41,7 +41,7 @@ export default class Legal extends Component {
         </span>
         <br />
         <a
-          href="https://www.instagram.com/johannes.eisenlohr/"
+          href="https://instagram.com/thatpinkparrot?utm_source=ig_profile_share&igshid=1gkwpgl5j3m4y"
           target="_blank"
           rel="noopener noreferrer"
           className="social_logo_insta"
@@ -470,7 +470,10 @@ export default class Legal extends Component {
         <br />
         <br />
         <br />
-        <span className="titlepage landingtitle legal_category_title">
+        <span
+          id="privacy"
+          className="titlepage landingtitle legal_category_title"
+        >
           Privacy Policy
         </span>
         <br />

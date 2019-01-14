@@ -470,7 +470,10 @@ export default class Legal extends Component {
         <br />
         <br />
         <br />
-        <span className="titlepage landingtitle legal_category_title">
+        <span
+          id="privacy"
+          className="titlepage landingtitle legal_category_title"
+        >
           Privacy Policy
         </span>
         <br />

@@ -3,7 +3,7 @@ import TextField from './TextField';
 import TextFieldConfirm from './TextFieldConfirm';
 import API_Gateway from './API_Gateway';
 import { Context } from './Context';
-import { Link } from 'react-router-dom';
+import { NavHashLink } from 'react-router-hash-link';
 
 export default class LandingPageRegister extends Component {
   errorCode = {
@@ -34,11 +34,15 @@ export default class LandingPageRegister extends Component {
               className="connect_insta_account landing_page_payment connect"
             >
               <h1 className="settingtitle">Register</h1>
-              <Link to="/privacy-policy" className="title_menu_element privacy">
+              <NavHashLink
+                smooth
+                to="/legal/#privacy"
+                className="title_menu_element privacy"
+              >
                 Your details will not be transferred to third parties, and
                 neither your email, nor your password will be saved. Click to
                 see our privacy policy.
-              </Link>
+              </NavHashLink>
               <div className="w-form">
                 <div className="formholder_connect_account">
                   <div className="columnholder filterholder first connect_account_column">

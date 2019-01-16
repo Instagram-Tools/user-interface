@@ -102,14 +102,6 @@ export default class GeneralSettings extends Component {
                   Profiles following 30 - 1000 Users <br />
                   Interact with last 1 - 5 pictures
                 </Help>
-
-                <div className="columnholder filterholder first">
-                  <TextFieldNumber
-                    placeholder="Pick your user's last X followers"
-                    value="follow_user_followers_amount"
-                  />
-                </div>
-
                 <div className="columnholder filterholder first">
                   <TextFieldNumber
                     placeholder="... having min X Followers"

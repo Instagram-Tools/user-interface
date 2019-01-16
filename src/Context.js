@@ -29,7 +29,7 @@ export class Provider extends Component {
     enable_like_by_locations: true,
     enable_like_by_tags: true,
     enable_message: true,
-    unfollow_users_nonfollowers: true,
+    unfollow_users_nonfollowers: false,
     speed: 100,
     timetable: [
       '1904-02-01 07:01:00Z',

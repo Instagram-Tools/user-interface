@@ -542,6 +542,11 @@ body {
 .title_menu_element.landingpage_element.loginlogout {
   margin-right: 0vw;
   margin-left: 0px;
+  color: #0082f3;
+}
+
+.title_menu_element.landingpage_element.loginlogout:hover {
+  color: #0062b7;
 }
 
 .title_menu_element.landingpage_element.loginlogout.homelogin {
@@ -613,8 +618,10 @@ body {
   position: absolute;
   top: 0px;
   right: 0px;
-  width: 10vh;
+  width: 15vw;
   height: 10vh;
+  padding-right: 1vw;
+  padding-left: 1vw;
   cursor: pointer;
 }
 
@@ -726,6 +733,79 @@ body {
 
 .settingtitle.firsttitle {
   margin-top: 3vh;
+}
+
+.settingtitle.setting_page_title {
+  margin-right: 0em;
+  margin-bottom: 0.6em;
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 1.15em;
+  text-align: center;
+}
+
+.settingtitle.setting_page_title.lasttitle_small {
+  margin-bottom: 0em;
+  margin-left: 7.5vw;
+}
+
+.settingtitle.setting_page_title.deletetitle {
+  margin-bottom: 1em;
+  color: #000;
+}
+
+.settingtitle.errortitle {
+  width: 40vw;
+  margin-right: 0em;
+  margin-bottom: 0.6em;
+  margin-left: 52.5vw;
+  padding-right: 2.5vw;
+  padding-left: 2.5vw;
+  color: #ff4c44;
+  font-size: 1.15em;
+  line-height: 1.33em;
+  text-align: center;
+}
+
+.settingtitle.settingspage {
+  margin-top: 13vh;
+  margin-bottom: 4vh;
+  margin-left: 6vw;
+  font-size: 2.33em;
+}
+
+.settingtitle.settingspage.nodistance {
+  margin-bottom: 0vh;
+}
+
+.settingtitle.locktitle {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-right: 0em;
+  margin-bottom: 0px;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: rgba(0, 0, 0, 0.66);
+  font-size: 1em;
+  font-weight: 600;
+  text-align: center;
+}
+
+.settingtitle.locktitle.lasttitle_small {
+  margin-bottom: 0em;
+  margin-left: 7.5vw;
+}
+
+.settingtitle.locktitle.deletetitle {
+  margin-bottom: 1em;
+  color: #000;
+}
+
+.settingtitle.locktitle.typingpassword {
+  display: none;
 }
 
 .columnholder {
@@ -884,6 +964,8 @@ body {
   width: auto;
   height: 36px;
   margin-bottom: 3px;
+  padding-right: 20px;
+  padding-left: 20px;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
@@ -896,32 +978,19 @@ body {
   border-width: 1px;
   border-color: rgba(0, 0, 0, 0.01);
   border-radius: 999px;
-  background-image: -webkit-gradient(
-    linear,
-    left top,
-    left bottom,
-    from(#fff),
-    to(#fff)
-  );
-  background-image: linear-gradient(180deg, #fff, #fff);
+  background-color: #fff;
   box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.05);
   font-family: Muli, sans-serif;
   color: rgba(0, 0, 0, 0.74);
   font-size: 1em;
   line-height: 1em;
   font-weight: 800;
+  text-decoration: none;
 }
 
 .submitbutton:hover {
   border-style: solid;
-  background-image: -webkit-gradient(
-    linear,
-    left top,
-    left bottom,
-    from(#5b55ff),
-    to(#5b55ff)
-  );
-  background-image: linear-gradient(180deg, #5b55ff, #5b55ff);
+  background-color: #5b55ff;
   box-shadow: 0 4px 10px 0 rgba(54, 54, 219, 0.4);
   color: #fff;
 }
@@ -1154,6 +1223,57 @@ body {
   color: #000;
 }
 
+.submitbutton.distancebutton {
+  margin-right: 25px;
+}
+
+.submitbutton.byebutton {
+  height: 40px;
+  margin-right: 25px;
+  background-color: #ff4c44;
+  box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.1);
+  color: #fff;
+}
+
+.submitbutton.byebutton:hover {
+  background-color: #5b55ff;
+}
+
+.submitbutton.byebutton.locked {
+  box-shadow: none;
+  opacity: 0.5;
+}
+
+.submitbutton.settingssave {
+  width: 100px;
+  height: 40px;
+  margin-left: 6vw;
+}
+
+.submitbutton.settingssave.locked {
+  margin-right: 40px;
+  box-shadow: none;
+  opacity: 0.5;
+  cursor: default;
+}
+
+.submitbutton.passwordcontinue {
+  display: block;
+  width: 100px;
+  height: 40px;
+}
+
+.submitbutton.passwordcontinue.locked {
+  margin-right: 30px;
+  box-shadow: none;
+  opacity: 0.5;
+  cursor: default;
+}
+
+.submitbutton.legalbutton {
+  height: 40px;
+}
+
 .text-field {
   height: 33px;
   margin-bottom: 3vh;
@@ -1208,6 +1328,32 @@ body {
 
 .text-field.filter.connect_account_filter {
   margin-left: 2.5vw;
+}
+
+.text-field.settingsfield {
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+.text-field.settingsfield.error {
+  border: 1px solid #ff4c44;
+}
+
+.text-field.settingsfield.error-copy {
+  margin-bottom: 0px;
+}
+
+.text-field.passwordfield {
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.text-field.passwordfield.error {
+  border: 1px solid #ff4c44;
+}
+
+.text-field.passwordfield.error-copy {
+  margin-bottom: 0px;
 }
 
 .success-message {
@@ -1379,6 +1525,23 @@ body {
   box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.07);
 }
 
+.deletebutton.notificationclose {
+  position: absolute;
+  width: 2.5vw;
+  height: 2.5vw;
+  min-height: auto;
+  min-width: auto;
+  margin-left: 87.5vw;
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(#ff4c44),
+    to(#ff4c44)
+  );
+  background-image: linear-gradient(180deg, #ff4c44, #ff4c44);
+}
+
 .classicon {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1508,10 +1671,12 @@ body {
 .general_settings.subtitle.generaltutorial {
   display: block;
   height: auto;
-  margin: 1em 0.8em;
-  color: #e5e5e5;
+  max-width: 90vw;
+  margin-right: 1vw;
+  margin-left: 1vw;
+  color: #f5f5f5;
   font-size: 1em;
-  font-weight: 700;
+  font-weight: 600;
   text-align: center;
 }
 
@@ -1621,10 +1786,15 @@ body {
   z-index: 2;
   width: auto;
   min-width: auto;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
 }
 
 .switch_general_settings.title.speedswitch_text_holder {
-  width: auto;
+  width: 100%;
+  height: 100%;
   margin-right: 0px;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
@@ -1999,6 +2169,21 @@ body {
   font-size: 1.1em;
   font-weight: 600;
   text-align: left;
+}
+
+.fieldlabel.showlabel {
+  color: rgba(0, 0, 0, 0.74);
+  font-size: 1em;
+  font-weight: 800;
+}
+
+.fieldlabel.errorlabel {
+  margin-top: 15px;
+  margin-bottom: 0px;
+  color: rgba(0, 0, 0, 0.74);
+  font-size: 1.15em;
+  line-height: 1em;
+  font-weight: 800;
 }
 
 .checkbox-2 {
@@ -3321,9 +3506,9 @@ body {
   );
   background-image: linear-gradient(180deg, #fff, #fff);
   font-family: Muli, sans-serif;
-  color: #e0e0e0;
-  font-size: 0.85em;
-  font-weight: 700;
+  color: rgba(0, 0, 0, 0.33);
+  font-size: 1em;
+  font-weight: 800;
   cursor: pointer;
 }
 
@@ -3348,6 +3533,26 @@ body {
     to(#31f688)
   );
   background-image: linear-gradient(180deg, #31f688, #31f688);
+}
+
+.new_help_circle.tutorial_help_circle {
+  position: absolute;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-bottom: 0px;
+  background-image: url('../images/muli-extra-bold-question-mark--33-black.svg'),
+    -webkit-gradient(linear, left top, left bottom, from(#fff), to(#fff));
+  background-image: url('../images/muli-extra-bold-question-mark--33-black.svg'),
+    linear-gradient(180deg, #fff, #fff);
+  background-position: 50% 50%, 0px 0px;
+  background-size: 10px 10px, auto;
+  background-repeat: no-repeat, repeat;
+  -webkit-transform: none;
+  -ms-transform: none;
+  transform: none;
+  font-size: 0em;
+  line-height: 0em;
 }
 
 .speedtext {
@@ -3565,8 +3770,69 @@ body {
   box-shadow: none;
 }
 
+.generalinfo.delivered_as_notification {
+  position: fixed;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  z-index: 999999;
+  display: none;
+  width: 90vw;
+  height: auto;
+  min-height: 10vh;
+  margin-bottom: 2em;
+  margin-left: 5vw;
+  padding: 0vh 0vw 1vw;
+  border-radius: 10px;
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(#797979),
+    to(#797979)
+  );
+  background-image: linear-gradient(180deg, #797979, #797979);
+  box-shadow: none;
+}
+
+.generalinfo.update_delivered_as_notification {
+  position: fixed;
+  left: 0px;
+  bottom: 0px;
+  z-index: 999999;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 90vw;
+  height: auto;
+  margin-bottom: 2em;
+  margin-left: 5vw;
+  padding: 0vh 0vw;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  border-radius: 1.25vw 1.25vw 10px 10px;
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(#797979),
+    to(#797979)
+  );
+  background-image: linear-gradient(180deg, #797979, #797979);
+  box-shadow: none;
+}
+
+.generalinfo.update_delivered_as_notification.notification_in_settings {
+  position: static;
+  margin-top: 9vh;
+  margin-bottom: 0em;
+}
+
 .infoicon {
-  display: block;
+  display: none;
   width: 1.66em;
   height: 1.66em;
   margin-right: 7px;
@@ -3667,6 +3933,582 @@ body {
   background-size: contain;
 }
 
+.notificationcircle {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 26px;
+  height: 26px;
+  margin-right: 0.5vw;
+  margin-left: 1.5vw;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  border-radius: 999999px;
+  background-color: #ff4c44;
+  font-family: Muli, sans-serif;
+  color: #fff;
+  font-size: 1em;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.notificationcircle:hover {
+  background-color: #31f688;
+}
+
+.notificationcircle:active {
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(#31f688),
+    to(#31f688)
+  );
+  background-image: linear-gradient(180deg, #31f688, #31f688);
+}
+
+.general_help_icon {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 26px;
+  height: 26px;
+  margin-right: 1vw;
+  float: left;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-radius: 9999px;
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(#000),
+    to(#000)
+  );
+  background-image: linear-gradient(180deg, #000, #000);
+  color: #fff;
+  font-size: 1em;
+  font-weight: 600;
+}
+
+.general_help_icon:hover {
+  background-color: #31f688;
+  background-image: none;
+  background-position: 0px 0px;
+  background-size: auto;
+  background-repeat: repeat;
+}
+
+.general_help_icon:active {
+  background-color: #31f688;
+}
+
+.notificationheader_div {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 2.5vw;
+  margin-bottom: 1.5vw;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-radius: 10vw;
+  background-color: #b6b6b6;
+}
+
+.notificationtext {
+  margin-right: 1.5vw;
+  margin-bottom: 1.5vw;
+  margin-left: 1.5vw;
+  color: #fff;
+  font-size: 1.05em;
+  line-height: 1.33em;
+  text-align: center;
+}
+
+.notificationicon {
+  position: absolute;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 2.5vw;
+  height: 2.5vw;
+  margin-right: 2vw;
+  float: left;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-radius: 9999px;
+  background-image: url('../images/bell-icon-white.svg'),
+    -webkit-gradient(linear, left top, left bottom, from(#000), to(#000));
+  background-image: url('../images/bell-icon-white.svg'),
+    linear-gradient(180deg, #000, #000);
+  background-position: 50% 50%, 0px 0px;
+  background-size: 37% 37%, auto;
+  background-repeat: no-repeat, repeat;
+  color: #fff;
+  font-size: 1.2em;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.notificationicon:hover {
+  background-image: url('../images/bell-icon-white.svg'),
+    -webkit-gradient(linear, left top, left bottom, from(#31f688), to(#31f688));
+  background-image: url('../images/bell-icon-white.svg'),
+    linear-gradient(180deg, #31f688, #31f688);
+  background-position: 50% 50%, 0px 0px;
+  background-size: 33% 1733%, auto;
+  background-repeat: no-repeat, repeat;
+}
+
+.notificationheading {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  color: #000;
+  font-size: 1.1vw;
+  line-height: 1em;
+  font-weight: 800;
+}
+
+.settingsorientation {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.settingsmenu {
+  width: 25vw;
+}
+
+.tabs {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+.tabs-menu {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 20vw;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.tabs-content {
+  width: 80vw;
+}
+
+.settings {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100vw;
+  margin-bottom: 3em;
+  padding-right: 5vw;
+  padding-left: 5vw;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-justify-content: space-around;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.settings.switchaccount {
+  margin-bottom: 20vh;
+  padding-left: 0vw;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+}
+
+.settings.buttons {
+  width: auto;
+  padding-right: 0vw;
+  padding-left: 0vw;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.settings.buttons.delete {
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.settingsdistributor {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 17.5vw;
+  margin-right: 2.5vw;
+  margin-bottom: 0.75em;
+  margin-left: 2.5vw;
+  padding-right: 0.5vw;
+  padding-left: 0.5vw;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.settingsdistributor.bottom {
+  height: 33px;
+  margin-bottom: 0em;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.settingsdistributor.bottom.height {
+  height: auto;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+}
+
+.settingsdistributor.deletesettings {
+  width: 25vw;
+}
+
+.form-block-5 {
+  width: 100%;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+}
+
+.form-2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.body-2 {
+  background-color: #f5f5f5;
+}
+
+.checkbox-5 {
+  margin-top: 0px;
+  margin-right: 10px;
+}
+
+.errormessage {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: #ff4c44;
+  font-size: 1em;
+  font-weight: 800;
+  text-align: center;
+}
+
+.errormessage.paymenterror {
+  margin-bottom: 4vh;
+  margin-left: 6vw;
+  font-size: 1.1em;
+  text-align: left;
+}
+
+.errormessage.deleteaccount {
+  height: auto;
+  margin-top: 1em;
+  margin-bottom: 33px;
+}
+
+.settings_last_section {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 10vh;
+  padding-right: 5vw;
+  padding-left: 5vw;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+}
+
+.form-3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+}
+
+.checkbox-field {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.lockedicon {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 40px;
+  height: 40px;
+  margin-right: 15px;
+  float: left;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-radius: 9999px;
+  background-image: url('../images/lock-icon-white.svg'),
+    -webkit-gradient(linear, left top, left bottom, from(#000), to(#000));
+  background-image: url('../images/lock-icon-white.svg'),
+    linear-gradient(180deg, #000, #000);
+  background-position: 50% 50%, 0px 0px;
+  background-size: 50% 1733%, auto;
+  background-repeat: no-repeat, repeat;
+  color: #fff;
+  font-size: 1.2em;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.lockedicon:hover {
+  background-image: url('../images/lock-icon-white.svg'),
+    -webkit-gradient(linear, left top, left bottom, from(#31f688), to(#31f688));
+  background-image: url('../images/lock-icon-white.svg'),
+    linear-gradient(180deg, #31f688, #31f688);
+  background-position: 50% 50%, 0px 0px;
+  background-size: 50% 1733%, auto;
+  background-repeat: no-repeat, repeat;
+}
+
+.lockedicon.unlocked {
+  background-image: url('../images/unlock-icon-white.svg'),
+    -webkit-gradient(linear, left top, left bottom, from(#000), to(#000));
+  background-image: url('../images/unlock-icon-white.svg'),
+    linear-gradient(180deg, #000, #000);
+  background-size: 50% 50%, auto;
+  -webkit-filter: invert(100%);
+  filter: invert(100%);
+}
+
+.password_field {
+  display: block;
+  width: 17.5vw;
+  height: 33px;
+  margin-right: 30px;
+  margin-bottom: 0px;
+  border-radius: 999999px;
+  font-family: Muli, sans-serif;
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 1em;
+}
+
+.password_field.broadfield {
+  width: 90vw;
+  opacity: 0.66;
+  font-weight: 400;
+}
+
+.password_field.broadfield.indentedfield {
+  width: 86vw;
+}
+
+.password_field.filter {
+  position: relative;
+  z-index: 999;
+  width: 20vw;
+  min-width: 250px;
+  margin-right: 2.5vw;
+  opacity: 0.66;
+  color: #000;
+  text-align: right;
+}
+
+.password_field.filter.followfilter {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: auto;
+  margin-right: 5vw;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  opacity: 0.8;
+}
+
+.password_field.filter.last {
+  margin-bottom: 0vh;
+}
+
+.password_field.filter.last.send_message_indent {
+  margin-left: 4vw;
+}
+
+.password_field.filter.connect_account_filter {
+  margin-left: 2.5vw;
+}
+
+.password_field.settingsfield {
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.password_field.settingsfield.error {
+  border: 1px solid #ff4c44;
+}
+
+.password_field.settingsfield.error-copy {
+  margin-bottom: 0px;
+}
+
+.password_field.passwordfield {
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.password_field.passwordfield.error {
+  border: 1px solid #ff4c44;
+}
+
+.password_field.passwordfield.error-copy {
+  margin-bottom: 0px;
+}
+
+.error-message-2 {
+  border-radius: 9999px;
+  background-color: #ff4c44;
+  color: #fff;
+  text-align: center;
+}
+
+.success-message-3 {
+  border-radius: 9999px;
+}
+
 @media (max-width: 991px) {
   .menubar.menubar_landing_page {
     position: relative;
@@ -3745,7 +4587,7 @@ body {
   }
   .titlelogo.legallogo {
     margin-right: 1vw;
-    margin-left: 1vw;
+    margin-left: 3vw;
   }
   .titlelogo.legallogo.distance {
     margin-right: 0vw;
@@ -3795,6 +4637,14 @@ body {
   .title_menu_element.landingpage_element:hover {
     opacity: 0.66;
   }
+  .title_menu_element.landingpage_element.loginlogout {
+    width: auto;
+    height: 100%;
+    padding: 0em;
+  }
+  .title_menu_element.landingpage_element.loginlogout.w--current {
+    width: auto;
+  }
   .title_menu_element.landingpage_element.loginlogout.homelogin {
     display: none;
   }
@@ -3814,11 +4664,11 @@ body {
     padding-left: 4vw;
   }
   .menubarleft.landingpage_left {
-    width: 15vw;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-    -ms-flex-pack: center;
-    justify-content: center;
+    width: 20vw;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
   }
   .menubarleft.landingpage_left:hover {
     opacity: 0.7;
@@ -3830,7 +4680,8 @@ body {
     justify-content: center;
   }
   .menubarleft.landingpage_left.settingsicon {
-    width: 15vw;
+    width: 20vw;
+    padding-right: 2vw;
   }
   .menubarleft.landingpage_left.settingsicon.homelogin {
     width: 10vw;
@@ -3844,7 +4695,7 @@ body {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    width: 70vw;
+    width: 60vw;
     padding-right: 0vw;
     -webkit-box-pack: center;
     -webkit-justify-content: center;
@@ -3865,6 +4716,11 @@ body {
   }
   .submitbutton.connect_account_button.trialbutton.about_buy_button {
     width: 14vw;
+  }
+  .deletebutton.notificationclose {
+    width: 4vw;
+    height: 4vw;
+    margin-left: 86vw;
   }
   .generalsettings {
     padding: 1em 5vw 2em;
@@ -4233,6 +5089,36 @@ body {
     );
     background-image: linear-gradient(180deg, #3b3b3b, #3b3b3b);
   }
+  .generalinfo.update_delivered_as_notification.notification_in_settings {
+    border-top-left-radius: 2vw;
+    border-top-right-radius: 2vw;
+  }
+  .notificationcircle {
+    margin-right: 1vw;
+    margin-left: 0vw;
+  }
+  .general_help_icon {
+    margin-right: 2vw;
+  }
+  .notificationheader_div {
+    height: 4vw;
+  }
+  .notificationicon {
+    width: 4vw;
+    height: 4vw;
+    margin-right: 2vw;
+  }
+  .notificationheading {
+    font-size: 1.75vw;
+  }
+  .settingsdistributor {
+    width: 21.5vw;
+    margin-right: 0.5vw;
+    margin-left: 0.5vw;
+  }
+  .settingsdistributor.deletesettings {
+    width: 50vw;
+  }
 }
 
 @media (max-width: 767px) {
@@ -4275,8 +5161,9 @@ body {
   .titlelogo.legallogo {
     width: auto;
     height: auto;
-    min-height: 7.5vh;
-    min-width: 7.5vh;
+    min-height: 8.5vh;
+    min-width: 8.5vh;
+    margin-left: 2.5vw;
   }
   .title_menu_element.privacy {
     width: 90%;
@@ -4284,19 +5171,20 @@ body {
     margin-left: 2vw;
   }
   .menubarleft.landingpage_left {
-    width: 18vw;
     min-height: 7.5vh;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
   }
   .menubarleft.landingpage_left.settingsicon {
-    width: 18vw;
     height: 15vh;
+    padding-right: 0.5vw;
+    padding-left: 0vw;
   }
   .menubarleft.landingpage_left.settingsicon.homelogin {
     width: 13vw;
     margin-left: 87vw;
-  }
-  .menubarright.feature_in_development {
-    width: 64vw;
   }
   .profilepic {
     width: 3em;
@@ -4334,6 +5222,13 @@ body {
   .text-field.filter.connect_account_filter {
     width: 100%;
     margin-right: 2.5vw;
+  }
+  .generalsettings {
+    padding-top: 2em;
+    padding-bottom: 3em;
+  }
+  .general_settings.generaltitle.distancegeneral {
+    margin-bottom: 1.8em;
   }
   .dropdown {
     width: 45vw;
@@ -4425,6 +5320,48 @@ body {
   }
   .successimage {
     width: 85%;
+  }
+  .generalinfo.delivered_as_notification {
+    height: auto;
+    min-height: 15vh;
+  }
+  .generalinfo.update_delivered_as_notification {
+    height: auto;
+    min-height: 15vh;
+  }
+  .notificationcircle {
+    width: 23px;
+    height: 23px;
+    margin-right: 1vw;
+    font-size: 0.85em;
+  }
+  .general_help_icon {
+    width: 23px;
+    height: 23px;
+    margin-right: 2vw;
+  }
+  .notificationicon {
+    margin-right: 2vw;
+  }
+  .checkbox-field {
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  .password_field.filter {
+    width: 90vw;
+    margin-right: 0vw;
+  }
+  .password_field.filter.followfilter {
+    margin-bottom: 1vh;
+  }
+  .password_field.filter.unfollowsettings {
+    margin-bottom: 4vh;
+  }
+  .password_field.filter.connect_account_filter {
+    width: 100%;
+    margin-right: 2.5vw;
   }
 }
 
@@ -4549,19 +5486,21 @@ body {
     justify-content: flex-start;
   }
   .menubarleft.landingpage_left {
-    width: 25vw;
+    width: 33vw;
     min-height: auto;
   }
   .menubarleft.landingpage_left.settingsicon {
-    width: 25vw;
+    width: 33vw;
     height: 10vh;
+    padding-right: 0vw;
+    padding-left: 2vw;
   }
   .menubarleft.landingpage_left.settingsicon.homelogin {
     width: 20vw;
     margin-left: 80vw;
   }
   .menubarright.feature_in_development {
-    width: 50vw;
+    width: 34vw;
   }
   .profilepic {
     display: none;
@@ -4598,6 +5537,10 @@ body {
   .settingtitle.connecttitle {
     margin-top: 1em;
   }
+  .settingtitle.settingspage {
+    width: 88vw;
+    margin-right: 6vw;
+  }
   .columnholder.applied_hashtasgs_and_locations {
     margin-bottom: 0vh;
   }
@@ -4616,6 +5559,12 @@ body {
   .submitbutton.connect_account_button.trialbutton.about_buy_button {
     width: 33vw;
   }
+  .submitbutton.settingssave {
+    margin-bottom: 3vh;
+  }
+  .submitbutton.passwordcontinue {
+    margin-bottom: 3vh;
+  }
   .text-field.broadfield {
     margin-bottom: 4vh;
   }
@@ -4630,6 +5579,11 @@ body {
   }
   .applied_hashtag_or_location.long {
     margin-right: 0em;
+  }
+  .deletebutton.notificationclose {
+    width: 7vw;
+    height: 7vw;
+    margin-left: 83vw;
   }
   .generalsettings {
     padding-right: 11vw;
@@ -4828,12 +5782,6 @@ body {
     height: 66vh;
     margin-top: 17vh;
   }
-  .connect_insta_account_darkener {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-  }
   .landingpage {
     background-image: url('../images/rocket-mobile-landing-01.svg'),
       -webkit-gradient(linear, left top, left bottom, from(#f9fbfc), to(#f9fbfc));
@@ -5012,6 +5960,65 @@ body {
     -webkit-align-content: stretch;
     -ms-flex-line-pack: stretch;
     align-content: stretch;
+  }
+  .generalinfo.update_delivered_as_notification.notification_in_settings {
+    border-top-left-radius: 3.5vw;
+    border-top-right-radius: 3.5vw;
+  }
+  .notificationcircle {
+    z-index: 9999999;
+  }
+  .notificationheader_div {
+    height: 7vw;
+  }
+  .notificationicon {
+    width: 7vw;
+    height: 7vw;
+  }
+  .notificationheading {
+    font-size: 2.75vw;
+  }
+  .settings {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  .settings.switchaccount {
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  .settingsdistributor {
+    width: 75vw;
+  }
+  .errormessage.paymenterror {
+    margin-right: 6vw;
+    text-align: center;
+  }
+  .form-3 {
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  .password_field.broadfield {
+    margin-bottom: 4vh;
+  }
+  .password_field.filter.last {
+    margin-bottom: 4vh;
+  }
+  .password_field.filter.last.send_message_indent {
+    margin-bottom: 0vh;
+  }
+  .password_field.filter.unfollowsettings {
+    margin-bottom: 6vh;
   }
 }
 

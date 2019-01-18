@@ -6,6 +6,7 @@ import Legal from './Legal';
 import About from './About';
 import { Provider } from './Context';
 import Navigation from './Navigation';
+import Settings from './Settings';
 
 export default function BasicExample() {
   return (
@@ -17,6 +18,7 @@ export default function BasicExample() {
           <Route exact path="/interface" component={App} />
           <Route exact path="/about" component={About} />
           <Route exact path="/legal" component={Legal} />
+          <Route exact path="/settings" component={Settings} />
         </div>
       </Router>
     </Provider>

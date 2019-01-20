@@ -18,7 +18,10 @@ export default class TextFieldNumber extends Component {
               onChange={e => {
                 if (this.props.max && e.target.value > this.props.max) return;
 
-                const value = e.target.value > 0 ? e.target.value : '';
+                const value =
+                  e.target.value >= (this.props.min || 0)
+                    ? e.target.value
+                    : this.props.min || 0;
                 context.setState({
                   [this.props.value]: parseInt(value)
                 });

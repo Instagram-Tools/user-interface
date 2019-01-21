@@ -1,6 +1,6 @@
 import React from 'react';
 import { Elements, StripeProvider } from 'react-stripe-elements';
-import DropIn from './DropIn';
+import StripeDropIn from './StripeDropIn';
 
 import env from './Env';
 
@@ -11,7 +11,7 @@ export default class PaymentGateway extends React.Component {
     return (
       <StripeProvider apiKey={STRIPE_PUBLIC_KEY}>
         <Elements>
-          <DropIn setSubscription={this.props.setSubscription} />
+          <StripeDropIn setSubscription={this.props.setSubscription} />
         </Elements>
       </StripeProvider>
     );

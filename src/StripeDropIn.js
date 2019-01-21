@@ -8,7 +8,7 @@ import { Context } from './Context';
 
 const PAYMENT_MANAGER = env.PAYMENT_MANAGER;
 
-class DropIn extends React.Component {
+class StripeDropIn extends React.Component {
   constructor(props) {
     super(props);
     this.submit = this.submit.bind(this);
@@ -57,11 +57,11 @@ class DropIn extends React.Component {
         console.log('Purchase Complete! response:', response);
         this.props.setSubscription(await response.text());
       } else {
-        console.error('DropIn.submit() response not ok:', response);
+        console.error('StripeDropIn.submit() response not ok:', response);
         throw Error('response not ok');
       }
     } catch (e) {
-      console.error('Error on DropIn.submit():', e);
+      console.error('Error on StripeDropIn.submit():', e);
       return this.setState({ error: true });
     }
   }
@@ -132,4 +132,4 @@ class DropIn extends React.Component {
   }
 }
 
-export default injectStripe(DropIn);
+export default injectStripe(StripeDropIn);

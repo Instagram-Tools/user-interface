@@ -10,19 +10,6 @@ export default class App extends Component {
       <Context.Consumer>
         {context => (
           <div>
-            <div className="generalinfo update_delivered_as_notification notification_in_settings">
-              <div className="notificationheader_div w-clearfix">
-                <div className="notificationicon" />
-                <h1 className="notificationheading">NEW UPDATE!</h1>
-                <div className="deletebutton notificationclose">
-                  <div className="xicon" />
-                </div>
-              </div>
-              <div className="notificationtext">
-                You&#x27;re using an old version of Pink Parrot. To update,
-                please close this tab, open a new one and use Pink Parrot there.<br />
-              </div>
-            </div>
             <h1 className="settingtitle settingspage">Account</h1>
             <div className="w-form">
               <form

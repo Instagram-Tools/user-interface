@@ -12,7 +12,8 @@ export const unsavedState = {
   try_email: '',
   try_e_password: '',
   subscription: '',
-  bot_active: false
+  bot_active: false,
+  notifications: ['1', '1', '1', '1', '1']
 };
 
 // Then create a provider Component

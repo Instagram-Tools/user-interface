@@ -12,17 +12,18 @@ export default class Notifications extends Component {
 
   buildNotification() {
     return (
-      <div className="generalinfo update_delivered_as_notification notification_in_settings">
+      <div className="notification update_delivered_as_notification notification_in_settings">
         <div className="notificationheader_div w-clearfix">
           <div className="notificationicon" />
-          <h1 className="notificationheading">NEW UPDATE!</h1>
+          <h1 className="notificationheading">
+            <span>UPDATE PAYMENT INFO</span>
+          </h1>
           <div className="deletebutton notificationclose">
             <div className="xicon" />
           </div>
         </div>
         <div className="notificationtext">
-          You&#x27;re using an old version of Pink Parrot. To update, please
-          close this tab, open a new one and use Pink Parrot there.<br />
+          You&#x27;re broke af bitch!<br />
         </div>
       </div>
     );

@@ -19,7 +19,7 @@ export default class App extends Component {
                 className="form-3"
               >
                 <div className="settings">
-                  <div className="settingsdistributor">
+                  <div className="settingsdistributor weg">
                     <h1 className="settingtitle setting_page_title">
                       Login Email
                     </h1>
@@ -33,9 +33,9 @@ export default class App extends Component {
                       id="name"
                     />
                   </div>
-                  <div className="settingsdistributor">
+                  <div className="settingsdistributor new_row_left">
                     <h1 className="settingtitle setting_page_title">
-                      Login Password
+                      Change Login Password
                     </h1>
                     <input
                       type="text"
@@ -46,7 +46,6 @@ export default class App extends Component {
                       placeholder="**********"
                       id="name-2"
                     />
-
                     <div className="settingsdistributor bottom">
                       <div className="checkbox-field w-checkbox">
                         <input
@@ -65,7 +64,38 @@ export default class App extends Component {
                       </div>
                     </div>
                   </div>
-                  <div className="settingsdistributor">
+                  <div className="settingsdistributor newrow">
+                    <h1 className="settingtitle setting_page_title">
+                      Repeat Login Password
+                    </h1>
+                    <input
+                      type="text"
+                      className="text-field settingsfield w-input"
+                      maxLength="256"
+                      name="name-2"
+                      data-name="Name 2"
+                      placeholder="**********"
+                      id="name-2"
+                    />
+                    <div className="settingsdistributor bottom">
+                      <div className="checkbox-field w-checkbox">
+                        <input
+                          type="checkbox"
+                          id="Show-4"
+                          name="Show-4"
+                          data-name="Show 4"
+                          className="checkbox-5 w-checkbox-input"
+                        />
+                        <label
+                          htmlFor="Show-4"
+                          className="fieldlabel showlabel w-form-label"
+                        >
+                          Show
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="settingsdistributor new_row_left_down">
                     <h1 className="settingtitle setting_page_title">
                       Insta Username
                     </h1>
@@ -78,12 +108,11 @@ export default class App extends Component {
                       placeholder="timo.morawitz.official"
                       id="name-3"
                     />
-
                     <div className="errormessage">
                       No account connected. <br />Wrong Username / Password
                     </div>
                   </div>
-                  <div className="settingsdistributor">
+                  <div className="settingsdistributor new_row_right_down">
                     <h1 className="settingtitle setting_page_title">
                       Insta Password
                     </h1>
@@ -96,7 +125,6 @@ export default class App extends Component {
                       placeholder="**********"
                       id="name-2"
                     />
-
                     <div className="settingsdistributor bottom">
                       <div className="checkbox-field w-checkbox">
                         <input
@@ -121,9 +149,8 @@ export default class App extends Component {
                     type="submit"
                     value="Save"
                     data-wait="Please wait..."
-                    className="submitbutton settingssave locked w-button"
+                    className="submitbutton settingssave w-button"
                   />
-
                   <div className="lockedicon unlocked" />
                   <h1 className="settingtitle locktitle typingpassword">
                     Click on the lock to make changes.
@@ -206,7 +233,6 @@ export default class App extends Component {
                       placeholder="***"
                       id="name-3"
                     />
-
                     <div className="settingsdistributor bottom">
                       <div className="checkbox-field w-checkbox">
                         <input
@@ -231,9 +257,8 @@ export default class App extends Component {
                     type="submit"
                     value="Save"
                     data-wait="Please wait..."
-                    className="submitbutton settingssave locked w-button"
+                    className="submitbutton settingssave w-button"
                   />
-
                   <div className="lockedicon unlocked" />
                   <h1 className="settingtitle locktitle typingpassword">
                     Click on the lock to make changes.
@@ -262,8 +287,19 @@ export default class App extends Component {
                 <div>Oops! Something went wrong while submitting the form.</div>
               </div>
             </div>
+            <h1 className="settingtitle settingspage nodistance">
+              Delete account and end subscription
+            </h1>
+            <div className="errormessage deleteaccount">
+              To delete your account and / or end your Pink Parrot subscription,
+              please hit us up at{' '}
+              <a href="mailto:info@pinkparrot.co?subject=Quit">
+                info@pinkparrot.co
+              </a>{' '}
+              - we&#x27;re happy to assist you.
+            </div>
             <div className="settings switchaccount">
-              <h1 className="settingtitle settingspage">Switch to...</h1>
+              <h1 className="settingtitle settingspage weg">Switch to...</h1>
             </div>
             <div className="settings_last_section">
               <div className="settingsdistributor deletesettings">
@@ -285,7 +321,6 @@ export default class App extends Component {
                       maxLength="256"
                       className="text-field settingsfield error-copy w-input"
                     />
-
                     <div className="errormessage deleteaccount">
                       To delete your account and end your subscription on the
                       next date possible (you can quit once per month), enter

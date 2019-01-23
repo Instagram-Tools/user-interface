@@ -196,14 +196,7 @@ export default class Settings extends Component {
               to continue using Pink Parrot.
             </div>
             <div className="buy_plan_holder">
-              <PaymentGateway
-                style={{ width: '100%' }}
-                userdata={{
-                  email: context.state.email,
-                  discount_code: context.state.discount_code
-                }}
-                setSubscription={sub => this.setSubscription(sub, context)}
-              />
+              <PaymentGateway style={{ width: '100%' }} />
             </div>
             <h1 className="settingtitle settingspage nodistance">
               Delete account and end subscription

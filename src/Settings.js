@@ -5,6 +5,7 @@ import './css/code-connect.webflow.css';
 import { Context } from './Context';
 import TextField from './TextField';
 import TextFieldConfirm from './TextFieldConfirm';
+import PaymentGateway from './PaymentGateway';
 
 export default class Settings extends Component {
   setIsConfirmed(isConfirmed = false) {
@@ -194,108 +195,15 @@ export default class Settings extends Component {
               Something went wrong with your payment. Please fix that in order
               to continue using Pink Parrot.
             </div>
-            <div className="w-form">
-              <form
-                id="email-form-2"
-                name="email-form-2"
-                data-name="Email Form 2"
-                className="form-3"
-              >
-                <div className="settings">
-                  <div className="settingsdistributor">
-                    <h1 className="settingtitle setting_page_title">
-                      Card Number
-                    </h1>
-                    <input
-                      type="text"
-                      className="text-field settingsfield w-input"
-                      maxLength="256"
-                      name="name-5"
-                      data-name="Name 5"
-                      placeholder="12345678"
-                      id="name-5"
-                    />
-                  </div>
-                  <div className="settingsdistributor">
-                    <h1 className="settingtitle setting_page_title">
-                      Expiry Date
-                    </h1>
-                    <input
-                      type="text"
-                      className="text-field settingsfield w-input"
-                      maxLength="256"
-                      name="name-2"
-                      data-name="Name 2"
-                      placeholder="MM/YY"
-                      id="name-2"
-                    />
-                  </div>
-                  <div className="settingsdistributor">
-                    <h1 className="settingtitle setting_page_title">
-                      Security Code
-                    </h1>
-                    <input
-                      type="text"
-                      className="text-field settingsfield w-input"
-                      maxLength="256"
-                      name="name-3"
-                      data-name="Name 3"
-                      placeholder="***"
-                      id="name-3"
-                    />
-                    <div className="settingsdistributor bottom">
-                      <div className="checkbox-field w-checkbox">
-                        <input
-                          type="checkbox"
-                          id="Show-3"
-                          name="Show-3"
-                          data-name="Show 3"
-                          className="checkbox-5 w-checkbox-input"
-                        />
-                        <label
-                          htmlFor="Show-3"
-                          className="fieldlabel showlabel w-form-label"
-                        >
-                          Show
-                        </label>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="settings buttons w-clearfix">
-                  <input
-                    type="submit"
-                    value="Save"
-                    data-wait="Please wait..."
-                    className="submitbutton settingssave w-button"
-                  />
-                  <div className="lockedicon unlocked" />
-                  <h1 className="settingtitle locktitle typingpassword">
-                    Click on the lock to make changes.
-                  </h1>
-                  <input
-                    type="text"
-                    className="password_field w-input"
-                    maxLength="256"
-                    name="name-6"
-                    data-name="Name 6"
-                    placeholder="Password"
-                    id="name-6"
-                  />
-                  <input
-                    type="submit"
-                    value="Unlock"
-                    data-wait="Please wait..."
-                    className="submitbutton passwordcontinue w-button"
-                  />
-                </div>
-              </form>
-              <div className="w-form-done">
-                <div>Thank you! Your submission has been received!</div>
-              </div>
-              <div className="w-form-fail">
-                <div>Oops! Something went wrong while submitting the form.</div>
-              </div>
+            <div className="buy_plan_holder">
+              <PaymentGateway
+                style={{ width: '100%' }}
+                userdata={{
+                  email: context.state.email,
+                  discount_code: context.state.discount_code
+                }}
+                setSubscription={sub => this.setSubscription(sub, context)}
+              />
             </div>
             <h1 className="settingtitle settingspage nodistance">
               Delete account and end subscription

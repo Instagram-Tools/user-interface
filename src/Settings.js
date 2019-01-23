@@ -3,8 +3,14 @@ import './css/normalize.css';
 import './css/webflow.css';
 import './css/code-connect.webflow.css';
 import { Context } from './Context';
+import TextField from './TextField';
+import TextFieldConfirm from './TextFieldConfirm';
 
-export default class App extends Component {
+export default class Settings extends Component {
+  setIsConfirmed(isConfirmed = false) {
+    this.setState({ isConfirmed });
+  }
+
   render() {
     return (
       <Context.Consumer>
@@ -31,20 +37,21 @@ export default class App extends Component {
                       data-name="Name"
                       placeholder="timo.morawitz@witz.mora"
                       id="name"
+                      value="set_e_password"
                     />
                   </div>
                   <div className="settingsdistributor new_row_left">
                     <h1 className="settingtitle setting_page_title">
                       Change Login Password
                     </h1>
-                    <input
-                      type="text"
+                    <TextField
+                      type="password"
                       className="text-field settingsfield w-input"
                       maxLength="256"
                       name="name-2"
                       data-name="Name 2"
-                      placeholder="**********"
                       id="name-2"
+                      value="set_e_password"
                     />
                     <div className="settingsdistributor bottom">
                       <div className="checkbox-field w-checkbox">
@@ -68,14 +75,15 @@ export default class App extends Component {
                     <h1 className="settingtitle setting_page_title">
                       Repeat Login Password
                     </h1>
-                    <input
-                      type="text"
+                    <TextFieldConfirm
+                      type="password"
                       className="text-field settingsfield w-input"
                       maxLength="256"
                       name="name-2"
                       data-name="Name 2"
-                      placeholder="**********"
                       id="name-2"
+                      value="set_e_password"
+                      setIsConfirmed={this.setIsConfirmed.bind(this)}
                     />
                     <div className="settingsdistributor bottom">
                       <div className="checkbox-field w-checkbox">
@@ -99,7 +107,7 @@ export default class App extends Component {
                     <h1 className="settingtitle setting_page_title">
                       Insta Username
                     </h1>
-                    <input
+                    <TextField
                       type="text"
                       className="text-field settingsfield error w-input"
                       maxLength="256"
@@ -107,6 +115,7 @@ export default class App extends Component {
                       data-name="Name 3"
                       placeholder="timo.morawitz.official"
                       id="name-3"
+                      value="username"
                     />
                     <div className="errormessage">
                       No account connected. <br />Wrong Username / Password
@@ -116,7 +125,7 @@ export default class App extends Component {
                     <h1 className="settingtitle setting_page_title">
                       Insta Password
                     </h1>
-                    <input
+                    <TextField
                       type="text"
                       className="text-field settingsfield error w-input"
                       maxLength="256"
@@ -124,6 +133,7 @@ export default class App extends Component {
                       data-name="Name 2"
                       placeholder="**********"
                       id="name-2"
+                      value="password"
                     />
                     <div className="settingsdistributor bottom">
                       <div className="checkbox-field w-checkbox">

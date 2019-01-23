@@ -114,7 +114,7 @@ export default class Settings extends Component {
                       maxLength="256"
                       name="name-3"
                       data-name="Name 3"
-                      placeholder="timo.morawitz.official"
+                      placeholder=""
                       id="name-3"
                       value="username"
                     />
@@ -132,7 +132,7 @@ export default class Settings extends Component {
                       maxLength="256"
                       name="name-2"
                       data-name="Name 2"
-                      placeholder="**********"
+                      placeholder=""
                       id="name-2"
                       value="password"
                     />

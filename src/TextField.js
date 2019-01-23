@@ -14,8 +14,8 @@ export default class TextField extends Component {
               required={this.props.required}
               type={this.props.type || 'text'}
               style={this.props.inputStyle}
-              className="text-field filter w-input"
-              maxLength="256"
+              className={'text-field filter w-input'}
+              maxLength={this.props.type || '256'}
               value={this.getValue(context)}
               onChange={e => this.setValue(context, e.target.value)}
             />

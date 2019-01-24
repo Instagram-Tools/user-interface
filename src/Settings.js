@@ -8,6 +8,13 @@ import TextFieldConfirm from './TextFieldConfirm';
 import PaymentGateway from './PaymentGateway';
 
 export default class Settings extends Component {
+  state = {
+    isConfirmed: false,
+    show_set_e_password: false,
+    show_confirm_e_password: false,
+    show_password: false
+  };
+
   setIsConfirmed(isConfirmed = false) {
     this.setState({ isConfirmed });
   }
@@ -46,7 +53,9 @@ export default class Settings extends Component {
                       Change Login Password
                     </h1>
                     <TextField
-                      type="password"
+                      type={
+                        this.state.show_set_e_password ? 'text' : 'password'
+                      }
                       className="text-field settingsfield w-input"
                       maxLength="256"
                       name="name-2"
@@ -57,6 +66,11 @@ export default class Settings extends Component {
                     <div className="settingsdistributor bottom">
                       <div className="checkbox-field w-checkbox">
                         <input
+                          onChange={event =>
+                            this.setState({
+                              show_set_e_password: event.target.checked
+                            })
+                          }
                           type="checkbox"
                           id="Show"
                           name="Show"
@@ -77,7 +91,9 @@ export default class Settings extends Component {
                       Repeat Login Password
                     </h1>
                     <TextFieldConfirm
-                      type="password"
+                      type={
+                        this.state.show_confirm_e_password ? 'text' : 'password'
+                      }
                       className="text-field settingsfield w-input"
                       maxLength="256"
                       name="name-2"
@@ -89,6 +105,11 @@ export default class Settings extends Component {
                     <div className="settingsdistributor bottom">
                       <div className="checkbox-field w-checkbox">
                         <input
+                          onChange={event =>
+                            this.setState({
+                              show_confirm_e_password: event.target.checked
+                            })
+                          }
                           type="checkbox"
                           id="Show-4"
                           name="Show-4"
@@ -127,7 +148,7 @@ export default class Settings extends Component {
                       Insta Password
                     </h1>
                     <TextField
-                      type="text"
+                      type={this.state.show_password ? 'text' : 'password'}
                       className="text-field settingsfield error w-input"
                       maxLength="256"
                       name="name-2"
@@ -139,6 +160,11 @@ export default class Settings extends Component {
                     <div className="settingsdistributor bottom">
                       <div className="checkbox-field w-checkbox">
                         <input
+                          onChange={event =>
+                            this.setState({
+                              show_password: event.target.checked
+                            })
+                          }
                           type="checkbox"
                           id="Show-2"
                           name="Show-2"

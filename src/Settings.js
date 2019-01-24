@@ -137,7 +137,7 @@ export default class Settings extends Component {
                       data-name="Name 3"
                       placeholder=""
                       id="name-3"
-                      value="username"
+                      value="set_username"
                     />
                     <div className="errormessage">
                       No account connected. <br />Wrong Username / Password
@@ -155,7 +155,7 @@ export default class Settings extends Component {
                       data-name="Name 2"
                       placeholder=""
                       id="name-2"
-                      value="password"
+                      value="set_password"
                     />
                     <div className="settingsdistributor bottom">
                       <div className="checkbox-field w-checkbox">

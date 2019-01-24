@@ -19,6 +19,14 @@ export default class Settings extends Component {
     this.setState({ isConfirmed });
   }
 
+  save(context) {
+    context.setState(p => ({
+      e_password: p.set_e_password,
+      username: p.set_username,
+      password: p.set_password
+    }));
+  }
+
   render() {
     return (
       <Context.Consumer>
@@ -27,6 +35,7 @@ export default class Settings extends Component {
             <h1 className="settingtitle settingspage">Account</h1>
             <div className="w-form">
               <form
+                onSubmit={event => event.preventDefault() || this.save(context)}
                 id="email-form-2"
                 name="email-form-2"
                 data-name="Email Form 2"

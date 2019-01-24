@@ -11,7 +11,9 @@ export const unsavedState = {
   scrollHeight: document.body.scrollHeight,
   try_email: '',
   try_e_password: '',
-  set_e_password: '',
+  set_e_password: undefined,
+  set_username: undefined,
+  set_password: undefined,
   subscription: '',
   bot_active: false,
   notifications: ['1', '1', '1', '1', '1']

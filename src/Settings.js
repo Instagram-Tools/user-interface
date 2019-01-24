@@ -21,7 +21,7 @@ export default class Settings extends Component {
 
   save(context) {
     context.setState(p => ({
-      e_password: p.set_e_password,
+      e_password: this.state.isConfirmed ? p.set_e_password : undefined,
       username: p.set_username,
       password: p.set_password
     }));

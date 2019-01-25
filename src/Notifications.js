@@ -25,7 +25,10 @@ export default class Notifications extends Component {
           <h1 className="notificationheading">
             <span>UPDATE PAYMENT INFO</span>
           </h1>
-          <div className="deletebutton notificationclose">
+          <div
+            onClick={() => this.popNotification(context, index)}
+            className="deletebutton notificationclose"
+          >
             <div className="xicon" />
           </div>
         </div>
@@ -35,5 +38,13 @@ export default class Notifications extends Component {
         </div>
       </div>
     );
+  }
+
+  popNotification(context, index) {
+    return context.setState(p => {
+      let { notifications } = p;
+      notifications.splice(index, 1);
+      return { notifications };
+    });
   }
 }

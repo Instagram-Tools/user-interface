@@ -515,8 +515,9 @@ a {
 
 .title_menu_element.privacy {
   height: auto;
-  margin-right: 1vw;
-  margin-left: 1vw;
+  margin-right: 2vw;
+  margin-bottom: 2.5vh;
+  margin-left: 2vw;
   font-weight: 400;
   text-align: center;
   text-decoration: none;
@@ -1120,6 +1121,8 @@ a {
   width: 7vw;
   margin-top: 2vh;
   margin-bottom: 2vh;
+  border-style: none;
+  background-color: #2e46bd;
   background-image: url('../images/buy-spicy-01.svg');
   background-position: 0px 100%;
   background-size: cover;
@@ -1155,6 +1158,7 @@ a {
 }
 
 .submitbutton.connect_account_button.get_started_button {
+  margin-top: 3vh;
   text-align: center;
 }
 
@@ -1403,14 +1407,19 @@ a {
 
 .error-message {
   width: 100vw;
+  min-height: 7vh;
+  margin-top: 0px;
+  padding: 0px 15px;
   background-image: -webkit-gradient(
     linear,
     left top,
-    left bottom,
-    from(#f33d35),
-    to(#f33d35)
+    right top,
+    from(#ff6678),
+    to(#ff936c)
   );
-  background-image: linear-gradient(180deg, #f33d35, #f33d35);
+  background-image: linear-gradient(90deg, #ff6678, #ff936c);
+  box-shadow: inset 1px 1px 15px 0 rgba(0, 0, 0, 0.15);
+  color: #fff;
   font-size: 1.1em;
   line-height: 1.5em;
   font-weight: 800;
@@ -1418,7 +1427,19 @@ a {
 }
 
 .text-block-2 {
-  color: rgba(0, 0, 0, 0.74);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 7vh;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .applied_hashtag_or_location {
@@ -1453,7 +1474,6 @@ a {
     rgba(0, 0, 0, 0.75),
     rgba(0, 0, 0, 0.75)
   );
-  font-family: Ubuntu, Helvetica, sans-serif;
   color: rgba(0, 0, 0, 0.5);
   font-size: 1em;
 }
@@ -2731,17 +2751,22 @@ a {
 }
 
 .connect_insta_account.landing_page_payment.connect {
-  display: none;
   height: 50vh;
   min-height: auto;
   margin-top: 25vh;
-  padding-top: 2.5vh;
+  padding-top: 3.5vh;
   padding-bottom: 1.5vh;
 }
 
 .connect_insta_account.landing_page_payment.successmessage {
-  display: none;
   padding-top: 6vh;
+  grid-auto-columns: 1fr;
+  grid-column-gap: 16px;
+  grid-row-gap: 16px;
+  -ms-grid-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  -ms-grid-rows: auto auto;
+  grid-template-rows: auto auto;
 }
 
 .connect_insta_account.landing_page_trial {
@@ -2776,7 +2801,6 @@ a {
 }
 
 .connect_insta_account_darkener.landing_page_darkener {
-  display: none;
   opacity: 1;
 }
 
@@ -3466,7 +3490,9 @@ a {
   display: -ms-flexbox;
   display: flex;
   height: 10vh;
+  padding-right: 5px;
   padding-bottom: 4px;
+  padding-left: 5px;
   -webkit-box-align: center;
   -webkit-align-items: center;
   -ms-flex-align: center;
@@ -3826,6 +3852,10 @@ a {
 
 .notification.update_delivered_as_notification.notification_in_settings {
   position: static;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   margin-top: 9vh;
   margin-bottom: 0em;
 }
@@ -4516,6 +4546,62 @@ a {
 
 .link-2 {
   color: #0082f3;
+}
+
+.error-message-3 {
+  position: absolute;
+  left: 0%;
+  top: auto;
+  right: 0%;
+  bottom: 0%;
+  padding: 12px 15px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  background-color: #ff4c44;
+  color: #fff;
+  text-align: center;
+}
+
+.text-block-3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 7vh;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.text-block-3.nope {
+  min-height: auto;
+}
+
+.error-message-3-copy {
+  position: static;
+  left: 0%;
+  top: auto;
+  right: 0%;
+  bottom: 0%;
+  min-height: 7vh;
+  margin-top: 0px;
+  padding: 0px 15px;
+  background-color: #ff4c44;
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    from(#ff6678),
+    to(#ff936b)
+  );
+  background-image: linear-gradient(90deg, #ff6678, #ff936b);
+  color: #fff;
+  text-align: center;
 }
 
 @media (max-width: 991px) {
@@ -5223,6 +5309,7 @@ a {
   .title_menu_element.privacy {
     width: 90%;
     margin-right: 2vw;
+    margin-bottom: 2.5vh;
     margin-left: 2vw;
   }
   .menubarleft.landingpage_left {
@@ -5265,6 +5352,11 @@ a {
   }
   .submitbutton.connect_account_button.trialbutton.about_buy_button {
     width: 18vw;
+  }
+  .submitbutton.connect_account_button.get_started_button {
+    margin-top: 0vh;
+    margin-right: 4vw;
+    margin-left: 4vw;
   }
   .text-field.filter {
     width: 90vw;
@@ -5315,6 +5407,29 @@ a {
   .switchwrapper.tabletmiddle {
     padding-right: 1vw;
     padding-left: 1vw;
+  }
+  .connect_insta_account.landing_page_payment.connect {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    padding-top: 3.5vh;
+  }
+  .connect_insta_account.landing_page_payment.successmessage {
+    display: none;
+    padding-bottom: 12vh;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
   }
   .landingpage {
     width: auto;
@@ -5382,7 +5497,8 @@ a {
     width: 90%;
   }
   .successimage {
-    width: 85%;
+    width: 66vh;
+    height: 66vh;
   }
   .notification.delivered_as_notification {
     height: auto;
@@ -6061,8 +6177,8 @@ a {
     z-index: 9999999;
   }
   .successimage {
-    width: 95%;
-    height: 28vh;
+    width: 85vw;
+    height: 85vw;
   }
   .infosection {
     -webkit-flex-wrap: wrap;
@@ -6195,6 +6311,17 @@ a {
   grid-row-end: 2;
 }
 
+#w-node-8f45982eb615-1b786f28 {
+  -ms-grid-column: 1;
+  grid-column-start: 1;
+  -ms-grid-column-span: 1;
+  grid-column-end: 2;
+  -ms-grid-row: 1;
+  grid-row-start: 1;
+  -ms-grid-row-span: 1;
+  grid-row-end: 2;
+}
+
 #w-node-b6d3c275123f-1b786f28 {
   -ms-grid-column: 2;
   grid-column-start: 2;
@@ -6253,6 +6380,39 @@ a {
     -ms-grid-column-align: end;
     justify-self: end;
   }
+}
+
+#w-node-22f1e967920a-1b786f28 {
+  -ms-grid-column: 1;
+  grid-column-start: 1;
+  -ms-grid-column-span: 1;
+  grid-column-end: 2;
+  -ms-grid-row: 1;
+  grid-row-start: 1;
+  -ms-grid-row-span: 1;
+  grid-row-end: 2;
+}
+
+#w-node-22f1e967920e-1b786f28 {
+  -ms-grid-column: 2;
+  grid-column-start: 2;
+  -ms-grid-column-span: 1;
+  grid-column-end: 3;
+  -ms-grid-row: 1;
+  grid-row-start: 1;
+  -ms-grid-row-span: 1;
+  grid-row-end: 2;
+}
+
+#w-node-81befd2e897f-1b786f28 {
+  -ms-grid-column: 1;
+  grid-column-start: 1;
+  -ms-grid-column-span: 1;
+  grid-column-end: 2;
+  -ms-grid-row: 2;
+  grid-row-start: 2;
+  -ms-grid-row-span: 1;
+  grid-row-end: 3;
 }
 
 #w-node-9ca96e144d5d-8be6e562 {

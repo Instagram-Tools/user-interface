@@ -6,7 +6,7 @@ import { Context } from './Context';
 import { NavHashLink } from 'react-router-hash-link';
 
 export default class LandingPageRegister extends Component {
-  errorCode = {
+  statusCode = {
     0: 'success',
     1: 'PasswordError',
     2: 'ServerError',
@@ -17,7 +17,7 @@ export default class LandingPageRegister extends Component {
     isEmailSet: false,
     isPasswordSet: false,
     isConfirmed: false,
-    error: this.errorCode[0]
+    status: this.statusCode[0]
   };
 
   render() {
@@ -94,8 +94,8 @@ export default class LandingPageRegister extends Component {
 
   buildErrorMessage() {
     function getMessage() {
-      switch (this.state.error) {
-        case this.errorCode[3]:
+      switch (this.state.status) {
+        case this.statusCode[3]:
           return (
             <div>
               Email already taken. If you have registered but didn't pay or
@@ -114,7 +114,7 @@ export default class LandingPageRegister extends Component {
       <div
         className="w-form-fail"
         style={
-          this.state.error !== this.errorCode[0] ? { display: 'block' } : {}
+          this.state.status !== this.statusCode[0] ? { display: 'block' } : {}
         }
       >
         {getMessage.call(this)}
@@ -124,7 +124,7 @@ export default class LandingPageRegister extends Component {
 
   async submit(context) {
     if (!this.requirementsMet())
-      return this.setState({ error: this.errorCode[1] });
+      return this.setState({ status: this.statusCode[1] });
     if (
       await API_Gateway.register(
         context.state.try_email,
@@ -136,7 +136,7 @@ export default class LandingPageRegister extends Component {
         e_password: context.state.try_e_password
       });
       return this.props.toggle();
-    } else return this.setState({ error: this.errorCode[2] });
+    } else return this.setState({ status: this.statusCode[2] });
   }
 
   requirementsMet() {

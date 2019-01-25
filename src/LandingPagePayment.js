@@ -83,28 +83,12 @@ export default class LandingPagePayment extends Component {
                 </div>
               </div>
               <div className="buy_plan_holder">
-                <PaymentGateway
-                  style={{ width: '100%' }}
-                  userdata={{
-                    email: context.state.email,
-                    discount_code: context.state.discount_code
-                  }}
-                  setSubscription={sub => this.setSubscription(sub, context)}
-                />
+                <PaymentGateway style={{ width: '100%' }} />
               </div>
             </div>
           );
         }}
       </Context.Consumer>
     );
-  }
-
-  async setSubscription(subscription, context) {
-    await context.setState({ subscription });
-    API.put(API.data_to_save({ ...context.state, subscription })).catch(
-      console.error
-    );
-
-    this.props.toggle(context);
   }
 }

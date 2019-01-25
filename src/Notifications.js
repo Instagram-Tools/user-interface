@@ -5,14 +5,21 @@ export default class Notifications extends Component {
   render() {
     return (
       <Context.Consumer>
-        {context => context.state.notifications.map(this.buildNotification)}
+        {context =>
+          context.state.notifications.map((n, i) =>
+            this.buildNotification(n, i, context)
+          )
+        }
       </Context.Consumer>
     );
   }
 
-  buildNotification() {
+  buildNotification(notification, index, context) {
     return (
-      <div className="notification update_delivered_as_notification notification_in_settings">
+      <div
+        className="notification update_delivered_as_notification notification_in_settings"
+        key={index}
+      >
         <div className="notificationheader_div w-clearfix">
           <div className="notificationicon" />
           <h1 className="notificationheading">
@@ -23,7 +30,8 @@ export default class Notifications extends Component {
           </div>
         </div>
         <div className="notificationtext">
-          You&#x27;re broke af bitch!<br />
+          {notification}
+          <br />
         </div>
       </div>
     );

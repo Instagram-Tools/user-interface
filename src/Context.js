@@ -16,7 +16,7 @@ export const unsavedState = {
   set_password: undefined,
   subscription: '',
   bot_active: false,
-  notifications: ['1', '1', '1', '1', '1']
+  notifications: []
 };
 
 // Then create a provider Component
@@ -208,13 +208,18 @@ export class Provider extends Component {
     this.setState({ bot_active });
   }
 
+  async pushNotification(text) {
+    this.setState(p => ({ notifications: [...p.notifications, text] }));
+  }
+
   render() {
     return (
       <Context.Provider
         value={{
           state: this.state,
           setState: this.setState.bind(this),
-          isBotActive: this.isBotActive.bind(this)
+          isBotActive: this.isBotActive.bind(this),
+          pushNotification: this.pushNotification.bind(this)
         }}
       >
         {this.props.children}

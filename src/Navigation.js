@@ -35,12 +35,14 @@ export default class Navigation extends Component {
                       >
                         INTERFACE
                       </NavLink>
-                      <NavLink
-                        className="title_menu_element landingpage_element w-nav-link"
-                        to="/settings"
-                      >
-                        SETTINGS
-                      </NavLink>
+                      {this.isLoggedin(context) ? (
+                        <NavLink
+                          className="title_menu_element landingpage_element w-nav-link"
+                          to="/settings"
+                        >
+                          SETTINGS
+                        </NavLink>
+                      ) : null}
                       <NavLink
                         to="#"
                         className="title_menu_element feature_in_development w-nav-link"
@@ -176,12 +178,14 @@ export default class Navigation extends Component {
               >
                 INTERFACE
               </NavLink>
-              <NavLink
-                to="/settings"
-                className="title_menu_element landingpage_element w-nav-link w--nav-link-open"
-              >
-                SETTINGS
-              </NavLink>
+              {this.isLoggedin(context) ? (
+                <NavLink
+                  to="/settings"
+                  className="title_menu_element landingpage_element w-nav-link w--nav-link-open"
+                >
+                  SETTINGS
+                </NavLink>
+              ) : null}
               <NavLink
                 to="#"
                 className="title_menu_element feature_in_development w-nav-link w--nav-link-open"

@@ -6,6 +6,8 @@ import { Context } from './Context';
 import TextField from './TextField';
 import TextFieldConfirm from './TextFieldConfirm';
 import PaymentGateway from './PaymentGateway';
+import API from './API_Gateway';
+import console from './Log';
 
 export default class Settings extends Component {
   state = {
@@ -19,12 +21,34 @@ export default class Settings extends Component {
     this.setState({ isConfirmed });
   }
 
-  save(context) {
-    context.setState(p => ({
-      e_password: this.state.isConfirmed ? p.set_e_password : undefined,
-      username: p.set_username,
-      password: p.set_password
-    }));
+  async save(context) {
+    let update = {
+      e_password: this.state.isConfirmed
+        ? context.state.set_e_password
+        : undefined,
+      username: context.state.set_username,
+      password: context.state.set_password
+    };
+
+    await context.setState(update);
+
+    let data = API.data_to_save({ ...context.state, ...update });
+
+    if (data) {
+      API.put(data)
+        .then(this.success.bind(this))
+        .catch(this.error.bind(this));
+    }
+  }
+
+  success(r) {
+    console.log('Settings save():', r);
+    this.setState({ success: true, error: false });
+  }
+
+  error(e) {
+    console.error('Settings save():', e);
+    this.setState({ success: false, error: true });
   }
 
   render() {

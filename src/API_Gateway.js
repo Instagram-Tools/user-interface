@@ -37,7 +37,7 @@ export default class API_Gateway {
       }
     });
     await response.text();
-    return response.status === 200;
+    return response.status;
   }
 
   static extractToken(text) {

@@ -125,18 +125,24 @@ export default class LandingPageRegister extends Component {
   async submit(context) {
     if (!this.requirementsMet())
       return this.setState({ status: this.statusCode[1] });
-    if (
+    switch (
       await API_Gateway.register(
         context.state.try_email,
         context.state.try_e_password
       )
     ) {
-      context.setState({
-        email: context.state.try_email,
-        e_password: context.state.try_e_password
-      });
-      return this.props.toggle();
-    } else return this.setState({ status: this.statusCode[2] });
+      case 200:
+        context.setState({
+          email: context.state.try_email,
+          e_password: context.state.try_e_password
+        });
+        return this.props.toggle();
+      case 403:
+        return this.setState({ status: this.statusCode[3] });
+      case 500:
+      default:
+        return this.setState({ status: this.statusCode[2] });
+    }
   }
 
   requirementsMet() {

@@ -3,12 +3,19 @@ import TextField from './TextField';
 import API from './API_Gateway';
 import { Context } from './Context';
 import { NavHashLink } from 'react-router-hash-link';
+import console from './Log';
 
 export default class LandingPageLogin extends Component {
+  statusCode = {
+    0: 'success',
+    1: 'Some Error',
+    2: 'Wrong Credentials'
+  };
+
   state = {
     isEmailSet: false,
     isPasswordSet: false,
-    error: false
+    status: this.statusCode[0]
   };
 
   render() {
@@ -72,19 +79,37 @@ export default class LandingPageLogin extends Component {
                 <div className="w-form-done">
                   <div>Thank you! Your submission has been received!</div>
                 </div>
-                <div
-                  className="w-form-fail"
-                  style={this.state.error ? { display: 'block' } : {}}
-                >
-                  <div>
-                    Oops! Something went wrong while submitting the form.
-                  </div>
-                </div>
+                {this.buildErrorMessage()}
               </div>
             </div>
           );
         }}
       </Context.Consumer>
+    );
+  }
+
+  buildErrorMessage() {
+    function getMessage() {
+      switch (this.state.status) {
+        case this.statusCode[2]:
+          return <div>Wrong Credentials</div>;
+        case this.statusCode[1]:
+        default:
+          return (
+            <div>Oops! Something went wrong while submitting the form.</div>
+          );
+      }
+    }
+
+    return (
+      <div
+        className="w-form-fail"
+        style={
+          this.state.status !== this.statusCode[0] ? { display: 'block' } : {}
+        }
+      >
+        {getMessage.call(this)}
+      </div>
     );
   }
 
@@ -99,7 +124,8 @@ export default class LandingPageLogin extends Component {
   async login(context) {
     try {
       let { try_email, try_e_password } = context.state;
-      let result = await API.get(try_email, try_e_password);
+      let response = await API.get(try_email, try_e_password);
+      let result = await response.json();
 
       let settings;
       if (result.settings) {
@@ -121,9 +147,9 @@ export default class LandingPageLogin extends Component {
         timetable: timetable || p.timetable
       }));
       this.props.toggle();
-      this.setState({ error: false });
+      this.setState({ status: this.statusCode[0] });
     } catch (e) {
-      this.setState({ error: true });
+      this.setState({ status: this.statusCode[1] });
     }
   }
 }

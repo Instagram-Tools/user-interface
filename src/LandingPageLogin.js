@@ -125,6 +125,10 @@ export default class LandingPageLogin extends Component {
     try {
       let { try_email, try_e_password } = context.state;
       let response = await API.get(try_email, try_e_password);
+
+      if (response.status === 403)
+        return this.setState({ status: this.statusCode[2] });
+
       let result = await response.json();
 
       let settings;

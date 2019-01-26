@@ -85,8 +85,6 @@ export default class LandingPageConnect extends Component {
   }
 
   async save(context) {
-    console.log('save()');
-
     let data = API.data_to_save({ ...context.state });
 
     if (data) {

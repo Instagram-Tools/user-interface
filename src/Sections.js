@@ -65,6 +65,15 @@ export default class Sections extends Component {
             Bot active
           </h1>
         );
+      else if (this.isStarting(context))
+        return (
+          <h1
+            style={{ color: '#f6ec31' }}
+            className="general_settings generaltitle distancegeneral"
+          >
+            Bot starting
+          </h1>
+        );
       else
         return (
           <h1
@@ -108,5 +117,10 @@ export default class Sections extends Component {
 
   isLoggedin(context) {
     return context.state.email && context.state.e_password;
+  }
+
+  isStarting(context) {
+    //TODO implement isStarting()
+    return false;
   }
 }

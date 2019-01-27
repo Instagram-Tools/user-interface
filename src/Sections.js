@@ -120,7 +120,20 @@ export default class Sections extends Component {
   }
 
   isStarting(context) {
-    //TODO implement isStarting()
-    return false;
+    let { timetable } = context.state;
+    let tt = [];
+    for (let i = 0; i < timetable.length; i += 2) {
+      tt = tt.concat({ from: timetable[i], to: timetable[i + 1] });
+    }
+    tt = tt.filter(
+      t =>
+        this.format(t.from) < this.format() && this.format() < this.format(t.to)
+    );
+    return tt.length > 0;
+  }
+
+  format(date = new Date()) {
+    let d = new Date(date);
+    return new Date(4, 1, d.getDay(), d.getHours(), d.getMinutes());
   }
 }

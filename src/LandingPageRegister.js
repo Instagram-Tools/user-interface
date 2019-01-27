@@ -95,6 +95,8 @@ export default class LandingPageRegister extends Component {
   buildErrorMessage() {
     function getMessage() {
       switch (this.state.status) {
+        case this.statusCode[1]:
+          return <div>The passwords didnʼt m)tch. Please try again :-)</div>;
         case this.statusCode[3]:
           return (
             <div>

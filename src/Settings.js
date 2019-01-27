@@ -269,10 +269,12 @@ export default class Settings extends Component {
                 </div>
               </div>
               <h1 className="settingtitle settingspage nodistance">Payment</h1>
-              <div className="errormessage paymenterror">
-                Something went wrong with your payment. Please fix that in order
-                to continue using Pink Parrot.
-              </div>
+              {context.state.errorPayment && (
+                <div className="errormessage paymenterror">
+                  Something went wrong with your payment. Please fix that in
+                  order to continue using Pink Parrot.
+                </div>
+              )}
               <div className="buy_plan_holder">
                 <PaymentGateway style={{ width: '100%' }} />
               </div>

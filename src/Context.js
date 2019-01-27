@@ -17,6 +17,7 @@ export const unsavedState = {
   subscription: '',
   bot_active: false,
   errorConnectAccount: false,
+  errorPayment: false,
   notifications: []
 };
 

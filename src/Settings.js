@@ -187,9 +187,11 @@ export default class Settings extends Component {
                         id="name-3"
                         value="set_username"
                       />
-                      <div className="errormessage">
-                        No account connected. <br />Wrong Username / Password
-                      </div>
+                      {context.state.errorConnectAccount && (
+                        <div className="errormessage">
+                          No account connected. <br />Wrong Username / Password
+                        </div>
+                      )}
                     </div>
                     <div className="settingsdistributor new_row_right_down">
                       <h1 className="settingtitle setting_page_title">

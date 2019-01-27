@@ -65,7 +65,7 @@ export default class Sections extends Component {
             Bot active
           </h1>
         );
-      else if (this.isStarting(context))
+      else if (context.state.bot_on && this.isStarting(context))
         return (
           <h1
             style={{ color: '#f6ec31' }}

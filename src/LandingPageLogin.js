@@ -92,7 +92,7 @@ export default class LandingPageLogin extends Component {
     function getMessage() {
       switch (this.state.status) {
         case this.statusCode[2]:
-          return <div>Wrong Credentials</div>;
+          return <div>Wrong email or password. Please try again :-)</div>;
         case this.statusCode[1]:
         default:
           return (

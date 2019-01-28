@@ -70,13 +70,13 @@ class StripeDropIn extends React.Component {
     return (
       <Context.Consumer>
         {context => (
-          <div>
+          <div style={{ width: '100%' }}>
             <form onSubmit={ev => this.submit(ev, context)}>
               <label>
                 Card details
                 <CardElement {...this.createOptions(this.props.fontSize)} />
               </label>
-              <button>Pay</button>
+              <button>Save</button>
               <div
                 style={{ display: this.state.error ? 'table-cell' : 'none' }}
                 className="error-message w-form-fail"

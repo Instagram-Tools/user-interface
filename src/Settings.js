@@ -276,7 +276,7 @@ export default class Settings extends Component {
                 </div>
               )}
               <div className="buy_plan_holder">
-                <PaymentGateway style={{ width: '100%' }} />
+                <PaymentGateway />
               </div>
               <h1 className="settingtitle settingspage nodistance">
                 Delete account and end subscription

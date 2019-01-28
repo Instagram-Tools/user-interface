@@ -13,7 +13,7 @@ export default function BasicExample() {
   return (
     <Provider>
       <Router>
-        <div>
+        <div className="body-2">
           <Navigation />
           <Notifications />
           <Route exact path="/" component={Home} />

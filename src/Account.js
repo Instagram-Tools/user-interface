@@ -22,14 +22,12 @@ export default class Account extends Component {
               }
             >
               <div
-                onClick={this.nextStep.bind(context)}
                 data-w-id="5bc62214-6295-d5b6-2514-2ebbae7e5d29"
                 className="dropdown-toggle w-dropdown-toggle"
               >
                 <div className="general_settings subtitle account">
                   {context.state.username ? context.state.username : 'Account'}
                 </div>
-                <div className="icon w-icon-dropdown-toggle" />
               </div>
               <LandingPageLogin
                 display={context.state.registrationStep === 11}

@@ -13,16 +13,6 @@ export default class UnfollowSettings extends Component {
         </div>
         <div className="body">
           <div className="w-form form">
-            <div className="titleholder">
-              <div className="settingtitle">Only unfollow nonfollowers</div>
-              <Help>
-                <strong>Unfollow: </strong>
-                <br />
-                To keep your amount of followings low you should unfollow users
-                from time to time. <br />
-                Recommendation: after 2 - 3 days.
-              </Help>
-            </div>
             <TextFieldNumber
               value="unfollow_users_unfollow_after"
               placeholder="unfollow after X days"

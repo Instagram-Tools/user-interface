@@ -275,7 +275,7 @@ export default class Settings extends Component {
                   order to continue using Pink Parrot.
                 </div>
               )}
-              <div className="buy_plan_holder">
+              <div className="buy_plan_holder settingspayment">
                 <PaymentGateway />
               </div>
               <h1 className="settingtitle settingspage nodistance">

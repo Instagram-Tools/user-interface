@@ -15,10 +15,6 @@ export default class UnfollowSettings extends Component {
           <div className="w-form form">
             <div className="titleholder">
               <div className="settingtitle">Only unfollow nonfollowers</div>
-              <ContextSwitch
-                value="unfollow_users_nonfollowers"
-                className="title"
-              />
               <Help>
                 <strong>Unfollow: </strong>
                 <br />

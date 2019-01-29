@@ -102,7 +102,7 @@ export default class Settings extends Component {
                         type={
                           this.state.show_set_e_password ? 'text' : 'password'
                         }
-                        inputClass="text-field filter w-input settingsinput"
+                        inputClass="text-field filter bottom_distance_20px settingsinput w-input"
                         maxLength="256"
                         name="name-2"
                         data-name="Name 2"
@@ -142,7 +142,7 @@ export default class Settings extends Component {
                             ? 'text'
                             : 'password'
                         }
-                        inputClass="text-field filter w-input settingsinput"
+                        inputClass="text-field filter bottom_distance_20px settingsinput w-input"
                         maxLength="256"
                         name="name-2"
                         data-name="Name 2"
@@ -179,7 +179,7 @@ export default class Settings extends Component {
                       </h1>
                       <TextField
                         type="text"
-                        inputClass="text-field filter w-input settingsinput"
+                        inputClass="text-field filter bottom_distance_20px settingsinput w-input"
                         maxLength="256"
                         name="name-3"
                         data-name="Name 3"
@@ -199,7 +199,7 @@ export default class Settings extends Component {
                       </h1>
                       <TextField
                         type={this.state.show_password ? 'text' : 'password'}
-                        inputClass="text-field filter w-input settingsinput"
+                        inputClass="text-field filter bottom_distance_20px settingsinput w-input"
                         maxLength="256"
                         name="name-2"
                         data-name="Name 2"
@@ -310,7 +310,7 @@ export default class Settings extends Component {
                         name="name-4"
                         data-name="Name 4"
                         maxLength="256"
-                        inputClass="text-field filter w-input settingsinput"
+                        inputClass="text-field filter bottom_distance_20px settingsinput w-input"
                       />
                       <div className="errormessage deleteaccount">
                         To delete your account and end your subscription on the

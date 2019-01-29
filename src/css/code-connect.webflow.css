@@ -44,16 +44,13 @@ a {
 
 .menubar.menubar_landing_page {
   position: absolute;
+  left: 0%;
+  top: 0%;
+  right: 0%;
+  bottom: auto;
   z-index: 1;
-  padding-left: 5vw;
-  background-image: -webkit-gradient(
-    linear,
-    left top,
-    left bottom,
-    from(#fff),
-    to(#fff)
-  );
-  background-image: linear-gradient(180deg, #fff, #fff);
+  display: none;
+  padding-left: 3vw;
 }
 
 .menubar.menubar_landing_page.legalpage_menubar {
@@ -69,17 +66,21 @@ a {
 }
 
 .menubar.menubar_interface_page {
+  position: absolute;
+  left: 0%;
+  top: 0%;
+  right: 0%;
+  bottom: auto;
+  z-index: 1;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   width: 100vw;
   height: auto;
   min-height: 10vh;
-  background-image: -webkit-gradient(
-    linear,
-    left top,
-    left bottom,
-    from(#fff),
-    to(#fff)
-  );
-  background-image: linear-gradient(180deg, #fff, #fff);
+  background-color: transparent;
+  background-image: none;
 }
 
 .body {
@@ -362,7 +363,7 @@ a {
   -ms-flex-align: center;
   align-items: center;
   background-color: #fff;
-  background-image: url('../images/pink-parrot-about-page-graphic-sarah-new-03.svg');
+  background-image: url('../images/pink-parrot-about-page-graphic-sarah-new-font-03.svg');
   background-position: 50% 100%;
   background-size: cover;
   background-attachment: fixed;
@@ -1682,6 +1683,7 @@ a {
   display: flex;
   height: auto;
   min-height: 11vh;
+  margin-top: 10vh;
   padding: 1vh 0.66em 1vh 0.66vw;
   -webkit-justify-content: space-around;
   -ms-flex-pack: distribute;
@@ -1941,6 +1943,7 @@ a {
 }
 
 .dropdown-toggle {
+  z-index: 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2901,6 +2904,7 @@ a {
 
 .landing_content_wrap {
   position: relative;
+  z-index: 2;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3293,7 +3297,7 @@ a {
   margin-left: 27.5vw;
   padding-top: 16vh;
   padding-bottom: 4vh;
-  color: rgba(0, 0, 0, 0.8);
+  color: rgba(0, 0, 0, 0.9);
   font-size: 1em;
 }
 
@@ -3489,6 +3493,11 @@ a {
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
+  background-image: url('../images/buy-spicy-01.svg');
+  background-position: 0px 0px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #fff;
 }
 
 .utility-page-content {
@@ -3686,12 +3695,17 @@ a {
   opacity: 0.75;
 }
 
+.speedtext.mediumspeed {
+  margin-top: -1px;
+}
+
 .speedtext.slowspeed {
   border-top-left-radius: 14px;
   border-bottom-left-radius: 14px;
 }
 
 .speedtext.slowspeed.slowactive {
+  margin-top: -1px;
   background-image: -webkit-gradient(
     linear,
     left top,
@@ -3705,6 +3719,7 @@ a {
 
 .speedtext.fastspeed {
   min-height: 28px;
+  margin-top: -1px;
   border-top-right-radius: 14px;
   border-bottom-right-radius: 14px;
 }
@@ -3855,7 +3870,7 @@ a {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  margin-top: 9vh;
+  margin-top: 19vh;
   margin-bottom: 0em;
 }
 
@@ -3957,10 +3972,7 @@ a {
 }
 
 .notificationcircle {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   width: 26px;
   height: 26px;
   margin-right: 0.5vw;
@@ -4002,10 +4014,7 @@ a {
 }
 
 .general_help_icon {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   width: 26px;
   height: 26px;
   margin-right: 1vw;
@@ -4703,6 +4712,21 @@ a {
   background-color: #f5f5f5;
 }
 
+.body-5 {
+  background-color: #f5f5f5;
+}
+
+.menu_bar_whitener {
+  position: absolute;
+  left: 0%;
+  top: 0%;
+  right: 0%;
+  bottom: auto;
+  width: 100vw;
+  height: 10vh;
+  background-color: #fff;
+}
+
 @media (max-width: 991px) {
   .menubar.menubar_landing_page {
     position: relative;
@@ -4716,7 +4740,7 @@ a {
   }
   .titlepage.landingtitle {
     width: 90vw;
-    margin-top: 1vh;
+    margin-top: 11vh;
     color: #fff;
     font-size: 3em;
     text-align: center;
@@ -4963,6 +4987,7 @@ a {
     margin-right: 0%;
   }
   .dropdown-toggle {
+    z-index: 1;
     padding-right: 0%;
   }
   .dropdown {
@@ -5026,17 +5051,9 @@ a {
   .menu-button {
     padding-right: 3vw;
     padding-left: 3vw;
-    background-image: -webkit-gradient(
-      linear,
-      left top,
-      left bottom,
-      from(#fff),
-      to(#fff)
-    );
-    background-image: linear-gradient(180deg, #fff, #fff);
   }
-  .menu-button:hover {
-    opacity: 0.7;
+  .menu-button:active {
+    background-color: transparent;
   }
   .menu-button.w--open {
     margin-left: 0vw;
@@ -5050,10 +5067,10 @@ a {
     background-image: linear-gradient(180deg, #fff, #fff);
   }
   .menuicon {
-    color: rgba(0, 0, 0, 0.66);
+    color: #ffb700;
   }
   .menuicon:active {
-    color: #4251ff;
+    background-color: transparent;
   }
   .switchwrapper {
     width: 30vw;
@@ -5125,7 +5142,7 @@ a {
       -webkit-gradient(linear, left top, left bottom, from(#f9fbfc), to(#f9fbfc));
     background-image: url('../images/rocket-landing-mobile-easteregg-high-01.svg'),
       linear-gradient(180deg, #f9fbfc, #f9fbfc);
-    background-position: 50% 0px, 0px 0px;
+    background-position: 50% 0%, 0px 0px;
     background-size: contain, auto;
     background-repeat: no-repeat, repeat;
   }
@@ -5367,8 +5384,8 @@ a {
     height: 7em;
   }
   .titlepage.landingtitle {
-    height: 8.5vh;
     margin-top: 0vh;
+    padding-top: 18vh;
     font-size: 2.5em;
   }
   .titlepage.landingtitle.legalpage {
@@ -5475,6 +5492,7 @@ a {
     margin-right: 2.5vw;
   }
   .generalsettings {
+    margin-top: 15vh;
     padding-top: 2em;
     padding-bottom: 3em;
     -webkit-box-pack: center;
@@ -5555,13 +5573,16 @@ a {
     position: relative;
     height: auto;
     min-height: 48vh;
-    margin-top: 80vh;
+    margin-top: 70vh;
+    margin-bottom: 7vh;
     padding-top: 0vh;
     grid-row-gap: 4vw;
   }
   .usp_wrap.about_page_wrap {
+    min-height: 105vh;
     margin-top: 3vh;
-    margin-bottom: 7vh;
+    margin-bottom: 0vh;
+    padding-bottom: 15vh;
   }
   .usp.uspleft {
     width: 80%;
@@ -5589,7 +5610,6 @@ a {
   .legaltext {
     width: 75vw;
     margin-left: 12.5vw;
-    padding-top: 5vh;
   }
   .whatstatement {
     padding-top: 15vh;
@@ -5657,6 +5677,9 @@ a {
     -ms-flex-align: center;
     align-items: center;
   }
+  .menu_bar_whitener {
+    height: 15vh;
+  }
 }
 
 @media (max-width: 479px) {
@@ -5688,18 +5711,21 @@ a {
     font-size: 2.5em;
   }
   .titlepage.landingtitle {
-    margin-top: 2vh;
+    margin-right: 7vw;
+    margin-left: 7vw;
+    padding-top: 12vh;
     font-size: 2em;
   }
   .titlepage.landingtitle.legalpage {
     font-size: 2.5em;
   }
   .titlepage.landingsubtitle {
-    margin-top: 1vh;
-    margin-bottom: 0.5em;
+    margin: 1vh 7vw 0.5em;
     font-size: 1.14em;
   }
   .titlepage.landingtext {
+    margin-right: 7vw;
+    margin-left: 7vw;
     font-size: 1.2em;
   }
   .titlepage.usptext.subtext.abouttext.righttext2 {
@@ -5963,6 +5989,7 @@ a {
     margin-left: 83vw;
   }
   .generalsettings {
+    margin-top: 10vh;
     padding-right: 11vw;
     padding-left: 11vw;
     -webkit-flex-wrap: wrap;
@@ -6239,7 +6266,8 @@ a {
     display: -ms-flexbox;
     display: flex;
     height: auto;
-    margin-top: 49vh;
+    margin-top: 29vh;
+    margin-bottom: 4vh;
     padding-top: 2vh;
     padding-right: 0vw;
     padding-left: 0vw;
@@ -6256,7 +6284,7 @@ a {
   .usp_wrap.about_page_wrap {
     margin-top: 5vh;
     padding-right: 8vw;
-    padding-left: 6vw;
+    padding-left: 8vw;
   }
   .usp {
     width: 100%;
@@ -6336,7 +6364,6 @@ a {
   .legaltext {
     width: 80vw;
     margin-left: 10vw;
-    padding-top: 4vh;
   }
   .whatstatement {
     padding-top: 11vh;
@@ -6489,6 +6516,9 @@ a {
   .columns-3 {
     width: 95vw;
     padding-right: 5vw;
+  }
+  .menu_bar_whitener {
+    height: 10vh;
   }
 }
 

@@ -2,9 +2,8 @@ import React, { Component } from 'react';
 import './css/normalize.css';
 import './css/webflow.css';
 import './css/code-connect.webflow.css';
-import App from './App';
-import './Home.css';
 import { HashLink } from 'react-router-hash-link';
+import About from './About';
 
 export default class Home extends Component {
   render() {
@@ -31,7 +30,7 @@ export default class Home extends Component {
                 </div>
                 <HashLink
                   smooth
-                  to="/about/#whatstatement"
+                  to="#whatstatement"
                   className="more_info_button"
                 >
                   Learn more
@@ -47,7 +46,7 @@ export default class Home extends Component {
                 </div>
                 <HashLink
                   smooth
-                  to="/about/#whatstatement"
+                  to="#whatstatement"
                   className="more_info_button"
                 >
                   Learn more
@@ -57,12 +56,12 @@ export default class Home extends Component {
                 <div className="uspicon privacyicon" />
                 <div className="titlepage usptext">Privacy</div>
                 <div className="titlepage usptext subtext">
-                  Your data is not saved. You're the only one who can access
-                  your insta.
+                  Your data is not saved. You&#x27;re the only one who can
+                  access your insta.
                 </div>
                 <HashLink
                   smooth
-                  to="/about/#whatstatement"
+                  to="#whatstatement"
                   className="more_info_button"
                 >
                   Learn more
@@ -74,11 +73,11 @@ export default class Home extends Component {
                   Bot works. Whenever.
                 </div>
                 <div className="titlepage usptext subtext righttext">
-                  It's on a server. Works even when your devices are off.
+                  It&#x27;s on a server. Works even when your devices are off.
                 </div>
                 <HashLink
                   smooth
-                  to="/about/#whatstatement"
+                  to="#whatstatement"
                   className="more_info_button"
                 >
                   Learn more
@@ -87,7 +86,14 @@ export default class Home extends Component {
             </div>
           </div>
         </div>
-        <App className="App" />
+        <h1 className="titlepage abouttitle new_about_title">
+          Everyone&#x27;s gotta bring home the bacon. Our way pushes you to the
+          next level of social media success.<span className="text-span-5">
+            <br />
+            <br />
+          </span>
+        </h1>
+        <About />
       </div>
     );
   }

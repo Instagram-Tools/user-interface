@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import './css/normalize.css';
 import './css/webflow.css';
 import './css/code-connect.webflow.css';
-import { Link } from 'react-router-dom';
 import { Context } from './Context';
 import TextField from './TextField';
 
@@ -13,18 +12,8 @@ export default class About extends Component {
         {context => (
           <div>
             <div className="whystatement">
-              <h1 className="titlepage abouttitle">
-                <span className="text-span-4">
-                  Everyone&#x27;s gotta bring home the bacon. Our way<br />
-                </span>
-                <span className="text-span-3">
-                  pushes you to the next level of social media success.
-                </span>
-                <span className="text-span-5">
-                  <br />
-                  <br />
-                </span>
-              </h1>
+              <div className="whystatement topstatement" />
+              <div className="titlepage abouttitle bottomimage" />
             </div>
             <div className="howstatement">
               <div className="typeleft">
@@ -65,17 +54,15 @@ export default class About extends Component {
             </div>
             <div id="whatstatement" className="whatstatement">
               <div className="titleholder_bacon">
-                <h1 className="titlepage featurestitle">
-                  WHAT <span>do we offer?</span>
-                </h1>
+                <h1 className="titlepage featurestitle">WHAT do we offer?</h1>
                 <h1 className="titlepage aboutsubtitle">
                   Bacon. Success. Rocket. Texts on websites can be annoyingly
                   vague. Let&#x27;s talk features.
                 </h1>
               </div>
               <div className="usp_wrap about_page_wrap">
-                <div id="w-node-9ca96e144d5d-8be6e562" className="usp">
-                  <div className="uspicon" />
+                <div id="w-node-ababf5ef94ca-1b786f28" className="usp">
+                  <div className="uspicon distance3vh" />
                   <div className="titlepage usptext">Catch me if you can</div>
                   <div className="titlepage usptext subtext">
                     <strong>Most Secure -</strong> It&#x27;s one of the main
@@ -89,8 +76,8 @@ export default class About extends Component {
                     about Instagram updates that require us to adapt.
                   </div>
                 </div>
-                <div id="w-node-9ca96e144d65-8be6e562" className="usp">
-                  <div className="uspicon sniper" />
+                <div id="w-node-ababf5ef94d7-1b786f28" className="usp">
+                  <div className="uspicon sniper distance5vh" />
                   <div className="titlepage usptext">Sniper targeting</div>
                   <div className="titlepage usptext subtext">
                     <strong>Hyper Targeting -</strong> Because having a lot of
@@ -105,10 +92,10 @@ export default class About extends Component {
                   </div>
                 </div>
                 <div
-                  id="w-node-9ca96e144d6d-8be6e562"
+                  id="w-node-ababf5ef94e4-1b786f28"
                   className="usp bottomusp"
                 >
-                  <div className="uspicon privacyicon" />
+                  <div className="uspicon privacyicon distance5vh" />
                   <div className="titlepage usptext">Privacy</div>
                   <div className="titlepage usptext subtext">
                     <strong>Privacy -</strong> a service like ours needs to
@@ -121,10 +108,10 @@ export default class About extends Component {
                   </div>
                 </div>
                 <div
-                  id="w-node-9ca96e144d75-8be6e562"
+                  id="w-node-ababf5ef94f1-1b786f28"
                   className="usp bottomusp"
                 >
-                  <div className="uspicon alwaysonicon" />
+                  <div className="uspicon alwaysonicon distance5vh" />
                   <div className="titlepage usptext">Bot works. Whenever.</div>
                   <div className="titlepage usptext subtext">
                     <strong>Always on -</strong>{' '}
@@ -140,24 +127,21 @@ export default class About extends Component {
                 </div>
               </div>
             </div>
-            <div id="pricing" className="pricing">
+            <div className="pricing">
               <div className="software_plan_holder aboutpage_buy">
                 <div className="paycolumn aboutcolumn">
                   <h1 className="softwareheading">
                     Let&#x27;s get your Insta to the next level!
                   </h1>
-                  <h1 className="titlepage buysubtitle">
-                    Launch price until Jan 1, 2019
-                  </h1>
+                  <h1 className="titlepage buysubtitle">Reduced beta price</h1>
                   <h1 className="softwareheading price">
                     Just <span className="text-span">29,95€</span> / month!
                   </h1>
                   <div className="form-block-3 w-form">
                     <TextField
                       type="text"
-                      placeholder="Promo Code"
+                      inputClass="text-field filter bottom_distance_20px settingsinput w-input"
                       value="discount_code"
-                      inputStyle={{ minWidth: '100%', width: '100%' }}
                     />
                     <div className="w-form-done">
                       <div>Thank you! Your submission has been received!</div>
@@ -170,13 +154,12 @@ export default class About extends Component {
                   </div>
                 </div>
                 <div className="div-block-2">
-                  <Link
-                    to="/interface"
+                  <a
+                    href="#"
                     className="submitbutton connect_account_button trialbutton about_buy_button w-button"
-                    onClick={this.clickOnLogin.bind(context)}
                   >
                     Buy
-                  </Link>
+                  </a>
                 </div>
               </div>
             </div>
@@ -188,7 +171,7 @@ export default class About extends Component {
                 We warmly invite you to contact us :-)
               </h1>
               <h1 className="titlepage legalsubtitle contacttext aboutemail">
-                <a href="mailto:info@pinkparrot.co">info@pinkparrot.co</a>
+                hi@pinkparrot.co
               </h1>
             </div>
           </div>

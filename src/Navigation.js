@@ -55,12 +55,6 @@ export default class Navigation extends Component {
                       >
                         Your statistics
                       </NavLink>
-                      <NavLink
-                        to="/about"
-                        className="title_menu_element landingpage_element w-nav-link"
-                      >
-                        ABOUT
-                      </NavLink>
                       <NavHashLink
                         smooth
                         to="/about/#pricing"
@@ -118,14 +112,14 @@ export default class Navigation extends Component {
             onClick={this.clickOnLogin(context)}
             className="title_menu_element landingpage_element loginlogout homelogin w-nav-link"
           >
-            login / register
+            login/register
           </NavLink>
           <NavLink
             to="/interface"
             onClick={this.clickOnLogin(context)}
             className="title_menu_element landingpage_element loginlogout responsive w-nav-link"
           >
-            login / register
+            login/register
           </NavLink>
         </div>
       );
@@ -197,12 +191,6 @@ export default class Navigation extends Component {
                 className="title_menu_element feature_in_development w-nav-link w--nav-link-open"
               >
                 Your statistics
-              </NavLink>
-              <NavLink
-                to="/about"
-                className="title_menu_element landingpage_element w-nav-link w--nav-link-open"
-              >
-                ABOUT
               </NavLink>
               <NavHashLink
                 smooth

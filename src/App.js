@@ -21,6 +21,7 @@ export default class App extends Component {
       <Context.Consumer>
         {context => (
           <div className={this.props.className} style={this.props.style}>
+            <div className="menu_bar_whitener" />
             <Progress />
             <Sections />
             <GeneralInfo />

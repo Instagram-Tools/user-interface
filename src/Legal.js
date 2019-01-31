@@ -7,6 +7,7 @@ export default class Legal extends Component {
   render() {
     return (
       <div className="legaltext">
+        <div className="menu_bar_whitener" />
         <span className="titlepage landingtitle legalpage">
           Pink Parrot Website Terms of Use &amp; Privacy Policy
         </span>

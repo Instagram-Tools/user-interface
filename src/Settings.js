@@ -67,6 +67,7 @@ export default class Settings extends Component {
 
           return (
             <div>
+              <div className="menu_bar_whitener" />
               <h1 className="settingtitle settingspage">Account</h1>
               <div className="w-form">
                 <form

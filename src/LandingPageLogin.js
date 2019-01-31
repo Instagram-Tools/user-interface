@@ -26,7 +26,7 @@ export default class LandingPageLogin extends Component {
             <div
               style={
                 this.props.display
-                  ? { opacity: 1, display: 'unset' }
+                  ? { opacity: 1, display: 'flex' }
                   : { display: 'none' }
               }
               className="connect_insta_account landing_page_payment connect"

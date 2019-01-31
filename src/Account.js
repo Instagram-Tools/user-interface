@@ -54,7 +54,7 @@ export default class Account extends Component {
               <div
                 style={
                   context.state.registrationStep > 0
-                    ? { opacity: 1, display: 'unset' }
+                    ? { opacity: 1, display: 'block' }
                     : {}
                 }
                 onClick={this.resetStep.bind(context)}

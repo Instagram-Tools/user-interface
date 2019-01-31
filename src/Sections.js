@@ -46,11 +46,6 @@ export default class Sections extends Component {
             {/*<h1 className="general_settings subtitle">Messages</h1>*/}
             {/*<Switch value="enable_message" />*/}
             {/*</div>*/}
-            {!this.isLoggedin(context) ? (
-              this.warning(context)
-            ) : (
-              <Statistics className="general_settings" />
-            )}
           </div>
         )}
       </Context.Consumer>
@@ -92,19 +87,6 @@ export default class Sections extends Component {
       console.log('bot_active', bot_active);
       context.setState({ bot_active });
     }
-  }
-
-  warning(context) {
-    return (
-      <Link
-        to="/interface"
-        className="general_settings warningtext"
-        onClick={this.clickOnLogin(context)}
-      >
-        If you already have a Pink Parrot account, please log in instead of
-        using the interface below first.
-      </Link>
-    );
   }
 
   clickOnLogin(context) {

@@ -109,8 +109,8 @@ export default class Navigation extends Component {
               <div className="notificationcircle">1</div>
               <div className="general_help_icon">?</div>
               {this.loginButton(context)}
-              {this.navOverlay(context)}
             </div>
+            {this.navOverlay(context)}
           </div>
         )}
       </Context.Consumer>

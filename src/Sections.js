@@ -13,7 +13,7 @@ export default class Sections extends Component {
       <Context.Consumer>
         {context => (
           <div
-            className="generalsettings general_settings_landing_page"
+            className="generalsettings"
             onClick={() => this.isBotActive(context)}
           >
             {this.activity(context)}

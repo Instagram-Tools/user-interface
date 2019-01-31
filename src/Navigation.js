@@ -35,7 +35,7 @@ export default class Navigation extends Component {
                     <div className="nav_menu_half">
                       <NavLink
                         to="/interface"
-                        className="title_menu_element landingpage_element w-nav-link w--current"
+                        className="title_menu_element landingpage_element w-nav-link"
                         activeClassName="w--current"
                         onClick={this.clickOnLogin(context)}
                       >

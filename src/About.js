@@ -127,7 +127,7 @@ export default class About extends Component {
                 </div>
               </div>
             </div>
-            <div className="pricing">
+            <div id="pricing" className="pricing">
               <div className="software_plan_holder aboutpage_buy">
                 <div className="paycolumn aboutcolumn">
                   <h1 className="softwareheading">

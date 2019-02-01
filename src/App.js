@@ -13,7 +13,6 @@ import UnfollowSettings from './UnfollowSettings';
 import ActivitySettings from './ActivitySettings';
 import { Context } from './Context';
 import Save from './Save';
-import GeneralInfo from './GeneralInfo';
 
 export default class App extends Component {
   render() {
@@ -24,7 +23,6 @@ export default class App extends Component {
             <div className="menu_bar_whitener" />
             <Progress />
             <Sections />
-            <GeneralInfo />
             <GeneralSettings />
             <LikeSettings
               className={

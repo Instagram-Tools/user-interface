@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 export default class GeneralInfo extends Component {
   render() {
     return (
-      <div className="generalinfo">
+      <div className="body">
         <div className="general_settings subtitle generaltutorial w-clearfix">
           <span className="infoicon"> </span>Define your target group via{' '}
           <span className="generaltutorial_ha">General</span> and when Pink

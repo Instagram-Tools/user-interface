@@ -16,8 +16,10 @@ export default class GeneralSettings extends Component {
         </div>
         <div data-w-id="885ad75b-5927-d36b-7821-9522271a2279" className="body">
           <div className="w-form form">
-            <div className="titleholder">
-              <label className="settingtitle">Interactions speed</label>
+            <div className="titleholder interactionsholder">
+              <label className="settingtitle speedttitle">
+                Interactions speed
+              </label>
               <Help className="helptext">
                 <strong>Speed: </strong>Defines interaction rate/speed. <br />
                 slow: for new accounts younger than 6 months<br />
@@ -26,8 +28,8 @@ export default class GeneralSettings extends Component {
               </Help>
               <SwitchSpeed value="speed" />
             </div>
-            <div className="titleholder">
-              <label htmlFor="email" className="settingtitle">
+            <div className="titleholder right_padding_5vw">
+              <label htmlFor="email" className="settingtitle interfacetitle">
                 Relevant Hashtags
               </label>
               <Switch value="enable_like_by_tags" className="title" />
@@ -49,7 +51,7 @@ export default class GeneralSettings extends Component {
                 placeholder="Enter hashtags this way: fitness"
               />
             </div>
-            <div className="titleholder">
+            <div className="titleholder right_padding_5vw">
               <label htmlFor="email" className="settingtitle">
                 Relevant Locations
               </label>
@@ -67,7 +69,7 @@ export default class GeneralSettings extends Component {
               value="like_by_locations"
               placeholder="Search for locations"
             />
-            <div className="titleholder">
+            <div className="titleholder right_padding_5vw">
               <label htmlFor="email" className="settingtitle">
                 Relevant Users
               </label>
@@ -90,7 +92,7 @@ export default class GeneralSettings extends Component {
                 <label
                   style={{ fontSize: '1.4em', fontWeight: '400' }}
                   htmlFor="email"
-                  className="settingtitle"
+                  className="settingtitle mobile_bottom_margin_0 mobile_width_auto"
                 >
                   Settings
                 </label>

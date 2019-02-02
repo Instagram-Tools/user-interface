@@ -12,7 +12,7 @@ export default class TextFieldNumber extends Component {
           >
             <input
               type="number"
-              className="text-field filter w-input"
+              className="text-field filter bottom_distance_20px w-input"
               maxLength="256"
               value={context.state[this.props.value]}
               onChange={e => {

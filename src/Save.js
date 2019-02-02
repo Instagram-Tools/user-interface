@@ -30,10 +30,13 @@ export default class Save extends Component {
                 Oops! Something went wrong while submitting the form.
               </div>
             </div>
-            <div className="header savebutton holder" style={{ margin: 0 }}>
+            <div
+              className="header savebutton holder save_header_bg"
+              style={{ margin: 0 }}
+            >
               <div
                 data-w-id="d8b0db36-ca47-deb4-6250-cc991b79ddb9"
-                className="header savebutton color"
+                className="header savebutton color transparent"
                 style={{ left: 0 }}
               />
 

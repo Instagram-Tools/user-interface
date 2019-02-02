@@ -19,7 +19,8 @@ export default class Save extends Component {
               className="success-message w-form-done"
             >
               <div className="text-block">
-                Thank you! Pink Parrot is active now!
+                Your changes are saved! Keep pressing save if you change
+                something :-)
               </div>
             </div>
             <div
@@ -27,7 +28,10 @@ export default class Save extends Component {
               className="error-message w-form-fail"
             >
               <div className="text-block-2">
-                Oops! Something went wrong while submitting the form.
+                <span>
+                  Something went wrong. Please try again or contact{' '}
+                  <a href="mailto:info@pinkparrot.co">info@pinkparrot.co</a>
+                </span>
               </div>
             </div>
             <div

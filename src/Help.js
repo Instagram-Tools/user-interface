@@ -16,7 +16,7 @@ export default class Help extends Component {
               : '',
             position: 'unset'
           }}
-          className="settingtitle helpcircle "
+          className="new_help_circle"
         >
           {this.state.display ? 'X' : '?'}
         </div>

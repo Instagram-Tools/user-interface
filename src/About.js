@@ -170,9 +170,11 @@ export default class About extends Component {
               <h1 className="titlepage aboutsubtitle contactsubtitle">
                 We warmly invite you to contact us :-)
               </h1>
-              <h1 className="titlepage legalsubtitle contacttext aboutemail">
-                hi@pinkparrot.co
-              </h1>
+              <a href="mailto:info@pinkparrot.co">
+                <h1 className="titlepage legalsubtitle contacttext aboutemail">
+                  info@pinkparrot.co
+                </h1>
+              </a>
             </div>
           </div>
         )}

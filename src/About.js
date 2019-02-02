@@ -4,6 +4,7 @@ import './css/webflow.css';
 import './css/code-connect.webflow.css';
 import { Context } from './Context';
 import TextField from './TextField';
+import { NavHashLink } from 'react-router-hash-link';
 
 export default class About extends Component {
   render() {
@@ -154,12 +155,14 @@ export default class About extends Component {
                   </div>
                 </div>
                 <div className="div-block-2">
-                  <a
-                    href="#"
+                  <NavHashLink
+                    smooth
+                    to="/interface/#popups"
                     className="submitbutton connect_account_button trialbutton about_buy_button w-button"
+                    onClick={this.clickOnLogin.bind(context)}
                   >
                     Buy
-                  </a>
+                  </NavHashLink>
                 </div>
               </div>
             </div>

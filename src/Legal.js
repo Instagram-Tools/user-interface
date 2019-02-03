@@ -134,15 +134,17 @@ export default class Legal extends Component {
         and all impact to your Instagram account(s) or yourself from using our
         products, including but not limited to Pink Parrot and the site and
         tools available on{' '}
-        <span className="emailsmall">https://ww.pinkparrot.co</span>. Potential
-        impact to you or your Instagram accounts includes but is not limited to
-        loss of account access, account freezes or suspensions, identity
-        verification challenges, and limits on the visibility of your Instagram
-        content (commonly known as “shadowbans”). You agree that activity on
-        Instagram using any of your accounts but performed by Pink Parrot Ltd.
-        or any of its products including Pink Parrot may result in unwanted
-        interactions with Instagram users and their content, including but not
-        limited to pornography, prostitution, narcotics, or hate groups.<br />
+        <span className="emailsmall">
+          <a href="https://www.pinkparrot.co">https://www.pinkparrot.co</a>
+        </span>. Potential impact to you or your Instagram accounts includes but
+        is not limited to loss of account access, account freezes or
+        suspensions, identity verification challenges, and limits on the
+        visibility of your Instagram content (commonly known as “shadowbans”).
+        You agree that activity on Instagram using any of your accounts but
+        performed by Pink Parrot Ltd. or any of its products including Pink
+        Parrot may result in unwanted interactions with Instagram users and
+        their content, including but not limited to pornography, prostitution,
+        narcotics, or hate groups.<br />
         <br />
         <br />
         <span className="paragraphtitle">
@@ -485,7 +487,9 @@ export default class Legal extends Component {
         <br />Here we describe how we at Pink Parrot Ltd. collect, use and
         handle your information when you use our websites, software and services
         (&quot;Services&quot;), including but not limited to Pink Parrot and{' '}
-        <span className="emailsmall">https://www.pinkparrot.co</span>.<br />
+        <span className="emailsmall">
+          <a href="https://www.pinkparrot.co">https://www.pinkparrot.co</a>
+        </span>.<br />
         <br />What&amp; Why We collect and use the following information to
         provide, improve and protect our Services:Account. We collect, and
         associate with your account, information like your name, email address,

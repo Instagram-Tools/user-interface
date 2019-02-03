@@ -35,7 +35,8 @@ export default class Legal extends Component {
         <br />
         <span className="paragraphtitle">FOR INQUIRIES</span>
         <br />Phone: 0049 160 2674280<br />Fax: 0049 32 224257748<br />E-Mail:
-        info@pinkparrot.co<br />
+        <a href="mailto:info@pinkparrot.co">info@pinkparrot.co</a>
+        <br />
         <br />
         <span className="paragraphtitle">
           SOCIAL MEDIA<br />‍
@@ -466,7 +467,9 @@ export default class Legal extends Component {
         <span className="paragraphtitle">
           SECTION 21 - CONTACT INFORMATION<br />
         </span>Questions about the Terms of Service should be sent to us at{' '}
-        <span className="emailsmall">info@pinkparrot.co</span>
+        <span className="emailsmall">
+          <a href="mailto:info@pinkparrot.co">info@pinkparrot.co</a>
+        </span>
         <br />
         <br />
         <br />
@@ -549,7 +552,7 @@ export default class Legal extends Component {
           privacy? <br />Contact us at:<br />‍
         </span>
         <span className="titlepage legalsubtitle contacttext email">
-          info@pinkparrot.co
+          <a href="mailto:info@pinkparrot.co">info@pinkparrot.co</a>
         </span>
       </div>
     );

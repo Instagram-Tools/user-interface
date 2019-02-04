@@ -13,7 +13,8 @@ class StripeDropIn extends React.Component {
     super(props);
     this.submit = this.submit.bind(this);
     this.state = {
-      error: false
+      error: false,
+      isLoading: false
     };
   }
 
@@ -39,6 +40,7 @@ class StripeDropIn extends React.Component {
 
   async submit(ev, context) {
     ev.preventDefault();
+    this.setState({ isLoading: true });
     let { token } = await this.props.stripe.createToken({
       name: context.state.email
     });
@@ -76,7 +78,9 @@ class StripeDropIn extends React.Component {
                 Card details
                 <CardElement {...this.createOptions(this.props.fontSize)} />
               </label>
-              <button>Save</button>
+              <button disabled={this.state.isLoading}>
+                {this.state.isLoading ? 'Loading...' : 'Save'}
+              </button>
               <div
                 style={{ display: this.state.error ? 'table-cell' : 'none' }}
                 className="error-message w-form-fail"

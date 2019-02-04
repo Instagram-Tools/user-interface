@@ -57,6 +57,7 @@ class StripeDropIn extends React.Component {
 
       if (response.ok) {
         console.log('Purchase Complete! response:', response);
+        this.setState({ isLoading: false });
         this.setSubscription(await response.text(), context);
       } else {
         console.error('StripeDropIn.submit() response not ok:', response);
@@ -64,7 +65,7 @@ class StripeDropIn extends React.Component {
       }
     } catch (e) {
       console.error('Error on StripeDropIn.submit():', e);
-      return this.setState({ error: true });
+      return this.setState({ error: true, isLoading: false });
     }
   }
 

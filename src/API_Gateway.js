@@ -7,7 +7,7 @@ export default class API_Gateway {
   static async get(email, e_password, username = '') {
     let url =
       API_URL +
-      `/?email=${email}&e_password=${e_password}&username=${username}`;
+      `/?email=${email.toLowerCase()}&e_password=${e_password}&username=${username}`;
     return await fetch(url);
   }
 
@@ -31,7 +31,7 @@ export default class API_Gateway {
   static async register(email, password) {
     let response = await fetch(API_URL + '/register/', {
       method: 'PUT',
-      body: JSON.stringify({ email, password }),
+      body: JSON.stringify({ email: email.toLowerCase(), password }),
       headers: {
         'Content-Type': 'application/json'
       }
@@ -49,7 +49,7 @@ export default class API_Gateway {
   static async login(email, password) {
     let response = await fetch(API_URL + '/reg/', {
       method: 'PUT',
-      body: JSON.stringify({ email, password }),
+      body: JSON.stringify({ email: email.toLowerCase(), password }),
       headers: {
         'Content-Type': 'application/json'
       }
@@ -91,9 +91,9 @@ export default class API_Gateway {
 
     return {
       bot_on,
-      email,
+      email: email.toLowerCase(),
       e_password,
-      username,
+      username: username.toLowerCase(),
       password,
       subscription,
       settings: JSON.stringify(settings),

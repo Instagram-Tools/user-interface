@@ -53,8 +53,4 @@ export default class LandingPageSuccess extends Component {
       </div>
     );
   }
-
-  setSubscription(subscription) {
-    this.setState({ subscription, registrationStep: 0 });
-  }
 }

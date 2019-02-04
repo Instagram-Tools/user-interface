@@ -55,7 +55,7 @@ class StripeDropIn extends React.Component {
 
       if (response.ok) {
         console.log('Purchase Complete! response:', response);
-        this.props.setSubscription(await response.text());
+        this.setSubscription(await response.text(), context);
       } else {
         console.error('StripeDropIn.submit() response not ok:', response);
         throw Error('response not ok');
@@ -90,6 +90,10 @@ class StripeDropIn extends React.Component {
         )}
       </Context.Consumer>
     );
+  }
+
+  setSubscription(subscription, context) {
+    context.setState({ subscription, registrationStep: 4 });
   }
 }
 

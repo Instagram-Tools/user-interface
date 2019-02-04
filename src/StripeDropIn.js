@@ -48,7 +48,7 @@ class StripeDropIn extends React.Component {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           token: token.id,
-          email: context.state.email,
+          email: context.state.email.toLowerCase(),
           discount_code: context.state.discount_code
         })
       });

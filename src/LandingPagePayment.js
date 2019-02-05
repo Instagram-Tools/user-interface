@@ -33,12 +33,9 @@ export default class LandingPagePayment extends Component {
                   </h1>
                   <div className="w-form">
                     <TextField
-                      inputClass="text-field-2 filter connect_account_filter w-input"
-                      className="text_field_description-2 below connect_account_text"
                       type="text"
-                      placeholder="Promo Code"
+                      inputClass="text-field filter bottom_distance_20px settingsinput w-input"
                       value="discount_code"
-                      // inputStyle={{ minWidth: '100%', width: '100%' }}
                     />
                     <div className="w-form-done">
                       <div>Thank you! Your submission has been received!</div>

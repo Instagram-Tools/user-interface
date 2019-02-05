@@ -28,37 +28,42 @@ export default class LandingPageRegister extends Component {
             <div
               style={
                 this.props.display
-                  ? { opacity: 1, display: 'unset' }
+                  ? { opacity: 1, display: 'flex' }
                   : { display: 'none' }
               }
-              className="connect_insta_account landing_page_payment connect"
+              className="connect_insta_account"
             >
-              <h1 className="settingtitle">Register</h1>
+              <h1 className="logintitle">Register</h1>
               <NavHashLink
                 smooth
                 to="/legal/#privacy"
-                className="title_menu_element privacy"
+                className="loginsubtitle clickprivacy"
               >
-                Your details will not be transferred to third parties, and
-                neither your email, nor your password will be saved. Click to
-                see our privacy policy.
+                Your details will not be transferred to third parties. Your
+                password is encrypted. Click to see our privacy policy.
               </NavHashLink>
               <div className="w-form">
                 <div className="formholder_connect_account">
                   <div className="columnholder filterholder first connect_account_column">
                     <TextField
+                      inputClass="text-field-2 filter connect_account_filter w-input"
+                      className="text_field_description-2 below connect_account_text"
                       type="email"
                       placeholder="Email"
                       value="try_email"
                       setIsSet={b => this.setState({ isEmailSet: b })}
                     />
                     <TextField
+                      inputClass="text-field-2 filter connect_account_filter w-input"
+                      className="text_field_description-2 below connect_account_text"
                       type="password"
                       placeholder="Password"
                       value="try_e_password"
                       setIsSet={b => this.setState({ isPasswordSet: b })}
                     />
                     <TextFieldConfirm
+                      inputClass="text-field-2 filter connect_account_filter w-input"
+                      className="text_field_description-2 below connect_account_text"
                       type="password"
                       placeholder="Confirm Password"
                       value="try_e_password"
@@ -70,13 +75,13 @@ export default class LandingPageRegister extends Component {
                     type="button"
                     value="Connect"
                     data-wait="Please wait..."
-                    className="submitbutton connect_account_button w-button"
+                    className="loginbutton w-button"
                   />
                   <input
                     type="button"
                     value="Login"
                     data-wait="Please wait..."
-                    className="submitbutton connect_account_button registerbutton w-button"
+                    className="loginbutton w-button"
                     onClick={this.props.login}
                   />
                 </div>
@@ -96,7 +101,7 @@ export default class LandingPageRegister extends Component {
     function getMessage() {
       switch (this.state.status) {
         case this.statusCode[1]:
-          return <div>The passwords didnʼt m)tch. Please try again :-)</div>;
+          return <div>The passwords didnʼt match. Please try again :-)</div>;
         case this.statusCode[3]:
           return (
             <div>

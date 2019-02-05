@@ -12,15 +12,15 @@ export default class MessageSettings extends Component {
         <div className="body">
           <div className="form-block w-form form">
             <div className="titleholder">
-              <label htmlFor="email" className="settingtitle">
-                Define message when someone follows you
-              </label>
               <Help>
                 <strong>This could be your HelpText: </strong>
                 <br />
                 and or<br />
                 recommendations
               </Help>
+              <label htmlFor="email" className="settingtitle">
+                Define message when someone follows you
+              </label>
             </div>
             <TextFieldComments
               value="messages_onfollow"

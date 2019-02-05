@@ -14,14 +14,14 @@ export default class CommentSettings extends Component {
         <div className="body">
           <div className="w-form form">
             <div className="titleholder">
-              <label htmlFor="email" className="settingtitle">
-                Comment Percentage
-              </label>
               <Help>
                 <strong>Comment X percent of crawled pictures: </strong> <br />
                 100% means every crawled picture will be commented. <br />
                 50% means every second crawled picture will be commented.
               </Help>
+              <label htmlFor="email" className="settingtitle">
+                Comment Percentage
+              </label>
             </div>
             <TextFieldNumber
               placeholder="Comment Percentage %"
@@ -65,9 +65,6 @@ export default class CommentSettings extends Component {
               </div>
             </div>
             <div className="titleholder">
-              <label htmlFor="email" className="settingtitle">
-                <strong>Filters:</strong> Comment pictures with...
-              </label>
               <Help className="helptext">
                 <strong>Comment pictures with...: </strong>
                 <br />
@@ -81,6 +78,9 @@ export default class CommentSettings extends Component {
                 </span>
                 <span className="helptext_tertiary" />
               </Help>
+              <label htmlFor="email" className="settingtitle">
+                <strong>Filters:</strong> Comment pictures with...
+              </label>
             </div>
             <div className="columnholder filterholder first">
               <TextFieldNumber

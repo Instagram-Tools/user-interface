@@ -13,9 +13,6 @@ export default class LikeSettings extends Component {
         <div data-w-id="885ad75b-5927-d36b-7821-9522271a2279" className="body">
           <div className="w-form form">
             <div className="titleholder">
-              <label htmlFor="email" className="settingtitle">
-                Like Percentage
-              </label>
               <Help
                 data-w-id="22c58d28-9a42-f414-7b98-09bcc5c05a9b"
                 className="helptext"
@@ -24,6 +21,9 @@ export default class LikeSettings extends Component {
                 100% means every crawled picture will be liked. <br />
                 50% means every second crawled picture will be liked.
               </Help>
+              <label htmlFor="email" className="settingtitle">
+                Like Percentage
+              </label>
             </div>
             <TextFieldNumber
               placeholder="Like Percentage %"
@@ -32,9 +32,6 @@ export default class LikeSettings extends Component {
             />
             {/*<span> equals 700 - 1050 likes/day </span>*/}
             <div className="titleholder">
-              <label htmlFor="email" className="settingtitle">
-                <strong>Filters:</strong> Like pictures with...
-              </label>
               <Help className="helptext">
                 <strong>Like pictures with...: </strong>
                 <br />
@@ -45,6 +42,9 @@ export default class LikeSettings extends Component {
                 as your interaction will be one of many.<br />
                 Recommendation: 10 - 500 likes per picture.
               </Help>
+              <label htmlFor="email" className="settingtitle">
+                <strong>Filters:</strong> Like pictures with...
+              </label>
             </div>
             <div className="columnholder filterholder first">
               <TextFieldNumber

@@ -13,9 +13,6 @@ export default class FollowSettings extends Component {
         <div className="body">
           <div className="w-form form">
             <div className="titleholder">
-              <label htmlFor="email" className="settingtitle">
-                Follow Percentage
-              </label>
               <Help
                 data-w-id="22c58d28-9a42-f414-7b98-09bcc5c05a9b"
                 className="helptext"
@@ -27,6 +24,9 @@ export default class FollowSettings extends Component {
                 100% means every User will be followed. <br />
                 50% means every second User will be followed.
               </Help>
+              <label htmlFor="email" className="settingtitle">
+                Follow Percentage
+              </label>
             </div>
             <TextFieldNumber
               placeholder="Follow Percentage %"

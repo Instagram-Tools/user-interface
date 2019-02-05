@@ -17,21 +17,18 @@ export default class GeneralSettings extends Component {
         <div data-w-id="885ad75b-5927-d36b-7821-9522271a2279" className="body">
           <div className="w-form form">
             <div className="titleholder interactionsholder">
-              <label className="settingtitle speedttitle">
-                Interactions speed
-              </label>
               <Help className="helptext">
                 <strong>Speed: </strong>Defines interaction rate/speed. <br />
                 slow: for new accounts younger than 6 months<br />
                 medium: for accounts between 6 and 18 months<br />
                 fast: for accounts older than 18 months
               </Help>
+              <label className="settingtitle speedttitle">
+                Interactions speed
+              </label>
               <SwitchSpeed value="speed" />
             </div>
             <div className="titleholder right_padding_5vw">
-              <label htmlFor="email" className="settingtitle interfacetitle">
-                Relevant Hashtags
-              </label>
               <Switch value="enable_like_by_tags" className="title" />
               <Help className="helptext">
                 <strong>Relevant Hashtags: </strong>Choose hashtags your target
@@ -41,6 +38,9 @@ export default class GeneralSettings extends Component {
                   hashtags.{' '}
                 </span>
               </Help>
+              <label htmlFor="email" className="settingtitle interfacetitle">
+                Relevant Hashtags
+              </label>
             </div>
             <div
               data-w-id="1846180f-b0c1-4f62-a33b-df4641310d47"
@@ -52,9 +52,6 @@ export default class GeneralSettings extends Component {
               />
             </div>
             <div className="titleholder right_padding_5vw">
-              <label htmlFor="email" className="settingtitle">
-                Relevant Locations
-              </label>
               <Switch value="enable_like_by_locations" className="title" />
               <Help>
                 <strong>Relevant Locations: </strong>Choose locations where you
@@ -64,15 +61,15 @@ export default class GeneralSettings extends Component {
                   &quot;.
                 </span>
               </Help>
+              <label htmlFor="email" className="settingtitle">
+                Relevant Locations
+              </label>
             </div>
             <TextFieldPlaces
               value="like_by_locations"
               placeholder="Search for locations"
             />
             <div className="titleholder right_padding_5vw">
-              <label htmlFor="email" className="settingtitle">
-                Relevant Users
-              </label>
               <Switch value="enable_follow_user_followers" className="title" />
               <Help className="helptext">
                 <strong>Interact with user&#x27;s followers: </strong>Choose
@@ -82,6 +79,9 @@ export default class GeneralSettings extends Component {
                   your content.
                 </span>
               </Help>
+              <label htmlFor="email" className="settingtitle">
+                Relevant Users
+              </label>
             </div>
             <div className="columnholder hashtag_settings_holder">
               <TextFieldUsers
@@ -89,13 +89,6 @@ export default class GeneralSettings extends Component {
                 placeholder="Search for user"
               />
               <div className="titleholder">
-                <label
-                  style={{ fontSize: '1.4em', fontWeight: '400' }}
-                  htmlFor="email"
-                  className="settingtitle mobile_bottom_margin_0 mobile_width_auto"
-                >
-                  Settings
-                </label>
                 <Help className="helptext">
                   <strong>Define your target group: </strong> <br />
                   Recommendation: <br />
@@ -104,6 +97,13 @@ export default class GeneralSettings extends Component {
                   Profiles following 30 - 1000 Users <br />
                   Interact with last 1 - 5 pictures
                 </Help>
+                <label
+                  style={{ fontSize: '1.4em', fontWeight: '400' }}
+                  htmlFor="email"
+                  className="settingtitle mobile_bottom_margin_0 mobile_width_auto"
+                >
+                  Settings
+                </label>
                 <div className="columnholder filterholder first">
                   <TextFieldNumber
                     placeholder="... having min X Followers"
@@ -131,9 +131,6 @@ export default class GeneralSettings extends Component {
               </div>
             </div>
             <div className="titleholder like_pictures_from_feed">
-              <label htmlFor="email" className="settingtitle">
-                Interact with pictures from my feed
-              </label>
               <Switch value="enable_like_by_feed" className="title" />
               <Help className="helptext">
                 <strong>Interact with pictures from my feed: </strong>
@@ -142,6 +139,9 @@ export default class GeneralSettings extends Component {
                   That way, you keep your community engaged.
                 </span>
               </Help>
+              <label htmlFor="email" className="settingtitle">
+                Interact with pictures from my feed
+              </label>
             </div>
           </div>
         </div>

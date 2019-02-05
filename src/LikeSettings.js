@@ -8,7 +8,7 @@ export default class LikeSettings extends Component {
     return (
       <div className={this.props.className}>
         <div className="header">
-          <h1 className="titlepage">Like</h1>
+          <h1 className="titlepage likesunderline">Likes</h1>
         </div>
         <div data-w-id="885ad75b-5927-d36b-7821-9522271a2279" className="body">
           <div className="w-form form">

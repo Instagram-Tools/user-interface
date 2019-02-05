@@ -16,7 +16,7 @@ export default class Account extends Component {
               id="popups"
               style={
                 context.state.registrationStep > 0
-                  ? { opacity: 1, display: 'block' }
+                  ? { opacity: 1, display: 'flex' }
                   : { opacity: 0, display: 'none' }
               }
               onClick={this.resetStep.bind(context)}

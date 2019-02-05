@@ -12,7 +12,7 @@ export default class GeneralSettings extends Component {
     return (
       <div>
         <div className="header">
-          <h1 className="titlepage">General</h1>
+          <h1 className="titlepage generalunderline">General</h1>
         </div>
         <div data-w-id="885ad75b-5927-d36b-7821-9522271a2279" className="body">
           <div className="w-form form">

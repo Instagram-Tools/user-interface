@@ -12,7 +12,17 @@ export default class Account extends Component {
       <Context.Consumer>
         {context => {
           return (
-            <div id="popups">
+            <div
+              id="popups"
+              style={
+                context.state.registrationStep > 0
+                  ? { opacity: 1, display: 'block' }
+                  : { opacity: 0, display: 'none' }
+              }
+              onClick={this.resetStep.bind(context)}
+              data-w-id="b2698b2e-f4ae-8511-f68d-03f81973a9a5"
+              className="connect_insta_account_darkener landing_page_darkener"
+            >
               <LandingPageLogin
                 display={context.state.registrationStep === 11}
                 toggle={this.resetStep.bind(context)}
@@ -34,16 +44,6 @@ export default class Account extends Component {
               <LandingPageSuccess
                 display={context.state.registrationStep === 4}
                 toggle={this.resetStep.bind(context)}
-              />
-              <div
-                style={
-                  context.state.registrationStep > 0
-                    ? { opacity: 1, display: 'block' }
-                    : {}
-                }
-                onClick={this.resetStep.bind(context)}
-                data-w-id="b2698b2e-f4ae-8511-f68d-03f81973a9a5"
-                className="connect_insta_account_darkener landing_page_darkener"
               />
             </div>
           );

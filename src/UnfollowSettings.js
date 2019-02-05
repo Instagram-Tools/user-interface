@@ -13,6 +13,11 @@ export default class UnfollowSettings extends Component {
         </div>
         <div className="body">
           <div className="w-form form">
+            <div className="titleholder">
+              <label htmlFor="email" className="settingtitle">
+                Settings
+              </label>
+            </div>
             <TextFieldNumber
               value="unfollow_users_unfollow_after"
               placeholder="unfollow after X days"

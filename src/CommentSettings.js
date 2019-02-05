@@ -79,7 +79,7 @@ export default class CommentSettings extends Component {
                 <span className="helptext_tertiary" />
               </Help>
               <label htmlFor="email" className="settingtitle">
-                <strong>Filters:</strong> Comment pictures with...
+                Filters: Comment pictures with...
               </label>
             </div>
             <div className="columnholder filterholder first">

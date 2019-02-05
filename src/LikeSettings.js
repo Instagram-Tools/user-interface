@@ -43,7 +43,7 @@ export default class LikeSettings extends Component {
                 Recommendation: 10 - 500 likes per picture.
               </Help>
               <label htmlFor="email" className="settingtitle">
-                <strong>Filters:</strong> Like pictures with...
+                Filters: Like pictures with...
               </label>
             </div>
             <div className="columnholder filterholder first">

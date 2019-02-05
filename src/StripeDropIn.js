@@ -75,20 +75,18 @@ class StripeDropIn extends React.Component {
         {context => (
           <div style={{ width: '100%' }}>
             <form onSubmit={ev => this.submit(ev, context)}>
-              <label>
+              <label className="loginsubtitle">
                 Card details
                 <CardElement {...this.createOptions(this.props.fontSize)} />
               </label>
-              <button disabled={this.state.isLoading}>
+              <button disabled={this.state.isLoading} className="loginbutton">
                 {this.state.isLoading ? 'Loading...' : 'Save'}
               </button>
               <div
                 style={{ display: this.state.error ? 'table-cell' : 'none' }}
-                className="error-message w-form-fail"
+                className="error-message-3 w-form-fail"
               >
-                <div className="text-block-2">
-                  Oops! Something went wrong while submitting the form.
-                </div>
+                <div>Oops! Something went wrong while submitting the form.</div>
               </div>
             </form>
           </div>

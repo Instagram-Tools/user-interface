@@ -97,38 +97,34 @@ export default class GeneralSettings extends Component {
                   Profiles following 30 - 1000 Users <br />
                   Interact with last 1 - 5 pictures
                 </Help>
-                <label
-                  style={{ fontSize: '1.4em', fontWeight: '400' }}
-                  htmlFor="email"
-                  className="settingtitle mobile_bottom_margin_0 mobile_width_auto"
-                >
+                <label htmlFor="email" className="settingtitle">
                   Settings
                 </label>
-                <div className="columnholder filterholder first">
-                  <TextFieldNumber
-                    placeholder="... having min X Followers"
-                    value="relationship_bounds_min_followers"
-                  />
-                  <TextFieldNumber
-                    placeholder="... having max Y Followers"
-                    value="relationship_bounds_max_followers"
-                  />
-                </div>
-                <div className="columnholder filterholder first">
-                  <TextFieldNumber
-                    placeholder="... following min X users"
-                    value="relationship_bounds_min_following"
-                  />
-                  <TextFieldNumber
-                    placeholder="... following max Y users"
-                    value="relationship_bounds_max_following"
-                  />
-                </div>
+              </div>
+              <div className="columnholder filterholder first">
                 <TextFieldNumber
-                  placeholder="Interact with their last Z pictures"
-                  value="user_interact_amount"
+                  placeholder="... having min X Followers"
+                  value="relationship_bounds_min_followers"
+                />
+                <TextFieldNumber
+                  placeholder="... having max Y Followers"
+                  value="relationship_bounds_max_followers"
                 />
               </div>
+              <div className="columnholder filterholder first">
+                <TextFieldNumber
+                  placeholder="... following min X users"
+                  value="relationship_bounds_min_following"
+                />
+                <TextFieldNumber
+                  placeholder="... following max Y users"
+                  value="relationship_bounds_max_following"
+                />
+              </div>
+              <TextFieldNumber
+                placeholder="Interact with their last Z pictures"
+                value="user_interact_amount"
+              />
             </div>
             <div className="titleholder like_pictures_from_feed">
               <Switch value="enable_like_by_feed" className="title" />

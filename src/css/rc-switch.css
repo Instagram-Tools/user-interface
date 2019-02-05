@@ -7,7 +7,6 @@
   line-height: 20px;
   vertical-align: middle;
   border-radius: 20px 20px;
-  border: 1px solid #ccc;
   background-color: #ccc;
   cursor: pointer;
   transition: all 0.3s cubic-bezier(0.35, 0, 0.25, 1);
@@ -46,11 +45,6 @@
 .rc-switch:focus {
   box-shadow: 0 0 0 2px #d5f1fd;
   outline: none;
-}
-
-.rc-switch-checked {
-  border: 1px solid #87d068;
-  background-color: #87d068;
 }
 
 .rc-switch-checked .rc-switch-inner {

@@ -10,16 +10,10 @@ export default class Help extends Component {
       <div>
         <div
           onClick={() => this.setState(p => ({ display: !p.display }))}
-          style={{
-            backgroundImage: this.state.display
-              ? 'linear-gradient(180deg, #ff4252, #ff4252)'
-              : '',
-            position: 'unset'
-          }}
-          className="new_help_circle"
-        >
-          {this.state.display ? 'X' : '?'}
-        </div>
+          className={
+            this.state.display ? 'new_help_circle closehelp' : 'new_help_circle'
+          }
+        />
         <div
           style={{
             display: this.state.display ? 'unset' : 'none',

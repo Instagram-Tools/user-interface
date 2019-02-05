@@ -30,11 +30,11 @@ export default class Sections extends Component {
               <h1 className="general_settings subtitle">Like</h1>
               <Switch value="do_like_enabled" />
             </div>
-            <div className="switchwrapper tabletmiddle">
+            <div className="switchwrapper">
               <h1 className="general_settings subtitle">Comment</h1>
               <Switch value="do_comment_enabled" />
             </div>
-            <div className="switchwrapper tabletright">
+            <div className="switchwrapper">
               <h1 className="general_settings subtitle">Follow</h1>
               <Switch value="do_follow_enabled" />
             </div>
@@ -42,7 +42,7 @@ export default class Sections extends Component {
               <h1 className="general_settings subtitle">Unfollow</h1>
               <Switch value="enable_unfollow" />
             </div>
-            {/*<div className="switchwrapper tabletmiddle">*/}
+            {/*<div className="switchwrapper">*/}
             {/*<h1 className="general_settings subtitle">Messages</h1>*/}
             {/*<Switch value="enable_message" />*/}
             {/*</div>*/}

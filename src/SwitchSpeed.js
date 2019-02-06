@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Context } from './Context';
+import './SwitchSpeed.css';
 
 export default class SwitchSpeed extends Component {
   speed = { slow: 150, medium: 100, fast: 50 };

@@ -5,6 +5,8 @@ import './DropInCSS.css';
 
 import env from './Env';
 import { Context } from './Context';
+import API from './API_Gateway';
+import console from './Log';
 
 const PAYMENT_MANAGER = env.PAYMENT_MANAGER;
 
@@ -57,15 +59,13 @@ class StripeDropIn extends React.Component {
 
       if (response.ok) {
         console.log('Purchase Complete! response:', response);
-        this.setState({ isLoading: false });
         this.setSubscription(await response.text(), context);
       } else {
         console.error('StripeDropIn.submit() response not ok:', response);
         throw Error('response not ok');
       }
     } catch (e) {
-      console.error('Error on StripeDropIn.submit():', e);
-      return this.setState({ error: true, isLoading: false });
+      this.error(e);
     }
   }
 
@@ -96,7 +96,23 @@ class StripeDropIn extends React.Component {
   }
 
   setSubscription(subscription, context) {
-    context.setState({ subscription, registrationStep: 4 });
+    let data = API.data_to_save({ ...context.state, subscription });
+
+    if (data) {
+      API.put(data)
+        .then(() => this.success(subscription, context))
+        .catch(this.error.bind(this));
+    }
+  }
+
+  success(subscription, context) {
+    console.log('success s:', subscription);
+    context.setState({ subscription, isLoading: false, registrationStep: 4 });
+  }
+
+  error(e) {
+    console.error('Error on StripeDropIn.submit():', e);
+    return this.setState({ error: true, isLoading: false });
   }
 }
 

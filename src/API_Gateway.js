@@ -49,17 +49,6 @@ export default class API_Gateway {
       .getElementById('csrf_token').value;
   }
 
-  static async login(email, password) {
-    let response = await fetch(API_URL + '/reg/', {
-      method: 'PUT',
-      body: JSON.stringify({ email: email.toLowerCase(), password }),
-      headers: {
-        'Content-Type': 'application/json'
-      }
-    });
-    return this.parsResponse(response);
-  }
-
   static async fetchJSON(url) {
     let response = await fetch(url);
     let text = await this.parsResponse(response);

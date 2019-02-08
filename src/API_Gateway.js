@@ -32,15 +32,27 @@ export default class API_Gateway {
   }
 
   static async register(email, password) {
-    let response = await fetch(API_URL + '/register/', {
+    let init = {
       method: 'PUT',
       body: JSON.stringify({ email: email.toLowerCase(), password }),
       headers: {
         'Content-Type': 'application/json'
       }
-    });
-    await response.text();
-    return response.status;
+    };
+
+    try {
+      let response = await fetch(API_URL + '/register/', init);
+      if ((await response.status) === 200) {
+        return response.status;
+      } else {
+        throw Error('response.status !== 200');
+      }
+    } catch (e) {
+      console.error('Error in register()', e);
+      let response = await fetch(API_URL + '/register/', init);
+      await response.text();
+      return response.status;
+    }
   }
 
   static extractToken(text) {

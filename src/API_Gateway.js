@@ -8,6 +8,9 @@ export default class API_Gateway {
     let url =
       API_URL +
       `/?email=${email.toLowerCase()}&e_password=${e_password}&username=${username}`;
+    let response = await fetch(url);
+    if ((await response.status) === 200) return response;
+
     return await fetch(url);
   }
 

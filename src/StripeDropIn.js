@@ -60,6 +60,12 @@ class StripeDropIn extends React.Component {
       if (response.ok) {
         console.log('Purchase Complete! response:', response);
         this.setSubscription(await response.text(), context);
+      } else if ((await response.status) === 406) {
+        console.error(
+          'StripeDropIn.submit(): No such coupon, 406 Not Acceptable'
+        );
+        context.setState({ discount_code: '' });
+        this.error('No such coupon, 406 Not Acceptable');
       } else {
         console.error('StripeDropIn.submit() response not ok:', response);
         throw Error('response not ok');

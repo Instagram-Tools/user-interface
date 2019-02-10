@@ -11,11 +11,17 @@ import console from './Log';
 const PAYMENT_MANAGER = env.PAYMENT_MANAGER;
 
 class StripeDropIn extends React.Component {
+  statusCode = {
+    0: 'success',
+    1: 'Some Error',
+    2: 'No such coupon'
+  };
+
   constructor(props) {
     super(props);
     this.submit = this.submit.bind(this);
     this.state = {
-      error: false,
+      status: this.statusCode[0],
       isLoading: false
     };
   }
@@ -64,8 +70,11 @@ class StripeDropIn extends React.Component {
         console.error(
           'StripeDropIn.submit(): No such coupon, 406 Not Acceptable'
         );
-        context.setState({ discount_code: '' });
-        this.error('No such coupon, 406 Not Acceptable');
+        context.setState({
+          status: this.statusCode[2],
+          discount_code: '',
+          isLoading: false
+        });
       } else {
         console.error('StripeDropIn.submit() response not ok:', response);
         throw Error('response not ok');
@@ -88,16 +97,44 @@ class StripeDropIn extends React.Component {
               <button disabled={this.state.isLoading} className="loginbutton">
                 {this.state.isLoading ? 'Loading...' : 'Save'}
               </button>
-              <div
-                style={{ display: this.state.error ? 'table-cell' : 'none' }}
-                className="error-message-3 w-form-fail"
-              >
-                <div>Oops! Something went wrong while submitting the form.</div>
-              </div>
+              {this.buildErrorMessage()}
             </form>
           </div>
         )}
       </Context.Consumer>
+    );
+  }
+
+  buildErrorMessage() {
+    function getMessage() {
+      switch (this.state.status) {
+        case this.statusCode[2]:
+          return (
+            <div>
+              We searched for that code and didn’t find it. Please use another
+              one.
+            </div>
+          );
+        case this.statusCode[1]:
+        default:
+          return (
+            <div className="text-block-3 nope">
+              Something went wrong. Please try again or contact
+              info@pinkparrot.co
+            </div>
+          );
+      }
+    }
+
+    return (
+      <div
+        className="error-message-3 w-form-fail"
+        style={
+          this.state.status !== this.statusCode[0] ? { display: 'block' } : {}
+        }
+      >
+        {getMessage.call(this)}
+      </div>
     );
   }
 
@@ -118,7 +155,7 @@ class StripeDropIn extends React.Component {
 
   error(e) {
     console.error('Error on StripeDropIn.submit():', e);
-    return this.setState({ error: true, isLoading: false });
+    return this.setState({ status: this.statusCode[1], isLoading: false });
   }
 }
 

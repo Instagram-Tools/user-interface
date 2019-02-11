@@ -7,6 +7,7 @@ export const Context = React.createContext();
 
 export const unsavedState = {
   registrationStep: 11,
+  username: 'test',
   scrollY: 0,
   scrollHeight: document.body.scrollHeight,
   try_email: '',

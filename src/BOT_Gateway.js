@@ -14,8 +14,12 @@ export default class BOT_Gateway {
   }
 
   static async isBotRunning(username) {
-    let text = await this.fetchText(`/${username}`);
-    return text === 'True';
+    let response = await fetch(BOT_URL + `/${username}`);
+    let status = response.json();
+
+    console.log('isBotRunning', status);
+
+    return status.is_running === true;
   }
 
   static async stopBot(username) {

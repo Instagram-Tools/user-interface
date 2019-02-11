@@ -16,7 +16,7 @@ export default class Save extends Component {
           <div>
             <div
               style={{ display: this.state.success ? 'block' : 'none' }}
-              className="success-message w-form-done"
+              className="success-message savemessage w-form-done"
             >
               <div className="text-block">
                 Your changes are saved! Keep pressing save if you change

@@ -75,7 +75,7 @@ export default class Sections extends Component {
             style={{ color: '#ff4c44' }}
             className="general_settings generaltitle distancegeneral"
           >
-            Bot inactive
+            Bot sleeping
           </h1>
         );
     else return <h1 className="general_settings generaltitle">Sections</h1>;

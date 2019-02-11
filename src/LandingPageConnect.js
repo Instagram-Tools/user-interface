@@ -26,13 +26,10 @@ export default class LandingPageConnect extends Component {
               className="connect_insta_account"
             >
               <h1 className="logintitle">Connect your Instagram account</h1>
-              <NavHashLink
-                to="/leagal/#privacy"
-                className="loginsubtitle clickprivacy"
-              >
-                Your details will not be transferred to third parties. Your
-                password is encrypted. Click to see our privacy policy.
-              </NavHashLink>
+              <span className="loginsubtitle clickprivacy">
+                If you have turned on two factor authorization, please turn it
+                off. Pink Parrot will not work otherwise.
+              </span>
               <div className="w-form">
                 <div className="formholder_connect_account">
                   <div className="columnholder filterholder first connect_account_column">

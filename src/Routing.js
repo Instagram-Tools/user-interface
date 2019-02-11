@@ -12,7 +12,7 @@ export default function BasicExample() {
   return (
     <Provider>
       <Router>
-        <div className="body-2">
+        <div className="body">
           <Navigation />
           <Notifications />
           <Route exact path="/" component={Home} />

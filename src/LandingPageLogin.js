@@ -120,10 +120,6 @@ export default class LandingPageLogin extends Component {
     );
   }
 
-  setIsConfirmed(isConfirmed = false) {
-    this.setState({ isConfirmed });
-  }
-
   async login(context) {
     try {
       let { try_email, try_e_password } = context.state;

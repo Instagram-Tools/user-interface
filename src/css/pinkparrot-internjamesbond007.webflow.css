@@ -11,7 +11,7 @@
 }
 
 body {
-  font-family: Muli;
+  font-family: Muli, sans-serif;
   color: #333;
   font-size: 14px;
   line-height: 20px;
@@ -142,7 +142,7 @@ a {
 .titlepage {
   margin-top: 0px;
   margin-bottom: 0px;
-  font-family: Muli;
+  font-family: Muli, sans-serif;
   color: #000;
   font-size: 2.66em;
   line-height: 1em;
@@ -154,7 +154,7 @@ a {
   margin-top: 7vh;
   margin-right: 5vw;
   margin-left: 5vw;
-  font-family: Muli;
+  font-family: Muli, sans-serif;
   color: rgba(0, 0, 0, 0.9);
   font-size: 3.33em;
   line-height: 1em;
@@ -253,7 +253,7 @@ a {
 }
 
 .titlepage.buysubtitle {
-  font-family: Muli;
+  font-family: Muli, sans-serif;
   color: #000;
   font-size: 1em;
   line-height: 1.5em;
@@ -318,7 +318,7 @@ a {
   -ms-flex-pack: center;
   justify-content: center;
   box-shadow: none;
-  font-family: Muli;
+  font-family: Muli, sans-serif;
   color: #fff;
   font-size: 3em;
   line-height: 1.28em;
@@ -374,7 +374,7 @@ a {
 
 .titlepage.featurestitle {
   opacity: 0.95;
-  font-family: Muli;
+  font-family: Muli, sans-serif;
   color: rgba(0, 0, 0, 0.97);
   font-size: 3em;
   line-height: 1em;
@@ -496,7 +496,7 @@ a {
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
-  font-family: Muli;
+  font-family: Muli, sans-serif;
   color: rgba(0, 0, 0, 0.33);
   font-size: 1em;
   line-height: 1.5em;
@@ -642,14 +642,6 @@ a {
   -webkit-justify-content: space-around;
   -ms-flex-pack: distribute;
   justify-content: space-around;
-  background-image: -webkit-gradient(
-    linear,
-    left bottom,
-    left top,
-    from(#fff),
-    color-stop(5%, #f5f5f5)
-  );
-  background-image: linear-gradient(0deg, #fff, #f5f5f5 5%);
 }
 
 .form.last {
@@ -661,7 +653,7 @@ a {
   margin-top: 0px;
   margin-bottom: 0px;
   opacity: 0.9;
-  font-family: Muli;
+  font-family: Muli, sans-serif;
   color: #000;
   font-size: 1.6em;
   line-height: 1.5em;
@@ -935,7 +927,7 @@ a {
   border-radius: 999px;
   background-color: #fff;
   box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.05);
-  font-family: Muli;
+  font-family: Muli, sans-serif;
   color: rgba(0, 0, 0, 0.74);
   font-size: 1em;
   line-height: 1em;
@@ -1215,7 +1207,7 @@ a {
   height: 33px;
   margin-bottom: 3vh;
   border-radius: 999999px;
-  font-family: Muli;
+  font-family: Muli, sans-serif;
   color: rgba(0, 0, 0, 0.5);
   font-size: 1em;
 }
@@ -1451,7 +1443,7 @@ a {
 .hashtag_or_location_text {
   margin-top: 6px;
   margin-bottom: 6px;
-  font-family: Muli;
+  font-family: Muli, sans-serif;
   color: #fff;
   font-size: 1em;
   line-height: 1.5em;
@@ -1518,6 +1510,14 @@ a {
   min-width: auto;
   margin-left: 87.5vw;
   border-radius: 9999px;
+}
+
+.deletebutton.logindelete {
+  position: absolute;
+  left: auto;
+  top: 0%;
+  right: 0%;
+  bottom: auto;
 }
 
 .classicon {
@@ -1592,7 +1592,7 @@ a {
   margin-top: 0px;
   margin-right: 5vw;
   margin-bottom: 0px;
-  font-family: Muli;
+  font-family: Muli, sans-serif;
   color: #fff;
   font-size: 1.75em;
   line-height: 1.5em;
@@ -1770,14 +1770,7 @@ a {
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
   border-radius: 999999px;
-  background-image: -webkit-gradient(
-    linear,
-    left top,
-    left bottom,
-    from(#31f688),
-    to(#31f688)
-  );
-  background-image: linear-gradient(180deg, #31f688, #31f688);
+  background-color: #31f688;
   font-family: Ubuntu, Helvetica, sans-serif;
   color: rgba(0, 0, 0, 0.5);
   font-size: 1em;
@@ -2057,7 +2050,7 @@ a {
 .suggestion_text_hashtags {
   padding-right: 66px;
   padding-bottom: 12px;
-  font-family: Muli;
+  font-family: Muli, sans-serif;
   font-size: 1em;
   font-weight: 600;
   cursor: pointer;
@@ -2070,7 +2063,7 @@ a {
 .suggestion_text_locations {
   padding-right: 66px;
   padding-bottom: 12px;
-  font-family: Muli;
+  font-family: Muli, sans-serif;
   font-size: 1em;
   font-weight: 600;
 }
@@ -2090,7 +2083,7 @@ a {
 
 .suggestion_text_users {
   padding-bottom: 12px;
-  font-family: Muli;
+  font-family: Muli, sans-serif;
   font-size: 1em;
   font-weight: 600;
   cursor: pointer;
@@ -2172,7 +2165,7 @@ a {
 
 .amount_text_hashtags {
   padding-bottom: 12px;
-  font-family: Muli;
+  font-family: Muli, sans-serif;
   color: #9c9c9c;
   font-size: 1em;
 }
@@ -2199,7 +2192,7 @@ a {
 
 .amount_text_locations {
   padding-bottom: 12px;
-  font-family: Muli;
+  font-family: Muli, sans-serif;
   color: #9c9c9c;
   font-size: 1em;
 }
@@ -2217,7 +2210,7 @@ a {
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
-  font-family: Muli;
+  font-family: Muli, sans-serif;
   color: rgba(0, 0, 0, 0.75);
   font-size: 1em;
 }
@@ -2262,7 +2255,7 @@ a {
 .unfollowdisclaimer {
   margin-bottom: 33px;
   padding-right: 5vw;
-  font-family: Muli;
+  font-family: Muli, sans-serif;
   color: rgba(0, 0, 0, 0.33);
   font-size: 1em;
   line-height: 1.5em;
@@ -2391,7 +2384,7 @@ a {
 
 .legendtext {
   height: 25px;
-  font-family: Muli;
+  font-family: Muli, sans-serif;
   color: rgba(0, 0, 0, 0.75);
   font-size: 1em;
   font-weight: 400;
@@ -2694,6 +2687,12 @@ a {
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
+  background-image: linear-gradient(
+      187deg,
+      rgba(90, 2, 162, 0.05),
+      hsla(296.0377358490566, 100%, 22%, 0.05)
+    ),
+    linear-gradient(135deg, rgba(35, 11, 11, 0.66), rgba(0, 9, 36, 0.66));
   opacity: 1;
 }
 
@@ -2882,7 +2881,7 @@ a {
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
-  font-family: Muli;
+  font-family: Muli, sans-serif;
   color: #eb4956;
   font-size: 1em;
   font-weight: 700;
@@ -2959,7 +2958,7 @@ a {
   margin-top: 17px;
   margin-bottom: 25px;
   opacity: 0.95;
-  font-family: Muli;
+  font-family: Muli, sans-serif;
   color: #fff;
   font-size: 1.45em;
   line-height: 1.5em;
@@ -3061,10 +3060,10 @@ a {
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: start;
   -webkit-align-items: flex-start;
   -ms-flex-align: start;
@@ -3099,7 +3098,7 @@ a {
   height: 33px;
   margin-bottom: 3vh;
   border-radius: 999999px;
-  font-family: Muli;
+  font-family: Muli, sans-serif;
   color: rgba(0, 0, 0, 0.5);
   font-size: 1em;
 }
@@ -3116,7 +3115,7 @@ a {
 .legaltext {
   width: 45vw;
   margin-left: 27.5vw;
-  padding-top: 14vh;
+  padding-top: 24vh;
   padding-bottom: 4vh;
   color: rgba(0, 0, 0, 0.9);
   font-size: 1em;
@@ -3421,7 +3420,7 @@ a {
   background-position: 50% 50%;
   background-size: 40% 40%;
   background-repeat: no-repeat;
-  font-family: Muli;
+  font-family: Muli, sans-serif;
   color: rgba(0, 0, 0, 0.33);
   font-size: 1em;
   font-weight: 800;
@@ -3782,7 +3781,7 @@ a {
   flex: 0 0 auto;
   border-radius: 999999px;
   background-color: #ff4c44;
-  font-family: Muli;
+  font-family: Muli, sans-serif;
   color: #fff;
   font-size: 1em;
   font-weight: 600;
@@ -4216,7 +4215,7 @@ a {
   margin-right: 30px;
   margin-bottom: 0px;
   border-radius: 999999px;
-  font-family: Muli;
+  font-family: Muli, sans-serif;
   color: rgba(0, 0, 0, 0.5);
   font-size: 1em;
 }
@@ -4484,7 +4483,7 @@ a {
 .logintitle {
   margin-top: 0px;
   margin-bottom: 0px;
-  font-family: Muli;
+  font-family: Muli, sans-serif;
   color: rgba(0, 0, 0, 0.9);
   font-size: 1.5em;
   line-height: 1.5em;
@@ -4557,7 +4556,7 @@ a {
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
-  font-family: Muli;
+  font-family: Muli, sans-serif;
   color: rgba(0, 0, 0, 0.75);
   font-size: 1em;
 }
@@ -4580,7 +4579,7 @@ a {
   height: 33px;
   margin-bottom: 3vh;
   border-radius: 999999px;
-  font-family: Muli;
+  font-family: Muli, sans-serif;
   color: rgba(0, 0, 0, 0.5);
   font-size: 1em;
 }
@@ -4617,7 +4616,7 @@ a {
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
-  font-family: Muli;
+  font-family: Muli, sans-serif;
   color: rgba(0, 0, 0, 0.33);
   font-size: 1em;
   line-height: 1.5em;
@@ -4786,7 +4785,7 @@ a {
   border-radius: 999px;
   background-color: #f5f5f5;
   box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.05);
-  font-family: Muli;
+  font-family: Muli, sans-serif;
   color: rgba(0, 0, 0, 0.66);
   font-size: 1em;
   line-height: 1em;
@@ -5059,6 +5058,15 @@ a {
 
 .loginbutton.legalbutton {
   height: 40px;
+}
+
+.link-2 {
+  color: hsla(207.90123456790124, 0%, 100%, 1);
+  cursor: pointer;
+}
+
+.link-2:hover {
+  opacity: 0.79;
 }
 
 @media (max-width: 991px) {

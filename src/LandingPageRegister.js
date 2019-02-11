@@ -14,9 +14,6 @@ export default class LandingPageRegister extends Component {
   };
 
   state = {
-    isEmailSet: false,
-    isPasswordSet: false,
-    isConfirmed: false,
     status: this.statusCode[0]
   };
 
@@ -42,7 +39,10 @@ export default class LandingPageRegister extends Component {
                 Your details will not be transferred to third parties. Your
                 password is encrypted. Click to see our privacy policy.
               </NavHashLink>
-              <div className="w-form">
+              <form
+                className="w-form"
+                onSubmit={(e => this.submit(context, e)).bind(this)}
+              >
                 <div className="formholder_connect_account">
                   <div className="columnholder filterholder first connect_account_column">
                     <TextField
@@ -51,7 +51,7 @@ export default class LandingPageRegister extends Component {
                       type="email"
                       placeholder="Email"
                       value="try_email"
-                      setIsSet={b => this.setState({ isEmailSet: b })}
+                      required
                     />
                     <TextField
                       inputClass="text-field-2 filter connect_account_filter w-input"
@@ -59,7 +59,7 @@ export default class LandingPageRegister extends Component {
                       type="password"
                       placeholder="Password"
                       value="try_e_password"
-                      setIsSet={b => this.setState({ isPasswordSet: b })}
+                      required
                     />
                     <TextFieldConfirm
                       inputClass="text-field-2 filter connect_account_filter w-input"
@@ -68,11 +68,11 @@ export default class LandingPageRegister extends Component {
                       placeholder="Confirm Password"
                       value="try_e_password"
                       setIsConfirmed={this.setIsConfirmed.bind(this)}
+                      required
                     />
                   </div>
                   <input
-                    onClick={(e => this.submit(context)).bind(this)}
-                    type="button"
+                    type="submit"
                     value="Connect"
                     data-wait="Please wait..."
                     className="loginbutton w-button"
@@ -89,7 +89,7 @@ export default class LandingPageRegister extends Component {
                   <div>Thank you! Your submission has been received!</div>
                 </div>
                 {this.buildErrorMessage()}
-              </div>
+              </form>
             </div>
           );
         }}
@@ -129,7 +129,9 @@ export default class LandingPageRegister extends Component {
     );
   }
 
-  async submit(context) {
+  async submit(context, event) {
+    event.preventDefault();
+
     if (!this.requirementsMet())
       return this.setState({ status: this.statusCode[1] });
     switch (
@@ -153,11 +155,7 @@ export default class LandingPageRegister extends Component {
   }
 
   requirementsMet() {
-    return (
-      this.state.isEmailSet &&
-      this.state.isPasswordSet &&
-      this.state.isConfirmed
-    );
+    return this.state.isConfirmed;
   }
 
   setIsConfirmed(isConfirmed = false) {

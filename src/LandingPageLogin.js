@@ -13,8 +13,6 @@ export default class LandingPageLogin extends Component {
   };
 
   state = {
-    isEmailSet: false,
-    isPasswordSet: false,
     status: this.statusCode[0]
   };
 
@@ -40,7 +38,10 @@ export default class LandingPageLogin extends Component {
                 Your details will not be transferred to third parties. Your
                 password is encrypted. Click to see our privacy policy.
               </NavHashLink>
-              <div className="w-form">
+              <form
+                className="w-form"
+                onSubmit={(event => this.submit(context, event)).bind(this)}
+              >
                 <div className="formholder_connect_account">
                   <div className="columnholder filterholder first connect_account_column">
                     <TextField
@@ -49,7 +50,7 @@ export default class LandingPageLogin extends Component {
                       type="email"
                       placeholder="Email"
                       value="try_email"
-                      setIsSet={b => this.setState({ isEmailSet: b })}
+                      required
                     />
                     <TextField
                       inputClass="text-field-2 filter connect_account_filter w-input"
@@ -57,16 +58,11 @@ export default class LandingPageLogin extends Component {
                       type="password"
                       placeholder="Password"
                       value="try_e_password"
-                      setIsSet={b => this.setState({ isPasswordSet: b })}
+                      required
                     />
                   </div>
                   <input
-                    onClick={
-                      this.requirementsMet()
-                        ? (e => this.login(context)).bind(this)
-                        : null
-                    }
-                    type="button"
+                    type="submit"
                     value="Connect"
                     data-wait="Please wait..."
                     className="loginbutton w-button"
@@ -83,12 +79,17 @@ export default class LandingPageLogin extends Component {
                   <div>Thank you! Your submission has been received!</div>
                 </div>
                 {this.buildErrorMessage()}
-              </div>
+              </form>
             </div>
           );
         }}
       </Context.Consumer>
     );
+  }
+
+  submit(context, event) {
+    event.preventDefault();
+    this.login(context);
   }
 
   buildErrorMessage() {
@@ -117,10 +118,6 @@ export default class LandingPageLogin extends Component {
         {getMessage.call(this)}
       </div>
     );
-  }
-
-  requirementsMet() {
-    return this.state.isEmailSet && this.state.isPasswordSet;
   }
 
   setIsConfirmed(isConfirmed = false) {

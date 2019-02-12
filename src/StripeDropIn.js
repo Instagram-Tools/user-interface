@@ -70,10 +70,12 @@ class StripeDropIn extends React.Component {
         console.error(
           'StripeDropIn.submit(): No such coupon, 406 Not Acceptable'
         );
-        context.setState({
+        this.setState({
           status: this.statusCode[2],
-          discount_code: '',
           isLoading: false
+        });
+        context.setState({
+          discount_code: ''
         });
       } else {
         console.error('StripeDropIn.submit() response not ok:', response);
@@ -110,7 +112,7 @@ class StripeDropIn extends React.Component {
       switch (this.state.status) {
         case this.statusCode[2]:
           return (
-            <div>
+            <div className="text-block-3 nope">
               We searched for that code and didn’t find it. Please use another
               one.
             </div>

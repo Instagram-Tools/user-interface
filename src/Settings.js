@@ -4,7 +4,6 @@ import './css/webflow.css';
 import './css/pinkparrot-internjamesbond007.webflow.css';
 import { Context } from './Context';
 import TextField from './TextField';
-import TextFieldConfirm from './TextFieldConfirm';
 import PaymentGateway from './PaymentGateway';
 import API from './API_Gateway';
 import console from './Log';
@@ -12,21 +11,17 @@ import console from './Log';
 export default class Settings extends Component {
   state = {
     init: true,
-    isConfirmed: false,
     show_set_e_password: false,
     show_confirm_e_password: false,
     show_password: false
   };
 
-  setIsConfirmed(isConfirmed = false) {
-    this.setState({ isConfirmed });
-  }
-
   async save(context) {
     let update = {
-      e_password: this.state.isConfirmed
-        ? context.state.set_e_password
-        : undefined,
+      e_password:
+        this.context.set_e_password === this.context.set_e_password_confirm
+          ? context.state.set_e_password
+          : undefined,
       username: context.state.set_username,
       password: context.state.set_password
     };
@@ -137,7 +132,7 @@ export default class Settings extends Component {
                       <h1 className="settingtitle setting_page_title">
                         Repeat Login Password
                       </h1>
-                      <TextFieldConfirm
+                      <TextField
                         type={
                           this.state.show_confirm_e_password
                             ? 'text'
@@ -148,8 +143,7 @@ export default class Settings extends Component {
                         name="name-2"
                         data-name="Name 2"
                         id="name-2"
-                        value="set_e_password"
-                        setIsConfirmed={this.setIsConfirmed.bind(this)}
+                        value="set_e_password_confirm"
                       />
                       <div className="settingsdistributor bottom">
                         <div className="checkbox-field w-checkbox">

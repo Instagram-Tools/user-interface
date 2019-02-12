@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import TextField from './TextField';
-import TextFieldConfirm from './TextFieldConfirm';
 import API_Gateway from './API_Gateway';
 import { Context } from './Context';
 import { NavHashLink } from 'react-router-hash-link';
@@ -61,13 +60,12 @@ export default class LandingPageRegister extends Component {
                       value="try_e_password"
                       required
                     />
-                    <TextFieldConfirm
+                    <TextField
                       inputClass="text-field-2 filter connect_account_filter w-input"
                       className="text_field_description-2 below connect_account_text"
                       type="password"
                       placeholder="Confirm Password"
-                      value="try_e_password"
-                      setIsConfirmed={this.setIsConfirmed.bind(this)}
+                      value="try_e_password_confirm"
                       required
                     />
                   </div>
@@ -132,7 +130,7 @@ export default class LandingPageRegister extends Component {
   async submit(context, event) {
     event.preventDefault();
 
-    if (!this.requirementsMet())
+    if (!this.requirementsMet(context))
       return this.setState({ status: this.statusCode[1] });
     switch (
       await API_Gateway.register(
@@ -154,11 +152,9 @@ export default class LandingPageRegister extends Component {
     }
   }
 
-  requirementsMet() {
-    return this.state.isConfirmed;
-  }
-
-  setIsConfirmed(isConfirmed = false) {
-    this.setState({ isConfirmed });
+  requirementsMet(context) {
+    return (
+      context.state.try_e_password === context.state.try_e_password_confirm
+    );
   }
 }

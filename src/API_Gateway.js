@@ -49,9 +49,9 @@ export default class API_Gateway {
       }
     } catch (e) {
       console.error('Error in register()', e);
-      let response = await fetch(API_URL + '/register/', init);
-      await response.text();
-      return response.status;
+      return fetch(API_URL + '/register/', init)
+        .then(r => r.status)
+        .catch(e => console.error('Error in register()', e));
     }
   }
 

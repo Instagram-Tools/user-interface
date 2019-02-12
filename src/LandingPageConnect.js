@@ -3,12 +3,9 @@ import TextField from './TextField';
 import API from './API_Gateway';
 import console from './Log';
 import { Context } from './Context';
-import { NavHashLink } from 'react-router-hash-link';
 
 export default class LandingPageConnect extends Component {
   state = {
-    isEmailSet: false,
-    isPasswordSet: false,
     error: false
   };
 
@@ -30,16 +27,16 @@ export default class LandingPageConnect extends Component {
                 If you have turned on two factor authorization, please turn it
                 off. Pink Parrot will not work otherwise.
               </span>
-              <div className="w-form">
+              <form className="w-form" onSubmit={e => this.submit(context, e)}>
                 <div className="formholder_connect_account">
                   <div className="columnholder filterholder first connect_account_column">
                     <TextField
                       inputClass="text-field-2 filter connect_account_filter w-input"
                       className="text_field_description-2 below connect_account_text"
-                      type="email"
+                      type="text"
                       placeholder="Instagram Username"
                       value="username"
-                      setIsSet={b => this.setState({ isEmailSet: b })}
+                      required
                     />
                     <TextField
                       inputClass="text-field-2 filter connect_account_filter w-input"
@@ -47,12 +44,11 @@ export default class LandingPageConnect extends Component {
                       type="password"
                       placeholder="Instagram Password"
                       value="password"
-                      setIsSet={b => this.setState({ isPasswordSet: b })}
+                      required
                     />
                   </div>
                   <input
-                    onClick={() => this.submit(context)}
-                    type="button"
+                    type="submit"
                     value="Connect"
                     data-wait="Please wait..."
                     className="loginbutton w-button"
@@ -69,7 +65,7 @@ export default class LandingPageConnect extends Component {
                     Oops! Something went wrong while submitting the form.
                   </div>
                 </div>
-              </div>
+              </form>
             </div>
           );
         }}
@@ -77,14 +73,9 @@ export default class LandingPageConnect extends Component {
     );
   }
 
-  submit(context) {
-    return this.requirementsMet() && this.save(context)
-      ? this.props.toggle
-      : null;
-  }
-
-  requirementsMet() {
-    return this.state.isEmailSet && this.state.isPasswordSet;
+  submit(context, event) {
+    event.preventDefault();
+    if (this.save(context)) this.props.toggle;
   }
 
   async save(context) {

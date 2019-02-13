@@ -75,7 +75,7 @@ export default class LandingPageConnect extends Component {
 
   submit(context, event) {
     event.preventDefault();
-    if (this.save(context)) this.props.toggle;
+    if (this.save(context)) this.props.toggle();
   }
 
   async save(context) {

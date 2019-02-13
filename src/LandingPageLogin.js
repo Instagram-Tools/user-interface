@@ -29,7 +29,7 @@ export default class LandingPageLogin extends Component {
               }
               className="connect_insta_account"
             >
-              <h1 className="logintitle">Connect your Instagram account</h1>
+              <h1 className="logintitle">Login to Pink Parrot</h1>
               <NavHashLink
                 smooth
                 to="/legal/#privacy"

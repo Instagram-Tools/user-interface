@@ -71,7 +71,7 @@ export default class LandingPageRegister extends Component {
                   </div>
                   <input
                     type="submit"
-                    value="Connect"
+                    value="Submit"
                     data-wait="Please wait..."
                     className="loginbutton w-button"
                   />

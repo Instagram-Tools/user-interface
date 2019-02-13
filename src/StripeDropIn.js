@@ -97,7 +97,7 @@ class StripeDropIn extends React.Component {
                 <CardElement {...this.createOptions(this.props.fontSize)} />
               </label>
               <button disabled={this.state.isLoading} className="loginbutton">
-                {this.state.isLoading ? 'Loading...' : 'Save'}
+                {this.state.isLoading ? 'Loading...' : 'Submit'}
               </button>
               {this.buildErrorMessage()}
             </form>

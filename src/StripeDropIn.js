@@ -160,7 +160,7 @@ class StripeDropIn extends React.Component {
 
   success(subscription, context) {
     console.log('success s:', subscription);
-    context.setState({ subscription, isLoading: false, registrationStep: 4 });
+    context.setState({ subscription, registrationStep: 4 });
   }
 
   error(e) {

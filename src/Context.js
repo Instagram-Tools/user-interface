@@ -16,7 +16,7 @@ export const unsavedState = {
   set_e_password_confirm: undefined,
   set_username: undefined,
   set_password: undefined,
-  subscription: '',
+  subscription: undefined,
   bot_active: false,
   errorConnectAccount: false,
   errorPayment: false,

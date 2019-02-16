@@ -50,19 +50,6 @@ export default class Navigation extends Component {
                           SETTINGS
                         </NavLink>
                       ) : null}
-                      <NavLink
-                        activeClassName="w--current"
-                        to="#"
-                        className="title_menu_element feature_in_development w-nav-link"
-                      >
-                        Community
-                      </NavLink>
-                      <NavLink
-                        to="#"
-                        className="title_menu_element feature_in_development w-nav-link"
-                      >
-                        Your statistics
-                      </NavLink>
                       <NavHashLink
                         activeClassName="w--current"
                         smooth
@@ -78,15 +65,6 @@ export default class Navigation extends Component {
                       >
                         LEGAL
                       </NavLink>
-                    </div>
-                    <div className="nav_menu_half righthalf">
-                      <NavLink
-                        to="#"
-                        className="title_menu_element right profile_name_in_nav_menu w-nav-link"
-                      >
-                        Tash Sultana
-                      </NavLink>
-                      <div className="profilepic profile_pic_in_nav_menu" />
                     </div>
                   </div>
                 </nav>
@@ -176,18 +154,6 @@ export default class Navigation extends Component {
                   SETTINGS
                 </NavLink>
               ) : null}
-              <NavLink
-                to="#"
-                className="title_menu_element feature_in_development w-nav-link w--nav-link-open"
-              >
-                Community
-              </NavLink>
-              <NavLink
-                to="#"
-                className="title_menu_element feature_in_development w-nav-link w--nav-link-open"
-              >
-                Your statistics
-              </NavLink>
               <NavHashLink
                 smooth
                 to="/about/#pricing"
@@ -201,15 +167,6 @@ export default class Navigation extends Component {
               >
                 LEGAL
               </NavLink>
-            </div>
-            <div className="nav_menu_half righthalf">
-              <NavLink
-                to="#"
-                className="title_menu_element right profile_name_in_nav_menu w-nav-link w--nav-link-open"
-              >
-                Tash Sultana
-              </NavLink>
-              <div className="profilepic profile_pic_in_nav_menu" />
             </div>
           </div>
         </nav>

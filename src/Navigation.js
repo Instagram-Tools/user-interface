@@ -80,8 +80,6 @@ export default class Navigation extends Component {
               >
                 <div className="menuicon w-icon-nav-menu" />
               </div>
-              <h2 className="title_menu_element right">Tash Sultana</h2>
-              <div className="profilepic" />
             </div>
             <div className="menubarleft landingpage_left settingsicon w-clearfix">
               <div className="notificationcircle">1</div>

@@ -25,11 +25,6 @@ export default class LikeSettings extends Component {
                 Like Percentage
               </label>
             </div>
-            <TextFieldNumber
-              placeholder="Like Percentage %"
-              max={100}
-              value="do_like_percentage"
-            />
             {/*<span> equals 700 - 1050 likes/day </span>*/}
             <div className="titleholder">
               <Help className="helptext">

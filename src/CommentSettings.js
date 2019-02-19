@@ -23,12 +23,6 @@ export default class CommentSettings extends Component {
                 Comment Percentage
               </label>
             </div>
-            <TextFieldNumber
-              placeholder="Comment Percentage %"
-              max={100}
-              value="do_comment_percentage"
-            />
-
             <TextFieldComments
               value="comments"
               placeholder="Enter Text you want to comment."

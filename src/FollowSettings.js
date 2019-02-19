@@ -28,11 +28,6 @@ export default class FollowSettings extends Component {
                 Follow Percentage
               </label>
             </div>
-            <TextFieldNumber
-              placeholder="Follow Percentage %"
-              max={100}
-              value="do_follow_percentage"
-            />
           </div>
         </div>
       </div>

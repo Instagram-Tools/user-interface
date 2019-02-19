@@ -14,13 +14,9 @@ export default class CommentSettings extends Component {
         <div className="body">
           <div className="w-form form">
             <div className="titleholder">
-              <Help>
-                <strong>Comment X percent of crawled pictures: </strong> <br />
-                100% means every crawled picture will be commented. <br />
-                50% means every second crawled picture will be commented.
-              </Help>
+              <Help>On of these comments will be selected randomly.</Help>
               <label htmlFor="email" className="settingtitle">
-                Comment Percentage
+                Possible Comments
               </label>
             </div>
             <TextFieldComments

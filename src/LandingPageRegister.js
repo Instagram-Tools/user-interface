@@ -103,7 +103,9 @@ export default class LandingPageRegister extends Component {
         case this.statusCode[3]:
           return (
             <div>
-              This email is already registered. Please log in instead :-)
+              Wrong password. If you want to continue your register process,
+              then enter the password you chose before or register newly with a
+              different email address.
             </div>
           );
         default:

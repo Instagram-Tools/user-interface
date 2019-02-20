@@ -2930,6 +2930,7 @@ a {
   width: 40%;
   height: auto;
   min-height: 35vh;
+  padding: 0px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -webkit-flex-direction: column;
@@ -5243,8 +5244,14 @@ a {
     margin-right: 6vw;
     text-align: center;
   }
+  .columnholder.filterholder.first.connect_account_column {
+    width: 50vw;
+  }
   .columnholder.weekplan {
     width: 80vw;
+  }
+  .columnholder.belowholder.connect_account_second_column {
+    width: 50vw;
   }
   .submitbutton.connect_account_button {
     width: 15vw;
@@ -5432,6 +5439,9 @@ a {
     -webkit-justify-content: center;
     -ms-flex-pack: center;
     justify-content: center;
+  }
+  .connect_insta_account {
+    width: 80vw;
   }
   .connect_insta_account.landing_page_payment {
     width: 90vw;
@@ -5667,6 +5677,12 @@ a {
     -ms-flex-align: center;
     align-items: center;
   }
+  .text_field_description-2.below.connect_account_text {
+    width: 40vw;
+  }
+  .text-field-2.filter.connect_account_filter {
+    width: 40vw;
+  }
   .title_menu_element-2 {
     width: 100%;
     height: auto;
@@ -5690,6 +5706,9 @@ a {
     padding-top: 0em;
     padding-bottom: 0em;
     padding-left: 0em;
+  }
+  .loginsubtitle.clickprivacy {
+    width: 75%;
   }
   .loginbutton.connect_account_button {
     width: 15vw;
@@ -6002,7 +6021,9 @@ a {
     height: 66vh;
   }
   .text_field_description-2.below.connect_account_text {
-    padding-left: 6px;
+    width: 100%;
+    margin-right: 0vw;
+    margin-left: 0vw;
   }
   .text-field-2.filter {
     width: 90vw;
@@ -6010,7 +6031,8 @@ a {
   }
   .text-field-2.filter.connect_account_filter {
     width: 100%;
-    margin-right: 2.5vw;
+    margin-right: 0vw;
+    margin-left: 0vw;
   }
   .title_menu_element-2.privacy {
     width: 90%;
@@ -6020,6 +6042,9 @@ a {
   }
   .software_plan_holder-2 {
     width: 85%;
+  }
+  .loginsubtitle.clickprivacy {
+    width: 66vw;
   }
   .loginbutton.connect_account_button {
     width: 20vw;
@@ -6564,6 +6589,9 @@ a {
   .helptext_secondary {
     font-weight: 300;
   }
+  .connect_insta_account {
+    width: 90vw;
+  }
   .connect_insta_account.landing_page_payment.connect {
     height: 66vh;
     margin-top: 17vh;
@@ -6875,6 +6903,9 @@ a {
   .software_plan_holder-2 {
     width: 95%;
     height: 28vh;
+  }
+  .loginsubtitle.clickprivacy {
+    width: 80vw;
   }
   .loginbutton.upload {
     width: 45vw;

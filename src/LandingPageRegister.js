@@ -140,6 +140,7 @@ export default class LandingPageRegister extends Component {
         context.state.try_e_password
       )
     ) {
+      case 201:
       case 200:
         context.setState({
           email: context.state.try_email,

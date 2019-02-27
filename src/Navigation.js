@@ -154,7 +154,7 @@ export default class Navigation extends Component {
               ) : null}
               <NavHashLink
                 smooth
-                to="/about/#pricing"
+                to="/#pricing"
                 className="title_menu_element landingpage_element w-nav-link w--nav-link-open"
               >
                 PRICING

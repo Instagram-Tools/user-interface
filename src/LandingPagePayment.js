@@ -40,7 +40,12 @@ export default class LandingPagePayment extends Component {
           </div>
         </div>
         <div className="buy_plan_holder">
-          <PaymentGateway />
+          <PaymentGateway
+            onSuccess={((subscription, context) =>
+              context.setState({ subscription, registrationStep: 4 })).bind(
+              this
+            )}
+          />
         </div>
       </div>
     );

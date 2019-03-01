@@ -12,9 +12,10 @@ const PAYMENT_MANAGER = env.PAYMENT_MANAGER;
 
 class StripeDropIn extends React.Component {
   statusCode = {
-    0: 'success',
+    0: 'nothing',
     1: 'Some Error',
-    2: 'No such coupon'
+    2: 'success',
+    3: 'No such coupon'
   };
 
   constructor(props) {
@@ -71,7 +72,7 @@ class StripeDropIn extends React.Component {
           'StripeDropIn.submit(): No such coupon, 406 Not Acceptable'
         );
         this.setState({
-          status: this.statusCode[2],
+          status: this.statusCode[3],
           isLoading: false
         });
         context.setState({
@@ -110,12 +111,18 @@ class StripeDropIn extends React.Component {
   buildErrorMessage() {
     function getMessage() {
       switch (this.state.status) {
-        case this.statusCode[2]:
+        case this.statusCode[3]:
           return (
             <div className="text-block-3 nope">
               We searched for that code and didn’t find it. Please use another
               one. If you press "Submit" again, you will use no code and pay the
               full price.
+            </div>
+          );
+        case this.statusCode[2]:
+          return (
+            <div className="text-block-3 nope">
+              You successfully updated your payment data.
             </div>
           );
         case this.statusCode[1]:
@@ -129,9 +136,13 @@ class StripeDropIn extends React.Component {
       }
     }
 
+    let messageClass =
+      this.state.status === this.statusCode[2]
+        ? 'success-message settingsmessage'
+        : 'error-message-3';
     return (
       <div
-        className="error-message-3 w-form-fail"
+        className={`${messageClass} w-form-fail`}
         style={
           this.state.status !== this.statusCode[0] ? { display: 'block' } : {}
         }
@@ -161,7 +172,8 @@ class StripeDropIn extends React.Component {
 
   success(subscription, context) {
     console.log('success s:', subscription);
-    context.setState({ subscription, registrationStep: 4 });
+    this.props.onSuccess(subscription, context);
+    return this.setState({ status: this.statusCode[2], isLoading: false });
   }
 
   error(e) {

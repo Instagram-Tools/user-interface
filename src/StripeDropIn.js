@@ -114,7 +114,8 @@ class StripeDropIn extends React.Component {
           return (
             <div className="text-block-3 nope">
               We searched for that code and didn’t find it. Please use another
-              one.
+              one. If you press "Submit" again, you will use no code and pay the
+              full price.
             </div>
           );
         case this.statusCode[1]:

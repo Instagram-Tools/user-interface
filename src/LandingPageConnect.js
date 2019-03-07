@@ -73,24 +73,24 @@ export default class LandingPageConnect extends Component {
     );
   }
 
-  submit(context, event) {
+  async submit(context, event) {
     event.preventDefault();
-    if (this.save(context)) this.props.toggle();
+    if (await this.save(context)) this.props.toggle();
   }
 
   async save(context) {
-    let data = API.data_to_save({ ...context.state });
+    try {
+      let data = API.data_to_save({ ...context.state });
 
-    if (data) {
-      try {
+      if (data) {
         await API.put(data);
         this.setState({ error: false });
         return true;
-      } catch (e) {
-        console.error('LandingPageConnect save():', e);
-        this.setState({ error: true });
-        return false;
       }
+    } catch (e) {
+      console.error('LandingPageConnect save():', e);
+      this.setState({ error: true });
+      return false;
     }
   }
 }

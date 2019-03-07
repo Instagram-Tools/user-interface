@@ -75,7 +75,12 @@ export default class LandingPageConnect extends Component {
 
   async submit(context, event) {
     event.preventDefault();
-    if (await this.save(context)) this.props.toggle();
+    if (await this.save(context)) {
+      this.setState({ error: false });
+      this.props.toggle();
+    } else {
+      this.setState({ error: true });
+    }
   }
 
   async save(context) {
@@ -84,12 +89,10 @@ export default class LandingPageConnect extends Component {
 
       if (data) {
         await API.put(data);
-        this.setState({ error: false });
         return true;
       }
     } catch (e) {
       console.error('LandingPageConnect save():', e);
-      this.setState({ error: true });
       return false;
     }
   }

@@ -75,7 +75,7 @@ export default class LandingPageConnect extends Component {
 
   async submit(context, event) {
     event.preventDefault();
-    if (await this.save(context)) {
+    if (!this.isEmail(context) && (await this.save(context))) {
       this.setState({ error: false });
       this.props.toggle();
     } else {
@@ -95,5 +95,11 @@ export default class LandingPageConnect extends Component {
       console.error('LandingPageConnect save():', e);
       return false;
     }
+  }
+
+  isEmail(context) {
+    let email = context.state.username;
+    let re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(String(email).toLowerCase());
   }
 }

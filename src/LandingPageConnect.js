@@ -5,8 +5,14 @@ import console from './Log';
 import { Context } from './Context';
 
 export default class LandingPageConnect extends Component {
+  statusCode = {
+    0: 'None',
+    1: 'UsernameError',
+    2: 'ServerError'
+  };
+
   state = {
-    error: false
+    status: this.statusCode[0]
   };
 
   render() {
@@ -54,17 +60,7 @@ export default class LandingPageConnect extends Component {
                     className="loginbutton w-button"
                   />
                 </div>
-                <div className="w-form-done">
-                  <div>Thank you! Your submission has been received!</div>
-                </div>
-                <div
-                  style={this.state.error ? { display: 'block' } : {}}
-                  className="error-message-3 w-form-fail"
-                >
-                  <div>
-                    Oops! Something went wrong while submitting the form.
-                  </div>
-                </div>
+                {this.buildErrorMessage()}
               </form>
             </div>
           );
@@ -73,13 +69,44 @@ export default class LandingPageConnect extends Component {
     );
   }
 
+  buildErrorMessage() {
+    function getMessage() {
+      switch (this.state.status) {
+        case this.statusCode[1]:
+          return (
+            <div>Please use your Instagram Username instead of an Email!</div>
+          );
+        default:
+          return (
+            <div>
+              Oops! Something went wrong while submitting the form. Please try
+              again :-)
+            </div>
+          );
+      }
+    }
+
+    return (
+      <div
+        className="error-message-3 w-form-fail"
+        style={
+          this.state.status !== this.statusCode[0] ? { display: 'block' } : {}
+        }
+      >
+        {getMessage.call(this)}
+      </div>
+    );
+  }
+
   async submit(context, event) {
     event.preventDefault();
-    if (!this.isEmail(context) && (await this.save(context))) {
-      this.setState({ error: false });
+    if (this.isEmail(context)) {
+      this.setState({ status: this.statusCode[1] });
+    } else if (await this.save(context)) {
+      this.setState({ status: this.statusCode[0] });
       this.props.toggle();
     } else {
-      this.setState({ error: true });
+      this.setState({ status: this.statusCode[2] });
     }
   }
 

@@ -204,12 +204,15 @@ export class Provider extends Component {
     if (process.env.NODE_ENV === 'production') {
       new ScrollUtil().init(this.handleScroll.bind(this));
     }
+    window.addEventListener('click', this.isBotActive.bind(this));
   }
 
   async isBotActive() {
-    const bot_active = await BOT_Gateway.isBotRunning(this.state.username);
-    console.log('bot_active', bot_active);
-    this.setState({ bot_active });
+    if (this.state.username) {
+      const bot_active = await BOT_Gateway.isBotRunning(this.state.username);
+      console.log('bot_active', bot_active);
+      this.setState({ bot_active });
+    }
   }
 
   async pushNotification(text) {

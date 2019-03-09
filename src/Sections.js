@@ -12,10 +12,7 @@ export default class Sections extends Component {
     return (
       <Context.Consumer>
         {context => (
-          <div
-            className="generalsettings"
-            onClick={() => this.isBotActive(context)}
-          >
+          <div className="generalsettings">
             {this.activity(context)}
             <Account />
             {this.isLoggedin(context) ? (

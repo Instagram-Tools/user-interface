@@ -72,7 +72,6 @@ export default class API_Gateway {
     console.log('Settings to save:', data);
     let settings = { ...data };
     let {
-      bot_on,
       email,
       e_password,
       password,
@@ -85,7 +84,6 @@ export default class API_Gateway {
       delete settings[prop];
     }
 
-    delete settings.bot_on;
     delete settings.password;
     delete settings.username;
     delete settings.email;
@@ -94,7 +92,6 @@ export default class API_Gateway {
     delete settings.subscription;
 
     return {
-      bot_on,
       email: email.toLowerCase(),
       e_password,
       username: username.toLowerCase(),

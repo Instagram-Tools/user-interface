@@ -6,6 +6,7 @@ import { Context } from './Context';
 import Statistics from './Statistics';
 import StartStopButton from './StartStopButton';
 import BOT_Gateway from './BOT_Gateway';
+import console from './Log';
 
 export default class Sections extends Component {
   render() {

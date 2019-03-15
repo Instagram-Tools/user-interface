@@ -2,6 +2,7 @@
 import React, { Component } from 'react';
 import ScrollUtil from './ScrollUtil';
 import BOT_Gateway from './BOT_Gateway';
+import console from './Log';
 
 export const Context = React.createContext();
 

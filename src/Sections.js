@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
 import Switch from './ContextSwitch';
 import Account from './Account';
-import { Link } from 'react-router-dom';
 import { Context } from './Context';
-import Statistics from './Statistics';
 import StartStopButton from './StartStopButton';
 import BOT_Gateway from './BOT_Gateway';
 import console from './Log';
@@ -40,10 +38,6 @@ export default class Sections extends Component {
               <h1 className="general_settings subtitle">Unfollow</h1>
               <Switch value="enable_unfollow" />
             </div>
-            {/*<div className="switchwrapper">*/}
-            {/*<h1 className="general_settings subtitle">Messages</h1>*/}
-            {/*<Switch value="enable_message" />*/}
-            {/*</div>*/}
           </div>
         )}
       </Context.Consumer>

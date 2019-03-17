@@ -13,7 +13,9 @@ export default class Settings extends Component {
     init: true,
     show_set_e_password: false,
     show_confirm_e_password: false,
-    show_password: false
+    show_password: false,
+    error: false,
+    success: false
   };
 
   async save(context) {
@@ -254,14 +256,7 @@ export default class Settings extends Component {
                     />
                   </div>
                 </form>
-                <div className="success-message-2 w-form-done">
-                  <div>Your settings have been changed!</div>
-                </div>
-                <div className="w-form-fail">
-                  <div>
-                    Oops! Something went wrong while submitting the form.
-                  </div>
-                </div>
+                {this.saveAccountStatusMessage()}
               </div>
               <h1 className="settingtitle settingspage nodistance">Payment</h1>
               {context.state.errorPayment && (
@@ -341,6 +336,25 @@ export default class Settings extends Component {
           );
         }}
       </Context.Consumer>
+    );
+  }
+
+  saveAccountStatusMessage() {
+    return (
+      <React.Fragment>
+        <div
+          className="success-message-2 w-form-done"
+          style={this.state.success ? { display: 'block' } : {}}
+        >
+          <div>Your settings have been changed!</div>
+        </div>
+        <div
+          className="w-form-fail"
+          style={this.state.error ? { display: 'block' } : {}}
+        >
+          <div>Oops! Something went wrong while submitting the form.</div>
+        </div>
+      </React.Fragment>
     );
   }
 }

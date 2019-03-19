@@ -18,7 +18,7 @@ export default class API_Gateway {
   }
 
   static async put(data) {
-    let response = await fetch(API_URL + '/', {
+    let response = this.callAPI(API_URL + '/', {
       method: 'PUT',
       body: JSON.stringify(data),
       headers: {

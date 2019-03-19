@@ -4,14 +4,17 @@ import { unsavedState } from './Context';
 
 const API_URL = env.API_URL || document.location.origin + '/api';
 export default class API_Gateway {
-  static async get(email, e_password, username = '') {
+  static get(email, e_password, username = '') {
     let url =
       API_URL +
       `/?email=${email.toLowerCase()}&e_password=${e_password}&username=${username}`;
-    let response = await fetch(url);
-    if ((await response.status) === 200) return response;
+    return this.callAPI(url);
+  }
 
-    return await fetch(url);
+  static async callAPI(url, init) {
+    let response = await fetch(url, init);
+    if ((await response.status) === 200) return response;
+    return await fetch(url, init);
   }
 
   static async put(data) {

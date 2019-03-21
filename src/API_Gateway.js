@@ -17,7 +17,7 @@ export default class API_Gateway {
     return await fetch(url, init);
   }
 
-  static async put(data) {
+  static put(data) {
     let response = this.callAPI(API_URL + '/', {
       method: 'PUT',
       body: JSON.stringify(data),
@@ -25,7 +25,7 @@ export default class API_Gateway {
         'Content-Type': 'application/json'
       }
     });
-    return this.parsResponse(response);
+    return response;
   }
 
   static async parsResponse(response) {
@@ -80,6 +80,8 @@ export default class API_Gateway {
       password,
       username,
       subscription,
+      set_e_password,
+      set_username,
       timetable
     } = settings;
 
@@ -99,6 +101,8 @@ export default class API_Gateway {
       e_password,
       username: username.toLowerCase(),
       password,
+      set_e_password,
+      set_username,
       subscription,
       settings: JSON.stringify(settings),
       timetable

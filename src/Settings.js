@@ -20,11 +20,10 @@ export default class Settings extends Component {
 
   async save(context) {
     let update = {
-      e_password:
+      set_e_password:
         this.context.set_e_password === this.context.set_e_password_confirm
           ? context.state.set_e_password
           : undefined,
-      username: context.state.set_username,
       password: context.state.set_password
     };
 
@@ -32,7 +31,9 @@ export default class Settings extends Component {
 
     if (data) {
       API.put(data)
-        .then(() => context.setState(update))
+        .then(() =>
+          context.setState({ ...update, username: context.state.set_username })
+        )
         .then(this.success.bind(this))
         .catch(this.error.bind(this));
     }

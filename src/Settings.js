@@ -86,9 +86,8 @@ export default class Settings extends Component {
                         maxLength="256"
                         name="name"
                         data-name="Name"
-                        placeholder="timo.morawitz@witz.mora"
                         id="name"
-                        value="set_e_password"
+                        value="set_email"
                       />
                     </div>
                     <div className="settingsdistributor new_row_left">

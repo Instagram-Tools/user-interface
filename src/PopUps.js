@@ -32,11 +32,11 @@ export default class Account extends Component {
                 toggle={this.nextStep.bind(context)}
                 login={this.login.bind(context)}
               />
-              <LandingPageConnect
+              <LandingPagePayment
                 display={context.state.registrationStep === 2}
                 toggle={this.nextStep.bind(context)}
               />
-              <LandingPagePayment
+              <LandingPageConnect
                 display={context.state.registrationStep === 3}
                 toggle={this.nextStep.bind(context)}
               />

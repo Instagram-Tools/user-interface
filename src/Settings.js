@@ -28,12 +28,11 @@ export default class Settings extends Component {
       password: context.state.set_password
     };
 
-    await context.setState(update);
-
     let data = API.data_to_save({ ...context.state, ...update });
 
     if (data) {
       API.put(data)
+        .then(() => context.setState(update))
         .then(this.success.bind(this))
         .catch(this.error.bind(this));
     }

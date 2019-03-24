@@ -18,6 +18,7 @@ export default class TextField extends Component {
               maxLength={this.props.maxLength || '256'}
               value={this.getValue(context)}
               onChange={e => this.setValue(context, e.target.value)}
+              autoComplete="off"
             />
             <div className="columnholder belowholder">
               <div

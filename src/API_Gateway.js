@@ -99,7 +99,7 @@ export default class API_Gateway {
     return {
       email: email.toLowerCase(),
       e_password,
-      username: username.toLowerCase(),
+      username: username && username.toLowerCase(),
       password,
       set_e_password,
       set_username,

@@ -42,10 +42,9 @@ export default class LandingPagePayment extends Component {
         </div>
         <div className="buy_plan_holder">
           <PaymentGateway
-            onSuccess={((subscription, context) =>
-              context.setState({ subscription, registrationStep: 4 })).bind(
-              this
-            )}
+            onSuccess={((subscription, context) => {
+              context.setState({ subscription }, this.props.toggle.bind(this));
+            }).bind(this)}
           />
         </div>
       </div>

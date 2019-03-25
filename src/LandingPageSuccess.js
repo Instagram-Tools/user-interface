@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 export default class LandingPageSuccess extends Component {
   render() {
+    if (!this.props.display) return <div />;
     return (
       <div
         style={

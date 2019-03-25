@@ -16,6 +16,7 @@ export default class LandingPageConnect extends Component {
   };
 
   render() {
+    if (!this.props.display) return <div />;
     return (
       <Context.Consumer>
         {context => {

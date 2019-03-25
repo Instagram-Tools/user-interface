@@ -4,6 +4,7 @@ import PaymentGateway from './PaymentGateway';
 
 export default class LandingPagePayment extends Component {
   render() {
+    if (!this.props.display) return <div />;
     return (
       <div
         style={

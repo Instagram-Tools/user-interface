@@ -153,21 +153,7 @@ class StripeDropIn extends React.Component {
   }
 
   setSubscription(subscription, context) {
-    let data = API.data_to_save({ ...context.state, subscription });
-
-    if (data) {
-      API.put(data)
-        .then(() => this.success(subscription, context))
-        .catch(e => {
-          console.error('Error on first try to save via StripeDropIn', e);
-          return API.put(data)
-            .then(() => this.success(subscription, context))
-            .catch(e => {
-              console.error('Error on second try to save via StripeDropIn', e);
-              return this.success(subscription, context);
-            });
-        });
-    }
+    this.success(subscription, context);
   }
 
   success(subscription, context) {

@@ -24,10 +24,13 @@ export const unsavedState = {
   notifications: []
 };
 
+const settings = {};
+
 // Then create a provider Component
 export class Provider extends Component {
   state = {
     ...unsavedState,
+    ...settings,
     bot_on: true,
     do_comment_enabled: true,
     do_follow_enabled: true,

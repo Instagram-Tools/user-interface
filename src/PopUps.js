@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Context } from './Context';
+import { Context, REGISTRATION_STEPS } from './Context';
 import LandingPageConnect from './LandingPageConnect';
 import LandingPagePayment from './LandingPagePayment';
 import LandingPageRegister from './LandingPageRegister';
@@ -23,25 +23,40 @@ export default class Account extends Component {
               className="connect_insta_account_darkener landing_page_darkener"
             >
               <LandingPageLogin
-                display={context.state.registrationStep === 11}
+                display={
+                  context.state.registrationStep ===
+                  REGISTRATION_STEPS['LandingPageLogin']
+                }
                 toggle={this.resetStep.bind(context)}
                 register={this.register.bind(context)}
               />
               <LandingPageRegister
-                display={context.state.registrationStep === 1}
+                display={
+                  context.state.registrationStep ===
+                  REGISTRATION_STEPS['LandingPageRegister']
+                }
                 toggle={this.nextStep.bind(context)}
                 login={this.login.bind(context)}
               />
               <LandingPagePayment
-                display={context.state.registrationStep === 2}
+                display={
+                  context.state.registrationStep ===
+                  REGISTRATION_STEPS['LandingPagePayment']
+                }
                 toggle={this.nextStep.bind(context)}
               />
               <LandingPageConnect
-                display={context.state.registrationStep === 3}
+                display={
+                  context.state.registrationStep ===
+                  REGISTRATION_STEPS['LandingPageConnect']
+                }
                 toggle={this.nextStep.bind(context)}
               />
               <LandingPageSuccess
-                display={context.state.registrationStep === 4}
+                display={
+                  context.state.registrationStep ===
+                  REGISTRATION_STEPS['LandingPageSuccess']
+                }
                 toggle={this.resetStep.bind(context)}
               />
             </div>
@@ -52,7 +67,7 @@ export default class Account extends Component {
   }
 
   nextStep() {
-    let lastStep = 4;
+    let lastStep = REGISTRATION_STEPS['LandingPageSuccess'];
     this.setState(p => ({
       registrationStep:
         p.registrationStep + 1 < lastStep ? p.registrationStep + 1 : lastStep
@@ -60,15 +75,17 @@ export default class Account extends Component {
   }
 
   resetStep() {
-    if (this.state.registrationStep >= 4)
-      this.setState({ registrationStep: 0 });
+    if (this.state.registrationStep >= REGISTRATION_STEPS['LandingPageSuccess'])
+      this.setState({ registrationStep: REGISTRATION_STEPS['None'] });
   }
 
   register() {
-    this.setState({ registrationStep: 1 });
+    this.setState({
+      registrationStep: REGISTRATION_STEPS['LandingPageRegister']
+    });
   }
 
   login() {
-    this.setState({ registrationStep: 11 });
+    this.setState({ registrationStep: REGISTRATION_STEPS['LandingPageLogin'] });
   }
 }

@@ -6,6 +6,15 @@ import console from './Log';
 
 export const Context = React.createContext();
 
+export const REGISTRATION_STEPS = {
+  None: 0,
+  LandingPageRegister: 1,
+  LandingPagePayment: 2,
+  LandingPageConnect: 3,
+  LandingPageSuccess: 4,
+  LandingPageLogin: 11
+};
+
 export const unsavedState = {
   registrationStep: 11,
   scrollY: 0,

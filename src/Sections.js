@@ -45,7 +45,7 @@ export default class Sections extends Component {
   }
 
   activity(context) {
-    if (this.isLoggedin(context))
+    if (this.isLoggedin(context) && context.state.username)
       if (context.state.bot_active)
         return (
           <h1 className="general_settings generaltitle distancegeneral">

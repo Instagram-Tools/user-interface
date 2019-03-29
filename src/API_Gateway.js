@@ -4,11 +4,11 @@ import { unsavedState } from './Context';
 
 const API_URL = env.API_URL || document.location.origin + '/api';
 export default class API_Gateway {
-  static get(email, e_password, username = '') {
+  static async get(email, e_password, username = '') {
     let url =
       API_URL +
       `/?email=${email.toLowerCase()}&e_password=${e_password}&username=${username}`;
-    return this.callAPI(url);
+    return await this.callAPI(url);
   }
 
   static async callAPI(url, init) {
@@ -17,15 +17,15 @@ export default class API_Gateway {
     return await fetch(url, init);
   }
 
-  static put(data) {
-    let response = this.callAPI(API_URL + '/', {
+  static async put(data) {
+    let response = await this.callAPI(API_URL + '/', {
       method: 'PUT',
       body: JSON.stringify(data),
       headers: {
         'Content-Type': 'application/json'
       }
     });
-    return response;
+    return API_Gateway.parsResponse(response);
   }
 
   static async parsResponse(response) {

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Context } from './Context';
+import { Context, REGISTRATION_STEPS } from './Context';
 import API from './API_Gateway';
 import console from './Log';
 
@@ -67,11 +67,17 @@ export default class Save extends Component {
 
   save(context) {
     if (!(context.state.email && context.state.e_password)) {
-      return context.setState({ registrationStep: 1 });
+      return context.setState({
+        registrationStep: REGISTRATION_STEPS['LandingPageRegister']
+      });
     } else if (!(context.state.password && context.state.username)) {
-      return context.setState({ registrationStep: 2 });
+      return context.setState({
+        registrationStep: REGISTRATION_STEPS['LandingPageConnect']
+      });
     } else if (!context.state.subscription) {
-      return context.setState({ registrationStep: 3 });
+      return context.setState({
+        registrationStep: REGISTRATION_STEPS['LandingPagePayment']
+      });
     }
 
     let data = API.data_to_save({ ...context.state });

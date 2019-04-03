@@ -32,7 +32,11 @@ export default class Settings extends Component {
     if (data) {
       API.put(data)
         .then(() =>
-          context.setState({ ...update, username: context.state.set_username })
+          context.setState({
+            ...update,
+            username: context.state.set_username || context.state.username,
+            e_password: context.state.set_e_password || context.state.e_password
+          })
         )
         .then(this.success.bind(this))
         .catch(this.error.bind(this));

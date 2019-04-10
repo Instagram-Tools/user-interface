@@ -14,6 +14,15 @@ export default class Save extends Component {
       <Context.Consumer>
         {context => (
           <div>
+            <input
+              onClick={() => this.save(context)}
+              type="button"
+              value="Save"
+              data-wait="saving..."
+              data-w-id="d8b0db36-ca47-deb4-6250-cc991b79ddba"
+              className="submitbutton bigasssubmitbutton fixedsubmitbutton w-button"
+            />
+
             <div
               style={{ display: this.state.success ? 'block' : 'none' }}
               className="success-message savemessage w-form-done"
@@ -44,14 +53,6 @@ export default class Save extends Component {
                 style={{ left: 0 }}
               />
 
-              <input
-                onClick={() => this.save(context)}
-                type="button"
-                value="Save"
-                data-wait="saving..."
-                data-w-id="d8b0db36-ca47-deb4-6250-cc991b79ddba"
-                className="submitbutton bigasssubmitbutton w-button"
-              />
               <h1
                 data-w-id="d8b0db36-ca47-deb4-6250-cc991b79ddbb"
                 className="titlepage"

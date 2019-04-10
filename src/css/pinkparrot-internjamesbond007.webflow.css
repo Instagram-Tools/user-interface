@@ -996,7 +996,7 @@ a {
   top: auto;
   right: auto;
   bottom: 0%;
-  z-index: 9999999;
+  z-index: 999;
   width: 8vw;
   height: 40px;
   margin-right: 20px;

@@ -120,6 +120,7 @@ a {
 }
 
 .header.savebutton.holder.save_header_bg {
+  display: none;
   background-color: transparent;
   background-image: url('../images/buy-spicy-01.svg');
   background-position: 50% 0%;
@@ -544,8 +545,22 @@ a {
 }
 
 .title_menu_element.landingpage_element.loginlogout.homelogin {
-  color: #ffb700;
+  height: 50%;
+  padding-right: 20px;
+  padding-left: 20px;
+  border-radius: 999px;
+  background-color: #fff;
+  color: rgba(0, 82, 255, 0.8);
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
   text-shadow: none;
+}
+
+.title_menu_element.landingpage_element.loginlogout.homelogin:hover {
+  padding-top: 0px;
+  border-bottom-style: none;
+  color: hsla(220.70588235294116, 100%, 61.38%, 0.8);
 }
 
 .menubarleft {
@@ -646,7 +661,6 @@ a {
 
 .form.last {
   width: 100vw;
-  padding-bottom: 0vh;
 }
 
 .settingtitle {
@@ -974,6 +988,51 @@ a {
 .submitbutton.bigasssubmitbutton:hover {
   background-color: #ffe455;
   color: #292929;
+}
+
+.submitbutton.bigasssubmitbutton.fixedsubmitbutton {
+  position: fixed;
+  left: 0%;
+  top: auto;
+  right: auto;
+  bottom: 0%;
+  z-index: 9999999;
+  width: 8vw;
+  height: 40px;
+  margin-right: 20px;
+  margin-bottom: 0px;
+  margin-left: 47vw;
+  padding-right: 40px;
+  padding-left: 40px;
+  border-color: rgba(0, 0, 0, 0.02);
+  border-radius: 20px 20px 0px 0px;
+  background-color: #31f688;
+  box-shadow: 0 3px 10px 0 hsla(146.497461928934, 91.63%, 57.84%, 0.5);
+  color: #fff;
+  font-size: 1em;
+  font-weight: 700;
+}
+
+.submitbutton.bigasssubmitbutton.fixedgetstartedbutton {
+  position: fixed;
+  left: 0%;
+  top: auto;
+  right: 0%;
+  bottom: 0%;
+  z-index: 9999999;
+  width: 15vw;
+  height: 50px;
+  margin-right: auto;
+  margin-bottom: 33px;
+  margin-left: auto;
+  padding-right: 27px;
+  padding-left: 33px;
+  border-color: rgba(0, 0, 0, 0.02);
+  background-color: #515ffb;
+  box-shadow: 0 3px 10px 0 #5f52fb;
+  color: #fff;
+  font-size: 1.15em;
+  font-weight: 700;
 }
 
 .submitbutton.connect_account_button {
@@ -2764,7 +2823,7 @@ a {
 .usp_wrap {
   position: absolute;
   left: 0px;
-  top: 0px;
+  top: -0.5vh;
   display: -ms-grid;
   display: grid;
   width: 55vw;
@@ -5796,6 +5855,26 @@ a {
     -ms-flex-align: start;
     align-items: flex-start;
   }
+  .submitbutton.bigasssubmitbutton.fixedsubmitbutton {
+    left: auto;
+    top: auto;
+    right: 0%;
+    bottom: 0%;
+    width: auto;
+    height: 33px;
+    margin-bottom: 15px;
+    margin-left: 20px;
+    padding-right: 20px;
+    padding-left: 20px;
+    border-radius: 999px;
+    font-weight: 800;
+  }
+  .submitbutton.bigasssubmitbutton.fixedgetstartedbutton {
+    height: 33px;
+    padding-right: 20px;
+    padding-left: 20px;
+    font-weight: 800;
+  }
   .submitbutton.connect_account_button {
     width: 20vw;
   }
@@ -6601,6 +6680,7 @@ a {
     margin-top: 17vh;
   }
   .landingpage {
+    overflow: hidden;
     background-image: url('../images/rocket-mobile-landing-01.svg'),
       -webkit-gradient(linear, left top, left bottom, from(#f9fbfc), to(#f9fbfc));
     background-image: url('../images/rocket-mobile-landing-01.svg'),
@@ -6609,6 +6689,7 @@ a {
   }
   .landing_content_wrap {
     position: relative;
+    overflow: hidden;
   }
   .usp_wrap {
     position: relative;
@@ -6860,6 +6941,9 @@ a {
     width: 95vw;
     padding-right: 5vw;
   }
+  .body-4 {
+    overflow: hidden;
+  }
   .menu_bar_whitener {
     height: 10vh;
   }
@@ -6936,31 +7020,6 @@ a {
   grid-row-end: 2;
 }
 
-#w-node-b6d3c275123f-7745ceba {
-  -ms-grid-column: 2;
-  grid-column-start: 2;
-  -ms-grid-column-span: 1;
-  grid-column-end: 3;
-  -ms-grid-row: 1;
-  grid-row-start: 1;
-  -ms-grid-row-span: 0;
-  grid-row-end: 1;
-}
-
-@media screen and (max-width: 991px) {
-  #w-node-b6d3c275123f-7745ceba {
-    -ms-grid-column-align: end;
-    justify-self: end;
-  }
-}
-
-@media screen and (max-width: 767px) {
-  #w-node-b6d3c275123f-7745ceba {
-    -ms-grid-column-align: end;
-    justify-self: end;
-  }
-}
-
 #w-node-6a47229be18e-7745ceba {
   -ms-grid-column: 1;
   grid-column-start: 1;
@@ -6970,8 +7029,6 @@ a {
   grid-row-start: 2;
   -ms-grid-row-span: 0;
   grid-row-end: 2;
-  -webkit-align-self: auto;
-  -ms-flex-item-align: auto;
   -ms-grid-row-align: auto;
   align-self: auto;
   -ms-grid-column-align: auto;

@@ -4,11 +4,19 @@ import './css/webflow.css';
 import './css/pinkparrot-internjamesbond007.webflow.css';
 import { HashLink } from 'react-router-hash-link';
 import About from './About';
+import { NavLink } from 'react-router-dom';
 
 export default class Home extends Component {
   render() {
     return (
       <div>
+        <NavLink
+          to="/interface"
+          className="submitbutton bigasssubmitbutton fixedgetstartedbutton w-button"
+        >
+          Get Started! 🚀
+        </NavLink>
+
         <div className="landingpage">
           <div className="landing_content_wrap">
             <h1 className="titlepage landingtitle">

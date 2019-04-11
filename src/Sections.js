@@ -19,7 +19,7 @@ export default class Sections extends Component {
                 <h1 className="general_settings subtitle generalswitch">
                   Bot Off/On
                 </h1>
-                <StartStopButton value="bot_on" />
+                <StartStopButton value="started" />
               </div>
             ) : null}
             <div className="switchwrapper">
@@ -52,7 +52,7 @@ export default class Sections extends Component {
             Bot active
           </h1>
         );
-      else if (context.state.bot_on && this.isStarting(context))
+      else if (context.state.started && this.isStarting(context))
         return (
           <h1 className="general_settings generaltitle distancegeneral">
             Bot active

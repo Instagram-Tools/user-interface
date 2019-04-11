@@ -40,7 +40,7 @@ export class Provider extends Component {
   state = {
     ...unsavedState,
     ...settings,
-    bot_on: true,
+    started: true,
     do_comment_enabled: true,
     do_follow_enabled: true,
     do_like_enabled: true,

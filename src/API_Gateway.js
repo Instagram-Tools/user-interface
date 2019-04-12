@@ -90,6 +90,7 @@ export default class API_Gateway {
       delete settings[prop];
     }
 
+    delete settings.started;
     delete settings.password;
     delete settings.username;
     delete settings.email;

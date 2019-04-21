@@ -49,6 +49,7 @@ export class Provider extends Component {
     enable_like_by_feed: true,
     enable_like_by_locations: true,
     enable_like_by_tags: true,
+    enable_interact_by_comments: true,
     enable_message: true,
     unfollow_users_nonfollowers: false,
     speed: 100,

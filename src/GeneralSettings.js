@@ -126,6 +126,17 @@ export default class GeneralSettings extends Component {
                 value="user_interact_amount"
               />
             </div>
+
+            <div className="titleholder right_padding_5vw">
+              <Switch value="enable_interact_by_comments" className="title" />
+              <Help className="helptext">
+                Like Comments and interact with the Author
+              </Help>
+              <label htmlFor="email" className="settingtitle">
+                Interact with Comments of Relevant Users
+              </label>
+            </div>
+
             <div className="titleholder like_pictures_from_feed">
               <Switch value="enable_like_by_feed" className="title" />
               <Help className="helptext">

@@ -14,6 +14,7 @@ export default class BOT_Gateway {
   }
 
   static async isBotRunning(username) {
+    return true;
     let text = await this.fetchText(`/${username}`);
     return text === 'True';
   }

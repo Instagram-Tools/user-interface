@@ -54,8 +54,11 @@ export default class Sections extends Component {
         );
       else if (context.state.started && this.isStarting(context))
         return (
-          <h1 className="general_settings generaltitle distancegeneral">
-            Bot active
+          <h1
+            style={{ color: '#f6ec31' }}
+            className="general_settings generaltitle distancegeneral"
+          >
+            Bot starting
           </h1>
         );
       else

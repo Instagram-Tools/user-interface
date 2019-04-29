@@ -81,7 +81,7 @@ export default class LandingPageLogin extends Component {
                 </div>
                 {this.buildErrorMessage()}
               </form>
-              <a href="/api/reset">Password vergessen</a>
+              <a href="/api/reset">Forgot Password</a>
             </div>
           );
         }}

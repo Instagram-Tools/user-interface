@@ -8,3 +8,7 @@ body {
 .w-form {
   margin-bottom: 0 !important;
 }
+
+.displaynone {
+  display: none;
+}

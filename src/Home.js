@@ -89,8 +89,8 @@ export default class Home extends Component {
                     <div className="uspicon privacyicon" />
                     <div className="titlepage usptext">Privacy</div>
                     <div className="titlepage usptext subtext">
-                      Your data is not saved. You&#x27;re the only one who can
-                      access your insta.
+                      We work with the highest SSL encryption, and don’t save
+                      your credit card info.
                     </div>
                     <HashLink
                       smooth

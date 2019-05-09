@@ -130,10 +130,11 @@ export default class GeneralSettings extends Component {
             <div className="titleholder right_padding_5vw">
               <Switch value="enable_interact_by_comments" className="title" />
               <Help className="helptext">
-                Like Comments and interact with the Author
+                Like comments in your defined target group and interact with the
+                commentator
               </Help>
               <label htmlFor="email" className="settingtitle">
-                Interact with Comments of Relevant Users
+                Interact with Comments on Relevant Users’ posts
               </label>
             </div>
 

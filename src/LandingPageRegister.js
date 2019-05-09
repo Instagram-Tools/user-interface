@@ -3,6 +3,7 @@ import TextField from './TextField';
 import API_Gateway from './API_Gateway';
 import { Context } from './Context';
 import { NavHashLink } from 'react-router-hash-link';
+import { Link } from 'react-router-dom';
 
 export default class LandingPageRegister extends Component {
   statusCode = {
@@ -30,6 +31,9 @@ export default class LandingPageRegister extends Component {
               }
               className="connect_insta_account"
             >
+              <Link to="/" className="deletebutton logindelete">
+                <div className="xicon" />
+              </Link>
               <h1 className="logintitle">Register</h1>
               <NavHashLink
                 smooth

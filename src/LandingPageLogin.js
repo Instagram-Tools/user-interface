@@ -4,6 +4,7 @@ import API from './API_Gateway';
 import { Context } from './Context';
 import { NavHashLink } from 'react-router-hash-link';
 import console from './Log';
+import { Link } from 'react-router-dom';
 
 export default class LandingPageLogin extends Component {
   statusCode = {
@@ -30,6 +31,9 @@ export default class LandingPageLogin extends Component {
               }
               className="connect_insta_account"
             >
+              <Link to="/" className="deletebutton logindelete">
+                <div className="xicon" />
+              </Link>
               <h1 className="logintitle">Login to Pink Parrot</h1>
               <NavHashLink
                 smooth

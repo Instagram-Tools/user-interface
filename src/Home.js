@@ -1,7 +1,4 @@
 import React, { Component } from 'react';
-import './css/normalize.css';
-import './css/webflow.css';
-import './css/pinkparrot-internjamesbond007.webflow.css';
 import { HashLink } from 'react-router-hash-link';
 import About from './About';
 import { NavLink } from 'react-router-dom';

@@ -1,5 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import './css/normalize.css';
+import './css/webflow.css';
+import './css/pinkparrot-internjamesbond007.webflow.css';
 import './index.css';
 import * as serviceWorker from './serviceWorker';
 import Routing from './Routing';

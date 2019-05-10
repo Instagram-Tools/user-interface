@@ -12,3 +12,7 @@ body {
 .displaynone {
   display: none !important;
 }
+
+.columnholder {
+  width: auto;
+}

@@ -1,7 +1,4 @@
 import React, { Component } from 'react';
-import './css/normalize.css';
-import './css/webflow.css';
-import './css/pinkparrot-internjamesbond007.webflow.css';
 import { Context } from './Context';
 import TextField from './TextField';
 import PaymentGateway from './PaymentGateway';

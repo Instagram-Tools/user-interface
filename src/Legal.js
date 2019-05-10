@@ -1,7 +1,4 @@
 import React, { Component } from 'react';
-import './css/normalize.css';
-import './css/webflow.css';
-import './css/pinkparrot-internjamesbond007.webflow.css';
 
 export default class Legal extends Component {
   render() {

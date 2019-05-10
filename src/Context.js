@@ -223,10 +223,30 @@ export class Provider extends Component {
 
   async isBotActive() {
     if (this.state.username) {
-      const bot_active = await BOT_Gateway.isBotRunning(this.state.username);
+      const isBotRunning = await BOT_Gateway.isBotRunning(this.state.username);
+      const bot_active =
+        this.state.started && this.isScheduled(this) && isBotRunning;
       console.log('bot_active', bot_active);
       this.setState({ bot_active });
     }
+  }
+
+  isScheduled(context) {
+    let { timetable } = context.state;
+    let tt = [];
+    for (let i = 0; i < timetable.length; i += 2) {
+      tt = tt.concat({ from: timetable[i], to: timetable[i + 1] });
+    }
+    tt = tt.filter(
+      t =>
+        this.format(t.from) < this.format() && this.format() < this.format(t.to)
+    );
+    return tt.length > 0;
+  }
+
+  format(date = new Date()) {
+    let d = new Date(date);
+    return new Date(4, 1, d.getDay(), d.getHours(), d.getMinutes());
   }
 
   async pushNotification(text) {

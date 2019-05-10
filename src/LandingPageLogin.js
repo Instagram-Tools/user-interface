@@ -158,6 +158,7 @@ export default class LandingPageLogin extends Component {
       }));
       this.props.toggle();
       this.setState({ status: this.statusCode[0] });
+      await context.isBotActive();
     } catch (e) {
       this.setState({ status: this.statusCode[1] });
     }

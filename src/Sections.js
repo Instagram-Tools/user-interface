@@ -52,15 +52,6 @@ export default class Sections extends Component {
             Bot active
           </h1>
         );
-      else if (context.state.started && this.isStarting(context))
-        return (
-          <h1
-            style={{ color: '#f6ec31' }}
-            className="general_settings generaltitle distancegeneral"
-          >
-            Bot starting
-          </h1>
-        );
       else
         return (
           <h1
@@ -71,14 +62,6 @@ export default class Sections extends Component {
           </h1>
         );
     else return <h1 className="general_settings generaltitle">Sections</h1>;
-  }
-
-  async isBotActive(context) {
-    if (context.state.username) {
-      const bot_active = await BOT_Gateway.isBotRunning(context.state.username);
-      console.log('bot_active', bot_active);
-      context.setState({ bot_active });
-    }
   }
 
   clickOnLogin(context) {

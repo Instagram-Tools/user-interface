@@ -159,15 +159,15 @@ export default class LandingPageLogin extends Component {
       this.props.toggle();
       this.setState({ status: this.statusCode[0] });
 
-      if (!(context.state.email && context.state.e_password)) {
+      if (!(try_email && try_e_password)) {
         return context.setState({
           registrationStep: REGISTRATION_STEPS['LandingPageRegister']
         });
-      } else if (!(context.state.password && context.state.username)) {
+      } else if (!(password && username)) {
         return context.setState({
           registrationStep: REGISTRATION_STEPS['LandingPageConnect']
         });
-      } else if (!context.state.subscription) {
+      } else if (!subscription) {
         return context.setState({
           registrationStep: REGISTRATION_STEPS['LandingPagePayment']
         });

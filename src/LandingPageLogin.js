@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import TextField from './TextField';
 import API from './API_Gateway';
-import { Context } from './Context';
+import { Context, REGISTRATION_STEPS } from './Context';
 import { NavHashLink } from 'react-router-hash-link';
 import console from './Log';
 import { Link } from 'react-router-dom';
@@ -158,6 +158,21 @@ export default class LandingPageLogin extends Component {
       }));
       this.props.toggle();
       this.setState({ status: this.statusCode[0] });
+
+      if (!(context.state.email && context.state.e_password)) {
+        return context.setState({
+          registrationStep: REGISTRATION_STEPS['LandingPageRegister']
+        });
+      } else if (!(context.state.password && context.state.username)) {
+        return context.setState({
+          registrationStep: REGISTRATION_STEPS['LandingPageConnect']
+        });
+      } else if (!context.state.subscription) {
+        return context.setState({
+          registrationStep: REGISTRATION_STEPS['LandingPagePayment']
+        });
+      }
+
       await context.isBotActive();
     } catch (e) {
       this.setState({ status: this.statusCode[1] });

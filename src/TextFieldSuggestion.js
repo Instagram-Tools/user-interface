@@ -47,7 +47,8 @@ export default class TextFieldSuggestion extends Component {
                   display:
                     this.state.suggestions.length > 0 ? 'inline-grid' : 'none',
                   position: 'relative',
-                  top: '-60px'
+                  top: 0,
+                  marginTop: 0
                 }}
                 className="suggestions"
               >

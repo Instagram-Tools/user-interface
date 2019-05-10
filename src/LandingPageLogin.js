@@ -145,10 +145,11 @@ export default class LandingPageLogin extends Component {
         }
       }
 
-      let { password, username, subscription, timetable } = result;
+      let { password, username, subscription, timetable, started } = result;
       context.setState(p => ({
         ...settings,
         email: try_email,
+        started,
         e_password: try_e_password,
         password: password || p.password,
         username: username || p.username,

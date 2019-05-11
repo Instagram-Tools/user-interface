@@ -16,3 +16,7 @@ body {
 .columnholder {
   width: auto;
 }
+
+.helptext {
+  bottom: 32px;
+}

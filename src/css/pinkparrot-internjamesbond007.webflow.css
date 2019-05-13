@@ -244,15 +244,6 @@ a {
   line-height: 1.5em;
 }
 
-.titlepage.usptext.savetext {
-  height: auto;
-  min-height: 28%;
-  color: #9898b0;
-  font-size: 1.1em;
-  font-weight: 400;
-  text-align: left;
-}
-
 .titlepage.buysubtitle {
   font-family: Muli, sans-serif;
   color: #000;
@@ -996,7 +987,7 @@ a {
   top: auto;
   right: auto;
   bottom: 0%;
-  z-index: 999;
+  z-index: 9999999;
   width: 8vw;
   height: 40px;
   margin-right: 20px;
@@ -1117,42 +1108,6 @@ a {
   background-size: cover;
   background-repeat: no-repeat;
   box-shadow: none;
-}
-
-.submitbutton.connect_account_button.buy_anyway_button {
-  width: auto;
-  border-style: none;
-  border-width: 0px;
-  border-radius: 0px;
-  background-image: -webkit-gradient(
-    linear,
-    left top,
-    left bottom,
-    from(#fff),
-    to(#fff)
-  );
-  background-image: linear-gradient(180deg, #fff, #fff);
-  box-shadow: none;
-  font-size: 0.85em;
-  text-decoration: underline;
-  cursor: pointer;
-}
-
-.submitbutton.connect_account_button.buy_anyway_button:hover {
-  color: #000;
-}
-
-.submitbutton.connect_account_button.registerbutton {
-  margin-bottom: 0vh;
-}
-
-.submitbutton.connect_account_button.get_started_button {
-  margin-top: 3vh;
-  text-align: center;
-}
-
-.submitbutton.connect_account_button.get_started_button.aaahhhh {
-  margin-top: 4vh;
 }
 
 .submitbutton.newmessage {
@@ -2615,103 +2570,6 @@ a {
   box-shadow: 0 5px 7px 0 rgba(0, 0, 0, 0.33);
 }
 
-.connect_insta_account.landing_page_payment {
-  position: absolute;
-  left: 0px;
-  top: 0px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  height: auto;
-  min-height: 90vh;
-  margin-top: 5vh;
-  padding-top: 0em;
-  padding-right: 0.5em;
-  padding-bottom: 0em;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  opacity: 1;
-}
-
-.connect_insta_account.landing_page_payment.connect {
-  display: none;
-  height: 50vh;
-  min-height: auto;
-  margin-top: 25vh;
-  padding-top: 40px;
-  padding-bottom: 1.5vh;
-}
-
-.connect_insta_account.landing_page_payment.successmessage {
-  padding-top: 6vh;
-  grid-auto-columns: 1fr;
-  grid-column-gap: 16px;
-  grid-row-gap: 16px;
-  -ms-grid-columns: 1fr 1fr;
-  grid-template-columns: 1fr 1fr;
-  -ms-grid-rows: auto auto;
-  grid-template-rows: auto auto;
-}
-
-.connect_insta_account.landing_page_trial {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  height: 66vh;
-  margin-top: 17vh;
-  padding-right: 0.5em;
-  opacity: 1;
-}
-
-.connect_insta_account.landing_page_payment {
-  position: absolute;
-  left: 0px;
-  top: 0px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  height: auto;
-  min-height: 90vh;
-  margin-top: 5vh;
-  padding-top: 0em;
-  padding-right: 0.5em;
-  padding-bottom: 0em;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  opacity: 1;
-}
-
-.connect_insta_account.landing_page_payment.successmessage {
-  display: none;
-  padding-top: 6vh;
-  grid-auto-columns: 1fr;
-  grid-column-gap: 16px;
-  grid-row-gap: 16px;
-  -ms-grid-columns: 1fr 1fr;
-  grid-template-columns: 1fr 1fr;
-  -ms-grid-rows: auto auto;
-  grid-template-rows: auto auto;
-}
-
-.connect_insta_account.landing_page_payment.connect {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  height: 50vh;
-  min-height: auto;
-  margin-top: 25vh;
-  padding-top: 3.5vh;
-  padding-bottom: 1.5vh;
-}
-
 .connect_insta_account.displaynone {
   display: none;
 }
@@ -3071,38 +2929,6 @@ a {
   background-position: 50% 50%;
   background-size: cover;
   background-repeat: no-repeat;
-}
-
-.paycolumn.right_pay_column {
-  display: none;
-}
-
-.image {
-  position: absolute;
-  top: 0px;
-  right: 0px;
-  display: none;
-}
-
-.image-2 {
-  position: absolute;
-  top: 0px;
-  right: 0px;
-  z-index: 1;
-  display: none;
-}
-
-.image-2-copy {
-  position: absolute;
-  top: 0px;
-  right: 0px;
-  z-index: 2;
-  display: none;
-}
-
-.image-2-copy-copy {
-  position: relative;
-  display: none;
 }
 
 .buy_plan_holder {
@@ -4554,19 +4380,6 @@ a {
   text-transform: uppercase;
 }
 
-.logintitle.subscribetitle {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  margin: 7vh 1.5em 10px;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-  align-items: center;
-  text-align: center;
-}
-
 .successimage {
   display: -webkit-box;
   display: -webkit-flex;
@@ -4593,15 +4406,6 @@ a {
   background-position: 50% 50%;
   background-size: cover;
   background-repeat: no-repeat;
-}
-
-.envelopeholder-2 {
-  position: relative;
-  width: 95%;
-  background-image: none;
-  background-size: auto;
-  background-repeat: repeat;
-  background-attachment: scroll;
 }
 
 .text_field_description-2 {
@@ -4662,148 +4466,6 @@ a {
   margin-left: 2.5vw;
 }
 
-.title_menu_element-2 {
-  z-index: 999;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  height: 100%;
-  margin-top: 0px;
-  margin-right: 3vw;
-  margin-bottom: 0px;
-  padding: 0px;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-  align-items: center;
-  font-family: Muli, sans-serif;
-  color: rgba(0, 0, 0, 0.33);
-  font-size: 1em;
-  line-height: 1.5em;
-  font-weight: 700;
-  cursor: pointer;
-}
-
-.title_menu_element-2:hover {
-  padding-top: 5px;
-  border-bottom: 5px solid #f7436a;
-  color: #616161;
-}
-
-.title_menu_element-2:active {
-  padding-top: 0px;
-  border-bottom-style: none;
-  color: #f7436a;
-}
-
-.title_menu_element-2.privacy {
-  height: auto;
-  margin-right: 2vw;
-  margin-bottom: 2.5vh;
-  margin-left: 2vw;
-  font-weight: 400;
-  text-align: center;
-  text-decoration: none;
-}
-
-.title_menu_element-2.privacy:hover {
-  padding-top: 0px;
-  border-bottom-style: none;
-  color: #000;
-}
-
-.title_menu_element-2.privacy:active {
-  color: #0014ff;
-}
-
-.title_menu_element-2.trialtext {
-  height: 7.5vh;
-  margin-right: 1vw;
-  margin-left: 1vw;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  font-weight: 600;
-  text-align: center;
-  text-decoration: none;
-  cursor: default;
-}
-
-.title_menu_element-2.trialtext:hover {
-  border-bottom-style: none;
-}
-
-.software_plan_holder-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  width: 66%;
-  margin-top: -10px;
-  margin-bottom: 33px;
-  padding: 15px 25px 20px;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-align: start;
-  -webkit-align-items: flex-start;
-  -ms-flex-align: start;
-  align-items: flex-start;
-  border-radius: 15px;
-  background-image: url('../images/buy-spicy-01.svg'),
-    -webkit-gradient(linear, left top, left bottom, from(#f1f1f1), to(#f1f1f1));
-  background-image: url('../images/buy-spicy-01.svg'),
-    linear-gradient(180deg, #f1f1f1, #f1f1f1);
-  background-position: 50% 50%, 0px 0px;
-  background-size: cover, auto;
-  background-repeat: no-repeat, repeat;
-}
-
-.buy_plan_holder-2 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  width: 66%;
-  height: auto;
-  min-height: 10vh;
-  margin-bottom: 20px;
-  padding: 15px 25px 20px;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  -webkit-box-align: start;
-  -webkit-align-items: flex-start;
-  -ms-flex-align: start;
-  align-items: flex-start;
-  border-radius: 15px;
-  background-image: -webkit-gradient(
-    linear,
-    left top,
-    left bottom,
-    from(#f1f1f1),
-    to(#f1f1f1)
-  );
-  background-image: linear-gradient(180deg, #f1f1f1, #f1f1f1);
-  background-position: 0px 0px;
-  background-size: auto;
-  background-repeat: repeat;
-}
-
 .loginsubtitle {
   margin-bottom: 28px;
   color: #a2a2b5;
@@ -4859,266 +4521,6 @@ a {
   background-color: #5b55ff;
   box-shadow: 0 4px 10px 0 rgba(54, 54, 219, 0.4);
   color: #fff;
-}
-
-.loginbutton.upload {
-  width: 10em;
-  margin-right: 5vw;
-  margin-bottom: 0px;
-  box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.05);
-  color: rgba(0, 0, 0, 0.5);
-}
-
-.loginbutton.upload:hover {
-  background-image: -webkit-gradient(
-    linear,
-    left top,
-    left bottom,
-    from(#424242),
-    to(#424242)
-  );
-  background-image: linear-gradient(180deg, #424242, #424242);
-  color: #fff;
-}
-
-.loginbutton.bigasssubmitbutton {
-  position: absolute;
-  z-index: 1;
-  width: 12em;
-  height: 45px;
-  box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.15);
-  font-size: 1.1em;
-}
-
-.loginbutton.bigasssubmitbutton:hover {
-  background-color: #ffe455;
-  color: #292929;
-}
-
-.loginbutton.connect_account_button {
-  margin-bottom: 3vh;
-  background-image: -webkit-gradient(
-    linear,
-    left top,
-    left bottom,
-    from(#f5f5f5),
-    to(#f5f5f5)
-  );
-  background-image: linear-gradient(180deg, #f5f5f5, #f5f5f5);
-  box-shadow: none;
-}
-
-.loginbutton.connect_account_button:hover {
-  background-image: -webkit-gradient(
-    linear,
-    left top,
-    left bottom,
-    from(#31f688),
-    to(#31f688)
-  );
-  background-image: linear-gradient(180deg, #31f688, #31f688);
-  box-shadow: 0 4px 10px 0 rgba(49, 246, 136, 0.33);
-}
-
-.loginbutton.connect_account_button:active {
-  background-image: -webkit-gradient(
-      linear,
-      left top,
-      left bottom,
-      from(rgba(49, 246, 136, 0.5)),
-      to(rgba(49, 246, 136, 0.5))
-    ),
-    -webkit-gradient(linear, left top, left bottom, from(#31f688), to(#31f688));
-  background-image: linear-gradient(
-      180deg,
-      rgba(49, 246, 136, 0.5),
-      rgba(49, 246, 136, 0.5)
-    ),
-    linear-gradient(180deg, #31f688, #31f688);
-  box-shadow: 0 0 10px 0 #31f688;
-}
-
-.loginbutton.connect_account_button.trialbutton {
-  margin-bottom: 36px;
-  background-image: -webkit-gradient(
-    linear,
-    left top,
-    left bottom,
-    from(#eb4956),
-    to(#eb4956)
-  );
-  background-image: linear-gradient(180deg, #eb4956, #eb4956);
-  box-shadow: 0 1px 9px 0 rgba(235, 73, 86, 0.33);
-  color: #fff;
-  cursor: pointer;
-}
-
-.loginbutton.connect_account_button.trialbutton:hover {
-  background-image: -webkit-gradient(
-    linear,
-    left top,
-    left bottom,
-    from(#eb4956),
-    to(#eb4956)
-  );
-  background-image: linear-gradient(180deg, #eb4956, #eb4956);
-  box-shadow: 0 4px 10px 0 rgba(235, 73, 86, 0.4);
-  opacity: 0.8;
-}
-
-.loginbutton.connect_account_button.trialbutton.about_buy_button {
-  width: 7vw;
-  margin-top: 2vh;
-  margin-bottom: 2vh;
-  border-style: none;
-  background-color: #2e46bd;
-  background-image: url('../images/buy-spicy-01.svg');
-  background-position: 0px 100%;
-  background-size: cover;
-  background-repeat: no-repeat;
-  box-shadow: none;
-}
-
-.loginbutton.connect_account_button.buy_anyway_button {
-  width: auto;
-  border-style: none;
-  border-width: 0px;
-  border-radius: 0px;
-  background-image: -webkit-gradient(
-    linear,
-    left top,
-    left bottom,
-    from(#fff),
-    to(#fff)
-  );
-  background-image: linear-gradient(180deg, #fff, #fff);
-  box-shadow: none;
-  font-size: 0.85em;
-  text-decoration: underline;
-  cursor: pointer;
-}
-
-.loginbutton.connect_account_button.buy_anyway_button:hover {
-  color: #000;
-}
-
-.loginbutton.connect_account_button.registerbutton {
-  margin-bottom: 0vh;
-}
-
-.loginbutton.connect_account_button.get_started_button {
-  margin-top: 3vh;
-  text-align: center;
-}
-
-.loginbutton.connect_account_button.get_started_button.aaahhhh {
-  margin-top: 4vh;
-}
-
-.loginbutton.newmessage {
-  width: 10em;
-  margin-right: 5vw;
-  box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.05);
-  color: rgba(0, 0, 0, 0.5);
-}
-
-.loginbutton.newmessage:hover {
-  background-image: -webkit-gradient(
-    linear,
-    left top,
-    left bottom,
-    from(#424242),
-    to(#424242)
-  );
-  background-image: linear-gradient(180deg, #424242, #424242);
-  color: #fff;
-}
-
-.loginbutton.sendmessage {
-  width: 10em;
-  margin-right: 25px;
-  margin-bottom: 66px;
-  box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.05);
-  color: rgba(0, 0, 0, 0.5);
-}
-
-.loginbutton.sendmessage:hover {
-  background-image: -webkit-gradient(
-    linear,
-    left top,
-    left bottom,
-    from(#31f688),
-    to(#31f688)
-  );
-  background-image: linear-gradient(180deg, #31f688, #31f688);
-  color: #fff;
-}
-
-.loginbutton.successmessage {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  margin-right: 5vw;
-  margin-bottom: 66px;
-  padding-right: 13px;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
-  grid-auto-columns: 1fr;
-  grid-column-gap: 16px;
-  grid-row-gap: 16px;
-  -ms-grid-columns: 1fr 1fr;
-  grid-template-columns: 1fr 1fr;
-  -ms-grid-rows: auto auto;
-  grid-template-rows: auto auto;
-  box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.05);
-}
-
-.loginbutton.successmessage:hover {
-  background-image: -webkit-gradient(
-    linear,
-    left top,
-    left bottom,
-    from(#fff),
-    to(#fff)
-  );
-  background-image: linear-gradient(180deg, #fff, #fff);
-  color: #000;
-}
-
-.loginbutton.byebutton {
-  height: 40px;
-  margin-right: 25px;
-  background-color: #ff4c44;
-  box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.1);
-  color: #fff;
-}
-
-.loginbutton.byebutton:hover {
-  background-color: #5b55ff;
-}
-
-.loginbutton.byebutton.locked {
-  box-shadow: none;
-  opacity: 0.5;
-}
-
-.loginbutton.settingssave {
-  width: 100px;
-  height: 40px;
-  margin-left: 6vw;
-}
-
-.loginbutton.passwordcontinue {
-  display: none;
-  width: 100px;
-  height: 40px;
-}
-
-.loginbutton.legalbutton {
-  height: 40px;
 }
 
 .link-2 {
@@ -5180,9 +4582,6 @@ a {
   }
   .titlepage.usptext.righttext {
     text-align: right;
-  }
-  .titlepage.usptext.savetext {
-    font-size: 1em;
   }
   .titlepage.legalsubtitle {
     width: 100%;
@@ -5312,14 +4711,14 @@ a {
   .columnholder.belowholder.connect_account_second_column {
     width: 50vw;
   }
+  .submitbutton.bigasssubmitbutton.fixedgetstartedbutton {
+    width: 25vw;
+  }
   .submitbutton.connect_account_button {
     width: 15vw;
   }
   .submitbutton.connect_account_button.trialbutton.about_buy_button {
     width: 14vw;
-  }
-  .submitbutton.connect_account_button.get_started_button.aaahhhh {
-    width: auto;
   }
   .submitbutton.settingssave {
     margin-left: 0vw;
@@ -5501,14 +4900,6 @@ a {
   }
   .connect_insta_account {
     width: 80vw;
-  }
-  .connect_insta_account.landing_page_payment {
-    width: 90vw;
-    margin-left: 5vw;
-  }
-  .connect_insta_account.landing_page_payment {
-    width: 90vw;
-    margin-left: 5vw;
   }
   .landingpage {
     min-width: auto;
@@ -5742,44 +5133,8 @@ a {
   .text-field-2.filter.connect_account_filter {
     width: 40vw;
   }
-  .title_menu_element-2 {
-    width: 100%;
-    height: auto;
-    padding-top: 1em;
-    padding-bottom: 1em;
-    padding-left: 2em;
-    color: #5d5d5d;
-  }
-  .title_menu_element-2:hover {
-    padding-top: 1em;
-    border-bottom-style: none;
-    color: #b6b6b6;
-  }
-  .title_menu_element-2.privacy {
-    padding-top: 0em;
-    padding-bottom: 0em;
-    padding-left: 0em;
-    color: rgba(0, 0, 0, 0.33);
-  }
-  .title_menu_element-2.trialtext {
-    padding-top: 0em;
-    padding-bottom: 0em;
-    padding-left: 0em;
-  }
   .loginsubtitle.clickprivacy {
     width: 75%;
-  }
-  .loginbutton.connect_account_button {
-    width: 15vw;
-  }
-  .loginbutton.connect_account_button.trialbutton.about_buy_button {
-    width: 14vw;
-  }
-  .loginbutton.connect_account_button.get_started_button.aaahhhh {
-    width: auto;
-  }
-  .loginbutton.settingssave {
-    margin-left: 0vw;
   }
 }
 
@@ -5870,7 +5225,8 @@ a {
     font-weight: 800;
   }
   .submitbutton.bigasssubmitbutton.fixedgetstartedbutton {
-    height: 33px;
+    width: 30vw;
+    margin-bottom: 25px;
     padding-right: 20px;
     padding-left: 20px;
     font-weight: 800;
@@ -5880,11 +5236,6 @@ a {
   }
   .submitbutton.connect_account_button.trialbutton.about_buy_button {
     width: 18vw;
-  }
-  .submitbutton.connect_account_button.get_started_button {
-    margin-top: 0vh;
-    margin-right: 4vw;
-    margin-left: 4vw;
   }
   .text-field.broadfield {
     min-width: 200px;
@@ -5932,43 +5283,6 @@ a {
   .switchwrapper {
     padding-right: 8vw;
     padding-left: 8vw;
-  }
-  .connect_insta_account.landing_page_payment.connect {
-    display: none;
-    padding-top: 3.5vh;
-  }
-  .connect_insta_account.landing_page_payment.successmessage {
-    padding-bottom: 12vh;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: row;
-    -ms-flex-direction: row;
-    flex-direction: row;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-flex-wrap: wrap;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-  }
-  .connect_insta_account.landing_page_payment.successmessage {
-    padding-bottom: 12vh;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: row;
-    -ms-flex-direction: row;
-    flex-direction: row;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-flex-wrap: wrap;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-  }
-  .connect_insta_account.landing_page_payment.connect {
-    padding-top: 3.5vh;
   }
   .landingpage {
     width: auto;
@@ -6033,9 +5347,6 @@ a {
   }
   .div-block-2 {
     height: 20vh;
-  }
-  .form-block-4 {
-    width: 90%;
   }
   .notification.update_delivered_as_notification {
     height: auto;
@@ -6113,28 +5424,8 @@ a {
     margin-right: 0vw;
     margin-left: 0vw;
   }
-  .title_menu_element-2.privacy {
-    width: 90%;
-    margin-right: 2vw;
-    margin-bottom: 2.5vh;
-    margin-left: 2vw;
-  }
-  .software_plan_holder-2 {
-    width: 85%;
-  }
   .loginsubtitle.clickprivacy {
     width: 66vw;
-  }
-  .loginbutton.connect_account_button {
-    width: 20vw;
-  }
-  .loginbutton.connect_account_button.trialbutton.about_buy_button {
-    width: 18vw;
-  }
-  .loginbutton.connect_account_button.get_started_button {
-    margin-top: 0vh;
-    margin-right: 4vw;
-    margin-left: 4vw;
   }
 }
 
@@ -6356,6 +5647,9 @@ a {
   .submitbutton.upload {
     width: 45vw;
     margin-left: 22.5vw;
+  }
+  .submitbutton.bigasssubmitbutton.fixedgetstartedbutton {
+    width: 55vw;
   }
   .submitbutton.connect_account_button {
     width: 33vw;
@@ -6671,14 +5965,6 @@ a {
   .connect_insta_account {
     width: 90vw;
   }
-  .connect_insta_account.landing_page_payment.connect {
-    height: 66vh;
-    margin-top: 17vh;
-  }
-  .connect_insta_account.landing_page_payment.connect {
-    height: 66vh;
-    margin-top: 17vh;
-  }
   .landingpage {
     overflow: hidden;
     background-image: url('../images/rocket-mobile-landing-01.svg'),
@@ -6959,53 +6245,12 @@ a {
     font-size: 1.5em;
     text-align: center;
   }
-  .logintitle.subscribetitle {
-    width: 80vw;
-  }
-  .logintitle.connecttitle {
-    margin-top: 1em;
-  }
   .successimage {
     width: 85vw;
     height: 85vw;
   }
-  .title_menu_element-2 {
-    width: 100%;
-    height: 6vh;
-    padding-top: 1em;
-    padding-bottom: 1em;
-    padding-left: 9vw;
-  }
-  .title_menu_element-2:hover {
-    padding-top: 1em;
-    border-bottom-style: none;
-  }
-  .title_menu_element-2.privacy {
-    margin-top: 1em;
-    margin-bottom: 1em;
-  }
-  .software_plan_holder-2 {
-    width: 95%;
-    height: 28vh;
-  }
   .loginsubtitle.clickprivacy {
     width: 80vw;
-  }
-  .loginbutton.upload {
-    width: 45vw;
-    margin-left: 22.5vw;
-  }
-  .loginbutton.connect_account_button {
-    width: 33vw;
-  }
-  .loginbutton.connect_account_button.trialbutton.about_buy_button {
-    width: 33vw;
-  }
-  .loginbutton.settingssave {
-    margin-bottom: 3vh;
-  }
-  .loginbutton.passwordcontinue {
-    margin-bottom: 3vh;
   }
 }
 

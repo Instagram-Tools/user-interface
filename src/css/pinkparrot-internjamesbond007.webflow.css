@@ -82,7 +82,7 @@ a {
     to(#f5f5f5)
   );
   background-image: linear-gradient(180deg, #f5f5f5, #f5f5f5);
-  box-shadow: 0 -1px 6px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 -1px 6px 0 rgba(0, 0, 0, 0.03);
 }
 
 .header {
@@ -97,7 +97,7 @@ a {
   -webkit-align-items: flex-end;
   -ms-flex-align: end;
   align-items: flex-end;
-  background-color: #dcdcdc;
+  background-color: hsla(0, 0%, 86.3%, 0.25);
 }
 
 .header.savebutton {
@@ -143,6 +143,7 @@ a {
 .titlepage {
   margin-top: 0px;
   margin-bottom: 0px;
+  opacity: 0.9;
   font-family: Muli, sans-serif;
   color: #000;
   font-size: 2.66em;
@@ -330,9 +331,10 @@ a {
   -ms-flex-align: center;
   align-items: center;
   background-color: #fff;
-  background-image: url('../images/pink-parrot-about-page-graphic-sarah-new-font-03.svg');
-  background-position: 50% 100%;
+  background-image: url('../images/about-page-graphic.svg');
+  background-position: 50% 50%;
   background-size: cover;
+  background-repeat: no-repeat;
   background-attachment: fixed;
   opacity: 0.95;
   color: #fff;
@@ -405,6 +407,10 @@ a {
   border-bottom: 2px solid #4bcdce;
 }
 
+.titlepage.resetting-title {
+  color: #fff;
+}
+
 .titlelogo {
   display: -webkit-box;
   display: -webkit-flex;
@@ -453,7 +459,7 @@ a {
   height: 100%;
   min-height: 33px;
   min-width: 33px;
-  margin-right: 4vw;
+  margin-right: 1.75vw;
   margin-left: 2vw;
   background-image: url('../images/pink-parrot-logo.svg');
   background-size: contain;
@@ -481,7 +487,7 @@ a {
   display: flex;
   height: 100%;
   margin-top: 0px;
-  margin-right: 3vw;
+  margin-right: 2vw;
   margin-bottom: 0px;
   padding: 0px;
   -webkit-box-align: center;
@@ -490,7 +496,7 @@ a {
   align-items: center;
   font-family: Muli, sans-serif;
   color: rgba(0, 0, 0, 0.33);
-  font-size: 1em;
+  font-size: 0.9em;
   line-height: 1.5em;
   font-weight: 700;
   cursor: pointer;
@@ -543,7 +549,7 @@ a {
   background-color: #fff;
   color: rgba(0, 82, 255, 0.8);
   font-weight: 800;
-  letter-spacing: 2px;
+  letter-spacing: 1.75px;
   text-transform: uppercase;
   text-shadow: none;
 }
@@ -551,7 +557,13 @@ a {
 .title_menu_element.landingpage_element.loginlogout.homelogin:hover {
   padding-top: 0px;
   border-bottom-style: none;
-  color: hsla(220.70588235294116, 100%, 61.38%, 0.8);
+  color: rgba(58, 121, 255, 0.8);
+}
+
+.title_menu_element.landingpage_element.pink_parrot_banner {
+  color: #f7436a;
+  font-weight: 800;
+  letter-spacing: 2px;
 }
 
 .menubarleft {
@@ -997,11 +1009,24 @@ a {
   padding-left: 40px;
   border-color: rgba(0, 0, 0, 0.02);
   border-radius: 20px 20px 0px 0px;
-  background-color: #31f688;
-  box-shadow: 0 3px 10px 0 hsla(146.497461928934, 91.63%, 57.84%, 0.5);
-  color: #fff;
+  background-color: #3b3b3b;
+  box-shadow: none;
+  -webkit-transition: color 50ms ease, height 50ms ease;
+  transition: color 50ms ease, height 50ms ease;
+  color: #31f688;
   font-size: 1em;
   font-weight: 700;
+}
+
+.submitbutton.bigasssubmitbutton.fixedsubmitbutton:hover {
+  color: rgba(49, 246, 136, 0.5);
+}
+
+.submitbutton.bigasssubmitbutton.fixedsubmitbutton:active {
+  height: 33px;
+  -webkit-transform: translate(0px, 0px);
+  -ms-transform: translate(0px, 0px);
+  transform: translate(0px, 0px);
 }
 
 .submitbutton.bigasssubmitbutton.fixedgetstartedbutton {
@@ -1019,7 +1044,7 @@ a {
   padding-right: 27px;
   padding-left: 33px;
   border-color: rgba(0, 0, 0, 0.02);
-  background-color: #515ffb;
+  background-color: #5260fb;
   box-shadow: 0 3px 10px 0 #5f52fb;
   color: #fff;
   font-size: 1.15em;
@@ -1102,7 +1127,7 @@ a {
   margin-top: 2vh;
   margin-bottom: 2vh;
   border-style: none;
-  background-color: #2e46bd;
+  background-color: #2e46be;
   background-image: url('../images/buy-spicy-01.svg');
   background-position: 0px 100%;
   background-size: cover;
@@ -1323,23 +1348,27 @@ a {
 }
 
 .success-message.savemessage {
-  height: auto;
-  min-height: 7vh;
+  position: fixed;
+  left: 0%;
+  top: auto;
+  right: 0%;
+  bottom: 0%;
+  z-index: 9999999999999;
+  width: 8vw;
+  height: 40px;
+  margin-left: 47vw;
   padding-right: 15px;
   padding-left: 15px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
   background-image: -webkit-gradient(
     linear,
     left top,
     right top,
-    from(hsla(175.23809523809524, 71.65%, 45.44%, 1)),
-    to(hsla(93.6206896551724, 45.63%, 63.21%, 1))
+    from(#21c7ba),
+    to(#9ccc76)
   );
-  background-image: linear-gradient(
-    90deg,
-    hsla(175.23809523809524, 71.65%, 45.44%, 1),
-    hsla(93.6206896551724, 45.63%, 63.21%, 1)
-  );
-  box-shadow: inset 1px 1px 15px 0 rgba(0, 0, 0, 0.15);
+  background-image: linear-gradient(90deg, #21c7ba, #9ccc76);
   color: #fff;
   font-size: 1.1em;
   font-weight: 800;
@@ -1354,14 +1383,10 @@ a {
     linear,
     left top,
     right top,
-    from(hsla(175.23809523809524, 71.65%, 45.44%, 1)),
-    to(hsla(93.6206896551724, 45.63%, 63.21%, 1))
+    from(#21c7ba),
+    to(#9ccc76)
   );
-  background-image: linear-gradient(
-    90deg,
-    hsla(175.23809523809524, 71.65%, 45.44%, 1),
-    hsla(93.6206896551724, 45.63%, 63.21%, 1)
-  );
+  background-image: linear-gradient(90deg, #21c7ba, #9ccc76);
   box-shadow: inset 1px 1px 15px 0 rgba(0, 0, 0, 0.15);
   color: #fff;
   font-size: 1.1em;
@@ -1373,7 +1398,7 @@ a {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  min-height: 7vh;
+  height: 40px;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
@@ -1442,7 +1467,7 @@ a {
   -ms-flex-align: start;
   align-items: flex-start;
   border-radius: 16.5px;
-  background-color: #454545;
+  background-color: #464646;
 }
 
 .applied_hashtag_or_location:hover {
@@ -2574,6 +2599,11 @@ a {
   display: none;
 }
 
+.connect_insta_account.reset_pw_popup {
+  min-height: auto;
+  padding-top: 42px;
+}
+
 .connect_insta_account_darkener {
   position: fixed;
   left: 0px;
@@ -2584,10 +2614,10 @@ a {
   height: 100vh;
   background-image: linear-gradient(
       187deg,
-      rgba(90, 2, 162, 0.05),
-      hsla(296.0377358490566, 100%, 22%, 0.05)
+      rgba(90, 1, 162, 0.05),
+      rgba(105, 0, 112, 0.05)
     ),
-    linear-gradient(135deg, rgba(35, 11, 11, 0.66), rgba(0, 9, 36, 0.66));
+    linear-gradient(135deg, rgba(36, 11, 11, 0.66), rgba(0, 9, 36, 0.66));
   opacity: 0;
 }
 
@@ -2606,10 +2636,10 @@ a {
   align-items: center;
   background-image: linear-gradient(
       187deg,
-      rgba(90, 2, 162, 0.05),
-      hsla(296.0377358490566, 100%, 22%, 0.05)
+      rgba(90, 1, 162, 0.05),
+      rgba(105, 0, 112, 0.05)
     ),
-    linear-gradient(135deg, rgba(35, 11, 11, 0.66), rgba(0, 9, 36, 0.66));
+    linear-gradient(135deg, rgba(36, 11, 11, 0.66), rgba(0, 9, 36, 0.66));
   opacity: 1;
 }
 
@@ -2636,6 +2666,10 @@ a {
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
+}
+
+.formholder_connect_account.pw_recover_form {
+  min-height: auto;
 }
 
 .landingpage {
@@ -3536,7 +3570,7 @@ a {
   -ms-flex-line-pack: justify;
   align-content: space-between;
   border-radius: 1.25vw 1.25vw 10px 10px;
-  background-color: #ababab;
+  background-color: #aaa;
   background-image: none;
   box-shadow: none;
 }
@@ -3747,7 +3781,7 @@ a {
   -ms-flex-align: center;
   align-items: center;
   border-radius: 1.25vw 1.25vw 0vw 0vw;
-  background-color: #c9c9c9;
+  background-color: #cacaca;
 }
 
 .notificationtext {
@@ -3994,7 +4028,7 @@ a {
   margin-bottom: 33px;
   margin-left: 6vw;
   padding-bottom: 3em;
-  color: hsla(2.5668449197860963, 0%, 0%, 1);
+  color: #000;
   font-size: 1.1em;
   font-weight: 600;
   text-align: left;
@@ -4179,7 +4213,7 @@ a {
   -webkit-align-items: flex-end;
   -ms-flex-align: end;
   align-items: flex-end;
-  color: hsla(235.27272727272728, 0%, 0%, 1);
+  color: #000;
   font-size: 1.6em;
   font-weight: 800;
 }
@@ -4259,7 +4293,7 @@ a {
   -ms-flex-align: center;
   align-items: center;
   border-radius: 9999px;
-  background-color: hsla(235.27272727272728, 0%, 0%, 1);
+  background-color: #000;
   font-weight: 800;
 }
 
@@ -4378,6 +4412,10 @@ a {
   text-align: center;
   letter-spacing: 2px;
   text-transform: uppercase;
+}
+
+.logintitle.pw_recover_title {
+  margin-bottom: 5vh;
 }
 
 .successimage {
@@ -4524,12 +4562,44 @@ a {
 }
 
 .link-2 {
-  color: hsla(207.90123456790124, 0%, 100%, 1);
+  color: #fff;
   cursor: pointer;
 }
 
 .link-2:hover {
   opacity: 0.79;
+}
+
+.reset_password_background {
+  position: fixed;
+  left: 0%;
+  top: 0%;
+  right: auto;
+  bottom: auto;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-image: linear-gradient(
+      135deg,
+      rgba(36, 11, 11, 0.66),
+      rgba(0, 9, 36, 0.66)
+    ),
+    url('../images/Success-Astronaut.svg');
+  background-position: 0px 0px, 50% 8%;
+  background-size: auto, 100%;
+  background-repeat: repeat, no-repeat;
+  opacity: 0.96;
 }
 
 @media (max-width: 991px) {
@@ -4554,7 +4624,7 @@ a {
   }
   .titlepage.landingsubtitle {
     width: 90vw;
-    color: hsla(0, 0%, 96%, 0.9);
+    color: hsla(0, 0%, 96.1%, 0.9);
     text-align: center;
     text-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
   }
@@ -4590,6 +4660,9 @@ a {
   .titlepage.abouttitle {
     padding-top: 2vh;
     padding-bottom: 0vh;
+  }
+  .titlepage.abouttitle.new_about_title {
+    background-size: cover;
   }
   .titlepage.aboutsubtitle {
     max-width: 55vw;
@@ -5135,6 +5208,10 @@ a {
   }
   .loginsubtitle.clickprivacy {
     width: 75%;
+  }
+  .reset_password_background {
+    background-position: 0px 0px, 50% 0%;
+    background-size: auto, cover;
   }
 }
 

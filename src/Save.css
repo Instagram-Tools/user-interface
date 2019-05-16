@@ -1,5 +1,44 @@
 .Save .error-message,
 .Save .success-message {
   position: fixed;
-  bottom: 0;
+  bottom: -65px;
+  z-index: 9999999;
+
+  animation-duration: 10s;
+}
+
+.Save .run-animation0 {
+  animation-name: 'show';
+}
+.Save .run-animation1 {
+  animation-name: 'show2';
+}
+
+@keyframes show {
+  0% {
+    bottom: -65px;
+  }
+  10% {
+    bottom: 0px;
+  }
+  90% {
+    bottom: 0px;
+  }
+  100% {
+    bottom: -65px;
+  }
+}
+@keyframes show2 {
+  0% {
+    bottom: -65px;
+  }
+  10% {
+    bottom: 0px;
+  }
+  90% {
+    bottom: 0px;
+  }
+  100% {
+    bottom: -65px;
+  }
 }

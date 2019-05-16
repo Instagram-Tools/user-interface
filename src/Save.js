@@ -7,7 +7,8 @@ import './Save.css';
 export default class Save extends Component {
   state = {
     success: false,
-    error: false
+    error: false,
+    count: 0
   };
 
   render() {
@@ -26,16 +27,21 @@ export default class Save extends Component {
 
             <div
               style={{ display: this.state.success ? 'block' : 'none' }}
-              className="success-message savemessage w-form-done"
+              className={
+                'success-message savemessage w-form-done ' +
+                (this.state.success
+                  ? `run-animation${this.state.count % 2}`
+                  : '')
+              }
             >
-              <div className="text-block">
-                Your changes are saved! Keep pressing save if you change
-                something :-)
-              </div>
+              <div className="text-block">Saved!</div>
             </div>
             <div
               style={{ display: this.state.error ? 'block' : 'none' }}
-              className="error-message w-form-fail"
+              className={
+                'error-message w-form-fail ' +
+                (this.state.error ? `run-animation${this.state.count % 2}` : '')
+              }
             >
               <div className="text-block-2">
                 <span>
@@ -93,11 +99,11 @@ export default class Save extends Component {
 
   success(r) {
     console.log('res s:', r);
-    this.setState({ success: true, error: false });
+    this.setState(p => ({ success: true, error: false, count: p.count + 1 }));
   }
 
   error(e) {
     console.log('err s:', e);
-    this.setState({ success: false, error: true });
+    this.setState(p => ({ success: false, error: true, count: p.count + 1 }));
   }
 }

@@ -35,6 +35,13 @@ export default class Navigation extends Component {
                     <h4 className="titlelogo landinglogo" />
                     <div className="nav_menu_half">
                       <NavLink
+                        to="/"
+                        className="title_menu_element landingpage_element pink_parrot_banner w-nav-link"
+                        activeClassName="w--current"
+                      >
+                        PINK PARROT
+                      </NavLink>
+                      <NavLink
                         to="/interface"
                         className="title_menu_element landingpage_element w-nav-link"
                         activeClassName="w--current"
@@ -138,6 +145,12 @@ export default class Navigation extends Component {
         <nav role="navigation" className="nav-menu w-nav-menu w--nav-menu-open">
           <div className="just_because_the_fucking_nav_menu_wont_distribute">
             <div className="nav_menu_half">
+              <NavLink
+                to="/"
+                className="title_menu_element landingpage_element pink_parrot_banner w-nav-link w--nav-link-open"
+              >
+                INTERFACE
+              </NavLink>
               <NavLink
                 to="/interface"
                 onClick={this.clickOnLogin(context)}

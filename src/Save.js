@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Context, REGISTRATION_STEPS } from './Context';
 import API from './API_Gateway';
 import console from './Log';
+import './Save.css';
 
 export default class Save extends Component {
   state = {
@@ -13,7 +14,7 @@ export default class Save extends Component {
     return (
       <Context.Consumer>
         {context => (
-          <div>
+          <div className="Save">
             <input
               onClick={() => this.save(context)}
               type="button"

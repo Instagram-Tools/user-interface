@@ -1,0 +1,5 @@
+.Save .error-message,
+.Save .success-message {
+  position: fixed;
+  bottom: 0;
+}

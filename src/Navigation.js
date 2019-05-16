@@ -149,7 +149,7 @@ export default class Navigation extends Component {
                 to="/"
                 className="title_menu_element landingpage_element pink_parrot_banner w-nav-link w--nav-link-open"
               >
-                INTERFACE
+                PINK PARROT
               </NavLink>
               <NavLink
                 to="/interface"

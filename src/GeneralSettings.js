@@ -103,21 +103,21 @@ export default class GeneralSettings extends Component {
               </div>
               <div className="columnholder filterholder first">
                 <TextFieldNumber
-                  placeholder="... having min X Followers"
+                  placeholder="Must have min X Followers"
                   value="relationship_bounds_min_followers"
                 />
                 <TextFieldNumber
-                  placeholder="... having max Y Followers"
+                  placeholder="Must have max Y Followers"
                   value="relationship_bounds_max_followers"
                 />
               </div>
               <div className="columnholder filterholder first">
                 <TextFieldNumber
-                  placeholder="... following min X users"
+                  placeholder="Must follow min X users"
                   value="relationship_bounds_min_following"
                 />
                 <TextFieldNumber
-                  placeholder="... following max Y users"
+                  placeholder="Must follow max Y users"
                   value="relationship_bounds_max_following"
                 />
               </div>

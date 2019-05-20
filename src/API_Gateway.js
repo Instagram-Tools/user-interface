@@ -105,7 +105,7 @@ export default class API_Gateway {
       username: username && username.toLowerCase(),
       password,
       set_e_password,
-      set_username,
+      set_username: set_username && set_username.toLowerCase(),
       subscription,
       settings: JSON.stringify(settings),
       timetable

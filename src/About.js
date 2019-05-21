@@ -131,7 +131,6 @@ export default class About extends Component {
                   <h1 className="softwareheading">
                     Let&#x27;s get your Insta to the next level!
                   </h1>
-                  <h1 className="titlepage buysubtitle">Reduced beta price</h1>
                   <h1 className="softwareheading price">
                     Just <span className="text-span">59,95€</span> / month!
                   </h1>

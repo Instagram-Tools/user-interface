@@ -133,7 +133,7 @@ export default class About extends Component {
                   </h1>
                   <h1 className="titlepage buysubtitle">Reduced beta price</h1>
                   <h1 className="softwareheading price">
-                    Just <span className="text-span">29,95€</span> / month!
+                    Just <span className="text-span">59,95€</span> / month!
                   </h1>
                   <div className="form-block-3 w-form">
                     <TextField

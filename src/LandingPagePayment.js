@@ -21,10 +21,7 @@ export default class LandingPagePayment extends Component {
             <h1 className="softwareheading">
               Let&#x27;s get your Insta to the next level!
             </h1>
-            <h1 className="titlepage buysubtitle">
-              Exclusive beta price until Jan 1 2019!
-            </h1>
-            <h1 className="softwareheading price">Just 29,95€ / month!</h1>
+            <h1 className="softwareheading price">Just 59,95€ / month!</h1>
             <div className="w-form">
               <TextField
                 type="text"

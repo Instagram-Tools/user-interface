@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import TextField from './TextField';
 import PaymentGateway from './PaymentGateway';
 import { Context } from './Context';
+import { formatMoney } from './Format';
 
 export default class LandingPagePayment extends Component {
   render() {
@@ -25,7 +26,10 @@ export default class LandingPagePayment extends Component {
                   Let&#x27;s get your Insta to the next level!
                 </h1>
                 <h1 className="softwareheading price">
-                  Just <span className="text-span">{context.state.price}</span>{' '}
+                  Just{' '}
+                  <span className="text-span">
+                    {formatMoney(context.state.price)}
+                  </span>{' '}
                   / month!
                 </h1>
                 <div className="w-form">

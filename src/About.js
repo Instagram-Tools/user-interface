@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Context } from './Context';
 import TextField from './TextField';
 import { NavHashLink } from 'react-router-hash-link';
+import { formatMoney } from './Format';
 
 export default class About extends Component {
   render() {
@@ -133,8 +134,10 @@ export default class About extends Component {
                   </h1>
                   <h1 className="softwareheading price">
                     Just{' '}
-                    <span className="text-span">{context.state.price}</span> /
-                    month!
+                    <span className="text-span">
+                      {formatMoney(context.state.price)}
+                    </span>{' '}
+                    / month!
                   </h1>
                   <div className="form-block-3 w-form">
                     <TextField

@@ -20,6 +20,9 @@ export default class TextField extends Component {
               onChange={e => this.setValue(context, e.target.value)}
               autoComplete="off"
               placeholder={this.props.placeholder}
+              onKeyDown={e =>
+                e.key === 'Enter' && this.props.onEnter && this.props.onEnter()
+              }
             />
             {this.props.label && (
               <div className="columnholder belowholder">

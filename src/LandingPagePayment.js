@@ -34,6 +34,11 @@ export default class LandingPagePayment extends Component {
                     inputClass="text-field filter bottom_distance_20px settingsinput w-input"
                     value="discount_code"
                     placeholder="Promo Code"
+                    onEnter={context.updatePrice}
+                  />
+                  <div
+                    className="submitbutton connect_account_button trialbutton check-code-button w-button"
+                    onClick={context.updatePrice}
                   />
                   <div className="w-form-done">
                     <div>Thank you! Your submission has been received!</div>

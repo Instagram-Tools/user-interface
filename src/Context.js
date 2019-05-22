@@ -254,6 +254,10 @@ export class Provider extends Component {
     this.setState(p => ({ notifications: [...p.notifications, text] }));
   }
 
+  async updatePrice() {
+    console.log(this.state.discount_code);
+  }
+
   render() {
     return (
       <Context.Provider
@@ -261,6 +265,7 @@ export class Provider extends Component {
           state: this.state,
           setState: this.setState.bind(this),
           isBotActive: this.isBotActive.bind(this),
+          updatePrice: this.updatePrice.bind(this),
           pushNotification: this.pushNotification.bind(this)
         }}
       >

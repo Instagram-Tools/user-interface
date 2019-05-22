@@ -132,7 +132,9 @@ export default class About extends Component {
                     Let&#x27;s get your Insta to the next level!
                   </h1>
                   <h1 className="softwareheading price">
-                    Just <span className="text-span">59,95€</span> / month!
+                    Just{' '}
+                    <span className="text-span">{context.state.price}</span> /
+                    month!
                   </h1>
                   <div className="form-block-3 w-form">
                     <TextField

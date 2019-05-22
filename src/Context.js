@@ -16,6 +16,7 @@ export const REGISTRATION_STEPS = {
 };
 
 export const unsavedState = {
+  price: '59,95€',
   registrationStep: 11,
   scrollY: 0,
   scrollHeight: document.body.scrollHeight,

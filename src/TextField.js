@@ -19,6 +19,7 @@ export default class TextField extends Component {
               value={this.getValue(context)}
               onChange={e => this.setValue(context, e.target.value)}
               autoComplete="off"
+              placeholder={this.props.placeholder}
             />
             {this.props.label && (
               <div className="columnholder belowholder">

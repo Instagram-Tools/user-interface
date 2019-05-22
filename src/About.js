@@ -141,6 +141,7 @@ export default class About extends Component {
                       type="text"
                       inputClass="text-field filter bottom_distance_20px settingsinput w-input"
                       value="discount_code"
+                      placeholder="Promo Code"
                     />
                     <div className="w-form-done">
                       <div>Thank you! Your submission has been received!</div>

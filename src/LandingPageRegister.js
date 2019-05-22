@@ -53,7 +53,7 @@ export default class LandingPageRegister extends Component {
                       inputClass="text-field-2 filter connect_account_filter w-input"
                       className="text_field_description-2 below connect_account_text"
                       type="email"
-                      placeholder="Email"
+                      label="Email"
                       value="try_email"
                       required
                     />
@@ -61,7 +61,7 @@ export default class LandingPageRegister extends Component {
                       inputClass="text-field-2 filter connect_account_filter w-input"
                       className="text_field_description-2 below connect_account_text"
                       type="password"
-                      placeholder="Password"
+                      label="Password"
                       value="try_e_password"
                       required
                     />
@@ -69,7 +69,7 @@ export default class LandingPageRegister extends Component {
                       inputClass="text-field-2 filter connect_account_filter w-input"
                       className="text_field_description-2 below connect_account_text"
                       type="password"
-                      placeholder="Confirm Password"
+                      label="Confirm Password"
                       value="try_e_password_confirm"
                       required
                     />

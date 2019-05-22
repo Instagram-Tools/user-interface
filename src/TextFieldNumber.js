@@ -33,7 +33,7 @@ export default class TextFieldNumber extends Component {
                   'text_field_description below ' + this.props.className
                 }
               >
-                {this.props.placeholder}
+                {this.props.label}
               </div>
               {this.props.children}
             </div>

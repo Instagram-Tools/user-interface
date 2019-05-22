@@ -20,7 +20,7 @@ export default class UnfollowSettings extends Component {
             </div>
             <TextFieldNumber
               value="unfollow_users_unfollow_after"
-              placeholder="unfollow after X days"
+              label="unfollow after X days"
               min={1}
             />
             <div className="unfollowdisclaimer">

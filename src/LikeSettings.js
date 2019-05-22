@@ -28,14 +28,8 @@ export default class LikeSettings extends Component {
               </label>
             </div>
             <div className="columnholder filterholder first">
-              <TextFieldNumber
-                placeholder="Min Likes"
-                value="delimit_liking_min"
-              />
-              <TextFieldNumber
-                placeholder="Max Likes"
-                value="delimit_liking_max"
-              />
+              <TextFieldNumber label="Min Likes" value="delimit_liking_min" />
+              <TextFieldNumber label="Max Likes" value="delimit_liking_max" />
             </div>
           </div>
         </div>

@@ -21,7 +21,7 @@ export default class CommentSettings extends Component {
             </div>
             <TextFieldComments
               value="comments"
-              placeholder="Enter Text you want to comment."
+              label="Enter Text you want to comment."
             />
             <div
               data-w-id="1846180f-b0c1-4f62-a33b-df4641310d47"
@@ -74,11 +74,11 @@ export default class CommentSettings extends Component {
             </div>
             <div className="columnholder filterholder first">
               <TextFieldNumber
-                placeholder="Min Comments"
+                label="Min Comments"
                 value="delimit_commenting_min"
               />
               <TextFieldNumber
-                placeholder="Max Comments"
+                label="Max Comments"
                 value="delimit_commenting_max"
               />
             </div>

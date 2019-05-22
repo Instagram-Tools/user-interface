@@ -180,7 +180,7 @@ export default class Settings extends Component {
                         maxLength="256"
                         name="name-3"
                         data-name="Name 3"
-                        placeholder=""
+                        label=""
                         id="name-3"
                         value="set_username"
                       />
@@ -200,7 +200,7 @@ export default class Settings extends Component {
                         maxLength="256"
                         name="name-2"
                         data-name="Name 2"
-                        placeholder=""
+                        label=""
                         id="name-2"
                         value="set_password"
                       />
@@ -245,7 +245,7 @@ export default class Settings extends Component {
                       maxLength="256"
                       name="name-6"
                       data-name="Name 6"
-                      placeholder="Password"
+                      label="Password"
                       id="name-6"
                     />
                     <input

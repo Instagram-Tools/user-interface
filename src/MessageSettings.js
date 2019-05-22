@@ -24,7 +24,7 @@ export default class MessageSettings extends Component {
             </div>
             <TextFieldComments
               value="messages_onfollow"
-              placeholder="Enter Text you want to message"
+              label="Enter Text you want to message"
             />
           </div>
         </div>

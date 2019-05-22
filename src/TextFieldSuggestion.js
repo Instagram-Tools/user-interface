@@ -32,7 +32,7 @@ export default class TextFieldSuggestion extends Component {
                 type="text"
                 className="text-field broadfield w-input"
                 maxLength="256"
-                placeholder={this.props.placeholder}
+                placeholder={this.props.label}
                 value={this.state.value}
                 onChange={e => this.onInput(e)}
                 onKeyPress={e =>

@@ -41,7 +41,7 @@ export default class LandingPageConnect extends Component {
                       inputClass="text-field-2 filter connect_account_filter w-input"
                       className="text_field_description-2 below connect_account_text"
                       type="text"
-                      placeholder="Instagram Username"
+                      label="Instagram Username"
                       value="username"
                       required
                     />
@@ -49,7 +49,7 @@ export default class LandingPageConnect extends Component {
                       inputClass="text-field-2 filter connect_account_filter w-input"
                       className="text_field_description-2 below connect_account_text"
                       type="password"
-                      placeholder="Instagram Password"
+                      label="Instagram Password"
                       value="password"
                       required
                     />

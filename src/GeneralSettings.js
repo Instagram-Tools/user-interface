@@ -48,7 +48,7 @@ export default class GeneralSettings extends Component {
             >
               <TextFieldHashtags
                 value="like_by_tags"
-                placeholder="Enter hashtags this way: fitness"
+                label="Enter hashtags this way: fitness"
               />
             </div>
             <div className="titleholder right_padding_5vw">
@@ -67,7 +67,7 @@ export default class GeneralSettings extends Component {
             </div>
             <TextFieldPlaces
               value="like_by_locations"
-              placeholder="Search for locations"
+              label="Search for locations"
             />
             <div className="titleholder right_padding_5vw">
               <Switch value="enable_follow_user_followers" className="title" />
@@ -86,7 +86,7 @@ export default class GeneralSettings extends Component {
             <div className="columnholder hashtag_settings_holder">
               <TextFieldUsers
                 value="follow_user_followers"
-                placeholder="Search for user"
+                label="Search for user"
               />
               <div className="titleholder">
                 <Help className="helptext">
@@ -103,26 +103,26 @@ export default class GeneralSettings extends Component {
               </div>
               <div className="columnholder filterholder first">
                 <TextFieldNumber
-                  placeholder="Must have min X Followers"
+                  label="Must have min X Followers"
                   value="relationship_bounds_min_followers"
                 />
                 <TextFieldNumber
-                  placeholder="Must have max Y Followers"
+                  label="Must have max Y Followers"
                   value="relationship_bounds_max_followers"
                 />
               </div>
               <div className="columnholder filterholder first">
                 <TextFieldNumber
-                  placeholder="Must follow min X users"
+                  label="Must follow min X users"
                   value="relationship_bounds_min_following"
                 />
                 <TextFieldNumber
-                  placeholder="Must follow max Y users"
+                  label="Must follow max Y users"
                   value="relationship_bounds_max_following"
                 />
               </div>
               <TextFieldNumber
-                placeholder="Interact with their last Z pictures"
+                label="Interact with their last Z pictures"
                 value="user_interact_amount"
               />
             </div>

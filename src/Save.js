@@ -78,13 +78,13 @@ export default class Save extends Component {
       return context.setState({
         registrationStep: REGISTRATION_STEPS['LandingPageRegister']
       });
-    } else if (!(context.state.password && context.state.username)) {
-      return context.setState({
-        registrationStep: REGISTRATION_STEPS['LandingPageConnect']
-      });
     } else if (!context.state.subscription) {
       return context.setState({
         registrationStep: REGISTRATION_STEPS['LandingPagePayment']
+      });
+    } else if (!(context.state.password && context.state.username)) {
+      return context.setState({
+        registrationStep: REGISTRATION_STEPS['LandingPageConnect']
       });
     }
 

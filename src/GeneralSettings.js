@@ -98,7 +98,7 @@ export default class GeneralSettings extends Component {
                   Interact with last 1 - 5 pictures
                 </Help>
                 <label htmlFor="email" className="settingtitle">
-                  Filters and Settings
+                  Filters: What users to interact with?
                 </label>
               </div>
               <div className="columnholder filterholder first">

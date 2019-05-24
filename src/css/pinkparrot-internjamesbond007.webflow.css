@@ -1207,6 +1207,7 @@ a {
   top: auto;
   right: 0%;
   bottom: 0%;
+  z-index: 9999;
   width: 33px;
   height: 33px;
   margin-bottom: 5px;
@@ -2625,6 +2626,7 @@ a {
   -ms-flex-align: start;
   align-items: flex-start;
   border-left: 3px solid #0082e6;
+  background-color: #fff;
   color: rgba(0, 0, 0, 0.55);
   font-size: 1em;
   line-height: 1.5em;
@@ -4913,11 +4915,11 @@ a {
   .submitbutton.connect_account_button.trialbutton.apply-button {
     width: 14vw;
   }
-  .submitbutton.connect_account_button.trialbutton.check-code-button {
-    width: 14vw;
-  }
   .submitbutton.settingssave {
     margin-left: 0vw;
+  }
+  .text-field.filter.bottom_distance_20px.settingsinput {
+    padding-left: 13px;
   }
   .deletebutton.notificationclose {
     width: 4vw;
@@ -5436,9 +5438,6 @@ a {
   .submitbutton.connect_account_button.trialbutton.apply-button {
     width: 18vw;
   }
-  .submitbutton.connect_account_button.trialbutton.check-code-button {
-    width: 18vw;
-  }
   .text-field.broadfield {
     min-width: 200px;
   }
@@ -5452,6 +5451,9 @@ a {
   .text-field.filter.bottom_distance_20px {
     min-width: 200px;
     margin-right: 2.5vw;
+  }
+  .text-field.filter.bottom_distance_20px.settingsinput {
+    padding-left: 11px;
   }
   .generalsettings {
     -webkit-box-pack: center;
@@ -5680,6 +5682,9 @@ a {
   .titlepage.usptext.subtext.abouttext.righttext2 {
     text-align: left;
   }
+  .titlepage.buysubtitle {
+    margin-bottom: 3px;
+  }
   .titlepage.aboutsubtitle {
     max-width: 90vw;
     margin-top: 0.25em;
@@ -5860,9 +5865,6 @@ a {
     width: 33vw;
   }
   .submitbutton.connect_account_button.trialbutton.apply-button {
-    width: 33vw;
-  }
-  .submitbutton.connect_account_button.trialbutton.check-code-button {
     width: 33vw;
   }
   .submitbutton.settingssave {

@@ -16,9 +16,7 @@ export default class Help extends Component {
         />
         <div
           style={{
-            display: this.state.display ? 'unset' : 'none',
-            position: 'absolute',
-            backgroundColor: '#f5f5f580'
+            display: this.state.display ? 'unset' : 'none'
           }}
           className="helptext"
         >

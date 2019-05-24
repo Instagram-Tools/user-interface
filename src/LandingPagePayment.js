@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import PaymentGateway from './PaymentGateway';
 import { Context } from './Context';
 import Price from './Price';
+import { Link } from 'react-router-dom';
 
 export default class LandingPagePayment extends Component {
   render() {
@@ -17,6 +18,9 @@ export default class LandingPagePayment extends Component {
             }
             className="connect_insta_account"
           >
+            <Link to="/" className="deletebutton logindelete">
+              <div className="xicon" />
+            </Link>
             <h1 className="logintitle">Subscribe to Pink Parrot</h1>
             <div className="loginsubtitle">You can quit any month.</div>
             <div className="software_plan_holder">

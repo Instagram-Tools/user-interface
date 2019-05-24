@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import { Context } from './Context';
-import TextField from './TextField';
 import { NavHashLink } from 'react-router-hash-link';
-import { formatMoney } from './Format';
+import Price from './Price';
 
 export default class About extends Component {
   render() {
@@ -132,34 +131,7 @@ export default class About extends Component {
                   <h1 className="softwareheading">
                     Let&#x27;s get your Insta to the next level!
                   </h1>
-                  <h1 className="softwareheading price">
-                    Just{' '}
-                    <span className="text-span">
-                      {formatMoney(context.state.price)}
-                    </span>{' '}
-                    / month!
-                  </h1>
-                  <div className="form-block-3 w-form">
-                    <TextField
-                      type="text"
-                      inputClass="text-field filter bottom_distance_20px settingsinput w-input"
-                      value="discount_code"
-                      placeholder="Promo Code"
-                      onEnter={context.updatePrice}
-                    />
-                    <div
-                      className="submitbutton connect_account_button trialbutton check-code-button w-button"
-                      onClick={context.updatePrice}
-                    />
-                    <div className="w-form-done">
-                      <div>Thank you! Your submission has been received!</div>
-                    </div>
-                    <div className="w-form-fail">
-                      <div>
-                        Oops! Something went wrong while submitting the form.
-                      </div>
-                    </div>
-                  </div>
+                  <Price />
                 </div>
                 <div className="div-block-2">
                   <NavHashLink

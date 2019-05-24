@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import ScrollUtil from './ScrollUtil';
 import BOT_Gateway from './BOT_Gateway';
 import console from './Log';
+import { getDiscountedPrice } from './PaymentGateway';
 
 export const Context = React.createContext();
 
@@ -16,7 +17,6 @@ export const REGISTRATION_STEPS = {
 };
 
 export const unsavedState = {
-  price: 59.95,
   registrationStep: 11,
   scrollY: 0,
   scrollHeight: document.body.scrollHeight,
@@ -254,10 +254,6 @@ export class Provider extends Component {
     this.setState(p => ({ notifications: [...p.notifications, text] }));
   }
 
-  async updatePrice() {
-    console.log(this.state.discount_code);
-  }
-
   render() {
     return (
       <Context.Provider
@@ -265,7 +261,6 @@ export class Provider extends Component {
           state: this.state,
           setState: this.setState.bind(this),
           isBotActive: this.isBotActive.bind(this),
-          updatePrice: this.updatePrice.bind(this),
           pushNotification: this.pushNotification.bind(this)
         }}
       >

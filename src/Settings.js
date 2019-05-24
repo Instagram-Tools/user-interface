@@ -4,6 +4,7 @@ import TextField from './TextField';
 import PaymentGateway from './PaymentGateway';
 import API from './API_Gateway';
 import console from './Log';
+import env from './Env';
 
 export default class Settings extends Component {
   state = {
@@ -266,7 +267,9 @@ export default class Settings extends Component {
                 </div>
               )}
               <div className="buy_plan_holder settingspayment">
-                <PaymentGateway />
+                <PaymentGateway
+                  url={`${env.PAYMENT_MANAGER}/customer/update`}
+                />
               </div>
               <h1 className="settingtitle settingspage nodistance">
                 Delete account and end subscription

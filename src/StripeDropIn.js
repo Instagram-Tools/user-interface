@@ -54,15 +54,18 @@ class StripeDropIn extends React.Component {
       name: context.state.email
     });
     try {
-      let response = await fetch(`${PAYMENT_MANAGER}/purchase/`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          token: token.id,
-          email: context.state.email.toLowerCase(),
-          discount_code: context.state.discount_code
-        })
-      });
+      let response = await fetch(
+        this.props.url || `${PAYMENT_MANAGER}/purchase/`,
+        {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            token: token.id,
+            email: context.state.email.toLowerCase(),
+            discount_code: context.state.discount_code
+          })
+        }
+      );
 
       if (response.ok) {
         console.log('Purchase Complete! response:', response);
@@ -158,13 +161,13 @@ class StripeDropIn extends React.Component {
 
   success(subscription, context) {
     console.log('success s:', subscription);
-    this.props.onSuccess(subscription, context);
-    return this.setState({ status: this.statusCode[2], isLoading: false });
+    this.setState({ status: this.statusCode[2], isLoading: false });
+    this.props.onSuccess && this.props.onSuccess(subscription, context);
   }
 
   error(e) {
     console.error('Error on StripeDropIn.submit():', e);
-    return this.setState({ status: this.statusCode[1], isLoading: false });
+    this.setState({ status: this.statusCode[1], isLoading: false });
   }
 }
 

@@ -14,6 +14,7 @@ export default class PaymentGateway extends React.Component {
           <StripeDropIn
             setSubscription={this.props.setSubscription}
             onSuccess={this.props.onSuccess}
+            url={this.props.url}
           />
         </Elements>
       </StripeProvider>

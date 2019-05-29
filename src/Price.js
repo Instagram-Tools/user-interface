@@ -63,8 +63,8 @@ export default class Price extends Component {
       if ((await response.status) === 200) {
         let json = await response.json();
         let price = json.amount_off
-          ? PRICE - json.amount_off
-          : PRICE / 100 * (100 - json.percent_off);
+          ? PRICE - json.amount_off / 100
+          : PRICE * (100 - json.percent_off) / 100;
         this.setState({ price });
         this.success(response);
         return;

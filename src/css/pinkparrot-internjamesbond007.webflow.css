@@ -4269,13 +4269,15 @@ a {
 
 .error-message-3.code-error {
   left: 0%;
-  top: auto;
+  top: -2px;
   right: 0%;
-  bottom: 0%;
-  height: 33px;
+  height: 37px;
   margin-top: 0px;
   padding-top: 0px;
   padding-bottom: 0px;
+  border: 3px solid #ff4c44;
+  border-radius: 33px;
+  background-color: transparent;
 }
 
 .text-block-3 {
@@ -4301,6 +4303,7 @@ a {
 .text-block-3.nope-2 {
   height: 33px;
   min-height: auto;
+  margin-top: 30px;
 }
 
 .schedulegrid {

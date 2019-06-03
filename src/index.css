@@ -22,3 +22,7 @@ body {
   bottom: 40px;
   top: unset;
 }
+
+.paycolumn.aboutcolumn {
+  padding-bottom: 20px;
+}

@@ -7,6 +7,7 @@ import { Provider } from './Context';
 import Navigation from './Navigation';
 import Settings from './Settings';
 import Notifications from './Notifications';
+import VerifyAccount from './VerifyAccount';
 
 export default function BasicExample() {
   return (
@@ -19,6 +20,7 @@ export default function BasicExample() {
           <Route exact path="/interface" component={App} />
           <Route exact path="/legal" component={Legal} />
           <Route exact path="/settings" component={Settings} />
+          <Route exact path="/insta_verify" component={VerifyAccount} />
         </div>
       </Router>
     </Provider>

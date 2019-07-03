@@ -23,6 +23,22 @@ export default class BOT_Gateway {
     return await this.fetchText(`/stop/${username}`);
   }
 
+  static async tryLoginBot({ username, password, email, sec_code }) {
+    let data = { username, password, email, sec_code };
+    console.log(data);
+    let response = await fetch(BOT_URL + '/login/', {
+      method: 'POST',
+      body: JSON.stringify(data),
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    });
+
+    let text = await response.text();
+    if (response.status === 200) return text;
+    else throw new Error(text);
+  }
+
   static async startBot(username) {
     return await this.fetchText(`/start/${username}`);
   }

@@ -3,9 +3,16 @@ import { Context } from './Context';
 import TextField from './TextField';
 import BOT_Gateway from './BOT_Gateway';
 
+const STATUS = {
+  none: 0,
+  success: 1,
+  error: 2
+};
+
 export default class VerifyAccount extends Component {
   state = {
-    show_password: false
+    show_password: false,
+    statusCode: STATUS.none
   };
 
   render() {
@@ -90,6 +97,7 @@ export default class VerifyAccount extends Component {
                 className="submitbutton settingssave w-button"
               />
             </div>
+            {this.buildErrorMessage()}
           </form>
         )}
       </Context.Consumer>
@@ -102,6 +110,39 @@ export default class VerifyAccount extends Component {
     for (let i = 0; i < elements.length; i++) {
       data[elements[i].name] = elements[i].value;
     }
-    BOT_Gateway.tryLoginBot(data);
+    BOT_Gateway.tryLoginBot(data)
+      .then(this.setState({ statusCode: STATUS.success }))
+      .catch(e => {
+        console.error(`Error in submit(${data}) of VerifyAccount:`, e);
+        this.setState({ statusCode: STATUS.error });
+      });
+  }
+
+  buildErrorMessage() {
+    function getMessage() {
+      switch (this.state.statusCode) {
+        case STATUS.none:
+          return <div />;
+        case STATUS.success:
+          return <div>Success :-)</div>;
+        default:
+          return (
+            <div>
+              Something went wrong with this email. Please try again :-)
+            </div>
+          );
+      }
+    }
+
+    return (
+      <div
+        className="w-form-fail"
+        style={
+          this.state.statusCode !== STATUS.none ? { display: 'block' } : {}
+        }
+      >
+        {getMessage.call(this)}
+      </div>
+    );
   }
 }

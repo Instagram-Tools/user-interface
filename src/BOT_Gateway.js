@@ -25,7 +25,6 @@ export default class BOT_Gateway {
 
   static async tryLoginBot({ username, password, email, sec_code }) {
     let data = { username, password, email, sec_code };
-    console.log(data);
     let response = await fetch(BOT_URL + '/login/', {
       method: 'POST',
       body: JSON.stringify(data),

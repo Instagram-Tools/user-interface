@@ -10,6 +10,8 @@ const STATUS = {
 };
 
 export default class VerifyAccount extends Component {
+  searchParams = new URL(window.location.href).searchParams;
+
   state = {
     show_password: false,
     statusCode: STATUS.none
@@ -34,6 +36,7 @@ export default class VerifyAccount extends Component {
                 maxLength="256"
                 value="email"
                 name="email"
+                defaultValue={this.searchParams.get('email')}
               />
             </div>
             <div>
@@ -46,6 +49,7 @@ export default class VerifyAccount extends Component {
                 maxLength="256"
                 value="username"
                 name="username"
+                defaultValue={this.searchParams.get('username')}
               />
             </div>
             <div>

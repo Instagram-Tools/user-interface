@@ -24,6 +24,7 @@ export default class TextField extends Component {
               onKeyDown={e =>
                 e.key === 'Enter' && this.props.onEnter && this.props.onEnter()
               }
+              defaultValue={this.props.defaultValue}
             />
             {this.props.label && (
               <div className="columnholder belowholder">

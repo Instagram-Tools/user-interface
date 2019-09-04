@@ -85,7 +85,7 @@ export default class VerifyAccount extends Component {
             </div>
             <div>
               <h1 className="settingtitle setting_page_title">
-                Verification Code (optional)
+                Verification Code
               </h1>
               <TextField
                 type="text"
